@@ -22,7 +22,7 @@ subprocess.call('doxygen Doxyfile.in', shell=True)
 # -- Project information -----------------------------------------------------
 
 project = 'RcppSMC'
-copyright = '2022, Leah South, Ilya Zarubin, Dirk Eddelbuettel, Adam Johansen'
+copyright = '2022, Leah South, Ilya Zarubin, Dirk Eddelbuettel, and Adam Johansen'
 author = 'Ilya Zarubin'
 
 
