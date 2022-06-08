@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/src/cSMCexamples.cpp" "/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/build/CMakeFiles/RcppSMC.dir/src/cSMCexamples.cpp.o"
+  "/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocs/src/cSMCexamples.cpp" "/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocs/build/CMakeFiles/RcppSMC.dir/src/cSMCexamples.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

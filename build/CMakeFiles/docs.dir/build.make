@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation
+CMAKE_SOURCE_DIR = /home/iz/Dropbox/projects/rcppsmc/RcppSMCdocs
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/build
+CMAKE_BINARY_DIR = /home/iz/Dropbox/projects/rcppsmc/RcppSMCdocs/build
 
 # Utility rule file for docs.
 
@@ -54,8 +54,8 @@ CMAKE_BINARY_DIR = /home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/build
 include CMakeFiles/docs.dir/progress.make
 
 CMakeFiles/docs:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating API documentation with Doxygen"
-	/usr/bin/doxygen /home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/build/Doxyfile.out
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating API documentation with Doxygen"
+	/usr/bin/doxygen /home/iz/Dropbox/projects/rcppsmc/RcppSMCdocs/build/Doxyfile.out
 
 docs: CMakeFiles/docs
 docs: CMakeFiles/docs.dir/build.make
@@ -72,6 +72,6 @@ CMakeFiles/docs.dir/clean:
 .PHONY : CMakeFiles/docs.dir/clean
 
 CMakeFiles/docs.dir/depend:
-	cd /home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation /home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation /home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/build /home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/build /home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/build/CMakeFiles/docs.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/iz/Dropbox/projects/rcppsmc/RcppSMCdocs/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/iz/Dropbox/projects/rcppsmc/RcppSMCdocs /home/iz/Dropbox/projects/rcppsmc/RcppSMCdocs /home/iz/Dropbox/projects/rcppsmc/RcppSMCdocs/build /home/iz/Dropbox/projects/rcppsmc/RcppSMCdocs/build /home/iz/Dropbox/projects/rcppsmc/RcppSMCdocs/build/CMakeFiles/docs.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/docs.dir/depend
 

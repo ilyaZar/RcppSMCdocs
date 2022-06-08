@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation
+CMAKE_SOURCE_DIR = /home/iz/Dropbox/projects/rcppsmc/RcppSMCdocs
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/build
+CMAKE_BINARY_DIR = /home/iz/Dropbox/projects/rcppsmc/RcppSMCdocs/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/RcppSMC.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/RcppSMC.dir/flags.make
 
 CMakeFiles/RcppSMC.dir/src/cSMCexamples.cpp.o: CMakeFiles/RcppSMC.dir/flags.make
 CMakeFiles/RcppSMC.dir/src/cSMCexamples.cpp.o: ../src/cSMCexamples.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/RcppSMC.dir/src/cSMCexamples.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RcppSMC.dir/src/cSMCexamples.cpp.o -c /home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/src/cSMCexamples.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/RcppSMC.dir/src/cSMCexamples.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RcppSMC.dir/src/cSMCexamples.cpp.o -c /home/iz/Dropbox/projects/rcppsmc/RcppSMCdocs/src/cSMCexamples.cpp
 
 CMakeFiles/RcppSMC.dir/src/cSMCexamples.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RcppSMC.dir/src/cSMCexamples.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/src/cSMCexamples.cpp > CMakeFiles/RcppSMC.dir/src/cSMCexamples.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/iz/Dropbox/projects/rcppsmc/RcppSMCdocs/src/cSMCexamples.cpp > CMakeFiles/RcppSMC.dir/src/cSMCexamples.cpp.i
 
 CMakeFiles/RcppSMC.dir/src/cSMCexamples.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RcppSMC.dir/src/cSMCexamples.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/src/cSMCexamples.cpp -o CMakeFiles/RcppSMC.dir/src/cSMCexamples.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/iz/Dropbox/projects/rcppsmc/RcppSMCdocs/src/cSMCexamples.cpp -o CMakeFiles/RcppSMC.dir/src/cSMCexamples.cpp.s
 
 # Object files for target RcppSMC
 RcppSMC_OBJECTS = \
@@ -80,7 +80,7 @@ RcppSMC_EXTERNAL_OBJECTS =
 libRcppSMC.a: CMakeFiles/RcppSMC.dir/src/cSMCexamples.cpp.o
 libRcppSMC.a: CMakeFiles/RcppSMC.dir/build.make
 libRcppSMC.a: CMakeFiles/RcppSMC.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libRcppSMC.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libRcppSMC.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/RcppSMC.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/RcppSMC.dir/link.txt --verbose=$(VERBOSE)
 
@@ -94,6 +94,6 @@ CMakeFiles/RcppSMC.dir/clean:
 .PHONY : CMakeFiles/RcppSMC.dir/clean
 
 CMakeFiles/RcppSMC.dir/depend:
-	cd /home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation /home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation /home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/build /home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/build /home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/build/CMakeFiles/RcppSMC.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/iz/Dropbox/projects/rcppsmc/RcppSMCdocs/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/iz/Dropbox/projects/rcppsmc/RcppSMCdocs /home/iz/Dropbox/projects/rcppsmc/RcppSMCdocs /home/iz/Dropbox/projects/rcppsmc/RcppSMCdocs/build /home/iz/Dropbox/projects/rcppsmc/RcppSMCdocs/build /home/iz/Dropbox/projects/rcppsmc/RcppSMCdocs/build/CMakeFiles/RcppSMC.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/RcppSMC.dir/depend
 

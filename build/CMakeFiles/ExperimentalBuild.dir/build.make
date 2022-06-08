@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation
+CMAKE_SOURCE_DIR = /home/iz/Dropbox/projects/rcppsmc/RcppSMCdocs
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/build
+CMAKE_BINARY_DIR = /home/iz/Dropbox/projects/rcppsmc/RcppSMCdocs/build
 
 # Utility rule file for ExperimentalBuild.
 
@@ -71,6 +71,6 @@ CMakeFiles/ExperimentalBuild.dir/clean:
 .PHONY : CMakeFiles/ExperimentalBuild.dir/clean
 
 CMakeFiles/ExperimentalBuild.dir/depend:
-	cd /home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation /home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation /home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/build /home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/build /home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/build/CMakeFiles/ExperimentalBuild.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/iz/Dropbox/projects/rcppsmc/RcppSMCdocs/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/iz/Dropbox/projects/rcppsmc/RcppSMCdocs /home/iz/Dropbox/projects/rcppsmc/RcppSMCdocs /home/iz/Dropbox/projects/rcppsmc/RcppSMCdocs/build /home/iz/Dropbox/projects/rcppsmc/RcppSMCdocs/build /home/iz/Dropbox/projects/rcppsmc/RcppSMCdocs/build/CMakeFiles/ExperimentalBuild.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ExperimentalBuild.dir/depend
 

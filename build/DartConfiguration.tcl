@@ -4,8 +4,8 @@
 
 
 # Configuration directories and files
-SourceDirectory: /home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation
-BuildDirectory: /home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/build
+SourceDirectory: /home/iz/Dropbox/projects/rcppsmc/RcppSMCdocs
+BuildDirectory: /home/iz/Dropbox/projects/rcppsmc/RcppSMCdocs/build
 
 # Where to place the cost data store
 CostDataFile: 
@@ -26,7 +26,7 @@ SubmitURL: http://
 NightlyStartTime: 00:00:00 EDT
 
 # Commands for the build/test/submit cycle
-ConfigureCommand: "/usr/bin/cmake" "/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation"
+ConfigureCommand: "/usr/bin/cmake" "/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocs"
 MakeCommand: /usr/bin/cmake --build . --config "${CTEST_CONFIGURATION_TYPE}" -- -i
 DefaultCTestConfigurationType: Release
 
@@ -57,9 +57,9 @@ P4UpdateOptions:
 P4UpdateCustom: 
 
 # Generic update command
-UpdateCommand: 
+UpdateCommand: /usr/bin/git
 UpdateOptions: 
-UpdateType: 
+UpdateType: git
 
 # Compiler info
 Compiler: /usr/bin/c++
