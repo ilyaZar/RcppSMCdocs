@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Moving, conditional moving and weighting particles &mdash; RcppSMC  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Adaptation Methods" href="adaptMethods.html" />
+    <link rel="prev" title="Particle Population" href="population.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> RcppSMC
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Welcome to the RcppSMC documentation!</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Classes</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="sampler.html">Sampler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conditionalSampler.html">Conditional Sampler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="population.html">Particle Population</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Moving, conditional moving and weighting particles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="adaptMethods.html">Adaptation Methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="staticModelAdapt.html">Static Adaptation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="history.html">Particle History Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="smcexception.html">Exception handling</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">RcppSMC</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="index.html">Classes</a> &raquo;</li>
+      <li>Moving, conditional moving and weighting particles</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/api/moveset.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="moving-conditional-moving-and-weighting-particles">
+<span id="api-moveset"></span><h1>Moving, conditional moving and weighting particles<a class="headerlink" href="#moving-conditional-moving-and-weighting-particles" title="Permalink to this headline"></a></h1>
+<p>Classes and functions which deal with collections of sampler proposal “moves”. </p>
+<p>This file contains definitions of <a class="reference internal" href="#classsmc_1_1moveset"><span class="std std-ref">smc::moveset</span></a>. It deals with the collections of proposal moves (including initialisation and MCMC moves) which must be dealt with by the sampler. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-defines">Defines</p>
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.__SMC_MOVESET_HH">
+<span class="target" id="moveset_8h_1ad37b85afd19fcad9abe5adab29f7e968"></span><span class="sig-name descname"><span class="n"><span class="pre">__SMC_MOVESET_HH</span></span></span><a class="headerlink" href="#c.__SMC_MOVESET_HH" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv43smc">
+<span id="_CPPv33smc"></span><span id="_CPPv23smc"></span><span id="smc"></span><span class="target" id="namespacesmc"></span><span class="k"><span class="pre">namespace</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">smc</span></span></span><br /></dt>
+<dd><p>The Sequential Monte Carlo namespace. </p>
+<p>The classes and functions within this namespace are intended to be used for producing implemenetations of SMC samplers and related simulation techniques. </p>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4I00EN3smc7movesetE">
+<span id="_CPPv3I00EN3smc7movesetE"></span><span id="_CPPv2I00EN3smc7movesetE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Space</span></span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Params</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classsmc_1_1moveset"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">moveset</span></span></span><a class="headerlink" href="#_CPPv4I00EN3smc7movesetE" title="Permalink to this definition"></a><br /></dt>
+<dd><div class="docutils container">
+<em>#include &lt;moveset.h&gt;</em></div>
+<p>A template class for a set of moves for use in an SMC samplers framework. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3smc7moveset7movesetEv">
+<span id="_CPPv3N3smc7moveset7movesetEv"></span><span id="_CPPv2N3smc7moveset7movesetEv"></span><span id="smc::moveset::moveset"></span><span class="target" id="classsmc_1_1moveset_1a507b985fafe3f1572edafb429bf7c2c1"></span><span class="sig-name descname"><span class="n"><span class="pre">moveset</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3smc7moveset7movesetEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create a completely unspecified moveset. </p>
+<p>The argument free <a class="reference internal" href="#classsmc_1_1moveset"><span class="std std-ref">smc::moveset</span></a> constructor simply sets the number of available moves to zero and sets all of the associated function pointers to NULL. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3smc7moveset7movesetEPFvR5SpaceRdR6ParamsEPFvlR5SpaceRdR6ParamsEPFblR5SpaceRdR6ParamsE">
+<span id="_CPPv3N3smc7moveset7movesetEPFvR5SpaceRdR6ParamsEPFvlR5SpaceRdR6ParamsEPFblR5SpaceRdR6ParamsE"></span><span id="_CPPv2N3smc7moveset7movesetEPFvR5SpaceRdR6ParamsEPFvlR5SpaceRdR6ParamsEPFblR5SpaceRdR6ParamsE"></span><span class="target" id="classsmc_1_1moveset_1a857a88c99a6aa68903d1dd67561f8a19"></span><span class="sig-name descname"><span class="n"><span class="pre">moveset</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">pfInit</span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">(</span></span><a class="reference internal" href="#_CPPv4I00EN3smc7movesetE" title="smc::moveset::Space"><span class="n"><span class="pre">Space</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I00EN3smc7movesetE" title="smc::moveset::Params"><span class="n"><span class="pre">Params</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">)</span></span>, <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">pfNewMove</span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">(</span></span><span class="kt"><span class="pre">long</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I00EN3smc7movesetE" title="smc::moveset::Space"><span class="n"><span class="pre">Space</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I00EN3smc7movesetE" title="smc::moveset::Params"><span class="n"><span class="pre">Params</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">)</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">pfNewMCMC</span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">(</span></span><span class="kt"><span class="pre">long</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I00EN3smc7movesetE" title="smc::moveset::Space"><span class="n"><span class="pre">Space</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I00EN3smc7movesetE" title="smc::moveset::Params"><span class="n"><span class="pre">Params</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">)</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3smc7moveset7movesetEPFvR5SpaceRdR6ParamsEPFvlR5SpaceRdR6ParamsEPFblR5SpaceRdR6ParamsE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>An alternative constructor for backwards compatibility. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3smc7moveset7movesetEPFvR5SpaceRdR6ParamsEPFvlR5SpaceRdR6ParamsEPFblR5SpaceRdR6ParamsEPFvlR5SpaceRdR6ParamsE">
+<span id="_CPPv3N3smc7moveset7movesetEPFvR5SpaceRdR6ParamsEPFvlR5SpaceRdR6ParamsEPFblR5SpaceRdR6ParamsEPFvlR5SpaceRdR6ParamsE"></span><span id="_CPPv2N3smc7moveset7movesetEPFvR5SpaceRdR6ParamsEPFvlR5SpaceRdR6ParamsEPFblR5SpaceRdR6ParamsEPFvlR5SpaceRdR6ParamsE"></span><span class="target" id="classsmc_1_1moveset_1a1ef41bba20f71cb92627e01360eb08c2"></span><span class="sig-name descname"><span class="n"><span class="pre">moveset</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">pfInit</span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">(</span></span><a class="reference internal" href="#_CPPv4I00EN3smc7movesetE" title="smc::moveset::Space"><span class="n"><span class="pre">Space</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I00EN3smc7movesetE" title="smc::moveset::Params"><span class="n"><span class="pre">Params</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">)</span></span>, <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">pfNewMove</span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">(</span></span><span class="kt"><span class="pre">long</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I00EN3smc7movesetE" title="smc::moveset::Space"><span class="n"><span class="pre">Space</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I00EN3smc7movesetE" title="smc::moveset::Params"><span class="n"><span class="pre">Params</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">)</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">pfNewMCMC</span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">(</span></span><span class="kt"><span class="pre">long</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I00EN3smc7movesetE" title="smc::moveset::Space"><span class="n"><span class="pre">Space</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I00EN3smc7movesetE" title="smc::moveset::Params"><span class="n"><span class="pre">Params</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">)</span></span>, <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">pfNewWeight</span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">(</span></span><span class="kt"><span class="pre">long</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I00EN3smc7movesetE" title="smc::moveset::Space"><span class="n"><span class="pre">Space</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I00EN3smc7movesetE" title="smc::moveset::Params"><span class="n"><span class="pre">Params</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">)</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3smc7moveset7movesetEPFvR5SpaceRdR6ParamsEPFvlR5SpaceRdR6ParamsEPFblR5SpaceRdR6ParamsEPFvlR5SpaceRdR6ParamsE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>An alternative constructor used for conditional SMC specifically. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3smc7movesetD0Ev">
+<span id="_CPPv3N3smc7movesetD0Ev"></span><span id="_CPPv2N3smc7movesetD0Ev"></span><span id="smc::moveset::~moveset"></span><span class="target" id="classsmc_1_1moveset_1a0792835f91ecd41230e68d850bd11f75"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">~moveset</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3smc7movesetD0Ev" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Free the workspace allocated for the algorithm parameters. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3smc7moveset12pfInitialiseER5SpaceRdR6Params">
+<span id="_CPPv3N3smc7moveset12pfInitialiseER5SpaceRdR6Params"></span><span id="_CPPv2N3smc7moveset12pfInitialiseER5SpaceRdR6Params"></span><span id="smc::moveset::pfInitialise__SpaceR.doubleR.ParamsR"></span><span class="target" id="classsmc_1_1moveset_1a7a9de1bcabd9871805dc290444c2f93e"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pfInitialise</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I00EN3smc7movesetE" title="smc::moveset::Space"><span class="n"><span class="pre">Space</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">value</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">weight</span></span>, <a class="reference internal" href="#_CPPv4I00EN3smc7movesetE" title="smc::moveset::Params"><span class="n"><span class="pre">Params</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">myParams</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3smc7moveset12pfInitialiseER5SpaceRdR6Params" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Holder function for updates to be done before the move step. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3smc7moveset6pfMoveElR5SpaceRdR6Params">
+<span id="_CPPv3N3smc7moveset6pfMoveElR5SpaceRdR6Params"></span><span id="_CPPv2N3smc7moveset6pfMoveElR5SpaceRdR6Params"></span><span id="smc::moveset::pfMove__l.SpaceR.doubleR.ParamsR"></span><span class="target" id="classsmc_1_1moveset_1aadb55d5525fecea2ae41799dc9addd37"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pfMove</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">time</span></span>, <a class="reference internal" href="#_CPPv4I00EN3smc7movesetE" title="smc::moveset::Space"><span class="n"><span class="pre">Space</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">value</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">weight</span></span>, <a class="reference internal" href="#_CPPv4I00EN3smc7movesetE" title="smc::moveset::Params"><span class="n"><span class="pre">Params</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">myParams</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3smc7moveset6pfMoveElR5SpaceRdR6Params" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Holder function for updates to be done before the MCMC step. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3smc7moveset6pfMCMCElR5SpaceRdR6Params">
+<span id="_CPPv3N3smc7moveset6pfMCMCElR5SpaceRdR6Params"></span><span id="_CPPv2N3smc7moveset6pfMCMCElR5SpaceRdR6Params"></span><span id="smc::moveset::pfMCMC__l.SpaceR.doubleR.ParamsR"></span><span class="target" id="classsmc_1_1moveset_1aa800251335f4220fa8389e5ea1231acf"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pfMCMC</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">time</span></span>, <a class="reference internal" href="#_CPPv4I00EN3smc7movesetE" title="smc::moveset::Space"><span class="n"><span class="pre">Space</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">value</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">weight</span></span>, <a class="reference internal" href="#_CPPv4I00EN3smc7movesetE" title="smc::moveset::Params"><span class="n"><span class="pre">Params</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">myParams</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3smc7moveset6pfMCMCElR5SpaceRdR6Params" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Holder function for updates to be done at the end of each iteration. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3smc7moveset8pfWeightElR5SpaceRdR6Params">
+<span id="_CPPv3N3smc7moveset8pfWeightElR5SpaceRdR6Params"></span><span id="_CPPv2N3smc7moveset8pfWeightElR5SpaceRdR6Params"></span><span id="smc::moveset::pfWeight__l.SpaceR.doubleR.ParamsR"></span><span class="target" id="classsmc_1_1moveset_1aaf4ddcd60382d696729fd55c36c1e4eb"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pfWeight</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">time</span></span>, <a class="reference internal" href="#_CPPv4I00EN3smc7movesetE" title="smc::moveset::Space"><span class="n"><span class="pre">Space</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">referenceValue</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">referenceWeight</span></span>, <a class="reference internal" href="#_CPPv4I00EN3smc7movesetE" title="smc::moveset::Params"><span class="n"><span class="pre">Params</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">myParams</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3smc7moveset8pfWeightElR5SpaceRdR6Params" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Holder function for weighting of conditioning reference trajectory. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3smc7moveset6DoInitER10populationI5SpaceElR6Params">
+<span id="_CPPv3N3smc7moveset6DoInitER10populationI5SpaceElR6Params"></span><span id="_CPPv2N3smc7moveset6DoInitER10populationI5SpaceElR6Params"></span><span id="smc::moveset::DoInit__population:Space:R.l.ParamsR"></span><span class="target" id="classsmc_1_1moveset_1ab262a9789a6e9204441b8d46ccd4dba9"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DoInit</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="population.html#_CPPv4I0EN3smc10populationE" title="smc::population"><span class="n"><span class="pre">population</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I00EN3smc7movesetE" title="smc::moveset::Space"><span class="n"><span class="pre">Space</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">pFrom</span></span>, <span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">N</span></span>, <a class="reference internal" href="#_CPPv4I00EN3smc7movesetE" title="smc::moveset::Params"><span class="n"><span class="pre">Params</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3smc7moveset6DoInitER10populationI5SpaceElR6Params" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Initialise the population of particles. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3smc7moveset6DoMCMCElR10populationI5SpaceEliRiR6Params">
+<span id="_CPPv3N3smc7moveset6DoMCMCElR10populationI5SpaceEliRiR6Params"></span><span id="_CPPv2N3smc7moveset6DoMCMCElR10populationI5SpaceEliRiR6Params"></span><span id="smc::moveset::DoMCMC__l.population:Space:R.l.i.iR.ParamsR"></span><span class="target" id="classsmc_1_1moveset_1adbefc0b5ff0d22b94b031a960f8a8c27"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DoMCMC</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">lTime</span></span>, <a class="reference internal" href="population.html#_CPPv4I0EN3smc10populationE" title="smc::population"><span class="n"><span class="pre">population</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I00EN3smc7movesetE" title="smc::moveset::Space"><span class="n"><span class="pre">Space</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">pFrom</span></span>, <span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">N</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">nRepeats</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">nAccepted</span></span>, <a class="reference internal" href="#_CPPv4I00EN3smc7movesetE" title="smc::moveset::Params"><span class="n"><span class="pre">Params</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3smc7moveset6DoMCMCElR10populationI5SpaceEliRiR6Params" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Perform an MCMC move on the particles. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3smc7moveset6DoMoveElR10populationI5SpaceElR6Params">
+<span id="_CPPv3N3smc7moveset6DoMoveElR10populationI5SpaceElR6Params"></span><span id="_CPPv2N3smc7moveset6DoMoveElR10populationI5SpaceElR6Params"></span><span id="smc::moveset::DoMove__l.population:Space:R.l.ParamsR"></span><span class="target" id="classsmc_1_1moveset_1a1815cd6f6577fa5fe7d558af8061ce0c"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DoMove</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">lTime</span></span>, <a class="reference internal" href="population.html#_CPPv4I0EN3smc10populationE" title="smc::population"><span class="n"><span class="pre">population</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I00EN3smc7movesetE" title="smc::moveset::Space"><span class="n"><span class="pre">Space</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">pFrom</span></span>, <span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">N</span></span>, <a class="reference internal" href="#_CPPv4I00EN3smc7movesetE" title="smc::moveset::Params"><span class="n"><span class="pre">Params</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3smc7moveset6DoMoveElR10populationI5SpaceElR6Params" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Select an appropriate move at time lTime and apply it to pFrom. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3smc7moveset17DoConditionalMoveElR10populationI5SpaceERK5SpacelR6Params">
+<span id="_CPPv3N3smc7moveset17DoConditionalMoveElR10populationI5SpaceERK5SpacelR6Params"></span><span id="_CPPv2N3smc7moveset17DoConditionalMoveElR10populationI5SpaceERK5SpacelR6Params"></span><span id="smc::moveset::DoConditionalMove__l.population:Space:R.SpaceCR.l.ParamsR"></span><span class="target" id="classsmc_1_1moveset_1a8f695a635a2469b15ebcff70100297aa"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DoConditionalMove</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">lTime</span></span>, <a class="reference internal" href="population.html#_CPPv4I0EN3smc10populationE" title="smc::population"><span class="n"><span class="pre">population</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I00EN3smc7movesetE" title="smc::moveset::Space"><span class="n"><span class="pre">Space</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">pFrom</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I00EN3smc7movesetE" title="smc::moveset::Space"><span class="n"><span class="pre">Space</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">referenceValue</span></span>, <span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">lReferenceIndex</span></span>, <a class="reference internal" href="#_CPPv4I00EN3smc7movesetE" title="smc::moveset::Params"><span class="n"><span class="pre">Params</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">params</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3smc7moveset17DoConditionalMoveElR10populationI5SpaceERK5SpacelR6Params" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Performs a conditional move: sets conditional reference value and re-weights corresponding particle coordinate. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-private-members">Private Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N3smc7moveset17defaultInitialiseE">
+<span id="_CPPv3N3smc7moveset17defaultInitialiseE"></span><span id="_CPPv2N3smc7moveset17defaultInitialiseE"></span><span class="target" id="classsmc_1_1moveset_1af86cd53918ca1a0efaf7339fbf1369e7"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">defaultInitialise</span></span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">(</span></span><a class="reference internal" href="#_CPPv4I00EN3smc7movesetE" title="smc::moveset::Space"><span class="n"><span class="pre">Space</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I00EN3smc7movesetE" title="smc::moveset::Params"><span class="n"><span class="pre">Params</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">)</span></span><a class="headerlink" href="#_CPPv4N3smc7moveset17defaultInitialiseE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Default functions (only needed so that they can be overriden for backwards compatibility) The function which initialises a single particle. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N3smc7moveset11defaultMoveE">
+<span id="_CPPv3N3smc7moveset11defaultMoveE"></span><span id="_CPPv2N3smc7moveset11defaultMoveE"></span><span class="target" id="classsmc_1_1moveset_1ae07933ed6c32e4cc51ab3f060081e7bf"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">defaultMove</span></span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">(</span></span><span class="kt"><span class="pre">long</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I00EN3smc7movesetE" title="smc::moveset::Space"><span class="n"><span class="pre">Space</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I00EN3smc7movesetE" title="smc::moveset::Params"><span class="n"><span class="pre">Params</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">)</span></span><a class="headerlink" href="#_CPPv4N3smc7moveset11defaultMoveE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>The functions which perform actual moves on a single particle. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N3smc7moveset11defaultMCMCE">
+<span id="_CPPv3N3smc7moveset11defaultMCMCE"></span><span id="_CPPv2N3smc7moveset11defaultMCMCE"></span><span class="target" id="classsmc_1_1moveset_1ac13c8aae10ec4c2c900e2d4dd8b3a5ad"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">defaultMCMC</span></span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">(</span></span><span class="kt"><span class="pre">long</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I00EN3smc7movesetE" title="smc::moveset::Space"><span class="n"><span class="pre">Space</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I00EN3smc7movesetE" title="smc::moveset::Params"><span class="n"><span class="pre">Params</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">)</span></span><a class="headerlink" href="#_CPPv4N3smc7moveset11defaultMCMCE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>One iteration of a Markov Chain Monte Carlo move for a single particle. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N3smc7moveset13defaultWeightE">
+<span id="_CPPv3N3smc7moveset13defaultWeightE"></span><span id="_CPPv2N3smc7moveset13defaultWeightE"></span><span class="target" id="classsmc_1_1moveset_1a25f89a568d72e02180751389aaf20baf"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">defaultWeight</span></span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">(</span></span><span class="kt"><span class="pre">long</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I00EN3smc7movesetE" title="smc::moveset::Space"><span class="n"><span class="pre">Space</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I00EN3smc7movesetE" title="smc::moveset::Params"><span class="n"><span class="pre">Params</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">)</span></span><a class="headerlink" href="#_CPPv4N3smc7moveset13defaultWeightE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>The function which weights a single (reference) particle coordinate. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="population.html" class="btn btn-neutral float-left" title="Particle Population" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="adaptMethods.html" class="btn btn-neutral float-right" title="Adaptation Methods" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Leah South, Ilya Zarubin, Dirk Eddelbuettel, Adam Johansen.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

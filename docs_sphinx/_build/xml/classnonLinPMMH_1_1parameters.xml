@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classnonLinPMMH_1_1parameters" kind="class" language="C++" prot="public">
+    <compoundname>nonLinPMMH::parameters</compoundname>
+    <includes refid="nonLinPMMH_8h" local="no">nonLinPMMH.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classnonLinPMMH_1_1parameters_1a4a3c06036653812cdad69583b6fd3905" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double nonLinPMMH::parameters::sigv</definition>
+        <argsstring></argsstring>
+        <name>sigv</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/nonLinPMMH.h" line="31" column="16" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/nonLinPMMH.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnonLinPMMH_1_1parameters_1abfbbe72aeed2188596cb3dfbd20f1fd9" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double nonLinPMMH::parameters::sigw</definition>
+        <argsstring></argsstring>
+        <name>sigw</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/nonLinPMMH.h" line="31" column="21" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/nonLinPMMH.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/nonLinPMMH.h" line="29" column="1" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/nonLinPMMH.h" bodystart="28" bodyend="32"/>
+    <listofallmembers>
+      <member refid="classnonLinPMMH_1_1parameters_1a4a3c06036653812cdad69583b6fd3905" prot="public" virt="non-virtual"><scope>nonLinPMMH::parameters</scope><name>sigv</name></member>
+      <member refid="classnonLinPMMH_1_1parameters_1abfbbe72aeed2188596cb3dfbd20f1fd9" prot="public" virt="non-virtual"><scope>nonLinPMMH::parameters</scope><name>sigw</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

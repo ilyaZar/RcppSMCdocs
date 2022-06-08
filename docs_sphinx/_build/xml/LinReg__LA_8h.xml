@@ -1,0 +1,192 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="LinReg__LA_8h" kind="file" language="C++">
+    <compoundname>LinReg_LA.h</compoundname>
+    <includes refid="smctc_8h" local="yes">smctc.h</includes>
+    <incdepgraph>
+      <node id="16">
+        <label>staticModelAdapt.h</label>
+        <link refid="staticModelAdapt_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>moveset.h</label>
+        <link refid="moveset_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>limits</label>
+      </node>
+      <node id="11">
+        <label>float.h</label>
+      </node>
+      <node id="1">
+        <label>/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/LinReg_LA.h</label>
+        <link refid="LinReg__LA_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>cmath</label>
+      </node>
+      <node id="10">
+        <label>RcppArmadillo.h</label>
+      </node>
+      <node id="6">
+        <label>smc-exception.h</label>
+        <link refid="smc-exception_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>adaptMethods.h</label>
+        <link refid="adaptMethods_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>population.h</label>
+        <link refid="population_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>cstdlib</label>
+      </node>
+      <node id="5">
+        <label>iostream</label>
+      </node>
+      <node id="13">
+        <label>history.h</label>
+        <link refid="history_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>sampler.h</label>
+        <link refid="sampler_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>smctc.h</label>
+        <link refid="smctc_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>algorithm</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classLinReg__LA_1_1rad__state" prot="public">LinReg_LA::rad_state</innerclass>
+    <innerclass refid="classLinReg__LA_1_1rad__obs" prot="public">LinReg_LA::rad_obs</innerclass>
+    <innerclass refid="classLinReg__LA_1_1LinReg__LA__move" prot="public">LinReg_LA::LinReg_LA_move</innerclass>
+    <innernamespace refid="namespaceLinReg__LA">LinReg_LA</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>-*-<sp/>mode:<sp/>C++;<sp/>c-indent-level:<sp/>4;<sp/>c-basic-offset:<sp/>4;<sp/>indent-tabs-mode:<sp/>nil;<sp/>-*-</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>LinReg_LA.h:<sp/>Rcpp<sp/>wrapper<sp/>for<sp/>SMC<sp/>library<sp/>--<sp/>A<sp/>simple<sp/>example<sp/>for<sp/>estimating</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>the<sp/>parameters<sp/>of<sp/>a<sp/>linear<sp/>regression<sp/>model<sp/>using<sp/>likelihood<sp/>annealing<sp/>SMC.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Copyright<sp/>(C)<sp/>2017<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Dirk<sp/>Eddelbuettel,<sp/>Adam<sp/>Johansen<sp/>and<sp/>Leah<sp/>South</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>RcppSMC.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/>RcppSMC<sp/>is<sp/>free<sp/>software:<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify<sp/>it</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>as<sp/>published<sp/>by</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//<sp/>the<sp/>Free<sp/>Software<sp/>Foundation,<sp/>either<sp/>version<sp/>2<sp/>of<sp/>the<sp/>License,<sp/>or</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/>(at<sp/>your<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//<sp/>RcppSMC<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,<sp/>but</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">//<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">//<sp/>MERCHANTABILITY<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">//<sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">//<sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">//<sp/>along<sp/>with<sp/>RcppSMC.<sp/><sp/>If<sp/>not,<sp/>see<sp/>&lt;http://www.gnu.org/licenses/&gt;.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="smctc_8h" kindref="compound">smctc.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="namespaceLinReg__LA" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceLinReg__LA" kindref="compound">LinReg_LA</ref><sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="27" refid="classLinReg__LA_1_1rad__state" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classLinReg__LA_1_1rad__state" kindref="compound">rad_state</ref></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="30" refid="classLinReg__LA_1_1rad__state_1a8cf81e465b65cbe907002d1021b800be" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>arma::vec<sp/><ref refid="classLinReg__LA_1_1rad__state_1a8cf81e465b65cbe907002d1021b800be" kindref="member">theta</ref>;<sp/></highlight><highlight class="comment">//<sp/>(alpha,beta,phi)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="classLinReg__LA_1_1rad__state_1a6963bd3c941e7e66031802cf4400a435" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classLinReg__LA_1_1rad__state_1a6963bd3c941e7e66031802cf4400a435" kindref="member">loglike</ref>;</highlight></codeline>
+<codeline lineno="32" refid="classLinReg__LA_1_1rad__state_1acc40054b5fa4f43f5b468c584f97a499" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classLinReg__LA_1_1rad__state_1acc40054b5fa4f43f5b468c584f97a499" kindref="member">logprior</ref>;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="classLinReg__LA_1_1rad__obs" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classLinReg__LA_1_1rad__obs" kindref="compound">rad_obs</ref></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="38" refid="classLinReg__LA_1_1rad__obs_1a50518046df6e259b7acbf6bc012110a9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>arma::vec<sp/><ref refid="classLinReg__LA_1_1rad__obs_1a50518046df6e259b7acbf6bc012110a9" kindref="member">y</ref>,<sp/><ref refid="classLinReg__LA_1_1rad__obs_1a3a31329522b786e6aaedbf885295ab10" kindref="member">x</ref>;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="namespaceLinReg__LA_1a1601cf36abf32cc4342a20d8bb3044ff" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classLinReg__LA_1_1rad__obs" kindref="compound">rad_obs</ref><sp/><ref refid="namespaceLinReg__LA_1a1601cf36abf32cc4342a20d8bb3044ff" kindref="member">data</ref>;</highlight></codeline>
+<codeline lineno="42" refid="namespaceLinReg__LA_1a2a3655a1a626b64570d1c1532c0c50f4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="namespaceLinReg__LA_1a2a3655a1a626b64570d1c1532c0c50f4" kindref="member">mean_x</ref>;</highlight></codeline>
+<codeline lineno="43" refid="namespaceLinReg__LA_1a9d8527189563c8b923aef9b0bf467fd6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="namespaceLinReg__LA_1a9d8527189563c8b923aef9b0bf467fd6" kindref="member">lIterates</ref>;</highlight></codeline>
+<codeline lineno="44" refid="namespaceLinReg__LA_1acca84c3c07643b5752a3b95121edffee" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>arma::vec<sp/><ref refid="namespaceLinReg__LA_1acca84c3c07643b5752a3b95121edffee" kindref="member">temps</ref>;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="namespaceLinReg__LA_1a9b91024cd274f001407c42f17228258c" kindref="member">logLikelihood</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classLinReg__LA_1_1rad__state" kindref="compound">rad_state</ref><sp/>&amp;<sp/>value);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="namespaceLinReg__LA_1aaf4b717f46b46d9c7276ebc2ad9a1592" kindref="member">logPrior</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classLinReg__LA_1_1rad__state" kindref="compound">rad_state</ref><sp/>&amp;<sp/>value);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//A<sp/>derived<sp/>class<sp/>for<sp/>the<sp/>moves</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="classLinReg__LA_1_1LinReg__LA__move" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classLinReg__LA_1_1LinReg__LA__move" kindref="compound">LinReg_LA_move</ref>:</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classsmc_1_1moveset" kindref="compound">smc::moveset</ref>&lt;rad_state,smc::nullParams&gt;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classLinReg__LA_1_1LinReg__LA__move_1a651fa1fa03f9addc0b149d2ad076a74d" kindref="member">pfInitialise</ref>(<ref refid="classLinReg__LA_1_1rad__state" kindref="compound">rad_state</ref><sp/>&amp;<sp/>value,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>&amp;<sp/>logweight,<sp/><ref refid="classsmc_1_1nullParams" kindref="compound">smc::nullParams</ref><sp/>&amp;<sp/>param);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classLinReg__LA_1_1LinReg__LA__move_1a52184c660e3b1de90ad533b354b96a4c" kindref="member">pfMove</ref>(</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>lTime,<sp/><ref refid="classLinReg__LA_1_1rad__state" kindref="compound">rad_state</ref><sp/>&amp;<sp/>value,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>&amp;<sp/>logweight,<sp/><ref refid="classsmc_1_1nullParams" kindref="compound">smc::nullParams</ref><sp/>&amp;<sp/>param);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classLinReg__LA_1_1LinReg__LA__move_1a082152cae98aff26be4fc77b4656d72e" kindref="member">pfMCMC</ref>(</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>lTime,<sp/><ref refid="classLinReg__LA_1_1rad__state" kindref="compound">rad_state</ref><sp/>&amp;<sp/>value,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>&amp;<sp/>logweight,<sp/><ref refid="classsmc_1_1nullParams" kindref="compound">smc::nullParams</ref><sp/>&amp;<sp/>param);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="classLinReg__LA_1_1LinReg__LA__move_1ae39a7bd4554f3fe2e51d48adf0f26c28" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classLinReg__LA_1_1LinReg__LA__move_1ae39a7bd4554f3fe2e51d48adf0f26c28" kindref="member">~LinReg_LA_move</ref>()<sp/>{};</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="namespaceLinReg__LA_1a89038def2b61972fa9d5de5f989dd9d6" kindref="member">integrand_ps</ref>(</highlight><highlight class="keywordtype">long</highlight><highlight class="normal">,</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>rad_state<sp/>&amp;,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="namespaceLinReg__LA_1af69b4e2c8853e7b320535502841f90a4" kindref="member">width_ps</ref>(</highlight><highlight class="keywordtype">long</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="66" refid="namespaceLinReg__LA_1a5790550270ce25021beb2f7b6b15f259" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classsmc_1_1moveset" kindref="compound">smc::moveset&lt;rad_state,smc::nullParams&gt;</ref>*<sp/><ref refid="namespaceLinReg__LA_1a5790550270ce25021beb2f7b6b15f259" kindref="member">myMove</ref>;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/LinReg_LA.h"/>
+  </compounddef>
+</doxygen>

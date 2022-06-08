@@ -1,0 +1,251 @@
+\hypertarget{classsmc_1_1moveset}{}\doxysection{smc\+::moveset$<$ Space, Params $>$ Class Template Reference}
+\label{classsmc_1_1moveset}\index{smc::moveset$<$ Space, Params $>$@{smc::moveset$<$ Space, Params $>$}}
+
+
+A template class for a set of moves for use in an S\+MC samplers framework.  
+
+
+
+
+{\ttfamily \#include $<$moveset.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsmc_1_1moveset_a507b985fafe3f1572edafb429bf7c2c1}{moveset}} ()
+\begin{DoxyCompactList}\small\item\em Create a completely unspecified moveset. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsmc_1_1moveset_a857a88c99a6aa68903d1dd67561f8a19}{moveset}} (void($\ast$pf\+Init)(Space \&, double \&, Params \&), void($\ast$pf\+New\+Move)(long, Space \&, double \&, Params \&), bool($\ast$pf\+New\+M\+C\+MC)(long, Space \&, double \&, Params \&))
+\begin{DoxyCompactList}\small\item\em An alternative constructor for backwards compatibility. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsmc_1_1moveset_a1ef41bba20f71cb92627e01360eb08c2}{moveset}} (void($\ast$pf\+Init)(Space \&, double \&, Params \&), void($\ast$pf\+New\+Move)(long, Space \&, double \&, Params \&), bool($\ast$pf\+New\+M\+C\+MC)(long, Space \&, double \&, Params \&), void($\ast$pf\+New\+Weight)(long, Space \&, double \&, Params \&))
+\begin{DoxyCompactList}\small\item\em An alternative constructor used for conditional S\+MC specifically. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classsmc_1_1moveset_a0792835f91ecd41230e68d850bd11f75}{$\sim$moveset}} ()
+\begin{DoxyCompactList}\small\item\em Free the workspace allocated for the algorithm parameters. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classsmc_1_1moveset_a7a9de1bcabd9871805dc290444c2f93e}{pf\+Initialise}} (Space \&value, double \&weight, Params \&my\+Params)
+\begin{DoxyCompactList}\small\item\em Holder function for updates to be done before the move step. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classsmc_1_1moveset_aadb55d5525fecea2ae41799dc9addd37}{pf\+Move}} (long time, Space \&value, double \&weight, Params \&my\+Params)
+\begin{DoxyCompactList}\small\item\em Holder function for updates to be done before the M\+C\+MC step. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classsmc_1_1moveset_aa800251335f4220fa8389e5ea1231acf}{pf\+M\+C\+MC}} (long time, Space \&value, double \&weight, Params \&my\+Params)
+\begin{DoxyCompactList}\small\item\em Holder function for updates to be done at the end of each iteration. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classsmc_1_1moveset_aaf4ddcd60382d696729fd55c36c1e4eb}{pf\+Weight}} (long time, Space \&reference\+Value, double \&reference\+Weight, Params \&my\+Params)
+\begin{DoxyCompactList}\small\item\em Holder function for weighting of conditioning reference trajectory. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classsmc_1_1moveset_ab262a9789a6e9204441b8d46ccd4dba9}{Do\+Init}} (\mbox{\hyperlink{classsmc_1_1population}{population}}$<$ Space $>$ \&p\+From, long N, Params \&)
+\begin{DoxyCompactList}\small\item\em Initialise the population of particles. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classsmc_1_1moveset_adbefc0b5ff0d22b94b031a960f8a8c27}{Do\+M\+C\+MC}} (long l\+Time, \mbox{\hyperlink{classsmc_1_1population}{population}}$<$ Space $>$ \&p\+From, long N, int n\+Repeats, int \&n\+Accepted, Params \&)
+\begin{DoxyCompactList}\small\item\em Perform an M\+C\+MC move on the particles. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classsmc_1_1moveset_a1815cd6f6577fa5fe7d558af8061ce0c}{Do\+Move}} (long l\+Time, \mbox{\hyperlink{classsmc_1_1population}{population}}$<$ Space $>$ \&p\+From, long N, Params \&)
+\begin{DoxyCompactList}\small\item\em Select an appropriate move at time l\+Time and apply it to p\+From. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classsmc_1_1moveset_a8f695a635a2469b15ebcff70100297aa}{Do\+Conditional\+Move}} (long l\+Time, \mbox{\hyperlink{classsmc_1_1population}{population}}$<$ Space $>$ \&p\+From, const Space \&reference\+Value, long l\+Reference\+Index, Params \&params)
+\begin{DoxyCompactList}\small\item\em Performs a conditional move\+: sets conditional reference value and re-\/weights corresponding particle coordinate. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+void($\ast$ \mbox{\hyperlink{classsmc_1_1moveset_af86cd53918ca1a0efaf7339fbf1369e7}{default\+Initialise}} )(Space \&, double \&, Params \&)
+\item 
+void($\ast$ \mbox{\hyperlink{classsmc_1_1moveset_ae07933ed6c32e4cc51ab3f060081e7bf}{default\+Move}} )(long, Space \&, double \&, Params \&)
+\begin{DoxyCompactList}\small\item\em The functions which perform actual moves on a single particle. \end{DoxyCompactList}\item 
+bool($\ast$ \mbox{\hyperlink{classsmc_1_1moveset_ac13c8aae10ec4c2c900e2d4dd8b3a5ad}{default\+M\+C\+MC}} )(long, Space \&, double \&, Params \&)
+\begin{DoxyCompactList}\small\item\em One iteration of a Markov Chain Monte Carlo move for a single particle. \end{DoxyCompactList}\item 
+void($\ast$ \mbox{\hyperlink{classsmc_1_1moveset_a25f89a568d72e02180751389aaf20baf}{default\+Weight}} )(long, Space \&, double \&, Params \&)
+\begin{DoxyCompactList}\small\item\em The function which weights a single (reference) particle coordinate. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$class Space, class Params$>$\newline
+class smc\+::moveset$<$ Space, Params $>$}
+
+A template class for a set of moves for use in an S\+MC samplers framework. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsmc_1_1moveset_a507b985fafe3f1572edafb429bf7c2c1}\label{classsmc_1_1moveset_a507b985fafe3f1572edafb429bf7c2c1}} 
+\index{smc::moveset$<$ Space, Params $>$@{smc::moveset$<$ Space, Params $>$}!moveset@{moveset}}
+\index{moveset@{moveset}!smc::moveset$<$ Space, Params $>$@{smc::moveset$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{moveset()}{moveset()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$class Space , class Params $>$ \\
+\mbox{\hyperlink{classsmc_1_1moveset}{smc\+::moveset}}$<$ Space, Params $>$\+::\mbox{\hyperlink{classsmc_1_1moveset}{moveset}}}
+
+
+
+Create a completely unspecified moveset. 
+
+The argument free \mbox{\hyperlink{classsmc_1_1moveset}{smc\+::moveset}} constructor simply sets the number of available moves to zero and sets all of the associated function pointers to N\+U\+LL. \mbox{\Hypertarget{classsmc_1_1moveset_a857a88c99a6aa68903d1dd67561f8a19}\label{classsmc_1_1moveset_a857a88c99a6aa68903d1dd67561f8a19}} 
+\index{smc::moveset$<$ Space, Params $>$@{smc::moveset$<$ Space, Params $>$}!moveset@{moveset}}
+\index{moveset@{moveset}!smc::moveset$<$ Space, Params $>$@{smc::moveset$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{moveset()}{moveset()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$class Space , class Params $>$ \\
+\mbox{\hyperlink{classsmc_1_1moveset}{smc\+::moveset}}$<$ Space, Params $>$\+::\mbox{\hyperlink{classsmc_1_1moveset}{moveset}} (\begin{DoxyParamCaption}\item[{void($\ast$)(Space \&, double \&, Params \&)}]{pf\+Init,  }\item[{void($\ast$)(long, Space \&, double \&, Params \&)}]{pf\+New\+Move,  }\item[{bool($\ast$)(long, Space \&, double \&, Params \&)}]{pf\+New\+M\+C\+MC }\end{DoxyParamCaption})}
+
+
+
+An alternative constructor for backwards compatibility. 
+
+\mbox{\Hypertarget{classsmc_1_1moveset_a1ef41bba20f71cb92627e01360eb08c2}\label{classsmc_1_1moveset_a1ef41bba20f71cb92627e01360eb08c2}} 
+\index{smc::moveset$<$ Space, Params $>$@{smc::moveset$<$ Space, Params $>$}!moveset@{moveset}}
+\index{moveset@{moveset}!smc::moveset$<$ Space, Params $>$@{smc::moveset$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{moveset()}{moveset()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$class Space , class Params $>$ \\
+\mbox{\hyperlink{classsmc_1_1moveset}{smc\+::moveset}}$<$ Space, Params $>$\+::\mbox{\hyperlink{classsmc_1_1moveset}{moveset}} (\begin{DoxyParamCaption}\item[{void($\ast$)(Space \&, double \&, Params \&)}]{pf\+Init,  }\item[{void($\ast$)(long, Space \&, double \&, Params \&)}]{pf\+New\+Move,  }\item[{bool($\ast$)(long, Space \&, double \&, Params \&)}]{pf\+New\+M\+C\+MC,  }\item[{void($\ast$)(long, Space \&, double \&, Params \&)}]{pf\+New\+Weight }\end{DoxyParamCaption})}
+
+
+
+An alternative constructor used for conditional S\+MC specifically. 
+
+\mbox{\Hypertarget{classsmc_1_1moveset_a0792835f91ecd41230e68d850bd11f75}\label{classsmc_1_1moveset_a0792835f91ecd41230e68d850bd11f75}} 
+\index{smc::moveset$<$ Space, Params $>$@{smc::moveset$<$ Space, Params $>$}!````~moveset@{$\sim$moveset}}
+\index{````~moveset@{$\sim$moveset}!smc::moveset$<$ Space, Params $>$@{smc::moveset$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$moveset()}{~moveset()}}
+{\footnotesize\ttfamily template$<$class Space , class Params $>$ \\
+virtual \mbox{\hyperlink{classsmc_1_1moveset}{smc\+::moveset}}$<$ Space, Params $>$\+::$\sim$\mbox{\hyperlink{classsmc_1_1moveset}{moveset}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Free the workspace allocated for the algorithm parameters. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classsmc_1_1moveset_a8f695a635a2469b15ebcff70100297aa}\label{classsmc_1_1moveset_a8f695a635a2469b15ebcff70100297aa}} 
+\index{smc::moveset$<$ Space, Params $>$@{smc::moveset$<$ Space, Params $>$}!DoConditionalMove@{DoConditionalMove}}
+\index{DoConditionalMove@{DoConditionalMove}!smc::moveset$<$ Space, Params $>$@{smc::moveset$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{DoConditionalMove()}{DoConditionalMove()}}
+{\footnotesize\ttfamily template$<$class Space , class Params $>$ \\
+void \mbox{\hyperlink{classsmc_1_1moveset}{smc\+::moveset}}$<$ Space, Params $>$\+::Do\+Conditional\+Move (\begin{DoxyParamCaption}\item[{long}]{l\+Time,  }\item[{\mbox{\hyperlink{classsmc_1_1population}{population}}$<$ Space $>$ \&}]{p\+From,  }\item[{const Space \&}]{reference\+Value,  }\item[{long}]{l\+Reference\+Index,  }\item[{Params \&}]{params }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Performs a conditional move\+: sets conditional reference value and re-\/weights corresponding particle coordinate. 
+
+Sets conditional reference value of l\+Time-\/coordinate.
+
+Re-\/weights this coordinate.\mbox{\Hypertarget{classsmc_1_1moveset_ab262a9789a6e9204441b8d46ccd4dba9}\label{classsmc_1_1moveset_ab262a9789a6e9204441b8d46ccd4dba9}} 
+\index{smc::moveset$<$ Space, Params $>$@{smc::moveset$<$ Space, Params $>$}!DoInit@{DoInit}}
+\index{DoInit@{DoInit}!smc::moveset$<$ Space, Params $>$@{smc::moveset$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{DoInit()}{DoInit()}}
+{\footnotesize\ttfamily template$<$class Space , class Params $>$ \\
+void \mbox{\hyperlink{classsmc_1_1moveset}{smc\+::moveset}}$<$ Space, Params $>$\+::Do\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsmc_1_1population}{population}}$<$ Space $>$ \&}]{p\+From,  }\item[{long}]{N,  }\item[{Params \&}]{params }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Initialise the population of particles. 
+
+\mbox{\Hypertarget{classsmc_1_1moveset_adbefc0b5ff0d22b94b031a960f8a8c27}\label{classsmc_1_1moveset_adbefc0b5ff0d22b94b031a960f8a8c27}} 
+\index{smc::moveset$<$ Space, Params $>$@{smc::moveset$<$ Space, Params $>$}!DoMCMC@{DoMCMC}}
+\index{DoMCMC@{DoMCMC}!smc::moveset$<$ Space, Params $>$@{smc::moveset$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{DoMCMC()}{DoMCMC()}}
+{\footnotesize\ttfamily template$<$class Space , class Params $>$ \\
+bool \mbox{\hyperlink{classsmc_1_1moveset}{smc\+::moveset}}$<$ Space, Params $>$\+::Do\+M\+C\+MC (\begin{DoxyParamCaption}\item[{long}]{l\+Time,  }\item[{\mbox{\hyperlink{classsmc_1_1population}{population}}$<$ Space $>$ \&}]{p\+From,  }\item[{long}]{N,  }\item[{int}]{n\+Repeats,  }\item[{int \&}]{n\+Accepted,  }\item[{Params \&}]{params }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Perform an M\+C\+MC move on the particles. 
+
+\mbox{\Hypertarget{classsmc_1_1moveset_a1815cd6f6577fa5fe7d558af8061ce0c}\label{classsmc_1_1moveset_a1815cd6f6577fa5fe7d558af8061ce0c}} 
+\index{smc::moveset$<$ Space, Params $>$@{smc::moveset$<$ Space, Params $>$}!DoMove@{DoMove}}
+\index{DoMove@{DoMove}!smc::moveset$<$ Space, Params $>$@{smc::moveset$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{DoMove()}{DoMove()}}
+{\footnotesize\ttfamily template$<$class Space , class Params $>$ \\
+void \mbox{\hyperlink{classsmc_1_1moveset}{smc\+::moveset}}$<$ Space, Params $>$\+::Do\+Move (\begin{DoxyParamCaption}\item[{long}]{l\+Time,  }\item[{\mbox{\hyperlink{classsmc_1_1population}{population}}$<$ Space $>$ \&}]{p\+From,  }\item[{long}]{N,  }\item[{Params \&}]{params }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Select an appropriate move at time l\+Time and apply it to p\+From. 
+
+\mbox{\Hypertarget{classsmc_1_1moveset_a7a9de1bcabd9871805dc290444c2f93e}\label{classsmc_1_1moveset_a7a9de1bcabd9871805dc290444c2f93e}} 
+\index{smc::moveset$<$ Space, Params $>$@{smc::moveset$<$ Space, Params $>$}!pfInitialise@{pfInitialise}}
+\index{pfInitialise@{pfInitialise}!smc::moveset$<$ Space, Params $>$@{smc::moveset$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{pfInitialise()}{pfInitialise()}}
+{\footnotesize\ttfamily template$<$class Space , class Params $>$ \\
+virtual void \mbox{\hyperlink{classsmc_1_1moveset}{smc\+::moveset}}$<$ Space, Params $>$\+::pf\+Initialise (\begin{DoxyParamCaption}\item[{Space \&}]{value,  }\item[{double \&}]{weight,  }\item[{Params \&}]{my\+Params }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Holder function for updates to be done before the move step. 
+
+
+
+Reimplemented in \mbox{\hyperlink{classnonLinPMMH_1_1nonLinPMMH__move_a0bf71a1cce2607766ee7a7744e291975}{non\+Lin\+P\+M\+M\+H\+::non\+Lin\+P\+M\+M\+H\+\_\+move}}, \mbox{\hyperlink{classnonlinbs_1_1nonlinbs__move_a9044ad5bcc1fab7325ba193264153b1a}{nonlinbs\+::nonlinbs\+\_\+move}}, and \mbox{\hyperlink{classBSPFG_1_1BSPFG__move_a7ef22bae2f2b07cedd399f83cb151283}{B\+S\+P\+F\+G\+::\+B\+S\+P\+F\+G\+\_\+move}}.
+
+\mbox{\Hypertarget{classsmc_1_1moveset_aa800251335f4220fa8389e5ea1231acf}\label{classsmc_1_1moveset_aa800251335f4220fa8389e5ea1231acf}} 
+\index{smc::moveset$<$ Space, Params $>$@{smc::moveset$<$ Space, Params $>$}!pfMCMC@{pfMCMC}}
+\index{pfMCMC@{pfMCMC}!smc::moveset$<$ Space, Params $>$@{smc::moveset$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{pfMCMC()}{pfMCMC()}}
+{\footnotesize\ttfamily template$<$class Space , class Params $>$ \\
+virtual bool \mbox{\hyperlink{classsmc_1_1moveset}{smc\+::moveset}}$<$ Space, Params $>$\+::pf\+M\+C\+MC (\begin{DoxyParamCaption}\item[{long}]{time,  }\item[{Space \&}]{value,  }\item[{double \&}]{weight,  }\item[{Params \&}]{my\+Params }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Holder function for updates to be done at the end of each iteration. 
+
+\mbox{\Hypertarget{classsmc_1_1moveset_aadb55d5525fecea2ae41799dc9addd37}\label{classsmc_1_1moveset_aadb55d5525fecea2ae41799dc9addd37}} 
+\index{smc::moveset$<$ Space, Params $>$@{smc::moveset$<$ Space, Params $>$}!pfMove@{pfMove}}
+\index{pfMove@{pfMove}!smc::moveset$<$ Space, Params $>$@{smc::moveset$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{pfMove()}{pfMove()}}
+{\footnotesize\ttfamily template$<$class Space , class Params $>$ \\
+virtual void \mbox{\hyperlink{classsmc_1_1moveset}{smc\+::moveset}}$<$ Space, Params $>$\+::pf\+Move (\begin{DoxyParamCaption}\item[{long}]{time,  }\item[{Space \&}]{value,  }\item[{double \&}]{weight,  }\item[{Params \&}]{my\+Params }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Holder function for updates to be done before the M\+C\+MC step. 
+
+
+
+Reimplemented in \mbox{\hyperlink{classnonLinPMMH_1_1nonLinPMMH__move_a49287819605b5975606fb12a76e1d545}{non\+Lin\+P\+M\+M\+H\+::non\+Lin\+P\+M\+M\+H\+\_\+move}}, \mbox{\hyperlink{classnonlinbs_1_1nonlinbs__move_a1971a5b12b0234f30d45ec234db8acb0}{nonlinbs\+::nonlinbs\+\_\+move}}, and \mbox{\hyperlink{classBSPFG_1_1BSPFG__move_a1388700e124be80b7438cbe077da6eff}{B\+S\+P\+F\+G\+::\+B\+S\+P\+F\+G\+\_\+move}}.
+
+\mbox{\Hypertarget{classsmc_1_1moveset_aaf4ddcd60382d696729fd55c36c1e4eb}\label{classsmc_1_1moveset_aaf4ddcd60382d696729fd55c36c1e4eb}} 
+\index{smc::moveset$<$ Space, Params $>$@{smc::moveset$<$ Space, Params $>$}!pfWeight@{pfWeight}}
+\index{pfWeight@{pfWeight}!smc::moveset$<$ Space, Params $>$@{smc::moveset$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{pfWeight()}{pfWeight()}}
+{\footnotesize\ttfamily template$<$class Space , class Params $>$ \\
+virtual void \mbox{\hyperlink{classsmc_1_1moveset}{smc\+::moveset}}$<$ Space, Params $>$\+::pf\+Weight (\begin{DoxyParamCaption}\item[{long}]{time,  }\item[{Space \&}]{reference\+Value,  }\item[{double \&}]{reference\+Weight,  }\item[{Params \&}]{my\+Params }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Holder function for weighting of conditioning reference trajectory. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classsmc_1_1moveset_af86cd53918ca1a0efaf7339fbf1369e7}\label{classsmc_1_1moveset_af86cd53918ca1a0efaf7339fbf1369e7}} 
+\index{smc::moveset$<$ Space, Params $>$@{smc::moveset$<$ Space, Params $>$}!defaultInitialise@{defaultInitialise}}
+\index{defaultInitialise@{defaultInitialise}!smc::moveset$<$ Space, Params $>$@{smc::moveset$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{defaultInitialise}{defaultInitialise}}
+{\footnotesize\ttfamily template$<$class Space , class Params $>$ \\
+void($\ast$ \mbox{\hyperlink{classsmc_1_1moveset}{smc\+::moveset}}$<$ Space, Params $>$\+::default\+Initialise) (Space \&, double \&, Params \&)\hspace{0.3cm}{\ttfamily [private]}}
+
+Default functions (only needed so that they can be overriden for backwards compatibility) The function which initialises a single particle. \mbox{\Hypertarget{classsmc_1_1moveset_ac13c8aae10ec4c2c900e2d4dd8b3a5ad}\label{classsmc_1_1moveset_ac13c8aae10ec4c2c900e2d4dd8b3a5ad}} 
+\index{smc::moveset$<$ Space, Params $>$@{smc::moveset$<$ Space, Params $>$}!defaultMCMC@{defaultMCMC}}
+\index{defaultMCMC@{defaultMCMC}!smc::moveset$<$ Space, Params $>$@{smc::moveset$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{defaultMCMC}{defaultMCMC}}
+{\footnotesize\ttfamily template$<$class Space , class Params $>$ \\
+bool($\ast$ \mbox{\hyperlink{classsmc_1_1moveset}{smc\+::moveset}}$<$ Space, Params $>$\+::default\+M\+C\+MC) (long, Space \&, double \&, Params \&)\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+One iteration of a Markov Chain Monte Carlo move for a single particle. 
+
+\mbox{\Hypertarget{classsmc_1_1moveset_ae07933ed6c32e4cc51ab3f060081e7bf}\label{classsmc_1_1moveset_ae07933ed6c32e4cc51ab3f060081e7bf}} 
+\index{smc::moveset$<$ Space, Params $>$@{smc::moveset$<$ Space, Params $>$}!defaultMove@{defaultMove}}
+\index{defaultMove@{defaultMove}!smc::moveset$<$ Space, Params $>$@{smc::moveset$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{defaultMove}{defaultMove}}
+{\footnotesize\ttfamily template$<$class Space , class Params $>$ \\
+void($\ast$ \mbox{\hyperlink{classsmc_1_1moveset}{smc\+::moveset}}$<$ Space, Params $>$\+::default\+Move) (long, Space \&, double \&, Params \&)\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The functions which perform actual moves on a single particle. 
+
+\mbox{\Hypertarget{classsmc_1_1moveset_a25f89a568d72e02180751389aaf20baf}\label{classsmc_1_1moveset_a25f89a568d72e02180751389aaf20baf}} 
+\index{smc::moveset$<$ Space, Params $>$@{smc::moveset$<$ Space, Params $>$}!defaultWeight@{defaultWeight}}
+\index{defaultWeight@{defaultWeight}!smc::moveset$<$ Space, Params $>$@{smc::moveset$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{defaultWeight}{defaultWeight}}
+{\footnotesize\ttfamily template$<$class Space , class Params $>$ \\
+void($\ast$ \mbox{\hyperlink{classsmc_1_1moveset}{smc\+::moveset}}$<$ Space, Params $>$\+::default\+Weight) (long, Space \&, double \&, Params \&)\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The function which weights a single (reference) particle coordinate. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/iz/\+Dropbox/projects/rcppsmc/\+Rcpp\+S\+M\+Cdocumentation/include/\mbox{\hyperlink{moveset_8h}{moveset.\+h}}\end{DoxyCompactItemize}

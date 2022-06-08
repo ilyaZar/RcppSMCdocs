@@ -1,0 +1,1201 @@
+\hypertarget{classsmc_1_1sampler}{}\doxysection{smc\+::sampler$<$ Space, Params $>$ Class Template Reference}
+\label{classsmc_1_1sampler}\index{smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}}
+
+
+A template class for an interacting particle system suitable for S\+MC sampling.  
+
+
+
+
+{\ttfamily \#include $<$sampler.\+h$>$}
+
+
+
+Collaboration diagram for smc\+::sampler$<$ Space, Params $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsmc_1_1sampler__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsmc_1_1sampler_a472b2a204b08daf80dc98794388904ee}{sampler}} (long l\+Size, \mbox{\hyperlink{namespaceHistoryType_a486dcf426d91692ddbce0dd2e97a9077}{History\+Type\+::\+Enum}} \mbox{\hyperlink{classsmc_1_1sampler_aece26a4146d52c7392594e6d1ffe0968}{ht\+History\+Mode}})
+\begin{DoxyCompactList}\small\item\em Create an particle system containing l\+Size uninitialised particles with the specified mode. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsmc_1_1sampler_aded691199afcc2e24f1faf2886449794}{sampler}} (long l\+Size, \mbox{\hyperlink{namespaceHistoryType_a486dcf426d91692ddbce0dd2e97a9077}{History\+Type\+::\+Enum}} \mbox{\hyperlink{classsmc_1_1sampler_aece26a4146d52c7392594e6d1ffe0968}{ht\+History\+Mode}}, \mbox{\hyperlink{classsmc_1_1moveset}{moveset}}$<$ Space, Params $>$ $\ast$)
+\begin{DoxyCompactList}\small\item\em Create an particle system containing l\+Size uninitialised particles with the specified mode. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsmc_1_1sampler_af9a1977c9da4adbf9b0a01db00eab189}{$\sim$sampler}} ()
+\begin{DoxyCompactList}\small\item\em Dispose of a sampler. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsmc_1_1sampler_ae72324aabe7dcd082881f45b43f6f750}{sampler}} (const \mbox{\hyperlink{classsmc_1_1sampler}{sampler}}$<$ Space, Params $>$ \&s\+From)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsmc_1_1sampler}{sampler}}$<$ Space, Params $>$ \& \mbox{\hyperlink{classsmc_1_1sampler_af94b34b4e20b6daad4dd517f0c6006c4}{operator=}} (const \mbox{\hyperlink{classsmc_1_1sampler}{sampler}}$<$ Space, Params $>$ \&s\+From)
+\begin{DoxyCompactList}\small\item\em Assignment overloading. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classsmc_1_1sampler_a0406aa8a7b757523bd7a5c4d98caa9c1}{Get\+E\+SS}} (void) const
+\begin{DoxyCompactList}\small\item\em Calculates and Returns the Effective Sample Size. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classsmc_1_1sampler_a2f9085247e3f2d87290f561dbfe35004}{Get\+Accepted}} (void) const
+\begin{DoxyCompactList}\small\item\em Returns the number of accepted proposals from the most recent M\+C\+MC iteration. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classsmc_1_1sampler_a7e9fdd095cdcdaba35c93eea378e23be}{Get\+Resampled}} (void) const
+\begin{DoxyCompactList}\small\item\em Returns a flag for whether the ensemble was resampled during the most recent iteration. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classsmc_1_1sampler_a6148fbbaa125e4994c336e720478f187}{Get\+Mcmc\+Repeats}} (void) const
+\begin{DoxyCompactList}\small\item\em Returns the number of M\+C\+MC repeats used in the most recent iteration. \end{DoxyCompactList}\item 
+const std\+::vector$<$ \mbox{\hyperlink{classsmc_1_1historyelement}{historyelement}}$<$ Space $>$ $>$ \& \mbox{\hyperlink{classsmc_1_1sampler_aaa249a5a25153b7cf1f9188af2c4f484}{Get\+History}} (void) const
+\begin{DoxyCompactList}\small\item\em Returns the History of the particle system. \end{DoxyCompactList}\item 
+long \mbox{\hyperlink{classsmc_1_1sampler_a3237ecc12bb3f858b6f48f9c2b6eb3ef}{Get\+Number}} (void) const
+\begin{DoxyCompactList}\small\item\em Returns the number of particles within the system. \end{DoxyCompactList}\item 
+long \mbox{\hyperlink{classsmc_1_1sampler_ae86060f9971051532a4e6baa8a153763}{Get\+History\+Length}} (void) const
+\begin{DoxyCompactList}\small\item\em Returns the number of evolution times stored in the history. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsmc_1_1population}{population}}$<$ Space $>$ \mbox{\hyperlink{classsmc_1_1sampler_a8915daf3ad97533e36ae323dda68dea2}{Get\+History\+Population}} (long n) const
+\begin{DoxyCompactList}\small\item\em Returns the current particle set stored in the history. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classsmc_1_1population}{population}}$<$ Space $>$ \& \mbox{\hyperlink{classsmc_1_1sampler_aaf6f7c243bac495d749dc2489b02a5ab}{Get\+History\+Population\+Refs}} (long n) const
+\begin{DoxyCompactList}\small\item\em Returns a reference to the particle set stored in the history. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsmc_1_1historyflags}{historyflags}} \mbox{\hyperlink{classsmc_1_1sampler_a0dea2ff19de9e6e1b3fb5c73fe282f3a}{Get\+History\+Flags}} (long n) const
+\begin{DoxyCompactList}\small\item\em Returns the history flags. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classsmc_1_1sampler_a2488928f15eb62dc87a2ae3c499ca9a9}{Get\+E\+SS}} (long n) const
+\begin{DoxyCompactList}\small\item\em Returns the Effective Sample Size of the specified particle generation. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{classsmc_1_1population}{population}}$<$ Space $>$ $>$ \mbox{\hyperlink{classsmc_1_1sampler_a7eb0ba76e8f078b6ce6b5c518d5e3b5c}{Get\+A\+Pop}} (void) const
+\begin{DoxyCompactList}\small\item\em Returns a vector of population objects re-\/ordered to match ancestral lines of the particle system. \end{DoxyCompactList}\item 
+arma\+::\+Col$<$ unsigned int $>$ \mbox{\hyperlink{classsmc_1_1sampler_ae8a186552e53e040839b98564e91f4a1}{Get\+A\+Line\+Ind}} (long n) const
+\begin{DoxyCompactList}\small\item\em Returns indices for ancestral line of particle \textquotesingle{}n\textquotesingle{}. \end{DoxyCompactList}\item 
+std\+::vector$<$ Space $>$ \mbox{\hyperlink{classsmc_1_1sampler_aa9b88abc6028271d0e004dd4a4071ab6}{Get\+A\+Line\+Space}} (long n) const
+\begin{DoxyCompactList}\small\item\em Returns ancestral line of particle \textquotesingle{}n\textquotesingle{}. \end{DoxyCompactList}\item 
+arma\+::\+Col$<$ unsigned int $>$ \mbox{\hyperlink{classsmc_1_1sampler_aef934b9a2559dce156fae29645ab4089}{Getu\+R\+S\+Indices}} (void) const
+\begin{DoxyCompactList}\small\item\em Returns current iteration resampled indices. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classsmc_1_1sampler_a758b1a6af2c727c43c36de09155db059}{Getu\+R\+S\+Index}} (long n) const
+\begin{DoxyCompactList}\small\item\em Returns current iteration resampled index number \textquotesingle{}n\textquotesingle{}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classsmc_1_1sampler_a29473291fd6cba8202718214cc8c2516}{Get\+Historymcmc\+Repeats}} (long n)
+\begin{DoxyCompactList}\small\item\em Returns the history number of M\+C\+MC iterations performed during this iteration. \end{DoxyCompactList}\item 
+const Params \& \mbox{\hyperlink{classsmc_1_1sampler_a3f9b62085c0162b2afb951944cefbbe7}{Get\+Alg\+Params}} (void) const
+\begin{DoxyCompactList}\small\item\em Returns the additional algorithm parameters. \end{DoxyCompactList}\item 
+const Space \& \mbox{\hyperlink{classsmc_1_1sampler_ade4aede0b9ad6001c02e4953bbb90557}{Get\+Particle\+ValueN}} (long n) const
+\begin{DoxyCompactList}\small\item\em Return the value of particle n. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classsmc_1_1sampler_a5393edbfe9e1daa3cceb0ea9e20f0d45}{Get\+Particle\+Log\+WeightN}} (long n) const
+\begin{DoxyCompactList}\small\item\em Return the logarithmic unnormalized weight of particle n. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classsmc_1_1sampler_a02f231667a23e4ea95af2ff559984b5b}{Get\+Particle\+WeightN}} (long n) const
+\begin{DoxyCompactList}\small\item\em Return the unnormalized weight of particle n. \end{DoxyCompactList}\item 
+arma\+::vec \mbox{\hyperlink{classsmc_1_1sampler_a396dcf31c7bbe9a53b9a499042489a5b}{Get\+Particle\+Weight}} (void) const
+\begin{DoxyCompactList}\small\item\em Return the unnormalized particle weights. \end{DoxyCompactList}\item 
+long \mbox{\hyperlink{classsmc_1_1sampler_ab9d45cfd0a2787bab0c111d5df0c3b77}{Get\+Time}} (void) const
+\begin{DoxyCompactList}\small\item\em Returns the current evolution time of the system. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classsmc_1_1sampler_a4df9333a991d86b8ebf9ff348ee9f485}{Get\+Log\+N\+C\+Path}} (void) const
+\begin{DoxyCompactList}\small\item\em Returns the current estimate of the log normalising constant ratio over the entire path. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classsmc_1_1sampler_a0ebe5470f04d674a1de0f4600bd5e893}{Get\+Log\+N\+C\+Step}} (void) const
+\begin{DoxyCompactList}\small\item\em Returns the current estimate of the log normalising constant ratio over the last step. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classsmc_1_1sampler_ae09ba8feb389b3446f15f861a0272c17}{Get\+N\+C\+Path}} (void) const
+\begin{DoxyCompactList}\small\item\em Returns the current estimate of the normalising constant ratio over the entire path. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classsmc_1_1sampler_a4f551a266ddf05e99c27c794087f3ded}{Get\+N\+C\+Step}} (void) const
+\begin{DoxyCompactList}\small\item\em Returns the current estimate of the normalising constant ratio over the last step. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsmc_1_1sampler_a1dc27a34f7ab2c35751caf9cc88c8e8a}{Initialise}} (void)
+\begin{DoxyCompactList}\small\item\em Initialise the sampler and its constituent particles. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classsmc_1_1sampler_a666b56f6f8b32f43d357db96a5b5c6f2}{Integrate}} (double($\ast$p\+Integrand)(const Space \&, void $\ast$), void $\ast$p\+Auxiliary)
+\begin{DoxyCompactList}\small\item\em Integrate the supplied function with respect to the current particle set. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classsmc_1_1sampler_ac7314f471000c8f7dca1cc5d42ca2a64}{Integrate\+Path\+Sampling}} (\mbox{\hyperlink{namespacePathSamplingType_a180b59ee4c6c2fa015480c609640614d}{Path\+Sampling\+Type\+::\+Enum}}, double($\ast$p\+Integrand)(long, const Space \&, void $\ast$), double($\ast$p\+Width)(long, void $\ast$), void $\ast$p\+Auxiliary)
+\begin{DoxyCompactList}\small\item\em Integrate the supplied function over the path using the supplied width function and integration method. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classsmc_1_1sampler_a62bbf526a0c5c504dee165b75cc4c420}{Integrate\+Path\+Sampling}} (double($\ast$p\+Integrand)(long, const Space \&, void $\ast$), double($\ast$p\+Width)(long, void $\ast$), void $\ast$p\+Auxiliary)
+\begin{DoxyCompactList}\small\item\em Integrate the supplied function over the path using the supplied width function and the default integration method (the corrected trapezoid rule). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsmc_1_1sampler_ae7d9eafdf6a741541425f1b57bde4cc8}{Iterate}} (void)
+\begin{DoxyCompactList}\small\item\em Perform one iteration of the simulation algorithm. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsmc_1_1sampler_a625924dbea2b9e202ac36a49d558aeb1}{Iterate\+Back}} (void)
+\begin{DoxyCompactList}\small\item\em Cancel one iteration of the simulation algorithm. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classsmc_1_1sampler_ac5528d39e667d64956261451517ff2e5}{Iterate\+Ess}} (void)
+\begin{DoxyCompactList}\small\item\em Perform one iteration of the simulation algorithm and return the resulting ess. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsmc_1_1sampler_ad787394d903686a67c92e2ec4a41816c}{Iterate\+Until}} (long l\+Terminate)
+\begin{DoxyCompactList}\small\item\em Perform iterations until the specified evolution time is reached. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsmc_1_1sampler_ac4e9ce4b69d34c4ae9d0cb923dc6b2ed}{Move\+Particles}} (void)
+\begin{DoxyCompactList}\small\item\em Move the particle set by proposing and applying an appropriate move to each particle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsmc_1_1sampler_a899baefc9c092a8162a7f1f775bda983}{Resample}} (\mbox{\hyperlink{namespaceResampleType_aae1fd87d74ce6bb0168e509df119f6eb}{Resample\+Type\+::\+Enum}} l\+Mode)
+\begin{DoxyCompactList}\small\item\em Resample the particle set using the specified resampling scheme. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsmc_1_1sampler_a2de74263c4be0fdc81779485bec9d5e9}{Set\+Move\+Set}} (\mbox{\hyperlink{classsmc_1_1moveset}{moveset}}$<$ Space, Params $>$ $\ast$p\+New\+Moves)
+\begin{DoxyCompactList}\small\item\em Sets the entire moveset to the one which is supplied. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsmc_1_1sampler_a8c1a6e83082941584894bfdf4e4a1de0}{Set\+Move\+Set}} (\mbox{\hyperlink{classsmc_1_1moveset}{moveset}}$<$ Space, Params $>$ \&New\+Moves)
+\begin{DoxyCompactList}\small\item\em Sets the entire moveset to the one which is supplied -\/ backwards compatibility. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsmc_1_1sampler_ada0a4d9961ed7f5f4d5849fb6911c146}{Set\+Resample\+Params}} (\mbox{\hyperlink{namespaceResampleType_aae1fd87d74ce6bb0168e509df119f6eb}{Resample\+Type\+::\+Enum}} rt\+Mode, double d\+Threshold)
+\begin{DoxyCompactList}\small\item\em Set Resampling Parameters. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsmc_1_1sampler_ae83b30eb2cb7f8bb3d975bda840f6119}{Set\+Alg\+Param}} (Params parameters)
+\begin{DoxyCompactList}\small\item\em Set additional algorithm parameters. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsmc_1_1sampler_a179a809335bde824bed2f4c11aee1b93}{Set\+Adapt\+Methods}} (\mbox{\hyperlink{classsmc_1_1adaptMethods}{adapt\+Methods}}$<$ Space, Params $>$ $\ast$adapt\+Method)
+\begin{DoxyCompactList}\small\item\em Set the methods to adapt the additional algorithm parameters. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsmc_1_1sampler_a9360d394cfb5bba57775235a930be017}{Set\+Mcmc\+Repeats}} (int reps)
+\begin{DoxyCompactList}\small\item\em Sets the number of M\+C\+MC repeats. \end{DoxyCompactList}\item 
+std\+::ostream \& \mbox{\hyperlink{classsmc_1_1sampler_a1baaee3a9ae3ec89c636f1e6ec55f38c}{Stream\+Particle}} (std\+::ostream \&os, long n) const
+\begin{DoxyCompactList}\small\item\em Dump a specified particle to the specified output stream in a human readable form. \end{DoxyCompactList}\item 
+std\+::ostream \& \mbox{\hyperlink{classsmc_1_1sampler_a0b10f998db4499d5e60887060b6d0ad3}{Stream\+Particles}} (std\+::ostream \&os) const
+\begin{DoxyCompactList}\small\item\em Dump the entire particle set to the specified output stream in a human readable form. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsmc_1_1sampler_a53807d342ac4a41e4ac4044fed2885d3}{Ostream\+M\+C\+M\+C\+Record\+To\+Stream}} (std\+::ostream \&os) const
+\begin{DoxyCompactList}\small\item\em Output a vector indicating the number of accepted M\+C\+MC moves at each time instance. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsmc_1_1sampler_a448d1939002343af0369b696f0761689}{Ostream\+Resampling\+Record\+To\+Stream}} (std\+::ostream \&os) const
+\begin{DoxyCompactList}\small\item\em Output a 0-\/1 value vector indicating the times at which resampling occured to an output stream. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classsmc_1_1sampler_a1ff2ec789f32dbf115823960e5158e6f}{\+\_\+copy}} (const \mbox{\hyperlink{classsmc_1_1sampler}{sampler}}$<$ Space, Params $>$ \&s\+From)
+\begin{DoxyCompactList}\small\item\em Helper function for copy constructor and assignment overloading. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classsmc_1_1sampler_a5a9865da2c6bc998d865114c574cb426}{Calc\+Log\+NC}} (void) const
+\begin{DoxyCompactList}\small\item\em Returns the crude normalising constant ratio estimate implied by the weights. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+long \mbox{\hyperlink{classsmc_1_1sampler_aa19bb3728da5cbe6db9211348fb699e6}{N}}
+\begin{DoxyCompactList}\small\item\em Number of particles in the system. \end{DoxyCompactList}\item 
+long \mbox{\hyperlink{classsmc_1_1sampler_a49562c192a35a61bfa8d3cbc0c8e38a2}{T}}
+\begin{DoxyCompactList}\small\item\em The current evolution time of the system. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceResampleType_aae1fd87d74ce6bb0168e509df119f6eb}{Resample\+Type\+::\+Enum}} \mbox{\hyperlink{classsmc_1_1sampler_a86ec66749d53010f5e7a0025288ee05e}{rt\+Resample\+Mode}}
+\begin{DoxyCompactList}\small\item\em The resampling mode which is to be employed. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classsmc_1_1sampler_ab85e9e87029de1d0660d887d7582cfcf}{d\+Resample\+Threshold}}
+\begin{DoxyCompactList}\small\item\em The effective sample size at which resampling should be used. \end{DoxyCompactList}\item 
+arma\+::vec \mbox{\hyperlink{classsmc_1_1sampler_ae7129c31c690eac51762006b4014e550}{d\+R\+S\+Weights}}
+\begin{DoxyCompactList}\small\item\em Structure used internally for resampling. \end{DoxyCompactList}\item 
+arma\+::\+Col$<$ int $>$ \mbox{\hyperlink{classsmc_1_1sampler_a9fe0293cd6610777c5e638761c13bf5f}{u\+R\+S\+Count}}
+\begin{DoxyCompactList}\small\item\em Structure used internally for resampling. \end{DoxyCompactList}\item 
+arma\+::\+Col$<$ unsigned int $>$ \mbox{\hyperlink{classsmc_1_1sampler_a5438b36f90d688120e76289a87dd287c}{u\+R\+S\+Indices}}
+\begin{DoxyCompactList}\small\item\em Structure used internally for resampling. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsmc_1_1population}{population}}$<$ Space $>$ \mbox{\hyperlink{classsmc_1_1sampler_ad9ab90f6fc45429d544031e50047d101}{p\+Population}}
+\begin{DoxyCompactList}\small\item\em The particles within the system. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsmc_1_1moveset}{moveset}}$<$ Space, Params $>$ $\ast$ \mbox{\hyperlink{classsmc_1_1sampler_a96300615cb900608783ebe2ebf22d001}{p\+Moves}}
+\begin{DoxyCompactList}\small\item\em The set of moves available. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classsmc_1_1sampler_a5f02b1f0615afc33b0daa5d0ae82cfbf}{moveset\+Belong}}
+\begin{DoxyCompactList}\small\item\em A flag to track whether the moveset object needs to be included in this destructor. \end{DoxyCompactList}\item 
+Params \mbox{\hyperlink{classsmc_1_1sampler_a545305926af1a03a471c81fbd72ab431}{alg\+Params}}
+\begin{DoxyCompactList}\small\item\em The additional algorithm parameters. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsmc_1_1adaptMethods}{adapt\+Methods}}$<$ Space, Params $>$ $\ast$ \mbox{\hyperlink{classsmc_1_1sampler_aaba69d99b529db6c77aa69f07ea605a5}{p\+Adapt}}
+\begin{DoxyCompactList}\small\item\em An object for adapting additional algorithm parameters. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classsmc_1_1sampler_abaf3a81e80f9f3297a5d67542bfb03ec}{adapt\+Belong}}
+\begin{DoxyCompactList}\small\item\em A flag to track whether the adaptation object needs to be included in this destructor. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classsmc_1_1sampler_a54ae775cd4c20870aee5ca353c3f8cb3}{n\+Accepted}}
+\begin{DoxyCompactList}\small\item\em The number of M\+C\+MC moves which have been accepted during this iteration. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classsmc_1_1sampler_a82570bda66ba66fecbf675c4f803ab56}{n\+Resampled}}
+\begin{DoxyCompactList}\small\item\em A flag which tracks whether the ensemble was resampled during this iteration. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classsmc_1_1sampler_a978a2613da180ac511f186dc01c92d94}{n\+Repeats}}
+\begin{DoxyCompactList}\small\item\em The number of M\+C\+MC repeats to be performed. The default is 1 if an M\+C\+MC step is supplied. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classsmc_1_1sampler_a46a71bac0445a1793e681717e648bef8}{accept\+Prob}}
+\item 
+double \mbox{\hyperlink{classsmc_1_1sampler_ad1e75bebf7a4377aafb0c4d9e006e921}{dlog\+N\+C\+Path}}
+\begin{DoxyCompactList}\small\item\em An estimate of the log normalising constant ratio over the entire path. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classsmc_1_1sampler_a80eba70fd89db813093dd69ff6015263}{dlog\+N\+C\+It}}
+\begin{DoxyCompactList}\small\item\em An estimate of the log normalising constant ratio over the last step. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceHistoryType_a486dcf426d91692ddbce0dd2e97a9077}{History\+Type\+::\+Enum}} \mbox{\hyperlink{classsmc_1_1sampler_aece26a4146d52c7392594e6d1ffe0968}{ht\+History\+Mode}}
+\begin{DoxyCompactList}\small\item\em A mode flag which indicates whether historical information is stored. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{classsmc_1_1historyelement}{historyelement}}$<$ Space $>$ $>$ \mbox{\hyperlink{classsmc_1_1sampler_a8b5be5010088140e00206b0995dca5a7}{History}}
+\begin{DoxyCompactList}\small\item\em The historical process associated with the particle system. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$class Space, class Params = null\+Params$>$\newline
+class smc\+::sampler$<$ Space, Params $>$}
+
+A template class for an interacting particle system suitable for S\+MC sampling. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsmc_1_1sampler_a472b2a204b08daf80dc98794388904ee}\label{classsmc_1_1sampler_a472b2a204b08daf80dc98794388904ee}} 
+\index{smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}!sampler@{sampler}}
+\index{sampler@{sampler}!smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{sampler()}{sampler()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$class Space , class Params $>$ \\
+\mbox{\hyperlink{classsmc_1_1sampler}{smc\+::sampler}}$<$ Space, Params $>$\+::\mbox{\hyperlink{classsmc_1_1sampler}{sampler}} (\begin{DoxyParamCaption}\item[{long}]{l\+Size,  }\item[{\mbox{\hyperlink{namespaceHistoryType_a486dcf426d91692ddbce0dd2e97a9077}{History\+Type\+::\+Enum}}}]{ht\+HM }\end{DoxyParamCaption})}
+
+
+
+Create an particle system containing l\+Size uninitialised particles with the specified mode. 
+
+The constructor prepares a sampler for use but does not assign any moves to the moveset, initialise the particles or otherwise perform any sampling related tasks. Its main function is to allocate a region of memory in which to store the particle set.
+
+
+\begin{DoxyParams}{Parameters}
+{\em l\+Size} & The number of particles present in the ensemble (at time 0 if this is a variable quantity) \\
+\hline
+{\em ht\+HM} & The history mode to use\+: set this to \mbox{\hyperlink{namespaceHistoryType_a486dcf426d91692ddbce0dd2e97a9077a63a959270994a6dff6ef90da8d618d28}{History\+Type\+::\+R\+AM}} to store the whole history of the system and \mbox{\hyperlink{namespaceHistoryType_a486dcf426d91692ddbce0dd2e97a9077a1755a29ac60a2ebeb8a4c4b27f48bcde}{History\+Type\+::\+N\+O\+NE}} to avoid doing so. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Space} & The class used to represent a point in the sample space. \\
+\hline
+{\em Params} & (optional) The class used for any additional parameters. \\
+\hline
+\end{DoxyTemplParams}
+\mbox{\Hypertarget{classsmc_1_1sampler_aded691199afcc2e24f1faf2886449794}\label{classsmc_1_1sampler_aded691199afcc2e24f1faf2886449794}} 
+\index{smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}!sampler@{sampler}}
+\index{sampler@{sampler}!smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{sampler()}{sampler()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$class Space , class Params $>$ \\
+\mbox{\hyperlink{classsmc_1_1sampler}{smc\+::sampler}}$<$ Space, Params $>$\+::\mbox{\hyperlink{classsmc_1_1sampler}{sampler}} (\begin{DoxyParamCaption}\item[{long}]{l\+Size,  }\item[{\mbox{\hyperlink{namespaceHistoryType_a486dcf426d91692ddbce0dd2e97a9077}{History\+Type\+::\+Enum}}}]{ht\+HM,  }\item[{\mbox{\hyperlink{classsmc_1_1moveset}{moveset}}$<$ Space, Params $>$ $\ast$}]{p\+New\+Moves }\end{DoxyParamCaption})}
+
+
+
+Create an particle system containing l\+Size uninitialised particles with the specified mode. 
+
+The constructor prepares a sampler for use but does not assign any moves to the moveset, initialise the particles or otherwise perform any sampling related tasks. Its main function is to allocate a region of memory in which to store the particle set.
+
+
+\begin{DoxyParams}{Parameters}
+{\em l\+Size} & The number of particles present in the ensemble (at time 0 if this is a variable quantity) \\
+\hline
+{\em ht\+HM} & The history mode to use\+: set this to \mbox{\hyperlink{namespaceHistoryType_a486dcf426d91692ddbce0dd2e97a9077a63a959270994a6dff6ef90da8d618d28}{History\+Type\+::\+R\+AM}} to store the whole history of the system and \mbox{\hyperlink{namespaceHistoryType_a486dcf426d91692ddbce0dd2e97a9077a1755a29ac60a2ebeb8a4c4b27f48bcde}{History\+Type\+::\+N\+O\+NE}} to avoid doing so. \\
+\hline
+{\em p\+New\+Moves} & Pointer to a moveset. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Space} & The class used to represent a point in the sample space. \\
+\hline
+{\em Params} & (optional) The class used for any additional parameters. \\
+\hline
+\end{DoxyTemplParams}
+\mbox{\Hypertarget{classsmc_1_1sampler_af9a1977c9da4adbf9b0a01db00eab189}\label{classsmc_1_1sampler_af9a1977c9da4adbf9b0a01db00eab189}} 
+\index{smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}!````~sampler@{$\sim$sampler}}
+\index{````~sampler@{$\sim$sampler}!smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$sampler()}{~sampler()}}
+{\footnotesize\ttfamily template$<$class Space , class Params $>$ \\
+\mbox{\hyperlink{classsmc_1_1sampler}{smc\+::sampler}}$<$ Space, Params $>$\+::$\sim$\mbox{\hyperlink{classsmc_1_1sampler}{sampler}}}
+
+
+
+Dispose of a sampler. 
+
+\mbox{\Hypertarget{classsmc_1_1sampler_ae72324aabe7dcd082881f45b43f6f750}\label{classsmc_1_1sampler_ae72324aabe7dcd082881f45b43f6f750}} 
+\index{smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}!sampler@{sampler}}
+\index{sampler@{sampler}!smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{sampler()}{sampler()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$class Space , class Params $>$ \\
+\mbox{\hyperlink{classsmc_1_1sampler}{smc\+::sampler}}$<$ Space, Params $>$\+::\mbox{\hyperlink{classsmc_1_1sampler}{sampler}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsmc_1_1sampler}{sampler}}$<$ Space, Params $>$ \&}]{s\+From }\end{DoxyParamCaption})}
+
+
+
+Copy constructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classsmc_1_1sampler_a1ff2ec789f32dbf115823960e5158e6f}\label{classsmc_1_1sampler_a1ff2ec789f32dbf115823960e5158e6f}} 
+\index{smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}!\_copy@{\_copy}}
+\index{\_copy@{\_copy}!smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{\_copy()}{\_copy()}}
+{\footnotesize\ttfamily template$<$class Space , class Params $>$ \\
+void \mbox{\hyperlink{classsmc_1_1sampler}{smc\+::sampler}}$<$ Space, Params $>$\+::\+\_\+copy (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsmc_1_1sampler}{sampler}}$<$ Space, Params $>$ \&}]{s\+From }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Helper function for copy constructor and assignment overloading. 
+
+Number of particles in the system.
+
+The current evolution time of the system.
+
+The resampling mode which is to be employed.
+
+The effective sample size at which resampling should be used.
+
+Structure used internally for resampling.
+
+Structure used internally for resampling.
+
+Structure used internally for resampling.
+
+The particles within the system.
+
+The set of moves.
+
+The additional algorithm parameters.
+
+The number of M\+C\+MC moves which have been accepted during this iteration
+
+A flag which tracks whether the ensemble was resampled during this iteration
+
+The number of M\+C\+MC repeats to be performed. The default is 1 if an M\+C\+MC step is supplied.
+
+The proportion of accepted M\+C\+MC proposals in the most recent M\+C\+MC step, with a default of -\/1 if no M\+C\+MC steps have been performed.
+
+An estimate of the log normalising constant ratio over the entire path.
+
+An estimate of the log normalising constant ratio over the last step.
+
+A mode flag which indicates whether historical information is stored
+
+The historical process associated with the particle system.\mbox{\Hypertarget{classsmc_1_1sampler_a5a9865da2c6bc998d865114c574cb426}\label{classsmc_1_1sampler_a5a9865da2c6bc998d865114c574cb426}} 
+\index{smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}!CalcLogNC@{CalcLogNC}}
+\index{CalcLogNC@{CalcLogNC}!smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{CalcLogNC()}{CalcLogNC()}}
+{\footnotesize\ttfamily template$<$class Space , class Params  = null\+Params$>$ \\
+double \mbox{\hyperlink{classsmc_1_1sampler}{smc\+::sampler}}$<$ Space, Params $>$\+::Calc\+Log\+NC (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Returns the crude normalising constant ratio estimate implied by the weights. 
+
+\mbox{\Hypertarget{classsmc_1_1sampler_a2f9085247e3f2d87290f561dbfe35004}\label{classsmc_1_1sampler_a2f9085247e3f2d87290f561dbfe35004}} 
+\index{smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}!GetAccepted@{GetAccepted}}
+\index{GetAccepted@{GetAccepted}!smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{GetAccepted()}{GetAccepted()}}
+{\footnotesize\ttfamily template$<$class Space , class Params  = null\+Params$>$ \\
+int \mbox{\hyperlink{classsmc_1_1sampler}{smc\+::sampler}}$<$ Space, Params $>$\+::Get\+Accepted (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the number of accepted proposals from the most recent M\+C\+MC iteration. 
+
+\mbox{\Hypertarget{classsmc_1_1sampler_a3f9b62085c0162b2afb951944cefbbe7}\label{classsmc_1_1sampler_a3f9b62085c0162b2afb951944cefbbe7}} 
+\index{smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}!GetAlgParams@{GetAlgParams}}
+\index{GetAlgParams@{GetAlgParams}!smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{GetAlgParams()}{GetAlgParams()}}
+{\footnotesize\ttfamily template$<$class Space , class Params  = null\+Params$>$ \\
+const Params\& \mbox{\hyperlink{classsmc_1_1sampler}{smc\+::sampler}}$<$ Space, Params $>$\+::Get\+Alg\+Params (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the additional algorithm parameters. 
+
+\mbox{\Hypertarget{classsmc_1_1sampler_ae8a186552e53e040839b98564e91f4a1}\label{classsmc_1_1sampler_ae8a186552e53e040839b98564e91f4a1}} 
+\index{smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}!GetALineInd@{GetALineInd}}
+\index{GetALineInd@{GetALineInd}!smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{GetALineInd()}{GetALineInd()}}
+{\footnotesize\ttfamily template$<$class Space , class Params $>$ \\
+arma\+::\+Col$<$ unsigned int $>$ \mbox{\hyperlink{classsmc_1_1sampler}{smc\+::sampler}}$<$ Space, Params $>$\+::Get\+A\+Line\+Ind (\begin{DoxyParamCaption}\item[{long}]{n }\end{DoxyParamCaption}) const}
+
+
+
+Returns indices for ancestral line of particle \textquotesingle{}n\textquotesingle{}. 
+
+Get final iteration indices and final iteration particle values\mbox{\Hypertarget{classsmc_1_1sampler_aa9b88abc6028271d0e004dd4a4071ab6}\label{classsmc_1_1sampler_aa9b88abc6028271d0e004dd4a4071ab6}} 
+\index{smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}!GetALineSpace@{GetALineSpace}}
+\index{GetALineSpace@{GetALineSpace}!smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{GetALineSpace()}{GetALineSpace()}}
+{\footnotesize\ttfamily template$<$class Space , class Params $>$ \\
+std\+::vector$<$ Space $>$ \mbox{\hyperlink{classsmc_1_1sampler}{smc\+::sampler}}$<$ Space, Params $>$\+::Get\+A\+Line\+Space (\begin{DoxyParamCaption}\item[{long}]{n }\end{DoxyParamCaption}) const}
+
+
+
+Returns ancestral line of particle \textquotesingle{}n\textquotesingle{}. 
+
+Get final iteration indices and final iteration particle values\mbox{\Hypertarget{classsmc_1_1sampler_a7eb0ba76e8f078b6ce6b5c518d5e3b5c}\label{classsmc_1_1sampler_a7eb0ba76e8f078b6ce6b5c518d5e3b5c}} 
+\index{smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}!GetAPop@{GetAPop}}
+\index{GetAPop@{GetAPop}!smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{GetAPop()}{GetAPop()}}
+{\footnotesize\ttfamily template$<$class Space , class Params $>$ \\
+std\+::vector$<$ \mbox{\hyperlink{classsmc_1_1population}{population}}$<$ Space $>$ $>$ \mbox{\hyperlink{classsmc_1_1sampler}{smc\+::sampler}}$<$ Space, Params $>$\+::Get\+A\+Pop (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns a vector of population objects re-\/ordered to match ancestral lines of the particle system. 
+
+Output container for particle population ancestor lines
+
+Get final iteration indices
+
+Get final iteration particle values
+
+Iterating from last iteration to initiliaization period whereby\+:
+\begin{DoxyEnumerate}
+\item Re-\/ordering particle population elements for each t=0,...,T-\/1 accoridng to ancestral lines
+\item Storing these particle population classes in output\+: population\+AL
+\end{DoxyEnumerate}
+
+Setting each particle population element at indices i=0,...,N-\/1 to its ancesor index in the output vector population\+AL
+
+Re-\/mapping ancestor indices to retrieve ancestor indices a period before
+
+The output container stores population classes re-\/ordered according to their ancestor lines for t=0,...,T-\/1. So, for example, the first each element of population\+AL\mbox{[}t\mbox{]} is the direct ancestor population class element of population\+AL\mbox{[}t+1\mbox{]}.\mbox{\Hypertarget{classsmc_1_1sampler_a2488928f15eb62dc87a2ae3c499ca9a9}\label{classsmc_1_1sampler_a2488928f15eb62dc87a2ae3c499ca9a9}} 
+\index{smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}!GetESS@{GetESS}}
+\index{GetESS@{GetESS}!smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{GetESS()}{GetESS()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class Space , class Params  = null\+Params$>$ \\
+double \mbox{\hyperlink{classsmc_1_1sampler}{smc\+::sampler}}$<$ Space, Params $>$\+::Get\+E\+SS (\begin{DoxyParamCaption}\item[{long}]{n }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the Effective Sample Size of the specified particle generation. 
+
+\mbox{\Hypertarget{classsmc_1_1sampler_a0406aa8a7b757523bd7a5c4d98caa9c1}\label{classsmc_1_1sampler_a0406aa8a7b757523bd7a5c4d98caa9c1}} 
+\index{smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}!GetESS@{GetESS}}
+\index{GetESS@{GetESS}!smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{GetESS()}{GetESS()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class Space , class Params $>$ \\
+double \mbox{\hyperlink{classsmc_1_1sampler}{smc\+::sampler}}$<$ Space, Params $>$\+::Get\+E\+SS (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const}
+
+
+
+Calculates and Returns the Effective Sample Size. 
+
+\mbox{\Hypertarget{classsmc_1_1sampler_aaa249a5a25153b7cf1f9188af2c4f484}\label{classsmc_1_1sampler_aaa249a5a25153b7cf1f9188af2c4f484}} 
+\index{smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}!GetHistory@{GetHistory}}
+\index{GetHistory@{GetHistory}!smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{GetHistory()}{GetHistory()}}
+{\footnotesize\ttfamily template$<$class Space , class Params  = null\+Params$>$ \\
+const std\+::vector$<$\mbox{\hyperlink{classsmc_1_1historyelement}{historyelement}}$<$Space$>$ $>$\& \mbox{\hyperlink{classsmc_1_1sampler}{smc\+::sampler}}$<$ Space, Params $>$\+::Get\+History (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the History of the particle system. 
+
+\mbox{\Hypertarget{classsmc_1_1sampler_a0dea2ff19de9e6e1b3fb5c73fe282f3a}\label{classsmc_1_1sampler_a0dea2ff19de9e6e1b3fb5c73fe282f3a}} 
+\index{smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}!GetHistoryFlags@{GetHistoryFlags}}
+\index{GetHistoryFlags@{GetHistoryFlags}!smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{GetHistoryFlags()}{GetHistoryFlags()}}
+{\footnotesize\ttfamily template$<$class Space , class Params  = null\+Params$>$ \\
+\mbox{\hyperlink{classsmc_1_1historyflags}{historyflags}} \mbox{\hyperlink{classsmc_1_1sampler}{smc\+::sampler}}$<$ Space, Params $>$\+::Get\+History\+Flags (\begin{DoxyParamCaption}\item[{long}]{n }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the history flags. 
+
+\mbox{\Hypertarget{classsmc_1_1sampler_ae86060f9971051532a4e6baa8a153763}\label{classsmc_1_1sampler_ae86060f9971051532a4e6baa8a153763}} 
+\index{smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}!GetHistoryLength@{GetHistoryLength}}
+\index{GetHistoryLength@{GetHistoryLength}!smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{GetHistoryLength()}{GetHistoryLength()}}
+{\footnotesize\ttfamily template$<$class Space , class Params  = null\+Params$>$ \\
+long \mbox{\hyperlink{classsmc_1_1sampler}{smc\+::sampler}}$<$ Space, Params $>$\+::Get\+History\+Length (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the number of evolution times stored in the history. 
+
+\mbox{\Hypertarget{classsmc_1_1sampler_a29473291fd6cba8202718214cc8c2516}\label{classsmc_1_1sampler_a29473291fd6cba8202718214cc8c2516}} 
+\index{smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}!GetHistorymcmcRepeats@{GetHistorymcmcRepeats}}
+\index{GetHistorymcmcRepeats@{GetHistorymcmcRepeats}!smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{GetHistorymcmcRepeats()}{GetHistorymcmcRepeats()}}
+{\footnotesize\ttfamily template$<$class Space , class Params  = null\+Params$>$ \\
+int \mbox{\hyperlink{classsmc_1_1sampler}{smc\+::sampler}}$<$ Space, Params $>$\+::Get\+Historymcmc\+Repeats (\begin{DoxyParamCaption}\item[{long}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the history number of M\+C\+MC iterations performed during this iteration. 
+
+\mbox{\Hypertarget{classsmc_1_1sampler_a8915daf3ad97533e36ae323dda68dea2}\label{classsmc_1_1sampler_a8915daf3ad97533e36ae323dda68dea2}} 
+\index{smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}!GetHistoryPopulation@{GetHistoryPopulation}}
+\index{GetHistoryPopulation@{GetHistoryPopulation}!smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{GetHistoryPopulation()}{GetHistoryPopulation()}}
+{\footnotesize\ttfamily template$<$class Space , class Params  = null\+Params$>$ \\
+\mbox{\hyperlink{classsmc_1_1population}{population}}$<$Space$>$ \mbox{\hyperlink{classsmc_1_1sampler}{smc\+::sampler}}$<$ Space, Params $>$\+::Get\+History\+Population (\begin{DoxyParamCaption}\item[{long}]{n }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the current particle set stored in the history. 
+
+\mbox{\Hypertarget{classsmc_1_1sampler_aaf6f7c243bac495d749dc2489b02a5ab}\label{classsmc_1_1sampler_aaf6f7c243bac495d749dc2489b02a5ab}} 
+\index{smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}!GetHistoryPopulationRefs@{GetHistoryPopulationRefs}}
+\index{GetHistoryPopulationRefs@{GetHistoryPopulationRefs}!smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{GetHistoryPopulationRefs()}{GetHistoryPopulationRefs()}}
+{\footnotesize\ttfamily template$<$class Space , class Params  = null\+Params$>$ \\
+const \mbox{\hyperlink{classsmc_1_1population}{population}}$<$Space$>$\& \mbox{\hyperlink{classsmc_1_1sampler}{smc\+::sampler}}$<$ Space, Params $>$\+::Get\+History\+Population\+Refs (\begin{DoxyParamCaption}\item[{long}]{n }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a reference to the particle set stored in the history. 
+
+\mbox{\Hypertarget{classsmc_1_1sampler_a4df9333a991d86b8ebf9ff348ee9f485}\label{classsmc_1_1sampler_a4df9333a991d86b8ebf9ff348ee9f485}} 
+\index{smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}!GetLogNCPath@{GetLogNCPath}}
+\index{GetLogNCPath@{GetLogNCPath}!smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{GetLogNCPath()}{GetLogNCPath()}}
+{\footnotesize\ttfamily template$<$class Space , class Params  = null\+Params$>$ \\
+double \mbox{\hyperlink{classsmc_1_1sampler}{smc\+::sampler}}$<$ Space, Params $>$\+::Get\+Log\+N\+C\+Path (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the current estimate of the log normalising constant ratio over the entire path. 
+
+\mbox{\Hypertarget{classsmc_1_1sampler_a0ebe5470f04d674a1de0f4600bd5e893}\label{classsmc_1_1sampler_a0ebe5470f04d674a1de0f4600bd5e893}} 
+\index{smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}!GetLogNCStep@{GetLogNCStep}}
+\index{GetLogNCStep@{GetLogNCStep}!smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{GetLogNCStep()}{GetLogNCStep()}}
+{\footnotesize\ttfamily template$<$class Space , class Params  = null\+Params$>$ \\
+double \mbox{\hyperlink{classsmc_1_1sampler}{smc\+::sampler}}$<$ Space, Params $>$\+::Get\+Log\+N\+C\+Step (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the current estimate of the log normalising constant ratio over the last step. 
+
+\mbox{\Hypertarget{classsmc_1_1sampler_a6148fbbaa125e4994c336e720478f187}\label{classsmc_1_1sampler_a6148fbbaa125e4994c336e720478f187}} 
+\index{smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}!GetMcmcRepeats@{GetMcmcRepeats}}
+\index{GetMcmcRepeats@{GetMcmcRepeats}!smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{GetMcmcRepeats()}{GetMcmcRepeats()}}
+{\footnotesize\ttfamily template$<$class Space , class Params  = null\+Params$>$ \\
+int \mbox{\hyperlink{classsmc_1_1sampler}{smc\+::sampler}}$<$ Space, Params $>$\+::Get\+Mcmc\+Repeats (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the number of M\+C\+MC repeats used in the most recent iteration. 
+
+\mbox{\Hypertarget{classsmc_1_1sampler_ae09ba8feb389b3446f15f861a0272c17}\label{classsmc_1_1sampler_ae09ba8feb389b3446f15f861a0272c17}} 
+\index{smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}!GetNCPath@{GetNCPath}}
+\index{GetNCPath@{GetNCPath}!smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{GetNCPath()}{GetNCPath()}}
+{\footnotesize\ttfamily template$<$class Space , class Params  = null\+Params$>$ \\
+double \mbox{\hyperlink{classsmc_1_1sampler}{smc\+::sampler}}$<$ Space, Params $>$\+::Get\+N\+C\+Path (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the current estimate of the normalising constant ratio over the entire path. 
+
+\mbox{\Hypertarget{classsmc_1_1sampler_a4f551a266ddf05e99c27c794087f3ded}\label{classsmc_1_1sampler_a4f551a266ddf05e99c27c794087f3ded}} 
+\index{smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}!GetNCStep@{GetNCStep}}
+\index{GetNCStep@{GetNCStep}!smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{GetNCStep()}{GetNCStep()}}
+{\footnotesize\ttfamily template$<$class Space , class Params  = null\+Params$>$ \\
+double \mbox{\hyperlink{classsmc_1_1sampler}{smc\+::sampler}}$<$ Space, Params $>$\+::Get\+N\+C\+Step (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the current estimate of the normalising constant ratio over the last step. 
+
+\mbox{\Hypertarget{classsmc_1_1sampler_a3237ecc12bb3f858b6f48f9c2b6eb3ef}\label{classsmc_1_1sampler_a3237ecc12bb3f858b6f48f9c2b6eb3ef}} 
+\index{smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}!GetNumber@{GetNumber}}
+\index{GetNumber@{GetNumber}!smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{GetNumber()}{GetNumber()}}
+{\footnotesize\ttfamily template$<$class Space , class Params  = null\+Params$>$ \\
+long \mbox{\hyperlink{classsmc_1_1sampler}{smc\+::sampler}}$<$ Space, Params $>$\+::Get\+Number (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the number of particles within the system. 
+
+\mbox{\Hypertarget{classsmc_1_1sampler_a5393edbfe9e1daa3cceb0ea9e20f0d45}\label{classsmc_1_1sampler_a5393edbfe9e1daa3cceb0ea9e20f0d45}} 
+\index{smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}!GetParticleLogWeightN@{GetParticleLogWeightN}}
+\index{GetParticleLogWeightN@{GetParticleLogWeightN}!smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{GetParticleLogWeightN()}{GetParticleLogWeightN()}}
+{\footnotesize\ttfamily template$<$class Space , class Params  = null\+Params$>$ \\
+double \mbox{\hyperlink{classsmc_1_1sampler}{smc\+::sampler}}$<$ Space, Params $>$\+::Get\+Particle\+Log\+WeightN (\begin{DoxyParamCaption}\item[{long}]{n }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Return the logarithmic unnormalized weight of particle n. 
+
+\mbox{\Hypertarget{classsmc_1_1sampler_ade4aede0b9ad6001c02e4953bbb90557}\label{classsmc_1_1sampler_ade4aede0b9ad6001c02e4953bbb90557}} 
+\index{smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}!GetParticleValueN@{GetParticleValueN}}
+\index{GetParticleValueN@{GetParticleValueN}!smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{GetParticleValueN()}{GetParticleValueN()}}
+{\footnotesize\ttfamily template$<$class Space , class Params  = null\+Params$>$ \\
+const Space\& \mbox{\hyperlink{classsmc_1_1sampler}{smc\+::sampler}}$<$ Space, Params $>$\+::Get\+Particle\+ValueN (\begin{DoxyParamCaption}\item[{long}]{n }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Return the value of particle n. 
+
+\mbox{\Hypertarget{classsmc_1_1sampler_a396dcf31c7bbe9a53b9a499042489a5b}\label{classsmc_1_1sampler_a396dcf31c7bbe9a53b9a499042489a5b}} 
+\index{smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}!GetParticleWeight@{GetParticleWeight}}
+\index{GetParticleWeight@{GetParticleWeight}!smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{GetParticleWeight()}{GetParticleWeight()}}
+{\footnotesize\ttfamily template$<$class Space , class Params  = null\+Params$>$ \\
+arma\+::vec \mbox{\hyperlink{classsmc_1_1sampler}{smc\+::sampler}}$<$ Space, Params $>$\+::Get\+Particle\+Weight (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Return the unnormalized particle weights. 
+
+\mbox{\Hypertarget{classsmc_1_1sampler_a02f231667a23e4ea95af2ff559984b5b}\label{classsmc_1_1sampler_a02f231667a23e4ea95af2ff559984b5b}} 
+\index{smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}!GetParticleWeightN@{GetParticleWeightN}}
+\index{GetParticleWeightN@{GetParticleWeightN}!smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{GetParticleWeightN()}{GetParticleWeightN()}}
+{\footnotesize\ttfamily template$<$class Space , class Params  = null\+Params$>$ \\
+double \mbox{\hyperlink{classsmc_1_1sampler}{smc\+::sampler}}$<$ Space, Params $>$\+::Get\+Particle\+WeightN (\begin{DoxyParamCaption}\item[{long}]{n }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Return the unnormalized weight of particle n. 
+
+\mbox{\Hypertarget{classsmc_1_1sampler_a7e9fdd095cdcdaba35c93eea378e23be}\label{classsmc_1_1sampler_a7e9fdd095cdcdaba35c93eea378e23be}} 
+\index{smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}!GetResampled@{GetResampled}}
+\index{GetResampled@{GetResampled}!smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{GetResampled()}{GetResampled()}}
+{\footnotesize\ttfamily template$<$class Space , class Params  = null\+Params$>$ \\
+int \mbox{\hyperlink{classsmc_1_1sampler}{smc\+::sampler}}$<$ Space, Params $>$\+::Get\+Resampled (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a flag for whether the ensemble was resampled during the most recent iteration. 
+
+\mbox{\Hypertarget{classsmc_1_1sampler_ab9d45cfd0a2787bab0c111d5df0c3b77}\label{classsmc_1_1sampler_ab9d45cfd0a2787bab0c111d5df0c3b77}} 
+\index{smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}!GetTime@{GetTime}}
+\index{GetTime@{GetTime}!smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{GetTime()}{GetTime()}}
+{\footnotesize\ttfamily template$<$class Space , class Params  = null\+Params$>$ \\
+long \mbox{\hyperlink{classsmc_1_1sampler}{smc\+::sampler}}$<$ Space, Params $>$\+::Get\+Time (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the current evolution time of the system. 
+
+\mbox{\Hypertarget{classsmc_1_1sampler_a758b1a6af2c727c43c36de09155db059}\label{classsmc_1_1sampler_a758b1a6af2c727c43c36de09155db059}} 
+\index{smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}!GetuRSIndex@{GetuRSIndex}}
+\index{GetuRSIndex@{GetuRSIndex}!smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{GetuRSIndex()}{GetuRSIndex()}}
+{\footnotesize\ttfamily template$<$class Space , class Params  = null\+Params$>$ \\
+int \mbox{\hyperlink{classsmc_1_1sampler}{smc\+::sampler}}$<$ Space, Params $>$\+::Getu\+R\+S\+Index (\begin{DoxyParamCaption}\item[{long}]{n }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns current iteration resampled index number \textquotesingle{}n\textquotesingle{}. 
+
+\mbox{\Hypertarget{classsmc_1_1sampler_aef934b9a2559dce156fae29645ab4089}\label{classsmc_1_1sampler_aef934b9a2559dce156fae29645ab4089}} 
+\index{smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}!GetuRSIndices@{GetuRSIndices}}
+\index{GetuRSIndices@{GetuRSIndices}!smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{GetuRSIndices()}{GetuRSIndices()}}
+{\footnotesize\ttfamily template$<$class Space , class Params  = null\+Params$>$ \\
+arma\+::\+Col$<$unsigned int$>$ \mbox{\hyperlink{classsmc_1_1sampler}{smc\+::sampler}}$<$ Space, Params $>$\+::Getu\+R\+S\+Indices (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns current iteration resampled indices. 
+
+\mbox{\Hypertarget{classsmc_1_1sampler_a1dc27a34f7ab2c35751caf9cc88c8e8a}\label{classsmc_1_1sampler_a1dc27a34f7ab2c35751caf9cc88c8e8a}} 
+\index{smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}!Initialise@{Initialise}}
+\index{Initialise@{Initialise}!smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{Initialise()}{Initialise()}}
+{\footnotesize\ttfamily template$<$class Space , class Params $>$ \\
+void \mbox{\hyperlink{classsmc_1_1sampler}{smc\+::sampler}}$<$ Space, Params $>$\+::Initialise (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initialise the sampler and its constituent particles. 
+
+At present this function resets the system evolution time to 0 and calls the moveset initialisor to assign each particle in the ensemble.
+
+Note that the initialisation function must be specified before calling this function. To avoid compiler warnings, \mbox{\hyperlink{namespaceHistoryType_a486dcf426d91692ddbce0dd2e97a9077a1755a29ac60a2ebeb8a4c4b27f48bcde}{History\+Type\+::\+N\+O\+NE}} is handled\mbox{\Hypertarget{classsmc_1_1sampler_a666b56f6f8b32f43d357db96a5b5c6f2}\label{classsmc_1_1sampler_a666b56f6f8b32f43d357db96a5b5c6f2}} 
+\index{smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}!Integrate@{Integrate}}
+\index{Integrate@{Integrate}!smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{Integrate()}{Integrate()}}
+{\footnotesize\ttfamily template$<$class Space , class Params $>$ \\
+double \mbox{\hyperlink{classsmc_1_1sampler}{smc\+::sampler}}$<$ Space, Params $>$\+::Integrate (\begin{DoxyParamCaption}\item[{double($\ast$)(const Space \&, void $\ast$)}]{p\+Integrand,  }\item[{void $\ast$}]{p\+Auxiliary }\end{DoxyParamCaption})}
+
+
+
+Integrate the supplied function with respect to the current particle set. 
+
+This function returns the result of integrating the supplied function under the empirical measure associated with the particle set at the present time. The final argument of the integrand function is a pointer which will be supplied with p\+Auxiliary to allow for arbitrary additional information to be passed to the function being integrated.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Integrand} & The function to integrate with respect to the particle set \\
+\hline
+{\em p\+Auxiliary} & A pointer to any auxiliary data which should be passed to the function \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classsmc_1_1sampler_a62bbf526a0c5c504dee165b75cc4c420}\label{classsmc_1_1sampler_a62bbf526a0c5c504dee165b75cc4c420}} 
+\index{smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}!IntegratePathSampling@{IntegratePathSampling}}
+\index{IntegratePathSampling@{IntegratePathSampling}!smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{IntegratePathSampling()}{IntegratePathSampling()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class Space , class Params  = null\+Params$>$ \\
+double \mbox{\hyperlink{classsmc_1_1sampler}{smc\+::sampler}}$<$ Space, Params $>$\+::Integrate\+Path\+Sampling (\begin{DoxyParamCaption}\item[{double($\ast$)(long, const Space \&, void $\ast$)}]{p\+Integrand,  }\item[{double($\ast$)(long, void $\ast$)}]{p\+Width,  }\item[{void $\ast$}]{p\+Auxiliary }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Integrate the supplied function over the path using the supplied width function and the default integration method (the corrected trapezoid rule). 
+
+\mbox{\Hypertarget{classsmc_1_1sampler_ac7314f471000c8f7dca1cc5d42ca2a64}\label{classsmc_1_1sampler_ac7314f471000c8f7dca1cc5d42ca2a64}} 
+\index{smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}!IntegratePathSampling@{IntegratePathSampling}}
+\index{IntegratePathSampling@{IntegratePathSampling}!smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{IntegratePathSampling()}{IntegratePathSampling()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class Space , class Params $>$ \\
+double \mbox{\hyperlink{classsmc_1_1sampler}{smc\+::sampler}}$<$ Space, Params $>$\+::Integrate\+Path\+Sampling (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacePathSamplingType_a180b59ee4c6c2fa015480c609640614d}{Path\+Sampling\+Type\+::\+Enum}}}]{P\+Stype,  }\item[{double($\ast$)(long, const Space \&, void $\ast$)}]{p\+Integrand,  }\item[{double($\ast$)(long, void $\ast$)}]{p\+Width,  }\item[{void $\ast$}]{p\+Auxiliary }\end{DoxyParamCaption})}
+
+
+
+Integrate the supplied function over the path using the supplied width function and integration method. 
+
+This function is intended to be used to estimate integrals of the sort which must be evaluated to determine the normalising constant of a distribution obtained using a sequence of potential functions proportional to densities with respect to the initial distribution to define a sequence of distributions leading up to the terminal, interesting distribution.
+
+In this context, the particle set at each time is used to make an estimate of the path sampling integrand, and numerical integration is then performed to obtain an estimate of the path sampling integral which is the natural logarithm of the ratio of normalising densities.
+
+The integrand is integrated at every time point in the population history. The results of this integration are taken to be point-\/evaluations of the path sampling integrand which are spaced on a grid of intervals given by the width function. The path sampling integral is then calculated by performing a suitable numerical integration and the results of this integration is returned.
+
+p\+Auxiliary is passed to both of the user specified functions to allow the user to pass additional data to either or both of these functions in a convenient manner. It is safe to use N\+U\+LL if no such data is used by either function.
+
+
+\begin{DoxyParams}{Parameters}
+{\em P\+Stype} & The numerical integration method to use \\
+\hline
+{\em p\+Integrand} & The function to integrated. The first argument is evolution time, the second the particle value at which the function is to be evaluated and the final argument is always p\+Auxiliary. \\
+\hline
+{\em p\+Width} & The function which returns the width of the path sampling grid at the specified evolution time. The final argument is always p\+Auxiliary \\
+\hline
+{\em p\+Auxiliary} & A pointer to auxiliary data to pass to both of the above functions \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Space} & The class used to represent a point in the sample space. \\
+\hline
+{\em Params} & (optional) The class used for any additional parameters.\\
+\hline
+\end{DoxyTemplParams}
+The P\+Stype parameter should be set to one of the following\+:
+\begin{DoxyEnumerate}
+\item \mbox{\hyperlink{namespacePathSamplingType_a180b59ee4c6c2fa015480c609640614da42f1f053b9781a7ec871027d81b52e59}{Path\+Sampling\+Type\+::\+R\+E\+C\+T\+A\+N\+G\+LE}} to use the rectangle rule for integration.
+\item \mbox{\hyperlink{namespacePathSamplingType_a180b59ee4c6c2fa015480c609640614dac3287e3782a18e753ff2d3a888f7a2a6}{Path\+Sampling\+Type\+::\+T\+R\+A\+P\+E\+Z\+O\+I\+D1}} to use the trapezoidal rule for integration.
+\item \mbox{\hyperlink{namespacePathSamplingType_a180b59ee4c6c2fa015480c609640614da32bc9c84af00767367ced38e687869da}{Path\+Sampling\+Type\+::\+T\+R\+A\+P\+E\+Z\+O\+I\+D2}} to use the trapezoidal rule for integration with a second order correction. 
+\end{DoxyEnumerate}\mbox{\Hypertarget{classsmc_1_1sampler_ae7d9eafdf6a741541425f1b57bde4cc8}\label{classsmc_1_1sampler_ae7d9eafdf6a741541425f1b57bde4cc8}} 
+\index{smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}!Iterate@{Iterate}}
+\index{Iterate@{Iterate}!smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{Iterate()}{Iterate()}}
+{\footnotesize\ttfamily template$<$class Space , class Params $>$ \\
+void \mbox{\hyperlink{classsmc_1_1sampler}{smc\+::sampler}}$<$ Space, Params $>$\+::Iterate (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Perform one iteration of the simulation algorithm. 
+
+The iterate function\+:
+\begin{DoxyEnumerate}
+\item moves the current particle set
+\item checks the effective sample size and resamples if necessary
+\item performs a mcmc step if required
+\item appends the current particle set to the history if desired
+\item increments the current evolution time 
+\end{DoxyEnumerate}\mbox{\Hypertarget{classsmc_1_1sampler_a625924dbea2b9e202ac36a49d558aeb1}\label{classsmc_1_1sampler_a625924dbea2b9e202ac36a49d558aeb1}} 
+\index{smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}!IterateBack@{IterateBack}}
+\index{IterateBack@{IterateBack}!smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{IterateBack()}{IterateBack()}}
+{\footnotesize\ttfamily template$<$class Space , class Params $>$ \\
+void \mbox{\hyperlink{classsmc_1_1sampler}{smc\+::sampler}}$<$ Space, Params $>$\+::Iterate\+Back (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Cancel one iteration of the simulation algorithm. 
+
+\mbox{\Hypertarget{classsmc_1_1sampler_ac5528d39e667d64956261451517ff2e5}\label{classsmc_1_1sampler_ac5528d39e667d64956261451517ff2e5}} 
+\index{smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}!IterateEss@{IterateEss}}
+\index{IterateEss@{IterateEss}!smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{IterateEss()}{IterateEss()}}
+{\footnotesize\ttfamily template$<$class Space , class Params $>$ \\
+double \mbox{\hyperlink{classsmc_1_1sampler}{smc\+::sampler}}$<$ Space, Params $>$\+::Iterate\+Ess (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Perform one iteration of the simulation algorithm and return the resulting ess. 
+
+To avoid compiler warnings, \mbox{\hyperlink{namespaceHistoryType_a486dcf426d91692ddbce0dd2e97a9077a1755a29ac60a2ebeb8a4c4b27f48bcde}{History\+Type\+::\+N\+O\+NE}} is handled\mbox{\Hypertarget{classsmc_1_1sampler_ad787394d903686a67c92e2ec4a41816c}\label{classsmc_1_1sampler_ad787394d903686a67c92e2ec4a41816c}} 
+\index{smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}!IterateUntil@{IterateUntil}}
+\index{IterateUntil@{IterateUntil}!smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{IterateUntil()}{IterateUntil()}}
+{\footnotesize\ttfamily template$<$class Space , class Params $>$ \\
+void \mbox{\hyperlink{classsmc_1_1sampler}{smc\+::sampler}}$<$ Space, Params $>$\+::Iterate\+Until (\begin{DoxyParamCaption}\item[{long}]{l\+Terminate }\end{DoxyParamCaption})}
+
+
+
+Perform iterations until the specified evolution time is reached. 
+
+\mbox{\Hypertarget{classsmc_1_1sampler_ac4e9ce4b69d34c4ae9d0cb923dc6b2ed}\label{classsmc_1_1sampler_ac4e9ce4b69d34c4ae9d0cb923dc6b2ed}} 
+\index{smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}!MoveParticles@{MoveParticles}}
+\index{MoveParticles@{MoveParticles}!smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{MoveParticles()}{MoveParticles()}}
+{\footnotesize\ttfamily template$<$class Space , class Params $>$ \\
+void \mbox{\hyperlink{classsmc_1_1sampler}{smc\+::sampler}}$<$ Space, Params $>$\+::Move\+Particles (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Move the particle set by proposing and applying an appropriate move to each particle. 
+
+\mbox{\Hypertarget{classsmc_1_1sampler_af94b34b4e20b6daad4dd517f0c6006c4}\label{classsmc_1_1sampler_af94b34b4e20b6daad4dd517f0c6006c4}} 
+\index{smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily template$<$class Space , class Params $>$ \\
+\mbox{\hyperlink{classsmc_1_1sampler}{sampler}}$<$ Space, Params $>$ \& \mbox{\hyperlink{classsmc_1_1sampler}{smc\+::sampler}}$<$ Space, Params $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsmc_1_1sampler}{sampler}}$<$ Space, Params $>$ \&}]{s\+From }\end{DoxyParamCaption})}
+
+
+
+Assignment overloading. 
+
+\mbox{\Hypertarget{classsmc_1_1sampler_a53807d342ac4a41e4ac4044fed2885d3}\label{classsmc_1_1sampler_a53807d342ac4a41e4ac4044fed2885d3}} 
+\index{smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}!OstreamMCMCRecordToStream@{OstreamMCMCRecordToStream}}
+\index{OstreamMCMCRecordToStream@{OstreamMCMCRecordToStream}!smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{OstreamMCMCRecordToStream()}{OstreamMCMCRecordToStream()}}
+{\footnotesize\ttfamily template$<$class Space , class Params $>$ \\
+void \mbox{\hyperlink{classsmc_1_1sampler}{smc\+::sampler}}$<$ Space, Params $>$\+::Ostream\+M\+C\+M\+C\+Record\+To\+Stream (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os }\end{DoxyParamCaption}) const}
+
+
+
+Output a vector indicating the number of accepted M\+C\+MC moves at each time instance. 
+
+This function records the M\+C\+MC acceptance history to the specified output stream as a list of the number of moves accepted at each time instant.
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & The output stream to send the data to. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classsmc_1_1sampler_a448d1939002343af0369b696f0761689}\label{classsmc_1_1sampler_a448d1939002343af0369b696f0761689}} 
+\index{smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}!OstreamResamplingRecordToStream@{OstreamResamplingRecordToStream}}
+\index{OstreamResamplingRecordToStream@{OstreamResamplingRecordToStream}!smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{OstreamResamplingRecordToStream()}{OstreamResamplingRecordToStream()}}
+{\footnotesize\ttfamily template$<$class Space , class Params $>$ \\
+void \mbox{\hyperlink{classsmc_1_1sampler}{smc\+::sampler}}$<$ Space, Params $>$\+::Ostream\+Resampling\+Record\+To\+Stream (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os }\end{DoxyParamCaption}) const}
+
+
+
+Output a 0-\/1 value vector indicating the times at which resampling occured to an output stream. 
+
+This function records the resampling history to the specified output stream as a 0-\/1 valued list which takes the value 1 for those time instances when resampling occured and 0 otherwise.
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & The output stream to send the data to. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classsmc_1_1sampler_a899baefc9c092a8162a7f1f775bda983}\label{classsmc_1_1sampler_a899baefc9c092a8162a7f1f775bda983}} 
+\index{smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}!Resample@{Resample}}
+\index{Resample@{Resample}!smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{Resample()}{Resample()}}
+{\footnotesize\ttfamily template$<$class Space , class Params $>$ \\
+void \mbox{\hyperlink{classsmc_1_1sampler}{smc\+::sampler}}$<$ Space, Params $>$\+::Resample (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceResampleType_aae1fd87d74ce6bb0168e509df119f6eb}{Resample\+Type\+::\+Enum}}}]{l\+Mode }\end{DoxyParamCaption})}
+
+
+
+Resample the particle set using the specified resampling scheme. 
+
+\mbox{\Hypertarget{classsmc_1_1sampler_a179a809335bde824bed2f4c11aee1b93}\label{classsmc_1_1sampler_a179a809335bde824bed2f4c11aee1b93}} 
+\index{smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}!SetAdaptMethods@{SetAdaptMethods}}
+\index{SetAdaptMethods@{SetAdaptMethods}!smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{SetAdaptMethods()}{SetAdaptMethods()}}
+{\footnotesize\ttfamily template$<$class Space , class Params  = null\+Params$>$ \\
+void \mbox{\hyperlink{classsmc_1_1sampler}{smc\+::sampler}}$<$ Space, Params $>$\+::Set\+Adapt\+Methods (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsmc_1_1adaptMethods}{adapt\+Methods}}$<$ Space, Params $>$ $\ast$}]{adapt\+Method }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the methods to adapt the additional algorithm parameters. 
+
+\mbox{\Hypertarget{classsmc_1_1sampler_ae83b30eb2cb7f8bb3d975bda840f6119}\label{classsmc_1_1sampler_ae83b30eb2cb7f8bb3d975bda840f6119}} 
+\index{smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}!SetAlgParam@{SetAlgParam}}
+\index{SetAlgParam@{SetAlgParam}!smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{SetAlgParam()}{SetAlgParam()}}
+{\footnotesize\ttfamily template$<$class Space , class Params  = null\+Params$>$ \\
+void \mbox{\hyperlink{classsmc_1_1sampler}{smc\+::sampler}}$<$ Space, Params $>$\+::Set\+Alg\+Param (\begin{DoxyParamCaption}\item[{Params}]{parameters }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set additional algorithm parameters. 
+
+\mbox{\Hypertarget{classsmc_1_1sampler_a9360d394cfb5bba57775235a930be017}\label{classsmc_1_1sampler_a9360d394cfb5bba57775235a930be017}} 
+\index{smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}!SetMcmcRepeats@{SetMcmcRepeats}}
+\index{SetMcmcRepeats@{SetMcmcRepeats}!smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{SetMcmcRepeats()}{SetMcmcRepeats()}}
+{\footnotesize\ttfamily template$<$class Space , class Params  = null\+Params$>$ \\
+void \mbox{\hyperlink{classsmc_1_1sampler}{smc\+::sampler}}$<$ Space, Params $>$\+::Set\+Mcmc\+Repeats (\begin{DoxyParamCaption}\item[{int}]{reps }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the number of M\+C\+MC repeats. 
+
+\mbox{\Hypertarget{classsmc_1_1sampler_a8c1a6e83082941584894bfdf4e4a1de0}\label{classsmc_1_1sampler_a8c1a6e83082941584894bfdf4e4a1de0}} 
+\index{smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}!SetMoveSet@{SetMoveSet}}
+\index{SetMoveSet@{SetMoveSet}!smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{SetMoveSet()}{SetMoveSet()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class Space , class Params  = null\+Params$>$ \\
+void \mbox{\hyperlink{classsmc_1_1sampler}{smc\+::sampler}}$<$ Space, Params $>$\+::Set\+Move\+Set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsmc_1_1moveset}{moveset}}$<$ Space, Params $>$ \&}]{New\+Moves }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the entire moveset to the one which is supplied -\/ backwards compatibility. 
+
+\mbox{\Hypertarget{classsmc_1_1sampler_a2de74263c4be0fdc81779485bec9d5e9}\label{classsmc_1_1sampler_a2de74263c4be0fdc81779485bec9d5e9}} 
+\index{smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}!SetMoveSet@{SetMoveSet}}
+\index{SetMoveSet@{SetMoveSet}!smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{SetMoveSet()}{SetMoveSet()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class Space , class Params  = null\+Params$>$ \\
+void \mbox{\hyperlink{classsmc_1_1sampler}{smc\+::sampler}}$<$ Space, Params $>$\+::Set\+Move\+Set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsmc_1_1moveset}{moveset}}$<$ Space, Params $>$ $\ast$}]{p\+New\+Moves }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the entire moveset to the one which is supplied. 
+
+\mbox{\Hypertarget{classsmc_1_1sampler_ada0a4d9961ed7f5f4d5849fb6911c146}\label{classsmc_1_1sampler_ada0a4d9961ed7f5f4d5849fb6911c146}} 
+\index{smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}!SetResampleParams@{SetResampleParams}}
+\index{SetResampleParams@{SetResampleParams}!smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{SetResampleParams()}{SetResampleParams()}}
+{\footnotesize\ttfamily template$<$class Space , class Params $>$ \\
+void \mbox{\hyperlink{classsmc_1_1sampler}{smc\+::sampler}}$<$ Space, Params $>$\+::Set\+Resample\+Params (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceResampleType_aae1fd87d74ce6bb0168e509df119f6eb}{Resample\+Type\+::\+Enum}}}]{rt\+Mode,  }\item[{double}]{d\+Threshold }\end{DoxyParamCaption})}
+
+
+
+Set Resampling Parameters. 
+
+This function configures the resampling parameters, allowing the specification of both the resampling mode and the threshold at which resampling is used.
+
+
+\begin{DoxyParams}{Parameters}
+{\em rt\+Mode} & The resampling mode to be used. \\
+\hline
+{\em d\+Threshold} & The threshold at which resampling is deemed necesary.\\
+\hline
+\end{DoxyParams}
+The rt\+Mode parameter should be set to one of the following\+:
+\begin{DoxyEnumerate}
+\item \mbox{\hyperlink{namespaceResampleType_aae1fd87d74ce6bb0168e509df119f6eba0207afd43440ab190cc0dd07bab5ba78}{Resample\+Type\+::\+M\+U\+L\+T\+I\+N\+O\+M\+I\+AL}} to use multinomial resampling
+\item \mbox{\hyperlink{namespaceResampleType_aae1fd87d74ce6bb0168e509df119f6eba87e69e5e3b594ebbaf9b91e3b4c11168}{Resample\+Type\+::\+R\+E\+S\+I\+D\+U\+AL}} to use residual resampling
+\item \mbox{\hyperlink{namespaceResampleType_aae1fd87d74ce6bb0168e509df119f6eba47fcb7a0a69fdf1075e11d616cb8783b}{Resample\+Type\+::\+S\+T\+R\+A\+T\+I\+F\+I\+ED}} to use stratified resampling
+\item \mbox{\hyperlink{namespaceResampleType_aae1fd87d74ce6bb0168e509df119f6ebac25b219e8be6e967aaf5c4011935fe7d}{Resample\+Type\+::\+S\+Y\+S\+T\+E\+M\+A\+T\+IC}} to use systematic resampling
+\end{DoxyEnumerate}
+
+The d\+Threshold parameter can be set to a value in the range \mbox{[}0,1) corresponding to a fraction of the size of the particle set or it may be set to an integer corresponding to an actual effective sample size. \mbox{\Hypertarget{classsmc_1_1sampler_a1baaee3a9ae3ec89c636f1e6ec55f38c}\label{classsmc_1_1sampler_a1baaee3a9ae3ec89c636f1e6ec55f38c}} 
+\index{smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}!StreamParticle@{StreamParticle}}
+\index{StreamParticle@{StreamParticle}!smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{StreamParticle()}{StreamParticle()}}
+{\footnotesize\ttfamily template$<$class Space , class Params $>$ \\
+std\+::ostream \& \mbox{\hyperlink{classsmc_1_1sampler}{smc\+::sampler}}$<$ Space, Params $>$\+::Stream\+Particle (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{long}]{n }\end{DoxyParamCaption}) const}
+
+
+
+Dump a specified particle to the specified output stream in a human readable form. 
+
+Produce a human-\/readable display of the current nth particle value and log weight.
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & The output stream to which the display should be made. \\
+\hline
+{\em n} & The index of the particle of interest \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classsmc_1_1sampler_a0b10f998db4499d5e60887060b6d0ad3}\label{classsmc_1_1sampler_a0b10f998db4499d5e60887060b6d0ad3}} 
+\index{smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}!StreamParticles@{StreamParticles}}
+\index{StreamParticles@{StreamParticles}!smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{StreamParticles()}{StreamParticles()}}
+{\footnotesize\ttfamily template$<$class Space , class Params $>$ \\
+std\+::ostream \& \mbox{\hyperlink{classsmc_1_1sampler}{smc\+::sampler}}$<$ Space, Params $>$\+::Stream\+Particles (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os }\end{DoxyParamCaption}) const}
+
+
+
+Dump the entire particle set to the specified output stream in a human readable form. 
+
+Produce a human-\/readable display of the current particle values and log weights.
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & The output stream to which the display should be made. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classsmc_1_1sampler_a46a71bac0445a1793e681717e648bef8}\label{classsmc_1_1sampler_a46a71bac0445a1793e681717e648bef8}} 
+\index{smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}!acceptProb@{acceptProb}}
+\index{acceptProb@{acceptProb}!smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{acceptProb}{acceptProb}}
+{\footnotesize\ttfamily template$<$class Space , class Params  = null\+Params$>$ \\
+double \mbox{\hyperlink{classsmc_1_1sampler}{smc\+::sampler}}$<$ Space, Params $>$\+::accept\+Prob\hspace{0.3cm}{\ttfamily [protected]}}
+
+The proportion of accepted M\+C\+MC proposals in the most recent M\+C\+MC step, with a default of -\/1 if no M\+C\+MC steps have been performed. \mbox{\Hypertarget{classsmc_1_1sampler_abaf3a81e80f9f3297a5d67542bfb03ec}\label{classsmc_1_1sampler_abaf3a81e80f9f3297a5d67542bfb03ec}} 
+\index{smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}!adaptBelong@{adaptBelong}}
+\index{adaptBelong@{adaptBelong}!smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{adaptBelong}{adaptBelong}}
+{\footnotesize\ttfamily template$<$class Space , class Params  = null\+Params$>$ \\
+bool \mbox{\hyperlink{classsmc_1_1sampler}{smc\+::sampler}}$<$ Space, Params $>$\+::adapt\+Belong\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+A flag to track whether the adaptation object needs to be included in this destructor. 
+
+\mbox{\Hypertarget{classsmc_1_1sampler_a545305926af1a03a471c81fbd72ab431}\label{classsmc_1_1sampler_a545305926af1a03a471c81fbd72ab431}} 
+\index{smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}!algParams@{algParams}}
+\index{algParams@{algParams}!smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{algParams}{algParams}}
+{\footnotesize\ttfamily template$<$class Space , class Params  = null\+Params$>$ \\
+Params \mbox{\hyperlink{classsmc_1_1sampler}{smc\+::sampler}}$<$ Space, Params $>$\+::alg\+Params\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The additional algorithm parameters. 
+
+\mbox{\Hypertarget{classsmc_1_1sampler_a80eba70fd89db813093dd69ff6015263}\label{classsmc_1_1sampler_a80eba70fd89db813093dd69ff6015263}} 
+\index{smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}!dlogNCIt@{dlogNCIt}}
+\index{dlogNCIt@{dlogNCIt}!smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{dlogNCIt}{dlogNCIt}}
+{\footnotesize\ttfamily template$<$class Space , class Params  = null\+Params$>$ \\
+double \mbox{\hyperlink{classsmc_1_1sampler}{smc\+::sampler}}$<$ Space, Params $>$\+::dlog\+N\+C\+It\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+An estimate of the log normalising constant ratio over the last step. 
+
+\mbox{\Hypertarget{classsmc_1_1sampler_ad1e75bebf7a4377aafb0c4d9e006e921}\label{classsmc_1_1sampler_ad1e75bebf7a4377aafb0c4d9e006e921}} 
+\index{smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}!dlogNCPath@{dlogNCPath}}
+\index{dlogNCPath@{dlogNCPath}!smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{dlogNCPath}{dlogNCPath}}
+{\footnotesize\ttfamily template$<$class Space , class Params  = null\+Params$>$ \\
+double \mbox{\hyperlink{classsmc_1_1sampler}{smc\+::sampler}}$<$ Space, Params $>$\+::dlog\+N\+C\+Path\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+An estimate of the log normalising constant ratio over the entire path. 
+
+\mbox{\Hypertarget{classsmc_1_1sampler_ab85e9e87029de1d0660d887d7582cfcf}\label{classsmc_1_1sampler_ab85e9e87029de1d0660d887d7582cfcf}} 
+\index{smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}!dResampleThreshold@{dResampleThreshold}}
+\index{dResampleThreshold@{dResampleThreshold}!smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{dResampleThreshold}{dResampleThreshold}}
+{\footnotesize\ttfamily template$<$class Space , class Params  = null\+Params$>$ \\
+double \mbox{\hyperlink{classsmc_1_1sampler}{smc\+::sampler}}$<$ Space, Params $>$\+::d\+Resample\+Threshold\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The effective sample size at which resampling should be used. 
+
+\mbox{\Hypertarget{classsmc_1_1sampler_ae7129c31c690eac51762006b4014e550}\label{classsmc_1_1sampler_ae7129c31c690eac51762006b4014e550}} 
+\index{smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}!dRSWeights@{dRSWeights}}
+\index{dRSWeights@{dRSWeights}!smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{dRSWeights}{dRSWeights}}
+{\footnotesize\ttfamily template$<$class Space , class Params  = null\+Params$>$ \\
+arma\+::vec \mbox{\hyperlink{classsmc_1_1sampler}{smc\+::sampler}}$<$ Space, Params $>$\+::d\+R\+S\+Weights\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Structure used internally for resampling. 
+
+\mbox{\Hypertarget{classsmc_1_1sampler_a8b5be5010088140e00206b0995dca5a7}\label{classsmc_1_1sampler_a8b5be5010088140e00206b0995dca5a7}} 
+\index{smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}!History@{History}}
+\index{History@{History}!smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{History}{History}}
+{\footnotesize\ttfamily template$<$class Space , class Params  = null\+Params$>$ \\
+std\+::vector$<$\mbox{\hyperlink{classsmc_1_1historyelement}{historyelement}}$<$Space$>$ $>$ \mbox{\hyperlink{classsmc_1_1sampler}{smc\+::sampler}}$<$ Space, Params $>$\+::History\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The historical process associated with the particle system. 
+
+\mbox{\Hypertarget{classsmc_1_1sampler_aece26a4146d52c7392594e6d1ffe0968}\label{classsmc_1_1sampler_aece26a4146d52c7392594e6d1ffe0968}} 
+\index{smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}!htHistoryMode@{htHistoryMode}}
+\index{htHistoryMode@{htHistoryMode}!smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{htHistoryMode}{htHistoryMode}}
+{\footnotesize\ttfamily template$<$class Space , class Params  = null\+Params$>$ \\
+\mbox{\hyperlink{namespaceHistoryType_a486dcf426d91692ddbce0dd2e97a9077}{History\+Type\+::\+Enum}} \mbox{\hyperlink{classsmc_1_1sampler}{smc\+::sampler}}$<$ Space, Params $>$\+::ht\+History\+Mode\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+A mode flag which indicates whether historical information is stored. 
+
+\mbox{\Hypertarget{classsmc_1_1sampler_a5f02b1f0615afc33b0daa5d0ae82cfbf}\label{classsmc_1_1sampler_a5f02b1f0615afc33b0daa5d0ae82cfbf}} 
+\index{smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}!movesetBelong@{movesetBelong}}
+\index{movesetBelong@{movesetBelong}!smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{movesetBelong}{movesetBelong}}
+{\footnotesize\ttfamily template$<$class Space , class Params  = null\+Params$>$ \\
+bool \mbox{\hyperlink{classsmc_1_1sampler}{smc\+::sampler}}$<$ Space, Params $>$\+::moveset\+Belong\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+A flag to track whether the moveset object needs to be included in this destructor. 
+
+\mbox{\Hypertarget{classsmc_1_1sampler_aa19bb3728da5cbe6db9211348fb699e6}\label{classsmc_1_1sampler_aa19bb3728da5cbe6db9211348fb699e6}} 
+\index{smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}!N@{N}}
+\index{N@{N}!smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{N}{N}}
+{\footnotesize\ttfamily template$<$class Space , class Params  = null\+Params$>$ \\
+long \mbox{\hyperlink{classsmc_1_1sampler}{smc\+::sampler}}$<$ Space, Params $>$\+::N\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Number of particles in the system. 
+
+\mbox{\Hypertarget{classsmc_1_1sampler_a54ae775cd4c20870aee5ca353c3f8cb3}\label{classsmc_1_1sampler_a54ae775cd4c20870aee5ca353c3f8cb3}} 
+\index{smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}!nAccepted@{nAccepted}}
+\index{nAccepted@{nAccepted}!smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{nAccepted}{nAccepted}}
+{\footnotesize\ttfamily template$<$class Space , class Params  = null\+Params$>$ \\
+int \mbox{\hyperlink{classsmc_1_1sampler}{smc\+::sampler}}$<$ Space, Params $>$\+::n\+Accepted\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The number of M\+C\+MC moves which have been accepted during this iteration. 
+
+\mbox{\Hypertarget{classsmc_1_1sampler_a978a2613da180ac511f186dc01c92d94}\label{classsmc_1_1sampler_a978a2613da180ac511f186dc01c92d94}} 
+\index{smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}!nRepeats@{nRepeats}}
+\index{nRepeats@{nRepeats}!smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{nRepeats}{nRepeats}}
+{\footnotesize\ttfamily template$<$class Space , class Params  = null\+Params$>$ \\
+int \mbox{\hyperlink{classsmc_1_1sampler}{smc\+::sampler}}$<$ Space, Params $>$\+::n\+Repeats\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The number of M\+C\+MC repeats to be performed. The default is 1 if an M\+C\+MC step is supplied. 
+
+\mbox{\Hypertarget{classsmc_1_1sampler_a82570bda66ba66fecbf675c4f803ab56}\label{classsmc_1_1sampler_a82570bda66ba66fecbf675c4f803ab56}} 
+\index{smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}!nResampled@{nResampled}}
+\index{nResampled@{nResampled}!smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{nResampled}{nResampled}}
+{\footnotesize\ttfamily template$<$class Space , class Params  = null\+Params$>$ \\
+int \mbox{\hyperlink{classsmc_1_1sampler}{smc\+::sampler}}$<$ Space, Params $>$\+::n\+Resampled\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+A flag which tracks whether the ensemble was resampled during this iteration. 
+
+\mbox{\Hypertarget{classsmc_1_1sampler_aaba69d99b529db6c77aa69f07ea605a5}\label{classsmc_1_1sampler_aaba69d99b529db6c77aa69f07ea605a5}} 
+\index{smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}!pAdapt@{pAdapt}}
+\index{pAdapt@{pAdapt}!smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{pAdapt}{pAdapt}}
+{\footnotesize\ttfamily template$<$class Space , class Params  = null\+Params$>$ \\
+\mbox{\hyperlink{classsmc_1_1adaptMethods}{adapt\+Methods}}$<$Space,Params$>$$\ast$ \mbox{\hyperlink{classsmc_1_1sampler}{smc\+::sampler}}$<$ Space, Params $>$\+::p\+Adapt\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+An object for adapting additional algorithm parameters. 
+
+\mbox{\Hypertarget{classsmc_1_1sampler_a96300615cb900608783ebe2ebf22d001}\label{classsmc_1_1sampler_a96300615cb900608783ebe2ebf22d001}} 
+\index{smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}!pMoves@{pMoves}}
+\index{pMoves@{pMoves}!smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{pMoves}{pMoves}}
+{\footnotesize\ttfamily template$<$class Space , class Params  = null\+Params$>$ \\
+\mbox{\hyperlink{classsmc_1_1moveset}{moveset}}$<$Space,Params$>$$\ast$ \mbox{\hyperlink{classsmc_1_1sampler}{smc\+::sampler}}$<$ Space, Params $>$\+::p\+Moves\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The set of moves available. 
+
+\mbox{\Hypertarget{classsmc_1_1sampler_ad9ab90f6fc45429d544031e50047d101}\label{classsmc_1_1sampler_ad9ab90f6fc45429d544031e50047d101}} 
+\index{smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}!pPopulation@{pPopulation}}
+\index{pPopulation@{pPopulation}!smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{pPopulation}{pPopulation}}
+{\footnotesize\ttfamily template$<$class Space , class Params  = null\+Params$>$ \\
+\mbox{\hyperlink{classsmc_1_1population}{population}}$<$Space$>$ \mbox{\hyperlink{classsmc_1_1sampler}{smc\+::sampler}}$<$ Space, Params $>$\+::p\+Population\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The particles within the system. 
+
+\mbox{\Hypertarget{classsmc_1_1sampler_a86ec66749d53010f5e7a0025288ee05e}\label{classsmc_1_1sampler_a86ec66749d53010f5e7a0025288ee05e}} 
+\index{smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}!rtResampleMode@{rtResampleMode}}
+\index{rtResampleMode@{rtResampleMode}!smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{rtResampleMode}{rtResampleMode}}
+{\footnotesize\ttfamily template$<$class Space , class Params  = null\+Params$>$ \\
+\mbox{\hyperlink{namespaceResampleType_aae1fd87d74ce6bb0168e509df119f6eb}{Resample\+Type\+::\+Enum}} \mbox{\hyperlink{classsmc_1_1sampler}{smc\+::sampler}}$<$ Space, Params $>$\+::rt\+Resample\+Mode\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The resampling mode which is to be employed. 
+
+\mbox{\Hypertarget{classsmc_1_1sampler_a49562c192a35a61bfa8d3cbc0c8e38a2}\label{classsmc_1_1sampler_a49562c192a35a61bfa8d3cbc0c8e38a2}} 
+\index{smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}!T@{T}}
+\index{T@{T}!smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{T}{T}}
+{\footnotesize\ttfamily template$<$class Space , class Params  = null\+Params$>$ \\
+long \mbox{\hyperlink{classsmc_1_1sampler}{smc\+::sampler}}$<$ Space, Params $>$\+::T\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The current evolution time of the system. 
+
+\mbox{\Hypertarget{classsmc_1_1sampler_a9fe0293cd6610777c5e638761c13bf5f}\label{classsmc_1_1sampler_a9fe0293cd6610777c5e638761c13bf5f}} 
+\index{smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}!uRSCount@{uRSCount}}
+\index{uRSCount@{uRSCount}!smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{uRSCount}{uRSCount}}
+{\footnotesize\ttfamily template$<$class Space , class Params  = null\+Params$>$ \\
+arma\+::\+Col$<$int$>$ \mbox{\hyperlink{classsmc_1_1sampler}{smc\+::sampler}}$<$ Space, Params $>$\+::u\+R\+S\+Count\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Structure used internally for resampling. 
+
+\mbox{\Hypertarget{classsmc_1_1sampler_a5438b36f90d688120e76289a87dd287c}\label{classsmc_1_1sampler_a5438b36f90d688120e76289a87dd287c}} 
+\index{smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}!uRSIndices@{uRSIndices}}
+\index{uRSIndices@{uRSIndices}!smc::sampler$<$ Space, Params $>$@{smc::sampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{uRSIndices}{uRSIndices}}
+{\footnotesize\ttfamily template$<$class Space , class Params  = null\+Params$>$ \\
+arma\+::\+Col$<$unsigned int$>$ \mbox{\hyperlink{classsmc_1_1sampler}{smc\+::sampler}}$<$ Space, Params $>$\+::u\+R\+S\+Indices\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Structure used internally for resampling. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/iz/\+Dropbox/projects/rcppsmc/\+Rcpp\+S\+M\+Cdocumentation/include/\mbox{\hyperlink{sampler_8h}{sampler.\+h}}\end{DoxyCompactItemize}

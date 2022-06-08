@@ -1,0 +1,241 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="smctc_8h" kind="file" language="C++">
+    <compoundname>smctc.h</compoundname>
+    <includes local="no">cmath</includes>
+    <includes local="no">cstdlib</includes>
+    <includes local="no">iostream</includes>
+    <includes refid="smc-exception_8h" local="yes">smc-exception.h</includes>
+    <includes refid="sampler_8h" local="yes">sampler.h</includes>
+    <includedby refid="blockpfgaussianopt_8h" local="yes">/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/blockpfgaussianopt.h</includedby>
+    <includedby refid="RcppSMC_8h" local="no">/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/RcppSMC.h</includedby>
+    <includedby refid="LinReg__LA_8h" local="yes">/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/LinReg_LA.h</includedby>
+    <includedby refid="LinReg__LA__adapt_8h" local="yes">/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/LinReg_LA_adapt.h</includedby>
+    <includedby refid="nonLinPMMH_8h" local="yes">/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/nonLinPMMH.h</includedby>
+    <includedby refid="pflineart_8h" local="yes">/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/pflineart.h</includedby>
+    <includedby refid="pfnonlinbs_8h" local="yes">/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/pfnonlinbs.h</includedby>
+    <incdepgraph>
+      <node id="15">
+        <label>staticModelAdapt.h</label>
+        <link refid="staticModelAdapt_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>moveset.h</label>
+        <link refid="moveset_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>limits</label>
+      </node>
+      <node id="10">
+        <label>float.h</label>
+      </node>
+      <node id="2">
+        <label>cmath</label>
+      </node>
+      <node id="9">
+        <label>RcppArmadillo.h</label>
+      </node>
+      <node id="5">
+        <label>smc-exception.h</label>
+        <link refid="smc-exception_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>adaptMethods.h</label>
+        <link refid="adaptMethods_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>population.h</label>
+        <link refid="population_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>cstdlib</label>
+      </node>
+      <node id="4">
+        <label>iostream</label>
+      </node>
+      <node id="12">
+        <label>history.h</label>
+        <link refid="history_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>sampler.h</label>
+        <link refid="sampler_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/smctc.h</label>
+        <link refid="smctc_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>algorithm</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="8">
+        <label>/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/pflineart.h</label>
+        <link refid="pflineart_8h"/>
+      </node>
+      <node id="5">
+        <label>/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/LinReg_LA.h</label>
+        <link refid="LinReg__LA_8h"/>
+      </node>
+      <node id="4">
+        <label>/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/cSMCexamples.h</label>
+        <link refid="cSMCexamples_8h"/>
+      </node>
+      <node id="9">
+        <label>/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/pfnonlinbs.h</label>
+        <link refid="pfnonlinbs_8h"/>
+      </node>
+      <node id="2">
+        <label>/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/blockpfgaussianopt.h</label>
+        <link refid="blockpfgaussianopt_8h"/>
+      </node>
+      <node id="3">
+        <label>/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/RcppSMC.h</label>
+        <link refid="RcppSMC_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/nonLinPMMH.h</label>
+        <link refid="nonLinPMMH_8h"/>
+      </node>
+      <node id="6">
+        <label>/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/LinReg_LA_adapt.h</label>
+        <link refid="LinReg__LA__adapt_8h"/>
+      </node>
+      <node id="1">
+        <label>/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/smctc.h</label>
+        <link refid="smctc_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="namespacesmc">smc</innernamespace>
+    <innernamespace refid="namespacestd">std</innernamespace>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="smctc_8h_1a5af00a11c9b6e844372ff1af28903e03" prot="public" static="no">
+        <name>__SMC_TDSMC_HH</name>
+        <initializer>1.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/smctc.h" line="94" column="9" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/smctc.h" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The main header file for SMCTC. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This file serves as an interface between user-space programs and the SMCTC library. This is the only header file which applications need to include to make use of the library (it includes such additional files as are necessary). </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>-*-<sp/>mode:<sp/>C++;<sp/>c-indent-level:<sp/>4;<sp/>c-basic-offset:<sp/>4;<sp/>indent-tabs-mode:<sp/>nil;<sp/>-*-</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>smctc.h:<sp/>Rcpp<sp/>integration<sp/>of<sp/>SMC<sp/>library<sp/>--<sp/>The<sp/>principle<sp/>header<sp/>file<sp/>for</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>the<sp/>SMC<sp/>template<sp/>class.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Copyright<sp/>(C)<sp/>2008<sp/>-<sp/>2009<sp/><sp/>Adam<sp/>Johansen</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>RcppSMC.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/>RcppSMC<sp/>is<sp/>free<sp/>software:<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify<sp/>it</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>as<sp/>published<sp/>by</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//<sp/>the<sp/>Free<sp/>Software<sp/>Foundation,<sp/>either<sp/>version<sp/>2<sp/>of<sp/>the<sp/>License,<sp/>or</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/>(at<sp/>your<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//<sp/>RcppSMC<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,<sp/>but</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">//<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">//<sp/>MERCHANTABILITY<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">//<sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">//<sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">//<sp/>along<sp/>with<sp/>RcppSMC.<sp/><sp/>If<sp/>not,<sp/>see<sp/>&lt;http://www.gnu.org/licenses/&gt;.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>__SMC_TDSMC_HH</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94" refid="smctc_8h_1a5af00a11c9b6e844372ff1af28903e03" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__SMC_TDSMC_HH<sp/>1.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cmath&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdlib&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="smc-exception_8h" kindref="compound">smc-exception.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sampler_8h" kindref="compound">sampler.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacesmc" kindref="compound">smc</ref><sp/>{}</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacestd" kindref="compound">std</ref><sp/>{}</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/smctc.h"/>
+  </compounddef>
+</doxygen>

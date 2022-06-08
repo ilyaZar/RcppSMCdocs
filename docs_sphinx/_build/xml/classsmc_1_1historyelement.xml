@@ -1,0 +1,658 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classsmc_1_1historyelement" kind="class" language="C++" prot="public">
+    <compoundname>smc::historyelement</compoundname>
+    <includes refid="history_8h" local="no">history.h</includes>
+    <templateparamlist>
+      <param>
+        <type>class Space</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classsmc_1_1historyelement_1adea5f8dc2ea310f798c4db30548f5197" prot="private" static="no" mutable="no">
+        <type>long</type>
+        <definition>long smc::historyelement&lt; Space &gt;::number</definition>
+        <argsstring></argsstring>
+        <name>number</name>
+        <briefdescription>
+<para>The number of particles (presently redundant as this is not a function of iteration) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/history.h" line="66" column="14" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/history.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsmc_1_1historyelement_1a015849edb0b8e68761175355625d2ad8" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int smc::historyelement&lt; Space &gt;::nAccepted</definition>
+        <argsstring></argsstring>
+        <name>nAccepted</name>
+        <briefdescription>
+<para>Number of MCMC moves accepted during this iteration. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/history.h" line="67" column="13" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/history.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsmc_1_1historyelement_1aead93445bfbf78315d4a0dc41d0ef6ce" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int smc::historyelement&lt; Space &gt;::nRepeat</definition>
+        <argsstring></argsstring>
+        <name>nRepeat</name>
+        <briefdescription>
+<para>Number of MCMC iterations performed at this iteration (per particle) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/history.h" line="68" column="13" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/history.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsmc_1_1historyelement_1ad5c8283a96e2342ee3108f62119398af" prot="private" static="no" mutable="no">
+        <type><ref refid="classsmc_1_1population" kindref="compound">population</ref>&lt; Space &gt;</type>
+        <definition>population&lt;Space&gt; smc::historyelement&lt; Space &gt;::pop</definition>
+        <argsstring></argsstring>
+        <name>pop</name>
+        <briefdescription>
+<para>The particles themselves (values and weights) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/history.h" line="69" column="20" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/history.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsmc_1_1historyelement_1a4453e89a2521144d2946a77ed8be49b4" prot="private" static="no" mutable="no">
+        <type>arma::Col&lt; unsigned int &gt;</type>
+        <definition>arma::Col&lt;unsigned int&gt; smc::historyelement&lt; Space &gt;::ancestorIndices</definition>
+        <argsstring></argsstring>
+        <name>ancestorIndices</name>
+        <initializer>= arma::Col&lt;unsigned int&gt;(<ref refid="classsmc_1_1historyelement_1adea5f8dc2ea310f798c4db30548f5197" kindref="member">number</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/history.h" line="70" column="19" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/history.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsmc_1_1historyelement_1a7cdc4a207a4fcede8d45f7ca90aac356" prot="private" static="no" mutable="no">
+        <type><ref refid="classsmc_1_1historyflags" kindref="compound">historyflags</ref></type>
+        <definition>historyflags smc::historyelement&lt; Space &gt;::flags</definition>
+        <argsstring></argsstring>
+        <name>flags</name>
+        <briefdescription>
+<para>Flags associated with this iteration. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/history.h" line="71" column="22" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/history.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classsmc_1_1historyelement_1acfe01a851a4cee19068c291e2cc9b0d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>smc::historyelement&lt; Space &gt;::historyelement</definition>
+        <argsstring>()</argsstring>
+        <name>historyelement</name>
+        <briefdescription>
+<para>The null constructor creates an empty history element. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/history.h" line="75" column="9" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/history.h" bodystart="123" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1historyelement_1a3ead7752e711387f3f038bdbc016ebcc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>smc::historyelement&lt; Space &gt;::historyelement</definition>
+        <argsstring>(long lNumber, population&lt; Space &gt; pNew, int nAccepts, int nRepeats, historyflags hf)</argsstring>
+        <name>historyelement</name>
+        <param>
+          <type>long</type>
+          <declname>lNumber</declname>
+        </param>
+        <param>
+          <type><ref refid="classsmc_1_1population" kindref="compound">population</ref>&lt; Space &gt;</type>
+          <declname>pNew</declname>
+          <defname>New</defname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nAccepts</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nRepeats</declname>
+        </param>
+        <param>
+          <type><ref refid="classsmc_1_1historyflags" kindref="compound">historyflags</ref></type>
+          <declname>hf</declname>
+        </param>
+        <briefdescription>
+<para>A constructor with four arguments initialises the particle set. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lNumber</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of particles present in the particle generation </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>New</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The array of particles which are present in the particle generation </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nAccepts</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of MCMC moves that were accepted during this particle generation </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nRepeats</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of MCMC iterations that were performed during this particle generation </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The historyflags associated with the particle generation </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/history.h" line="77" column="9" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/history.h" bodystart="138" bodyend="141"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1historyelement_1a4428ce46f4dd11a8b99cd93cfdc72b33" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>smc::historyelement&lt; Space &gt;::~historyelement</definition>
+        <argsstring>()</argsstring>
+        <name>~historyelement</name>
+        <briefdescription>
+<para>The destructor tidies up. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/history.h" line="80" column="9" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/history.h" bodystart="144" bodyend="146"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1historyelement_1a0fc2b96ec075a38c32f08433b0de7337" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double smc::historyelement&lt; Space &gt;::GetESS</definition>
+        <argsstring>(void) const</argsstring>
+        <name>GetESS</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Returns the effective sample size of this particle generation. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/history.h" line="83" column="16" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/history.h" bodystart="149" bodyend="152"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1historyelement_1ad811b285a6b854a99d4285125692b28b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classsmc_1_1historyflags" kindref="compound">historyflags</ref></type>
+        <definition>historyflags smc::historyelement&lt; Space &gt;::GetFlags</definition>
+        <argsstring>(void) const</argsstring>
+        <name>GetFlags</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Returns the flags. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/history.h" line="85" column="22" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/history.h" bodystart="85" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1historyelement_1a9524c99e0173d1b2244c30b7fa29f0e6" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>long</type>
+        <definition>long smc::historyelement&lt; Space &gt;::GetNumber</definition>
+        <argsstring>(void) const</argsstring>
+        <name>GetNumber</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Returns the number of particles present. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/history.h" line="87" column="14" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/history.h" bodystart="87" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1historyelement_1a7fa5ffc6301ace687069cb2237b0a0df" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classsmc_1_1population" kindref="compound">population</ref>&lt; Space &gt;</type>
+        <definition>population&lt;Space&gt; smc::historyelement&lt; Space &gt;::GetValues</definition>
+        <argsstring>(void) const</argsstring>
+        <name>GetValues</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Returns the current particle set. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/history.h" line="89" column="20" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/history.h" bodystart="89" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1historyelement_1a41c634dfaa108fe51b9cf7a66121e9a2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classsmc_1_1population" kindref="compound">population</ref>&lt; Space &gt; &amp;</type>
+        <definition>population&lt;Space&gt;&amp; smc::historyelement&lt; Space &gt;::GetRefs</definition>
+        <argsstring>(void)</argsstring>
+        <name>GetRefs</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Returns a reference to the current particle set. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/history.h" line="91" column="21" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/history.h" bodystart="91" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1historyelement_1ae8812a55f616bf65107ad5bc08ca2644" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void smc::historyelement&lt; Space &gt;::SetAIndices</definition>
+        <argsstring>(const arma::Col&lt; unsigned int &gt; &amp;newAindices)</argsstring>
+        <name>SetAIndices</name>
+        <param>
+          <type>const arma::Col&lt; unsigned int &gt; &amp;</type>
+          <declname>newAindices</declname>
+        </param>
+        <briefdescription>
+<para>Sets the ancestor indices of the current particle set. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/history.h" line="93" column="14" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/history.h" bodystart="93" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1historyelement_1a20dfbaf1b1e0cd4e4fc80ddf6aef7023" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>arma::Col&lt; unsigned int &gt;</type>
+        <definition>arma::Col&lt;unsigned int&gt; smc::historyelement&lt; Space &gt;::GetAIndices</definition>
+        <argsstring>(void) const</argsstring>
+        <name>GetAIndices</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Returns the ancestor indices of the current particle set. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/history.h" line="97" column="19" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/history.h" bodystart="97" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1historyelement_1aca253afff3c7234a966e59fb6ee6a58e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>long double</type>
+        <definition>long double smc::historyelement&lt; Space &gt;::Integrate</definition>
+        <argsstring>(long lTime, double(*pIntegrand)(long, const Space &amp;, void *), void *pAuxiliary) const</argsstring>
+        <name>Integrate</name>
+        <param>
+          <type>long</type>
+          <declname>lTime</declname>
+        </param>
+        <param>
+          <type>double(*)(long, const Space &amp;, void *)</type>
+          <declname>pIntegrand</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>pAuxiliary</declname>
+        </param>
+        <briefdescription>
+<para>Monte Carlo estimate of the expectation of the supplied function with respect to the empirical measure of the particle ensemble. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The timestep at which the integration is to be carried out </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pIntegrand</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The function which is to be integrated </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pAuxiliary</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to additional information which is passed to the integrand function </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/history.h" line="99" column="21" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/history.h" bodystart="159" bodyend="170"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1historyelement_1ad64f0a4b0dddd789fc1822d057023ab9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>long double</type>
+        <definition>long double smc::historyelement&lt; Space &gt;::Integrate_Var</definition>
+        <argsstring>(long lTime, double(*pIntegrand)(long, const Space &amp;, void *), double Expectation, void *pAuxiliary) const</argsstring>
+        <name>Integrate_Var</name>
+        <param>
+          <type>long</type>
+          <declname>lTime</declname>
+        </param>
+        <param>
+          <type>double(*)(long, const Space &amp;, void *)</type>
+          <declname>pIntegrand</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>Expectation</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>pAuxiliary</declname>
+        </param>
+        <briefdescription>
+<para>Monte Carlo estimate of the variance of the supplied function with respect to the empirical measure of the particle ensemble (to be used in second order trapezoidal correction). </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The timestep at which the integration is to be carried out </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pIntegrand</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The function which is to be integrated </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pAuxiliary</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to additional information which is passed to the integrand function </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/history.h" line="101" column="21" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/history.h" bodystart="177" bodyend="188"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1historyelement_1a937d74cb8b5ffe8e0aa1e637faef2807" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void smc::historyelement&lt; Space &gt;::Set</definition>
+        <argsstring>(long lNumber, const population&lt; Space &gt; &amp;New, int inAccepted, int nRepeats, const historyflags &amp;histflags)</argsstring>
+        <name>Set</name>
+        <param>
+          <type>long</type>
+          <declname>lNumber</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classsmc_1_1population" kindref="compound">population</ref>&lt; Space &gt; &amp;</type>
+          <declname>New</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>inAccepted</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nRepeats</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classsmc_1_1historyflags" kindref="compound">historyflags</ref> &amp;</type>
+          <declname>histflags</declname>
+        </param>
+        <briefdescription>
+<para>Sets the particle set to the specified values excluding ancestors. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/history.h" line="103" column="14" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/history.h" bodystart="103" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1historyelement_1a6e16e343752bb1c4403f40b362fc0e7f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void smc::historyelement&lt; Space &gt;::Set</definition>
+        <argsstring>(long lNumber, const population&lt; Space &gt; &amp;New, int inAccepted, int nRepeats, const historyflags &amp;histflags, const arma::Col&lt; unsigned int &gt; &amp;newAindices)</argsstring>
+        <name>Set</name>
+        <param>
+          <type>long</type>
+          <declname>lNumber</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classsmc_1_1population" kindref="compound">population</ref>&lt; Space &gt; &amp;</type>
+          <declname>New</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>inAccepted</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nRepeats</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classsmc_1_1historyflags" kindref="compound">historyflags</ref> &amp;</type>
+          <declname>histflags</declname>
+        </param>
+        <param>
+          <type>const arma::Col&lt; unsigned int &gt; &amp;</type>
+          <declname>newAindices</declname>
+        </param>
+        <briefdescription>
+<para>Sets the particle set to the specified values including ancestors. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/history.h" line="105" column="14" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/history.h" bodystart="105" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1historyelement_1a91d3d8baac02d4cbf08642be106a4384" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void smc::historyelement&lt; Space &gt;::Set</definition>
+        <argsstring>(long lNumber, const population&lt; Space &gt; &amp;New, const historyflags &amp;histflags, const arma::Col&lt; unsigned int &gt; &amp;newAindices)</argsstring>
+        <name>Set</name>
+        <param>
+          <type>long</type>
+          <declname>lNumber</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classsmc_1_1population" kindref="compound">population</ref>&lt; Space &gt; &amp;</type>
+          <declname>New</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classsmc_1_1historyflags" kindref="compound">historyflags</ref> &amp;</type>
+          <declname>histflags</declname>
+        </param>
+        <param>
+          <type>const arma::Col&lt; unsigned int &gt; &amp;</type>
+          <declname>newAindices</declname>
+        </param>
+        <briefdescription>
+<para>Sets the particle set to the specified values including ancestors specifically to use with the derived conditional sampler class where adaptation and MCMC moves are not supported. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/history.h" line="107" column="14" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/history.h" bodystart="107" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1historyelement_1a17dc6cf863db8064b7ef6e40b86cd02d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void smc::historyelement&lt; Space &gt;::Set</definition>
+        <argsstring>(long lNumber, const population&lt; Space &gt; &amp;New, const historyflags &amp;histflags)</argsstring>
+        <name>Set</name>
+        <param>
+          <type>long</type>
+          <declname>lNumber</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classsmc_1_1population" kindref="compound">population</ref>&lt; Space &gt; &amp;</type>
+          <declname>New</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classsmc_1_1historyflags" kindref="compound">historyflags</ref> &amp;</type>
+          <declname>histflags</declname>
+        </param>
+        <briefdescription>
+<para>Sets the particle set to the specified values excluding ancestors for the derived conditional sampler class. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/history.h" line="109" column="14" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/history.h" bodystart="109" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1historyelement_1a703582146b53ef99d37c128e73ab4538" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int smc::historyelement&lt; Space &gt;::AcceptCount</definition>
+        <argsstring>(void)</argsstring>
+        <name>AcceptCount</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Returns the number of MCMC moves accepted during this iteration. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/history.h" line="111" column="13" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/history.h" bodystart="111" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1historyelement_1aa79e02ab98b7b603c05b9f1af6d18823" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int smc::historyelement&lt; Space &gt;::mcmcRepeats</definition>
+        <argsstring>(void)</argsstring>
+        <name>mcmcRepeats</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Returns the number of MCMC iterations performed during this iteration. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/history.h" line="113" column="13" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/history.h" bodystart="113" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1historyelement_1abbf23e201874f2d75a615dfd550b8603" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int smc::historyelement&lt; Space &gt;::WasResampled</definition>
+        <argsstring>(void)</argsstring>
+        <name>WasResampled</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Returns true if the particle set. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/history.h" line="115" column="13" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/history.h" bodystart="115" bodyend="115"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A template class for the elements of a linked list to be used for the history of the sampler. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>smc::historyflags</label>
+        <link refid="classsmc_1_1historyflags"/>
+      </node>
+      <node id="1">
+        <label>smc::historyelement&lt; Space &gt;</label>
+        <link refid="classsmc_1_1historyelement"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>flags</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/history.h" line="64" column="1" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/history.h" bodystart="63" bodyend="120"/>
+    <listofallmembers>
+      <member refid="classsmc_1_1historyelement_1a703582146b53ef99d37c128e73ab4538" prot="public" virt="non-virtual"><scope>smc::historyelement</scope><name>AcceptCount</name></member>
+      <member refid="classsmc_1_1historyelement_1a4453e89a2521144d2946a77ed8be49b4" prot="private" virt="non-virtual"><scope>smc::historyelement</scope><name>ancestorIndices</name></member>
+      <member refid="classsmc_1_1historyelement_1a7cdc4a207a4fcede8d45f7ca90aac356" prot="private" virt="non-virtual"><scope>smc::historyelement</scope><name>flags</name></member>
+      <member refid="classsmc_1_1historyelement_1a20dfbaf1b1e0cd4e4fc80ddf6aef7023" prot="public" virt="non-virtual"><scope>smc::historyelement</scope><name>GetAIndices</name></member>
+      <member refid="classsmc_1_1historyelement_1a0fc2b96ec075a38c32f08433b0de7337" prot="public" virt="non-virtual"><scope>smc::historyelement</scope><name>GetESS</name></member>
+      <member refid="classsmc_1_1historyelement_1ad811b285a6b854a99d4285125692b28b" prot="public" virt="non-virtual"><scope>smc::historyelement</scope><name>GetFlags</name></member>
+      <member refid="classsmc_1_1historyelement_1a9524c99e0173d1b2244c30b7fa29f0e6" prot="public" virt="non-virtual"><scope>smc::historyelement</scope><name>GetNumber</name></member>
+      <member refid="classsmc_1_1historyelement_1a41c634dfaa108fe51b9cf7a66121e9a2" prot="public" virt="non-virtual"><scope>smc::historyelement</scope><name>GetRefs</name></member>
+      <member refid="classsmc_1_1historyelement_1a7fa5ffc6301ace687069cb2237b0a0df" prot="public" virt="non-virtual"><scope>smc::historyelement</scope><name>GetValues</name></member>
+      <member refid="classsmc_1_1historyelement_1acfe01a851a4cee19068c291e2cc9b0d5" prot="public" virt="non-virtual"><scope>smc::historyelement</scope><name>historyelement</name></member>
+      <member refid="classsmc_1_1historyelement_1a3ead7752e711387f3f038bdbc016ebcc" prot="public" virt="non-virtual"><scope>smc::historyelement</scope><name>historyelement</name></member>
+      <member refid="classsmc_1_1historyelement_1aca253afff3c7234a966e59fb6ee6a58e" prot="public" virt="non-virtual"><scope>smc::historyelement</scope><name>Integrate</name></member>
+      <member refid="classsmc_1_1historyelement_1ad64f0a4b0dddd789fc1822d057023ab9" prot="public" virt="non-virtual"><scope>smc::historyelement</scope><name>Integrate_Var</name></member>
+      <member refid="classsmc_1_1historyelement_1aa79e02ab98b7b603c05b9f1af6d18823" prot="public" virt="non-virtual"><scope>smc::historyelement</scope><name>mcmcRepeats</name></member>
+      <member refid="classsmc_1_1historyelement_1a015849edb0b8e68761175355625d2ad8" prot="private" virt="non-virtual"><scope>smc::historyelement</scope><name>nAccepted</name></member>
+      <member refid="classsmc_1_1historyelement_1aead93445bfbf78315d4a0dc41d0ef6ce" prot="private" virt="non-virtual"><scope>smc::historyelement</scope><name>nRepeat</name></member>
+      <member refid="classsmc_1_1historyelement_1adea5f8dc2ea310f798c4db30548f5197" prot="private" virt="non-virtual"><scope>smc::historyelement</scope><name>number</name></member>
+      <member refid="classsmc_1_1historyelement_1ad5c8283a96e2342ee3108f62119398af" prot="private" virt="non-virtual"><scope>smc::historyelement</scope><name>pop</name></member>
+      <member refid="classsmc_1_1historyelement_1a937d74cb8b5ffe8e0aa1e637faef2807" prot="public" virt="non-virtual"><scope>smc::historyelement</scope><name>Set</name></member>
+      <member refid="classsmc_1_1historyelement_1a6e16e343752bb1c4403f40b362fc0e7f" prot="public" virt="non-virtual"><scope>smc::historyelement</scope><name>Set</name></member>
+      <member refid="classsmc_1_1historyelement_1a91d3d8baac02d4cbf08642be106a4384" prot="public" virt="non-virtual"><scope>smc::historyelement</scope><name>Set</name></member>
+      <member refid="classsmc_1_1historyelement_1a17dc6cf863db8064b7ef6e40b86cd02d" prot="public" virt="non-virtual"><scope>smc::historyelement</scope><name>Set</name></member>
+      <member refid="classsmc_1_1historyelement_1ae8812a55f616bf65107ad5bc08ca2644" prot="public" virt="non-virtual"><scope>smc::historyelement</scope><name>SetAIndices</name></member>
+      <member refid="classsmc_1_1historyelement_1abbf23e201874f2d75a615dfd550b8603" prot="public" virt="non-virtual"><scope>smc::historyelement</scope><name>WasResampled</name></member>
+      <member refid="classsmc_1_1historyelement_1a4428ce46f4dd11a8b99cd93cfdc72b33" prot="public" virt="non-virtual"><scope>smc::historyelement</scope><name>~historyelement</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

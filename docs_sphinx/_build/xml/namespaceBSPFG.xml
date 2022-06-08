@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespaceBSPFG" kind="namespace" language="C++">
+    <compoundname>BSPFG</compoundname>
+    <innerclass refid="classBSPFG_1_1BSPFG__move" prot="public">BSPFG::BSPFG_move</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespaceBSPFG_1ae46539669060b1a7229a20419a6c494b" prot="public" static="no" mutable="no">
+        <type><ref refid="classsmc_1_1moveset" kindref="compound">smc::moveset</ref>&lt; arma::vec, <ref refid="classsmc_1_1nullParams" kindref="compound">smc::nullParams</ref> &gt; *</type>
+        <definition>smc::moveset&lt;arma::vec,smc::nullParams&gt;* BSPFG::myMove</definition>
+        <argsstring></argsstring>
+        <name>myMove</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/blockpfgaussianopt.h" line="39" column="14" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/blockpfgaussianopt.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/blockpfgaussianopt.h" line="25" column="15"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classLinReg__LA__adapt_1_1rad__adapt" kind="class" language="C++" prot="public">
+    <compoundname>LinReg_LA_adapt::rad_adapt</compoundname>
+    <basecompoundref refid="classsmc_1_1adaptMethods" prot="public" virt="non-virtual">smc::adaptMethods&lt; rad_state, smc::staticModelAdapt &gt;</basecompoundref>
+    <includes refid="LinReg__LA__adapt_8h" local="no">LinReg_LA_adapt.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classLinReg__LA__adapt_1_1rad__adapt_1ad965f934a5e6ca743307667891d8ecb0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void LinReg_LA_adapt::rad_adapt::updateForMove</definition>
+        <argsstring>(smc::staticModelAdapt &amp;param, const smc::population&lt; rad_state &gt; &amp;pop)</argsstring>
+        <name>updateForMove</name>
+        <param>
+          <type><ref refid="classsmc_1_1staticModelAdapt" kindref="compound">smc::staticModelAdapt</ref> &amp;</type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classsmc_1_1population" kindref="compound">smc::population</ref>&lt; <ref refid="classLinReg__LA__adapt_1_1rad__state" kindref="compound">rad_state</ref> &gt; &amp;</type>
+          <declname>pop</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/LinReg_LA_adapt.h" line="74" column="14" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/LinReg_LA_adapt.h" bodystart="74" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="classLinReg__LA__adapt_1_1rad__adapt_1a4c8b43f2be7bfa917bc85f97197bc09f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void LinReg_LA_adapt::rad_adapt::updateForMCMC</definition>
+        <argsstring>(smc::staticModelAdapt &amp;param, const smc::population&lt; rad_state &gt; &amp;pop, double acceptProb, int nResampled, int &amp;nRepeats)</argsstring>
+        <name>updateForMCMC</name>
+        <param>
+          <type><ref refid="classsmc_1_1staticModelAdapt" kindref="compound">smc::staticModelAdapt</ref> &amp;</type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classsmc_1_1population" kindref="compound">smc::population</ref>&lt; <ref refid="classLinReg__LA__adapt_1_1rad__state" kindref="compound">rad_state</ref> &gt; &amp;</type>
+          <declname>pop</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>acceptProb</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nResampled</declname>
+        </param>
+        <param>
+          <type>int &amp;</type>
+          <declname>nRepeats</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/LinReg_LA_adapt.h" line="83" column="14" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/LinReg_LA_adapt.h" bodystart="83" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="classLinReg__LA__adapt_1_1rad__adapt_1a4e95c2ecea2dfd8cf0fb897c46a8a69d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>LinReg_LA_adapt::rad_adapt::~rad_adapt</definition>
+        <argsstring>()</argsstring>
+        <name>~rad_adapt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/LinReg_LA_adapt.h" line="97" column="9" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/LinReg_LA_adapt.h" bodystart="97" bodyend="97"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>smc::adaptMethods&lt; rad_state, smc::staticModelAdapt &gt;</label>
+        <link refid="classsmc_1_1adaptMethods"/>
+      </node>
+      <node id="1">
+        <label>LinReg_LA_adapt::rad_adapt</label>
+        <link refid="classLinReg__LA__adapt_1_1rad__adapt"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>smc::adaptMethods&lt; rad_state, smc::staticModelAdapt &gt;</label>
+        <link refid="classsmc_1_1adaptMethods"/>
+      </node>
+      <node id="1">
+        <label>LinReg_LA_adapt::rad_adapt</label>
+        <link refid="classLinReg__LA__adapt_1_1rad__adapt"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/LinReg_LA_adapt.h" line="71" column="1" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/LinReg_LA_adapt.h" bodystart="69" bodyend="99"/>
+    <listofallmembers>
+      <member refid="classsmc_1_1adaptMethods_1a2f8373020e442ab65ef657097e2d4c03" prot="public" virt="virtual"><scope>LinReg_LA_adapt::rad_adapt</scope><name>updateEnd</name></member>
+      <member refid="classLinReg__LA__adapt_1_1rad__adapt_1a4c8b43f2be7bfa917bc85f97197bc09f" prot="public" virt="non-virtual"><scope>LinReg_LA_adapt::rad_adapt</scope><name>updateForMCMC</name></member>
+      <member refid="classsmc_1_1adaptMethods_1a642c9827bc6ed466160886219a0c0d8f" prot="public" virt="virtual" ambiguityscope="adaptMethods&lt; rad_state, smc::staticModelAdapt &gt;::"><scope>LinReg_LA_adapt::rad_adapt</scope><name>updateForMCMC</name></member>
+      <member refid="classLinReg__LA__adapt_1_1rad__adapt_1ad965f934a5e6ca743307667891d8ecb0" prot="public" virt="non-virtual"><scope>LinReg_LA_adapt::rad_adapt</scope><name>updateForMove</name></member>
+      <member refid="classsmc_1_1adaptMethods_1a96614576030dc76fbf7d64d0416d6f52" prot="public" virt="virtual" ambiguityscope="adaptMethods&lt; rad_state, smc::staticModelAdapt &gt;::"><scope>LinReg_LA_adapt::rad_adapt</scope><name>updateForMove</name></member>
+      <member refid="classsmc_1_1adaptMethods_1a6cd01df7136b41a40b2030a9606154e4" prot="public" virt="virtual"><scope>LinReg_LA_adapt::rad_adapt</scope><name>~adaptMethods</name></member>
+      <member refid="classLinReg__LA__adapt_1_1rad__adapt_1a4e95c2ecea2dfd8cf0fb897c46a8a69d" prot="public" virt="non-virtual"><scope>LinReg_LA_adapt::rad_adapt</scope><name>~rad_adapt</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

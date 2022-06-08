@@ -1,0 +1,72 @@
+\hypertarget{namespacesmc}{}\doxysection{smc Namespace Reference}
+\label{namespacesmc}\index{smc@{smc}}
+
+
+The Sequential Monte Carlo namespace.  
+
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classsmc_1_1adaptMethods}{adapt\+Methods}}
+\begin{DoxyCompactList}\small\item\em A base class which contains the algorithm parameters and virtual functions to adapt them. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsmc_1_1conditionalSampler}{conditional\+Sampler}}
+\item 
+class \mbox{\hyperlink{classsmc_1_1exception}{exception}}
+\begin{DoxyCompactList}\small\item\em S\+MC Exception class. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsmc_1_1historyelement}{historyelement}}
+\begin{DoxyCompactList}\small\item\em A template class for the elements of a linked list to be used for the history of the sampler. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsmc_1_1historyflags}{historyflags}}
+\begin{DoxyCompactList}\small\item\em The historyflags class holds a set of flags which describe various properties of the particle system at a given time. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsmc_1_1moveset}{moveset}}
+\begin{DoxyCompactList}\small\item\em A template class for a set of moves for use in an S\+MC samplers framework. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsmc_1_1nullParams}{null\+Params}}
+\begin{DoxyCompactList}\small\item\em An empty class for use when additional algorithm parameters are not required. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsmc_1_1population}{population}}
+\begin{DoxyCompactList}\small\item\em A template class for the particles of an S\+MC algorithm. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsmc_1_1sampler}{sampler}}
+\begin{DoxyCompactList}\small\item\em A template class for an interacting particle system suitable for S\+MC sampling. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsmc_1_1staticModelAdapt}{static\+Model\+Adapt}}
+\begin{DoxyCompactList}\small\item\em A class containing parameters and functions to update these parameters in the context of static Bayesian models. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class Space , class Params $>$ }\\std\+::ostream \& \mbox{\hyperlink{namespacesmc_afa9d36a4e701d48e0db9c8f0be9d9ea4}{operator$<$$<$}} (std\+::ostream \&, const \mbox{\hyperlink{classsmc_1_1conditionalSampler}{conditional\+Sampler}}$<$ Space, Params $>$ \&)
+\item 
+double \mbox{\hyperlink{namespacesmc_aaa30e89b2e4c9913d9a8b9b79d482308}{stable\+Log\+Sum\+Weights}} (const arma\+::vec \&logw)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The Sequential Monte Carlo namespace. 
+
+The classes and functions within this namespace are intended to be used for producing implemenetations of S\+MC samplers and related simulation techniques. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacesmc_afa9d36a4e701d48e0db9c8f0be9d9ea4}\label{namespacesmc_afa9d36a4e701d48e0db9c8f0be9d9ea4}} 
+\index{smc@{smc}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!smc@{smc}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily template$<$class Space , class Params $>$ \\
+std\+::ostream \& smc\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \mbox{\hyperlink{classsmc_1_1conditionalSampler}{conditional\+Sampler}}$<$ Space, Params $>$ \&}]{CS }\end{DoxyParamCaption})}
+
+Produce a human-\/readable display of the state of an \mbox{\hyperlink{classsmc_1_1sampler}{smc\+::sampler}} class using the stream operator. 
+\begin{DoxyParams}{Parameters}
+{\em os} & The output stream to which the display should be made. \\
+\hline
+{\em s} & The sampler which is to be displayed. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespacesmc_aaa30e89b2e4c9913d9a8b9b79d482308}\label{namespacesmc_aaa30e89b2e4c9913d9a8b9b79d482308}} 
+\index{smc@{smc}!stableLogSumWeights@{stableLogSumWeights}}
+\index{stableLogSumWeights@{stableLogSumWeights}!smc@{smc}}
+\doxysubsubsection{\texorpdfstring{stableLogSumWeights()}{stableLogSumWeights()}}
+{\footnotesize\ttfamily double smc\+::stable\+Log\+Sum\+Weights (\begin{DoxyParamCaption}\item[{const arma\+::vec \&}]{logw }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+A stable calculation of the log sum of the weights, used in E\+SS calculations This function performs a stable calculation of the log sum of the weights, which is useful for normalising weights, calculating the effective sample size and estimating the normalising constant.
+
+
+\begin{DoxyParams}{Parameters}
+{\em logw} & The log weights of interest. \\
+\hline
+\end{DoxyParams}

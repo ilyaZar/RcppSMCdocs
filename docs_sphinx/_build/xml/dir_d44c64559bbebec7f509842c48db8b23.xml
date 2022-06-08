@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_d44c64559bbebec7f509842c48db8b23" kind="dir">
+    <compoundname>/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include</compoundname>
+    <innerfile refid="adaptMethods_8h">adaptMethods.h</innerfile>
+    <innerfile refid="blockpfgaussianopt_8h">blockpfgaussianopt.h</innerfile>
+    <innerfile refid="conditionalSampler_8h">conditionalSampler.h</innerfile>
+    <innerfile refid="cSMCexamples_8h">cSMCexamples.h</innerfile>
+    <innerfile refid="history_8h">history.h</innerfile>
+    <innerfile refid="LinReg__LA_8h">LinReg_LA.h</innerfile>
+    <innerfile refid="LinReg__LA__adapt_8h">LinReg_LA_adapt.h</innerfile>
+    <innerfile refid="moveset_8h">moveset.h</innerfile>
+    <innerfile refid="nonLinPMMH_8h">nonLinPMMH.h</innerfile>
+    <innerfile refid="pflineart_8h">pflineart.h</innerfile>
+    <innerfile refid="pfnonlinbs_8h">pfnonlinbs.h</innerfile>
+    <innerfile refid="population_8h">population.h</innerfile>
+    <innerfile refid="RcppSMC_8h">RcppSMC.h</innerfile>
+    <innerfile refid="sampler_8h">sampler.h</innerfile>
+    <innerfile refid="smc-exception_8h">smc-exception.h</innerfile>
+    <innerfile refid="smctc_8h">smctc.h</innerfile>
+    <innerfile refid="staticModelAdapt_8h">staticModelAdapt.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/"/>
+  </compounddef>
+</doxygen>

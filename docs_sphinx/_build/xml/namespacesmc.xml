@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespacesmc" kind="namespace" language="C++">
+    <compoundname>smc</compoundname>
+    <innerclass refid="classsmc_1_1adaptMethods" prot="public">smc::adaptMethods</innerclass>
+    <innerclass refid="classsmc_1_1conditionalSampler" prot="public">smc::conditionalSampler</innerclass>
+    <innerclass refid="classsmc_1_1exception" prot="public">smc::exception</innerclass>
+    <innerclass refid="classsmc_1_1historyelement" prot="public">smc::historyelement</innerclass>
+    <innerclass refid="classsmc_1_1historyflags" prot="public">smc::historyflags</innerclass>
+    <innerclass refid="classsmc_1_1moveset" prot="public">smc::moveset</innerclass>
+    <innerclass refid="classsmc_1_1nullParams" prot="public">smc::nullParams</innerclass>
+    <innerclass refid="classsmc_1_1population" prot="public">smc::population</innerclass>
+    <innerclass refid="classsmc_1_1sampler" prot="public">smc::sampler</innerclass>
+    <innerclass refid="classsmc_1_1staticModelAdapt" prot="public">smc::staticModelAdapt</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespacesmc_1afa9d36a4e701d48e0db9c8f0be9d9ea4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class Space</type>
+          </param>
+          <param>
+            <type>class Params</type>
+          </param>
+        </templateparamlist>
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream &amp; smc::operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;, const conditionalSampler&lt; Space, Params &gt; &amp;)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <defname>os</defname>
+        </param>
+        <param>
+          <type>const <ref refid="classsmc_1_1conditionalSampler" kindref="compound">conditionalSampler</ref>&lt; Space, Params &gt; &amp;</type>
+          <defname>CS</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Produce a human-readable display of the state of an <ref refid="classsmc_1_1sampler" kindref="compound">smc::sampler</ref> class using the stream operator. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>os</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The output stream to which the display should be made. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The sampler which is to be displayed. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/conditionalSampler.h" line="704" column="5" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/conditionalSampler.h" bodystart="704" bodyend="716" declfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/conditionalSampler.h" declline="37" declcolumn="18"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacesmc_1aaa30e89b2e4c9913d9a8b9b79d482308" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double smc::stableLogSumWeights</definition>
+        <argsstring>(const arma::vec &amp;logw)</argsstring>
+        <name>stableLogSumWeights</name>
+        <param>
+          <type>const arma::vec &amp;</type>
+          <declname>logw</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A stable calculation of the log sum of the weights, used in ESS calculations This function performs a stable calculation of the log sum of the weights, which is useful for normalising weights, calculating the effective sample size and estimating the normalising constant.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>logw</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The log weights of interest. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/population.h" line="46" column="19" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/population.h" bodystart="46" bodyend="50"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The Sequential Monte Carlo namespace. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>The classes and functions within this namespace are intended to be used for producing implemenetations of SMC samplers and related simulation techniques. </para>
+    </detaileddescription>
+    <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/adaptMethods.h" line="33" column="13"/>
+  </compounddef>
+</doxygen>

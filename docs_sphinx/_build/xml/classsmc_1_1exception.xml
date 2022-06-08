@@ -1,0 +1,146 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classsmc_1_1exception" kind="class" language="C++" prot="public">
+    <compoundname>smc::exception</compoundname>
+    <includes refid="smc-exception_8h" local="no">smc-exception.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classsmc_1_1exception_1ae7eaaf46a8fbf4fcebc469afec4fa6de" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* smc::exception::szFile</definition>
+        <argsstring></argsstring>
+        <name>szFile</name>
+        <briefdescription>
+<para>The source file from which the code generating the exception was generated. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/smc-exception.h" line="54" column="17" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/smc-exception.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsmc_1_1exception_1a52fa917d7e89cd6532d300549f4f858b" prot="public" static="no" mutable="no">
+        <type>long</type>
+        <definition>long smc::exception::lLine</definition>
+        <argsstring></argsstring>
+        <name>lLine</name>
+        <briefdescription>
+<para>The line of that source file which generates the exception. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/smc-exception.h" line="55" column="10" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/smc-exception.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsmc_1_1exception_1ad620f37d0bc39955fb2596d4fb892dfa" prot="public" static="no" mutable="no">
+        <type>long</type>
+        <definition>long smc::exception::lCode</definition>
+        <argsstring></argsstring>
+        <name>lCode</name>
+        <briefdescription>
+<para>A numerical code indicating the nature of the exception generated. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/smc-exception.h" line="56" column="10" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/smc-exception.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsmc_1_1exception_1aca7310cf55883c51a5fbd0665ab9c729" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* smc::exception::szMessage</definition>
+        <argsstring></argsstring>
+        <name>szMessage</name>
+        <briefdescription>
+<para>A human-readable explanation of the cause of the exception. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/smc-exception.h" line="57" column="17" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/smc-exception.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classsmc_1_1exception_1a5745b40a366b5e47323186b1e567d55c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>smc::exception::exception</definition>
+        <argsstring>(char const *szN, long lL, long lC, char const *szM)</argsstring>
+        <name>exception</name>
+        <param>
+          <type>char const *</type>
+          <declname>szN</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>lL</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>lC</declname>
+        </param>
+        <param>
+          <type>char const *</type>
+          <declname>szM</declname>
+        </param>
+        <briefdescription>
+<para>Generate an SMCTC Exception class with the specified initialisation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This constructor fills the four elements of the class with their specified values. It is used to allow a single-line command to create and throw an exception.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>szN</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the source file generating the exception. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>lL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The line in that file responsible for the exception. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>lC</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The numerical code identifying the exception. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>szM</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An textual explanation of the problem. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/smc-exception.h" line="68" column="5" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/smc-exception.h" bodystart="68" bodyend="74"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>SMC Exception class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This class holds details of unrecoverable errors which occur within the SMCTC library. An instance of it is thrown whenever such an error occurs. </para>
+    </detaileddescription>
+    <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/smc-exception.h" line="52" column="18" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/smc-exception.h" bodystart="52" bodyend="75"/>
+    <listofallmembers>
+      <member refid="classsmc_1_1exception_1a5745b40a366b5e47323186b1e567d55c" prot="public" virt="non-virtual"><scope>smc::exception</scope><name>exception</name></member>
+      <member refid="classsmc_1_1exception_1ad620f37d0bc39955fb2596d4fb892dfa" prot="public" virt="non-virtual"><scope>smc::exception</scope><name>lCode</name></member>
+      <member refid="classsmc_1_1exception_1a52fa917d7e89cd6532d300549f4f858b" prot="public" virt="non-virtual"><scope>smc::exception</scope><name>lLine</name></member>
+      <member refid="classsmc_1_1exception_1ae7eaaf46a8fbf4fcebc469afec4fa6de" prot="public" virt="non-virtual"><scope>smc::exception</scope><name>szFile</name></member>
+      <member refid="classsmc_1_1exception_1aca7310cf55883c51a5fbd0665ab9c729" prot="public" virt="non-virtual"><scope>smc::exception</scope><name>szMessage</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

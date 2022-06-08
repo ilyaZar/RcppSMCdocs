@@ -1,0 +1,190 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="adaptMethods_8h" kind="file" language="C++">
+    <compoundname>adaptMethods.h</compoundname>
+    <includes refid="population_8h" local="no">population.h</includes>
+    <includedby refid="sampler_8h" local="yes">/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h</includedby>
+    <includedby refid="RcppSMC_8h" local="no">/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/RcppSMC.h</includedby>
+    <incdepgraph>
+      <node id="5">
+        <label>limits</label>
+      </node>
+      <node id="4">
+        <label>float.h</label>
+      </node>
+      <node id="6">
+        <label>cmath</label>
+      </node>
+      <node id="3">
+        <label>RcppArmadillo.h</label>
+      </node>
+      <node id="1">
+        <label>/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/adaptMethods.h</label>
+        <link refid="adaptMethods_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>population.h</label>
+        <link refid="population_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="12">
+        <label>/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/conditionalSampler.h</label>
+        <link refid="conditionalSampler_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/pflineart.h</label>
+        <link refid="pflineart_8h"/>
+      </node>
+      <node id="7">
+        <label>/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/LinReg_LA.h</label>
+        <link refid="LinReg__LA_8h"/>
+      </node>
+      <node id="6">
+        <label>/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/cSMCexamples.h</label>
+        <link refid="cSMCexamples_8h"/>
+      </node>
+      <node id="11">
+        <label>/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/pfnonlinbs.h</label>
+        <link refid="pfnonlinbs_8h"/>
+      </node>
+      <node id="1">
+        <label>/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/adaptMethods.h</label>
+        <link refid="adaptMethods_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/blockpfgaussianopt.h</label>
+        <link refid="blockpfgaussianopt_8h"/>
+      </node>
+      <node id="5">
+        <label>/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/RcppSMC.h</label>
+        <link refid="RcppSMC_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/nonLinPMMH.h</label>
+        <link refid="nonLinPMMH_8h"/>
+      </node>
+      <node id="8">
+        <label>/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/LinReg_LA_adapt.h</label>
+        <link refid="LinReg__LA__adapt_8h"/>
+      </node>
+      <node id="2">
+        <label>/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h</label>
+        <link refid="sampler_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/smctc.h</label>
+        <link refid="smctc_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classsmc_1_1adaptMethods" prot="public">smc::adaptMethods</innerclass>
+    <innernamespace refid="namespacesmc">smc</innernamespace>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="adaptMethods_8h_1ab2b18eafe8ee009db1c5c478a77a31d6" prot="public" static="no">
+        <name>__SMC_ADAPTMETHODS_H</name>
+        <initializer>1.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/adaptMethods.h" line="28" column="9" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/adaptMethods.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A base class with virtual functions to adapt parameters. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>-*-<sp/>mode:<sp/>C++;<sp/>c-indent-level:<sp/>4;<sp/>c-basic-offset:<sp/>4;<sp/>indent-tabs-mode:<sp/>nil;<sp/>-*-</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>adaptMethods:<sp/>A<sp/>class<sp/>that<sp/>adapts<sp/>the<sp/>algorithm<sp/>parameters</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Copyright<sp/>(C)<sp/>2017<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Dirk<sp/>Eddelbuettel,<sp/>Adam<sp/>Johansen<sp/>and<sp/>Leah<sp/>South</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>RcppSMC.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/>RcppSMC<sp/>is<sp/>free<sp/>software:<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify<sp/>it</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>as<sp/>published<sp/>by</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/>the<sp/>Free<sp/>Software<sp/>Foundation,<sp/>either<sp/>version<sp/>2<sp/>of<sp/>the<sp/>License,<sp/>or</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//<sp/>(at<sp/>your<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//<sp/>RcppSMC<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,<sp/>but</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">//<sp/>MERCHANTABILITY<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">//<sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//<sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">//<sp/>along<sp/>with<sp/>RInside.<sp/><sp/>If<sp/>not,<sp/>see<sp/>&lt;http://www.gnu.org/licenses/&gt;.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>__SMC_ADAPTMETHODS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="adaptMethods_8h_1ab2b18eafe8ee009db1c5c478a77a31d6" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__SMC_ADAPTMETHODS_H<sp/>1.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="population_8h" kindref="compound">population.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="namespacesmc" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacesmc" kindref="compound">smc</ref><sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="classsmc_1_1adaptMethods" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>Space,<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>Params&gt;<sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classsmc_1_1adaptMethods" kindref="compound">adaptMethods</ref><sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="classsmc_1_1adaptMethods_1a6cd01df7136b41a40b2030a9606154e4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classsmc_1_1adaptMethods_1a6cd01df7136b41a40b2030a9606154e4" kindref="member">~adaptMethods</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="classsmc_1_1adaptMethods_1a96614576030dc76fbf7d64d0416d6f52" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classsmc_1_1adaptMethods_1a96614576030dc76fbf7d64d0416d6f52" kindref="member">updateForMove</ref>(Params<sp/>&amp;,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classsmc_1_1population" kindref="compound">population&lt;Space&gt;</ref><sp/>&amp;<sp/>pop)<sp/>{}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="classsmc_1_1adaptMethods_1a642c9827bc6ed466160886219a0c0d8f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classsmc_1_1adaptMethods_1a642c9827bc6ed466160886219a0c0d8f" kindref="member">updateForMCMC</ref>(Params<sp/>&amp;,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classsmc_1_1population" kindref="compound">population&lt;Space&gt;</ref><sp/>&amp;<sp/>pop,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>acceptProb,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nResampled,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;<sp/>nRepeats)<sp/>{}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="classsmc_1_1adaptMethods_1a2f8373020e442ab65ef657097e2d4c03" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classsmc_1_1adaptMethods_1a2f8373020e442ab65ef657097e2d4c03" kindref="member">updateEnd</ref>(Params<sp/>&amp;,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classsmc_1_1population" kindref="compound">population&lt;Space&gt;</ref><sp/>&amp;<sp/>pop)<sp/>{}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="53"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/adaptMethods.h"/>
+  </compounddef>
+</doxygen>

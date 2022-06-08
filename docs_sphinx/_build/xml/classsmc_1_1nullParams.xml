@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classsmc_1_1nullParams" kind="class" language="C++" prot="public">
+    <compoundname>smc::nullParams</compoundname>
+    <includes refid="sampler_8h" local="no">sampler.h</includes>
+    <briefdescription>
+<para>An empty class for use when additional algorithm parameters are not required. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" line="73" column="21" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" bodystart="73" bodyend="73"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

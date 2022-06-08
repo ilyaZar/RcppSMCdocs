@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespacePathSamplingType" kind="namespace" language="C++">
+    <compoundname>PathSamplingType</compoundname>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespacePathSamplingType_1a180b59ee4c6c2fa015480c609640614d" prot="public" static="no" strong="no">
+        <type></type>
+        <name>Enum</name>
+        <enumvalue id="namespacePathSamplingType_1a180b59ee4c6c2fa015480c609640614da32bc9c84af00767367ced38e687869da" prot="public">
+          <name>TRAPEZOID2</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacePathSamplingType_1a180b59ee4c6c2fa015480c609640614dac3287e3782a18e753ff2d3a888f7a2a6" prot="public">
+          <name>TRAPEZOID1</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacePathSamplingType_1a180b59ee4c6c2fa015480c609640614da42f1f053b9781a7ec871027d81b52e59" prot="public">
+          <name>RECTANGLE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" line="56" column="14" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" bodystart="56" bodyend="58"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Specifiers for various path sampling methods: </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" line="55" column="1"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,706 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classsmc_1_1conditionalSampler" kind="class" language="C++" prot="public">
+    <compoundname>smc::conditionalSampler</compoundname>
+    <includes refid="conditionalSampler_8h" local="no">conditionalSampler.h</includes>
+    <templateparamlist>
+      <param>
+        <type>class Space</type>
+      </param>
+      <param>
+        <type>class Params</type>
+        <defval><ref refid="classsmc_1_1nullParams" kindref="compound">nullParams</ref></defval>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classsmc_1_1conditionalSampler_1abdf893a9b8c857e14736551c215a2904" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; Space &gt;</type>
+        <definition>std::vector&lt;Space&gt; smc::conditionalSampler&lt; Space, Params &gt;::referenceTrajectory</definition>
+        <argsstring></argsstring>
+        <name>referenceTrajectory</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/conditionalSampler.h" line="86" column="25" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/conditionalSampler.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsmc_1_1conditionalSampler_1ae2685bbe6aae5d6a6bfe443463724f42" prot="private" static="no" mutable="no">
+        <type>long</type>
+        <definition>long smc::conditionalSampler&lt; Space, Params &gt;::maxT</definition>
+        <argsstring></argsstring>
+        <name>maxT</name>
+        <initializer>= referenceTrajectory.size()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/conditionalSampler.h" line="87" column="18" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/conditionalSampler.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsmc_1_1conditionalSampler_1a50143e1f52e9939ae789eac84222d07c" prot="private" static="no" mutable="no">
+        <type>arma::Col&lt; unsigned int &gt;</type>
+        <definition>arma::Col&lt;unsigned int&gt; smc::conditionalSampler&lt; Space, Params &gt;::referenceTrajectoryIndices</definition>
+        <argsstring></argsstring>
+        <name>referenceTrajectoryIndices</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/conditionalSampler.h" line="88" column="23" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/conditionalSampler.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsmc_1_1conditionalSampler_1afe26462b634bc1f4907cb295528955e0" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int smc::conditionalSampler&lt; Space, Params &gt;::digitsPrint</definition>
+        <argsstring></argsstring>
+        <name>digitsPrint</name>
+        <initializer>= 6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/conditionalSampler.h" line="90" column="17" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/conditionalSampler.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classsmc_1_1conditionalSampler_1a49c8b41f8d53145456a4e6fe570c6a70" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>smc::conditionalSampler&lt; Space, Params &gt;::conditionalSampler</definition>
+        <argsstring>(long lSize, HistoryType::Enum htHistoryMode, std::vector&lt; Space &gt; referenceTrajectoryInit)</argsstring>
+        <name>conditionalSampler</name>
+        <param>
+          <type>long</type>
+          <declname>lSize</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceHistoryType_1a486dcf426d91692ddbce0dd2e97a9077" kindref="member">HistoryType::Enum</ref></type>
+          <declname>htHistoryMode</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; Space &gt;</type>
+          <declname>referenceTrajectoryInit</declname>
+        </param>
+        <briefdescription>
+<para>Create an particle system containing lSize uninitialised particles with the specified mode. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/conditionalSampler.h" line="93" column="13" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/conditionalSampler.h" bodystart="93" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1conditionalSampler_1a39f32e4513a3a1ebfaa1e29b91a149ca" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>smc::conditionalSampler&lt; Space, Params &gt;::conditionalSampler</definition>
+        <argsstring>(long lSize, HistoryType::Enum htHistoryMode, moveset&lt; Space, Params &gt; *pNewMoves, std::vector&lt; Space &gt; referenceTrajectoryInit)</argsstring>
+        <name>conditionalSampler</name>
+        <param>
+          <type>long</type>
+          <declname>lSize</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceHistoryType_1a486dcf426d91692ddbce0dd2e97a9077" kindref="member">HistoryType::Enum</ref></type>
+          <declname>htHistoryMode</declname>
+        </param>
+        <param>
+          <type><ref refid="classsmc_1_1moveset" kindref="compound">moveset</ref>&lt; Space, Params &gt; *</type>
+          <declname>pNewMoves</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; Space &gt;</type>
+          <declname>referenceTrajectoryInit</declname>
+        </param>
+        <briefdescription>
+<para>Create an particle system containing lSize uninitialised particles with the specified mode, additionally passing a moveset-object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/conditionalSampler.h" line="100" column="13" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/conditionalSampler.h" bodystart="100" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1conditionalSampler_1a37813f208d8438ffd9c0e860ca9323c6" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int smc::conditionalSampler&lt; Space, Params &gt;::GetDigitsPrint</definition>
+        <argsstring>(void) const</argsstring>
+        <name>GetDigitsPrint</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Get the number of digits used in ostream&lt;&lt; operator printing. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/conditionalSampler.h" line="107" column="17" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/conditionalSampler.h" bodystart="107" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1conditionalSampler_1a54958b76587872c308fd187b3d816eac" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void smc::conditionalSampler&lt; Space, Params &gt;::SetDigitsPrint</definition>
+        <argsstring>(int newDigitsPrint)</argsstring>
+        <name>SetDigitsPrint</name>
+        <param>
+          <type>int</type>
+          <declname>newDigitsPrint</declname>
+        </param>
+        <briefdescription>
+<para>Set the number of digits used in ostream&lt;&lt; operator printing. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/conditionalSampler.h" line="109" column="18" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/conditionalSampler.h" bodystart="109" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1conditionalSampler_1aa59a8a5ab41daaf58851b9edaf04c6fa" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; Space &gt;</type>
+        <definition>std::vector&lt;Space&gt; smc::conditionalSampler&lt; Space, Params &gt;::GetReferenceTrajectory</definition>
+        <argsstring>(void) const</argsstring>
+        <name>GetReferenceTrajectory</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Returns the reference trajectory. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/conditionalSampler.h" line="111" column="25" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/conditionalSampler.h" bodystart="111" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1conditionalSampler_1a4656dca677a96573b0a4c6a5c0d522a0" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const std::vector&lt; Space &gt; &amp;</type>
+        <definition>const std::vector&lt;Space&gt;&amp; smc::conditionalSampler&lt; Space, Params &gt;::GetReferenceTrajectoryRefs</definition>
+        <argsstring>(void) const</argsstring>
+        <name>GetReferenceTrajectoryRefs</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Returns a constant reference to the reference trajectory. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/conditionalSampler.h" line="113" column="32" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/conditionalSampler.h" bodystart="113" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1conditionalSampler_1a9b11181e2493bfbda730fd06044fb75c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Space</type>
+        <definition>Space smc::conditionalSampler&lt; Space, Params &gt;::GetReferenceValue</definition>
+        <argsstring>(long n) const</argsstring>
+        <name>GetReferenceValue</name>
+        <param>
+          <type>long</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>Returns the n&apos;th element of the reference trajectory. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/conditionalSampler.h" line="115" column="19" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/conditionalSampler.h" bodystart="115" bodyend="115"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1conditionalSampler_1ac7f05a0e26a3969d15d995f5b3389740" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const Space &amp;</type>
+        <definition>const Space&amp; smc::conditionalSampler&lt; Space, Params &gt;::GetReferenceValueRefs</definition>
+        <argsstring>(long n) const</argsstring>
+        <name>GetReferenceValueRefs</name>
+        <param>
+          <type>long</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>Returns a constant reference to the n&apos;th element of the reference trajectory. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/conditionalSampler.h" line="117" column="26" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/conditionalSampler.h" bodystart="117" bodyend="117"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1conditionalSampler_1a234aa40e48cd361d469ed9b2ca15fd8e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const long</type>
+        <definition>const long smc::conditionalSampler&lt; Space, Params &gt;::GetReferenceValueIndex</definition>
+        <argsstring>(long lTime) const</argsstring>
+        <name>GetReferenceValueIndex</name>
+        <param>
+          <type>long</type>
+          <declname>lTime</declname>
+        </param>
+        <briefdescription>
+<para>Returns index of conditional reference Trajectory. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/conditionalSampler.h" line="119" column="24" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/conditionalSampler.h" bodystart="119" bodyend="120"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1conditionalSampler_1a9ec349f8b96a7a9ed429672f3b38a526" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void smc::conditionalSampler&lt; Space, Params &gt;::SetReferenceTrajectory</definition>
+        <argsstring>(const std::vector&lt; Space &gt; &amp;newReferenceTrajectory)</argsstring>
+        <name>SetReferenceTrajectory</name>
+        <param>
+          <type>const std::vector&lt; Space &gt; &amp;</type>
+          <declname>newReferenceTrajectory</declname>
+        </param>
+        <briefdescription>
+<para>Sets the reference trajectory. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/conditionalSampler.h" line="122" column="18" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/conditionalSampler.h" bodystart="122" bodyend="122"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1conditionalSampler_1a7a2dab045105c1cf5d38665ef04ffa02" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void smc::conditionalSampler&lt; Space, Params &gt;::SetReferenceValue</definition>
+        <argsstring>(const Space &amp;newReferenceValue, long n)</argsstring>
+        <name>SetReferenceValue</name>
+        <param>
+          <type>const Space &amp;</type>
+          <declname>newReferenceValue</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>Sets the n&apos;elment of the reference trajectory. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/conditionalSampler.h" line="124" column="18" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/conditionalSampler.h" bodystart="124" bodyend="124"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1conditionalSampler_1ae906b8685eec7f3bbaf1bcefb82397f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void smc::conditionalSampler&lt; Space, Params &gt;::Initialise</definition>
+        <argsstring>(void)</argsstring>
+        <name>Initialise</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Initialise the conditional sampler and its constituent particles. The reference trajectory used to set the first coordinate at T=0 is either from the last call to <ref refid="classsmc_1_1conditionalSampler_1a9ec349f8b96a7a9ed429672f3b38a526" kindref="member">conditionalSampler.SetReferenceTrajectory()</ref>, or defaults to the trajectory passed to the constructor at the time the object is created. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>At present this function resets the system evolution time to 0 and calls the moveset initialisor to assign each particle in the ensemble.</para>
+<para>Note that the initialisation function must be specified before calling this function.</para>
+<para>Additionally, the t=0 particle coordinate is set to the conditional reference value and re-weighted. </para>
+        </detaileddescription>
+        <inbodydescription>
+<para>To avoid compiler warnings, <ref refid="namespaceHistoryType_1a486dcf426d91692ddbce0dd2e97a9077a1755a29ac60a2ebeb8a4c4b27f48bcde" kindref="member">HistoryType::NONE</ref> is handled</para>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/conditionalSampler.h" line="126" column="18" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/conditionalSampler.h" bodystart="162" bodyend="228"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1conditionalSampler_1a2bc4aa6c9ccd10fd0571780eb68989c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void smc::conditionalSampler&lt; Space, Params &gt;::Initialise</definition>
+        <argsstring>(const std::vector&lt; Space &gt; &amp;newReferenceTrajectory)</argsstring>
+        <name>Initialise</name>
+        <param>
+          <type>const std::vector&lt; Space &gt; &amp;</type>
+          <declname>newReferenceTrajectory</declname>
+          <defname>referenceTrajectoryInit</defname>
+        </param>
+        <briefdescription>
+<para>Initialise the sampler and its constituent particles. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>At present this function resets the system evolution time to 0 and calls the moveset initialisor to assign each particle in the ensemble.</para>
+<para>Note that the initialisation function must be specified before calling this function.</para>
+<para>Additionally, a conditional particle trajectory is set and the t=0 particle coordinate is set to the conditional reference value and re-weighted. </para>
+        </detaileddescription>
+        <inbodydescription>
+<para>To avoid compiler warnings, <ref refid="namespaceHistoryType_1a486dcf426d91692ddbce0dd2e97a9077a1755a29ac60a2ebeb8a4c4b27f48bcde" kindref="member">HistoryType::NONE</ref> is handled</para>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/conditionalSampler.h" line="128" column="18" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/conditionalSampler.h" bodystart="235" bodyend="302"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1conditionalSampler_1a395adfb581d81d289b7e092bac9e67eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void smc::conditionalSampler&lt; Space, Params &gt;::Iterate</definition>
+        <argsstring>(void)</argsstring>
+        <name>Iterate</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Perform one conditional iteration of the simulation algorithm. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/conditionalSampler.h" line="130" column="18" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/conditionalSampler.h" bodystart="361" bodyend="365"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1conditionalSampler_1acc84d393087acb54897b01d9c4c31e9e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double smc::conditionalSampler&lt; Space, Params &gt;::IterateEss</definition>
+        <argsstring>(void)</argsstring>
+        <name>IterateEss</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Perform one conditional iteration of the simulation algorithm and return the resulting ess. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/conditionalSampler.h" line="132" column="20" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/conditionalSampler.h" bodystart="304" bodyend="359"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1conditionalSampler_1a3d1b5064b90ee24b14a980c857eea6e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void smc::conditionalSampler&lt; Space, Params &gt;::IterateUntil</definition>
+        <argsstring>(long lTerminate)</argsstring>
+        <name>IterateUntil</name>
+        <param>
+          <type>long</type>
+          <declname>lTerminate</declname>
+        </param>
+        <briefdescription>
+<para>Perform conditional iterations until the specified evolution time is reached. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/conditionalSampler.h" line="134" column="18" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/conditionalSampler.h" bodystart="367" bodyend="374"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1conditionalSampler_1ad7404f268ac8e27490c9d1bea4d11d36" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void smc::conditionalSampler&lt; Space, Params &gt;::conditionalResample</definition>
+        <argsstring>(ResampleType::Enum lMode)</argsstring>
+        <name>conditionalResample</name>
+        <param>
+          <type><ref refid="namespaceResampleType_1aae1fd87d74ce6bb0168e509df119f6eb" kindref="member">ResampleType::Enum</ref></type>
+          <declname>lMode</declname>
+        </param>
+        <briefdescription>
+<para>Resample the particle set using the specified resampling scheme specifically adjusted for conditional resampling. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>upper sequence part: 1/N,2/N,...c/N,...,1</para>
+<para>lower sequence part: 0/N,1/N,...c/N,...,(N-1)/N</para>
+<para>particle k_{t-1} weight for all strata k_t=1,...,N</para>
+<para>weights of \lambda(k_t|.) distribution for k_t sampling</para>
+<para>upper sequence part: 1/N,2/N,...c/N,...,1</para>
+<para>lower sequence part: 0/N,1/N,...c/N,...,(N-1)/N</para>
+<para>particle k_{t-1} weight for all strata k_t=1,...,N</para>
+<para>weights of \lambda(k_t|.) distribution for k_t sampling</para>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/conditionalSampler.h" line="136" column="18" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/conditionalSampler.h" bodystart="376" bodyend="655"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1conditionalSampler_1a7d0c9bf096c898b19b8fa5ef77f4bfb4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void smc::conditionalSampler&lt; Space, Params &gt;::MoveReferenceParticle</definition>
+        <argsstring>(void)</argsstring>
+        <name>MoveReferenceParticle</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Move the reference particle by setting the coordinate to the reference value and re-weighting. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/conditionalSampler.h" line="138" column="18" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/conditionalSampler.h" bodystart="658" bodyend="661"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1conditionalSampler_1a2dbdc428dd532386637821500c9d8ee5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream &amp; smc::conditionalSampler&lt; Space, Params &gt;::StreamParticle</definition>
+        <argsstring>(std::ostream &amp;os, long n) const</argsstring>
+        <name>StreamParticle</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>os</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>Dump a specified particle to the specified output stream in a human readable form. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Produce a human-readable display of the current n&apos;th particle value and log weight.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>os</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The output stream to which the display should be made. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index of the particle of interest </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/conditionalSampler.h" line="140" column="27" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/conditionalSampler.h" bodystart="695" bodyend="699"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1conditionalSampler_1abd4f8ff812617b616fce87115f6be554" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream &amp; smc::conditionalSampler&lt; Space, Params &gt;::StreamParticles</definition>
+        <argsstring>(std::ostream &amp;os, int digits) const</argsstring>
+        <name>StreamParticles</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>os</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>digits</declname>
+        </param>
+        <briefdescription>
+<para>Dump the entire particle set to the specified output stream in a human readable form. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Produce a human-readable display of the current particle values and log weights.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>os</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The output stream to which the display should be made. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/conditionalSampler.h" line="142" column="27" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/conditionalSampler.h" bodystart="666" bodyend="689"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1conditionalSampler_1a19e56bae4c5af2dcabdeec27aedc3413" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void smc::conditionalSampler&lt; Space, Params &gt;::SetAdaptMethods</definition>
+        <argsstring>(adaptMethods&lt; Space, Params &gt; *adaptMethod)</argsstring>
+        <name>SetAdaptMethods</name>
+        <param>
+          <type><ref refid="classsmc_1_1adaptMethods" kindref="compound">adaptMethods</ref>&lt; Space, Params &gt; *</type>
+          <declname>adaptMethod</declname>
+        </param>
+        <briefdescription>
+<para>Throws exception when adaptation related members of the base sampler class are used: </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/conditionalSampler.h" line="146" column="18" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/conditionalSampler.h" bodystart="146" bodyend="146"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1conditionalSampler_1a6405be81a56dbf5ab41301033ee16ede" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void smc::conditionalSampler&lt; Space, Params &gt;::SetMcmcRepeats</definition>
+        <argsstring>(adaptMethods&lt; Space, Params &gt; *adaptMethod)</argsstring>
+        <name>SetMcmcRepeats</name>
+        <param>
+          <type><ref refid="classsmc_1_1adaptMethods" kindref="compound">adaptMethods</ref>&lt; Space, Params &gt; *</type>
+          <declname>adaptMethod</declname>
+        </param>
+        <briefdescription>
+<para>Throws exception when members related to MCMC moves of the base sampler class are used: </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/conditionalSampler.h" line="148" column="18" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/conditionalSampler.h" bodystart="148" bodyend="148"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1conditionalSampler_1acbb2adc565693c36b7e71e6a32969c75" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void smc::conditionalSampler&lt; Space, Params &gt;::OstreamMCMCRecordToStream</definition>
+        <argsstring>(std::ostream &amp;os) const</argsstring>
+        <name>OstreamMCMCRecordToStream</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>os</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/conditionalSampler.h" line="149" column="18" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/conditionalSampler.h" bodystart="149" bodyend="149"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1conditionalSampler_1a8472a0acd9578bdd94b5c08a7428135f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int smc::conditionalSampler&lt; Space, Params &gt;::GetAccepted</definition>
+        <argsstring>(void) const</argsstring>
+        <name>GetAccepted</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/conditionalSampler.h" line="150" column="17" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/conditionalSampler.h" bodystart="150" bodyend="150"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1conditionalSampler_1a2f2cf5a113c495bcf6a17c6ac11e0bbf" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int smc::conditionalSampler&lt; Space, Params &gt;::GetMcmcRepeats</definition>
+        <argsstring>(void) const</argsstring>
+        <name>GetMcmcRepeats</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/conditionalSampler.h" line="151" column="17" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/conditionalSampler.h" bodystart="151" bodyend="151"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1conditionalSampler_1ae5038f0bf1465ba16c4e27465f38a0bf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int smc::conditionalSampler&lt; Space, Params &gt;::GetHistorymcmcRepeats</definition>
+        <argsstring>(long n)</argsstring>
+        <name>GetHistorymcmcRepeats</name>
+        <param>
+          <type>long</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/conditionalSampler.h" line="152" column="17" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/conditionalSampler.h" bodystart="152" bodyend="152"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1conditionalSampler_1a5978a76877529f7ef636b19d92f094f2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void smc::conditionalSampler&lt; Space, Params &gt;::SetMcmcRepeats</definition>
+        <argsstring>(int reps)</argsstring>
+        <name>SetMcmcRepeats</name>
+        <param>
+          <type>int</type>
+          <declname>reps</declname>
+        </param>
+        <briefdescription>
+<para>Sets the number of MCMC repeats. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/conditionalSampler.h" line="154" column="18" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/conditionalSampler.h" bodystart="154" bodyend="154"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classsmc_1_1conditionalSampler_1a63d082b0e064edd6281eed9ce4543af1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;, const conditionalSampler&lt; Space, Params &gt; &amp;)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <defname>os</defname>
+        </param>
+        <param>
+          <type>const <ref refid="classsmc_1_1conditionalSampler" kindref="compound">conditionalSampler</ref>&lt; Space, Params &gt; &amp;</type>
+          <defname>CS</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Produce a human-readable display of the state of an <ref refid="classsmc_1_1sampler" kindref="compound">smc::sampler</ref> class using the stream operator. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>os</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The output stream to which the display should be made. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The sampler which is to be displayed. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/conditionalSampler.h" line="143" column="20" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/conditionalSampler.h" bodystart="704" bodyend="716"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/conditionalSampler.h" line="35" column="17" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/conditionalSampler.h" bodystart="35" bodyend="-1"/>
+    <listofallmembers>
+      <member refid="classsmc_1_1conditionalSampler_1ad7404f268ac8e27490c9d1bea4d11d36" prot="public" virt="non-virtual"><scope>smc::conditionalSampler</scope><name>conditionalResample</name></member>
+      <member refid="classsmc_1_1conditionalSampler_1a49c8b41f8d53145456a4e6fe570c6a70" prot="public" virt="non-virtual"><scope>smc::conditionalSampler</scope><name>conditionalSampler</name></member>
+      <member refid="classsmc_1_1conditionalSampler_1a39f32e4513a3a1ebfaa1e29b91a149ca" prot="public" virt="non-virtual"><scope>smc::conditionalSampler</scope><name>conditionalSampler</name></member>
+      <member refid="classsmc_1_1conditionalSampler_1afe26462b634bc1f4907cb295528955e0" prot="private" virt="non-virtual"><scope>smc::conditionalSampler</scope><name>digitsPrint</name></member>
+      <member refid="classsmc_1_1conditionalSampler_1a8472a0acd9578bdd94b5c08a7428135f" prot="public" virt="non-virtual"><scope>smc::conditionalSampler</scope><name>GetAccepted</name></member>
+      <member refid="classsmc_1_1conditionalSampler_1a37813f208d8438ffd9c0e860ca9323c6" prot="public" virt="non-virtual"><scope>smc::conditionalSampler</scope><name>GetDigitsPrint</name></member>
+      <member refid="classsmc_1_1conditionalSampler_1ae5038f0bf1465ba16c4e27465f38a0bf" prot="public" virt="non-virtual"><scope>smc::conditionalSampler</scope><name>GetHistorymcmcRepeats</name></member>
+      <member refid="classsmc_1_1conditionalSampler_1a2f2cf5a113c495bcf6a17c6ac11e0bbf" prot="public" virt="non-virtual"><scope>smc::conditionalSampler</scope><name>GetMcmcRepeats</name></member>
+      <member refid="classsmc_1_1conditionalSampler_1aa59a8a5ab41daaf58851b9edaf04c6fa" prot="public" virt="non-virtual"><scope>smc::conditionalSampler</scope><name>GetReferenceTrajectory</name></member>
+      <member refid="classsmc_1_1conditionalSampler_1a4656dca677a96573b0a4c6a5c0d522a0" prot="public" virt="non-virtual"><scope>smc::conditionalSampler</scope><name>GetReferenceTrajectoryRefs</name></member>
+      <member refid="classsmc_1_1conditionalSampler_1a9b11181e2493bfbda730fd06044fb75c" prot="public" virt="non-virtual"><scope>smc::conditionalSampler</scope><name>GetReferenceValue</name></member>
+      <member refid="classsmc_1_1conditionalSampler_1a234aa40e48cd361d469ed9b2ca15fd8e" prot="public" virt="non-virtual"><scope>smc::conditionalSampler</scope><name>GetReferenceValueIndex</name></member>
+      <member refid="classsmc_1_1conditionalSampler_1ac7f05a0e26a3969d15d995f5b3389740" prot="public" virt="non-virtual"><scope>smc::conditionalSampler</scope><name>GetReferenceValueRefs</name></member>
+      <member refid="classsmc_1_1conditionalSampler_1ae906b8685eec7f3bbaf1bcefb82397f3" prot="public" virt="non-virtual"><scope>smc::conditionalSampler</scope><name>Initialise</name></member>
+      <member refid="classsmc_1_1conditionalSampler_1a2bc4aa6c9ccd10fd0571780eb68989c7" prot="public" virt="non-virtual"><scope>smc::conditionalSampler</scope><name>Initialise</name></member>
+      <member refid="classsmc_1_1conditionalSampler_1a395adfb581d81d289b7e092bac9e67eb" prot="public" virt="non-virtual"><scope>smc::conditionalSampler</scope><name>Iterate</name></member>
+      <member refid="classsmc_1_1conditionalSampler_1acc84d393087acb54897b01d9c4c31e9e" prot="public" virt="non-virtual"><scope>smc::conditionalSampler</scope><name>IterateEss</name></member>
+      <member refid="classsmc_1_1conditionalSampler_1a3d1b5064b90ee24b14a980c857eea6e0" prot="public" virt="non-virtual"><scope>smc::conditionalSampler</scope><name>IterateUntil</name></member>
+      <member refid="classsmc_1_1conditionalSampler_1ae2685bbe6aae5d6a6bfe443463724f42" prot="private" virt="non-virtual"><scope>smc::conditionalSampler</scope><name>maxT</name></member>
+      <member refid="classsmc_1_1conditionalSampler_1a7d0c9bf096c898b19b8fa5ef77f4bfb4" prot="public" virt="non-virtual"><scope>smc::conditionalSampler</scope><name>MoveReferenceParticle</name></member>
+      <member refid="classsmc_1_1conditionalSampler_1a63d082b0e064edd6281eed9ce4543af1" prot="public" virt="non-virtual"><scope>smc::conditionalSampler</scope><name>operator&lt;&lt;</name></member>
+      <member refid="classsmc_1_1conditionalSampler_1acbb2adc565693c36b7e71e6a32969c75" prot="public" virt="non-virtual"><scope>smc::conditionalSampler</scope><name>OstreamMCMCRecordToStream</name></member>
+      <member refid="classsmc_1_1conditionalSampler_1abdf893a9b8c857e14736551c215a2904" prot="private" virt="non-virtual"><scope>smc::conditionalSampler</scope><name>referenceTrajectory</name></member>
+      <member refid="classsmc_1_1conditionalSampler_1a50143e1f52e9939ae789eac84222d07c" prot="private" virt="non-virtual"><scope>smc::conditionalSampler</scope><name>referenceTrajectoryIndices</name></member>
+      <member refid="classsmc_1_1conditionalSampler_1a19e56bae4c5af2dcabdeec27aedc3413" prot="public" virt="non-virtual"><scope>smc::conditionalSampler</scope><name>SetAdaptMethods</name></member>
+      <member refid="classsmc_1_1conditionalSampler_1a54958b76587872c308fd187b3d816eac" prot="public" virt="non-virtual"><scope>smc::conditionalSampler</scope><name>SetDigitsPrint</name></member>
+      <member refid="classsmc_1_1conditionalSampler_1a6405be81a56dbf5ab41301033ee16ede" prot="public" virt="non-virtual"><scope>smc::conditionalSampler</scope><name>SetMcmcRepeats</name></member>
+      <member refid="classsmc_1_1conditionalSampler_1a5978a76877529f7ef636b19d92f094f2" prot="public" virt="non-virtual"><scope>smc::conditionalSampler</scope><name>SetMcmcRepeats</name></member>
+      <member refid="classsmc_1_1conditionalSampler_1a9ec349f8b96a7a9ed429672f3b38a526" prot="public" virt="non-virtual"><scope>smc::conditionalSampler</scope><name>SetReferenceTrajectory</name></member>
+      <member refid="classsmc_1_1conditionalSampler_1a7a2dab045105c1cf5d38665ef04ffa02" prot="public" virt="non-virtual"><scope>smc::conditionalSampler</scope><name>SetReferenceValue</name></member>
+      <member refid="classsmc_1_1conditionalSampler_1a2dbdc428dd532386637821500c9d8ee5" prot="public" virt="non-virtual"><scope>smc::conditionalSampler</scope><name>StreamParticle</name></member>
+      <member refid="classsmc_1_1conditionalSampler_1abd4f8ff812617b616fce87115f6be554" prot="public" virt="non-virtual"><scope>smc::conditionalSampler</scope><name>StreamParticles</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

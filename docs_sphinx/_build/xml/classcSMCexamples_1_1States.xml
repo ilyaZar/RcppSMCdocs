@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classcSMCexamples_1_1States" kind="class" language="C++" prot="public">
+    <compoundname>cSMCexamples::States</compoundname>
+    <includes refid="cSMCexamples_8h" local="no">cSMCexamples.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classcSMCexamples_1_1States_1acf3dee1fbac5bf799d3826a607d3b052" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double cSMCexamples::States::xState</definition>
+        <argsstring></argsstring>
+        <name>xState</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/cSMCexamples.h" line="33" column="16" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/cSMCexamples.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/cSMCexamples.h" line="31" column="1" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/cSMCexamples.h" bodystart="30" bodyend="34"/>
+    <listofallmembers>
+      <member refid="classcSMCexamples_1_1States_1acf3dee1fbac5bf799d3826a607d3b052" prot="public" virt="non-virtual"><scope>cSMCexamples::States</scope><name>xState</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

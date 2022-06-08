@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespacepflineart" kind="namespace" language="C++">
+    <compoundname>pflineart</compoundname>
+    <innerclass refid="classpflineart_1_1cv__obs" prot="public">pflineart::cv_obs</innerclass>
+    <innerclass refid="classpflineart_1_1cv__state" prot="public">pflineart::cv_state</innerclass>
+    <innerclass refid="classpflineart_1_1pflineart__move" prot="public">pflineart::pflineart_move</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespacepflineart_1a0f24895ed711bad87b80467ae07197a1" prot="public" static="no" mutable="no">
+        <type><ref refid="classsmc_1_1moveset" kindref="compound">smc::moveset</ref>&lt; <ref refid="classpflineart_1_1cv__state" kindref="compound">cv_state</ref>, <ref refid="classsmc_1_1nullParams" kindref="compound">smc::nullParams</ref> &gt; *</type>
+        <definition>smc::moveset&lt;cv_state,smc::nullParams&gt;* pflineart::myMove</definition>
+        <argsstring></argsstring>
+        <name>myMove</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/pflineart.h" line="60" column="14" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/pflineart.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespacepflineart_1ad51c007aa1ed1638b582a1750b215435" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double pflineart::logLikelihood</definition>
+        <argsstring>(long lTime, const cv_state &amp;X)</argsstring>
+        <name>logLikelihood</name>
+        <param>
+          <type>long</type>
+          <declname>lTime</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classpflineart_1_1cv__state" kindref="compound">cv_state</ref> &amp;</type>
+          <declname>X</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/pflineart.h" line="40" column="8" declfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/pflineart.h" declline="40" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacepflineart_1ab29384a0aa26099c95b1725d0f8e9224" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double pflineart::integrand_mean_x</definition>
+        <argsstring>(const cv_state &amp;, void *)</argsstring>
+        <name>integrand_mean_x</name>
+        <param>
+          <type>const <ref refid="classpflineart_1_1cv__state" kindref="compound">cv_state</ref> &amp;</type>
+        </param>
+        <param>
+          <type>void *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/pflineart.h" line="55" column="12" declfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/pflineart.h" declline="55" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacepflineart_1af4999d50b3858b7edc1d749e88fcd7c8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double pflineart::integrand_mean_y</definition>
+        <argsstring>(const cv_state &amp;, void *)</argsstring>
+        <name>integrand_mean_y</name>
+        <param>
+          <type>const <ref refid="classpflineart_1_1cv__state" kindref="compound">cv_state</ref> &amp;</type>
+        </param>
+        <param>
+          <type>void *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/pflineart.h" line="56" column="12" declfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/pflineart.h" declline="56" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacepflineart_1ab2b5ee87587f99f0f993020734f26112" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double pflineart::integrand_var_x</definition>
+        <argsstring>(const cv_state &amp;, void *)</argsstring>
+        <name>integrand_var_x</name>
+        <param>
+          <type>const <ref refid="classpflineart_1_1cv__state" kindref="compound">cv_state</ref> &amp;</type>
+        </param>
+        <param>
+          <type>void *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/pflineart.h" line="57" column="12" declfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/pflineart.h" declline="57" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacepflineart_1a1c45c5851db4e626b618acce00fad456" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double pflineart::integrand_var_y</definition>
+        <argsstring>(const cv_state &amp;, void *)</argsstring>
+        <name>integrand_var_y</name>
+        <param>
+          <type>const <ref refid="classpflineart_1_1cv__state" kindref="compound">cv_state</ref> &amp;</type>
+        </param>
+        <param>
+          <type>void *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/pflineart.h" line="58" column="12" declfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/pflineart.h" declline="58" declcolumn="12"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/pflineart.h" line="26" column="19"/>
+  </compounddef>
+</doxygen>

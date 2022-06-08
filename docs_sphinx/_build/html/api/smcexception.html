@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exception handling &mdash; RcppSMC  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Particle History Storage" href="history.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> RcppSMC
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Welcome to the RcppSMC documentation!</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Classes</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="sampler.html">Sampler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conditionalSampler.html">Conditional Sampler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="population.html">Particle Population</a></li>
+<li class="toctree-l2"><a class="reference internal" href="moveset.html">Moving, conditional moving and weighting particles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="adaptMethods.html">Adaptation Methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="staticModelAdapt.html">Static Adaptation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="history.html">Particle History Storage</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Exception handling</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">RcppSMC</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="index.html">Classes</a> &raquo;</li>
+      <li>Exception handling</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/api/smcexception.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="exception-handling">
+<span id="api-smcexception"></span><h1>Exception handling<a class="headerlink" href="#exception-handling" title="Permalink to this headline"></a></h1>
+<p>This file defines exception-handling facilities. </p>
+<p>The <a class="reference internal" href="#classsmc_1_1exception"><span class="std std-ref">smc::exception</span></a> class, which is used for exception handling by SMCTC, is defined. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-defines">Defines</p>
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.__SMC_EXCEPT_HH">
+<span class="target" id="smc-exception_8h_1ac2c533be72251f8606810417886e783f"></span><span class="sig-name descname"><span class="n"><span class="pre">__SMC_EXCEPT_HH</span></span></span><a class="headerlink" href="#c.__SMC_EXCEPT_HH" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.SMC_EXCEPTION">
+<span class="target" id="smc-exception_8h_1a3294208165bcb4936a39183596f3b1f6"></span><span class="sig-name descname"><span class="n"><span class="pre">SMC_EXCEPTION</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">code</span></span>, <span class="n"><span class="pre">error</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.SMC_EXCEPTION" title="Permalink to this definition"></a><br /></dt>
+<dd><p>A macro which autocompletes the housekeeping components of an <a class="reference internal" href="#classsmc_1_1exception"><span class="std std-ref">smc::exception</span></a>. </p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.SMCX_FILE_NOT_FOUND">
+<span class="target" id="smc-exception_8h_1a331ca8981221cf327621afb6ddb21094"></span><span class="sig-name descname"><span class="n"><span class="pre">SMCX_FILE_NOT_FOUND</span></span></span><a class="headerlink" href="#c.SMCX_FILE_NOT_FOUND" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Exception thrown if a file cannot be accessed. </p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.SMCX_MISSING_HISTORY">
+<span class="target" id="smc-exception_8h_1a984f7b1fde8d8091971664718d5554a3"></span><span class="sig-name descname"><span class="n"><span class="pre">SMCX_MISSING_HISTORY</span></span></span><a class="headerlink" href="#c.SMCX_MISSING_HISTORY" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Exception thrown if the sampler attempts to access history data which wasn’t stored. </p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.SMCX_MULTIPLE_INSTANTIATION">
+<span class="target" id="smc-exception_8h_1ad474b50fb83c193ef0a0b233d01328f9"></span><span class="sig-name descname"><span class="n"><span class="pre">SMCX_MULTIPLE_INSTANTIATION</span></span></span><a class="headerlink" href="#c.SMCX_MULTIPLE_INSTANTIATION" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Exception thrown if an attempt is made to instantiate a class of which a single instance is permitted more than once. </p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.CSMCX_USING_MCMC">
+<span class="target" id="smc-exception_8h_1acb94a39a98d8ab105b87237c28481030"></span><span class="sig-name descname"><span class="n"><span class="pre">CSMCX_USING_MCMC</span></span></span><a class="headerlink" href="#c.CSMCX_USING_MCMC" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Exception thrown if an attempt is made to use facilities of the base sampler class related to MCMC moves. </p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.CSMCX_USING_ADAPTATION">
+<span class="target" id="smc-exception_8h_1ade447afb81db1d9ca2a0016ff04f4dc3"></span><span class="sig-name descname"><span class="n"><span class="pre">CSMCX_USING_ADAPTATION</span></span></span><a class="headerlink" href="#c.CSMCX_USING_ADAPTATION" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Exception thrown if an attempt is made to use facilities of the base sampler class related to adaptation. </p>
+</dd></dl>
+
+</div>
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv43smc">
+<span id="_CPPv33smc"></span><span id="_CPPv23smc"></span><span id="smc"></span><span class="target" id="namespacesmc"></span><span class="k"><span class="pre">namespace</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">smc</span></span></span><br /></dt>
+<dd><p>The Sequential Monte Carlo namespace. </p>
+<p>The classes and functions within this namespace are intended to be used for producing implemenetations of SMC samplers and related simulation techniques. </p>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N3smc9exceptionE">
+<span id="_CPPv3N3smc9exceptionE"></span><span id="_CPPv2N3smc9exceptionE"></span><span id="smc::exception"></span><span class="target" id="classsmc_1_1exception"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">exception</span></span></span><a class="headerlink" href="#_CPPv4N3smc9exceptionE" title="Permalink to this definition"></a><br /></dt>
+<dd><div class="docutils container">
+<em>#include &lt;smc-exception.h&gt;</em></div>
+<p>SMC Exception class. </p>
+<p>This class holds details of unrecoverable errors which occur within the SMCTC library. An instance of it is thrown whenever such an error occurs. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3smc9exception9exceptionEPKcllPKc">
+<span id="_CPPv3N3smc9exception9exceptionEPKcllPKc"></span><span id="_CPPv2N3smc9exception9exceptionEPKcllPKc"></span><span id="smc::exception::exception__cCP.l.l.cCP"></span><span class="target" id="classsmc_1_1exception_1a5745b40a366b5e47323186b1e567d55c"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">exception</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">szN</span></span>, <span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">lL</span></span>, <span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">lC</span></span>, <span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">szM</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3smc9exception9exceptionEPKcllPKc" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Generate an SMCTC Exception class with the specified initialisation. </p>
+<p>This constructor fills the four elements of the class with their specified values. It is used to allow a single-line command to create and throw an exception.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>szN</strong> – The name of the source file generating the exception. </p></li>
+<li><p><strong>lL</strong> – The line in that file responsible for the exception. </p></li>
+<li><p><strong>lC</strong> – The numerical code identifying the exception. </p></li>
+<li><p><strong>szM</strong> – An textual explanation of the problem. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N3smc9exception6szFileE">
+<span id="_CPPv3N3smc9exception6szFileE"></span><span id="_CPPv2N3smc9exception6szFileE"></span><span id="smc::exception::szFile__cCP"></span><span class="target" id="classsmc_1_1exception_1ae7eaaf46a8fbf4fcebc469afec4fa6de"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">szFile</span></span></span><a class="headerlink" href="#_CPPv4N3smc9exception6szFileE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>The source file from which the code generating the exception was generated. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N3smc9exception5lLineE">
+<span id="_CPPv3N3smc9exception5lLineE"></span><span id="_CPPv2N3smc9exception5lLineE"></span><span id="smc::exception::lLine__l"></span><span class="target" id="classsmc_1_1exception_1a52fa917d7e89cd6532d300549f4f858b"></span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">lLine</span></span></span><a class="headerlink" href="#_CPPv4N3smc9exception5lLineE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>The line of that source file which generates the exception. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N3smc9exception5lCodeE">
+<span id="_CPPv3N3smc9exception5lCodeE"></span><span id="_CPPv2N3smc9exception5lCodeE"></span><span id="smc::exception::lCode__l"></span><span class="target" id="classsmc_1_1exception_1ad620f37d0bc39955fb2596d4fb892dfa"></span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">lCode</span></span></span><a class="headerlink" href="#_CPPv4N3smc9exception5lCodeE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>A numerical code indicating the nature of the exception generated. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N3smc9exception9szMessageE">
+<span id="_CPPv3N3smc9exception9szMessageE"></span><span id="_CPPv2N3smc9exception9szMessageE"></span><span id="smc::exception::szMessage__cCP"></span><span class="target" id="classsmc_1_1exception_1aca7310cf55883c51a5fbd0665ab9c729"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">szMessage</span></span></span><a class="headerlink" href="#_CPPv4N3smc9exception9szMessageE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>A human-readable explanation of the cause of the exception. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4St">
+<span id="_CPPv3St"></span><span id="_CPPv2St"></span><span id="std"></span><span class="target" id="namespacestd"></span><span class="k"><span class="pre">namespace</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">std</span></span></span><br /></dt>
+<dd><p>The standard namespace. </p>
+<p>The classes provided within the standard libraries reside within this namespace and the TDSMC class library adds a number of additional operator overloads to some of the standard classes to allow them to deal with our structures. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-functions">Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NStlsERNSt7ostreamERN3smc9exceptionE">
+<span id="_CPPv3NStlsERNSt7ostreamERN3smc9exceptionE"></span><span id="_CPPv2NStlsERNSt7ostreamERN3smc9exceptionE"></span><span id="std::lshift-operator__osR.smc::exceptionR"></span><span class="target" id="namespacestd_1a4678d5a0443b232b2ed4e26c6d9bda35"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="sampler.html#_CPPv4St" title="std"><span class="n"><span class="pre">std</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">ostream</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">&lt;&lt;</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="sampler.html#_CPPv4St" title="std"><span class="n"><span class="pre">std</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">ostream</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">os</span></span>, <a class="reference internal" href="sampler.html#_CPPv43smc" title="smc"><span class="n"><span class="pre">smc</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N3smc9exceptionE" title="smc::exception"><span class="n"><span class="pre">exception</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">e</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4NStlsERNSt7ostreamERN3smc9exceptionE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Produce a human-readable display of the state of an <a class="reference internal" href="#classsmc_1_1exception"><span class="std std-ref">smc::exception</span></a> class using the stream operator. </p>
+<p>Display a human-readable version of an SMC exception. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>os</strong> – The stream to write to. </p></li>
+<li><p><strong>e</strong> – The exception class to display. </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>os </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="history.html" class="btn btn-neutral float-left" title="Particle History Storage" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Leah South, Ilya Zarubin, Dirk Eddelbuettel, Adam Johansen.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

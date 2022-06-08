@@ -1,0 +1,95 @@
+\hypertarget{namespaceLinReg__LA}{}\doxysection{Lin\+Reg\+\_\+\+LA Namespace Reference}
+\label{namespaceLinReg__LA}\index{LinReg\_LA@{LinReg\_LA}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classLinReg__LA_1_1LinReg__LA__move}{Lin\+Reg\+\_\+\+L\+A\+\_\+move}}
+\item 
+class \mbox{\hyperlink{classLinReg__LA_1_1rad__obs}{rad\+\_\+obs}}
+\item 
+class \mbox{\hyperlink{classLinReg__LA_1_1rad__state}{rad\+\_\+state}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{namespaceLinReg__LA_a9b91024cd274f001407c42f17228258c}{log\+Likelihood}} (const \mbox{\hyperlink{classLinReg__LA_1_1rad__state}{rad\+\_\+state}} \&value)
+\item 
+double \mbox{\hyperlink{namespaceLinReg__LA_aaf4b717f46b46d9c7276ebc2ad9a1592}{log\+Prior}} (const \mbox{\hyperlink{classLinReg__LA_1_1rad__state}{rad\+\_\+state}} \&value)
+\item 
+double \mbox{\hyperlink{namespaceLinReg__LA_a89038def2b61972fa9d5de5f989dd9d6}{integrand\+\_\+ps}} (long, const \mbox{\hyperlink{classLinReg__LA_1_1rad__state}{rad\+\_\+state}} \&, void $\ast$)
+\item 
+double \mbox{\hyperlink{namespaceLinReg__LA_af69b4e2c8853e7b320535502841f90a4}{width\+\_\+ps}} (long, void $\ast$)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classLinReg__LA_1_1rad__obs}{rad\+\_\+obs}} \mbox{\hyperlink{namespaceLinReg__LA_a1601cf36abf32cc4342a20d8bb3044ff}{data}}
+\item 
+double \mbox{\hyperlink{namespaceLinReg__LA_a2a3655a1a626b64570d1c1532c0c50f4}{mean\+\_\+x}}
+\item 
+long \mbox{\hyperlink{namespaceLinReg__LA_a9d8527189563c8b923aef9b0bf467fd6}{l\+Iterates}}
+\item 
+arma\+::vec \mbox{\hyperlink{namespaceLinReg__LA_acca84c3c07643b5752a3b95121edffee}{temps}}
+\item 
+\mbox{\hyperlink{classsmc_1_1moveset}{smc\+::moveset}}$<$ \mbox{\hyperlink{classLinReg__LA_1_1rad__state}{rad\+\_\+state}}, \mbox{\hyperlink{classsmc_1_1nullParams}{smc\+::null\+Params}} $>$ $\ast$ \mbox{\hyperlink{namespaceLinReg__LA_a5790550270ce25021beb2f7b6b15f259}{my\+Move}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespaceLinReg__LA_a89038def2b61972fa9d5de5f989dd9d6}\label{namespaceLinReg__LA_a89038def2b61972fa9d5de5f989dd9d6}} 
+\index{LinReg\_LA@{LinReg\_LA}!integrand\_ps@{integrand\_ps}}
+\index{integrand\_ps@{integrand\_ps}!LinReg\_LA@{LinReg\_LA}}
+\doxysubsubsection{\texorpdfstring{integrand\_ps()}{integrand\_ps()}}
+{\footnotesize\ttfamily double Lin\+Reg\+\_\+\+L\+A\+::integrand\+\_\+ps (\begin{DoxyParamCaption}\item[{long}]{,  }\item[{const \mbox{\hyperlink{classLinReg__LA_1_1rad__state}{rad\+\_\+state}} \&}]{,  }\item[{void $\ast$}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceLinReg__LA_a9b91024cd274f001407c42f17228258c}\label{namespaceLinReg__LA_a9b91024cd274f001407c42f17228258c}} 
+\index{LinReg\_LA@{LinReg\_LA}!logLikelihood@{logLikelihood}}
+\index{logLikelihood@{logLikelihood}!LinReg\_LA@{LinReg\_LA}}
+\doxysubsubsection{\texorpdfstring{logLikelihood()}{logLikelihood()}}
+{\footnotesize\ttfamily double Lin\+Reg\+\_\+\+L\+A\+::log\+Likelihood (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classLinReg__LA_1_1rad__state}{rad\+\_\+state}} \&}]{value }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceLinReg__LA_aaf4b717f46b46d9c7276ebc2ad9a1592}\label{namespaceLinReg__LA_aaf4b717f46b46d9c7276ebc2ad9a1592}} 
+\index{LinReg\_LA@{LinReg\_LA}!logPrior@{logPrior}}
+\index{logPrior@{logPrior}!LinReg\_LA@{LinReg\_LA}}
+\doxysubsubsection{\texorpdfstring{logPrior()}{logPrior()}}
+{\footnotesize\ttfamily double Lin\+Reg\+\_\+\+L\+A\+::log\+Prior (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classLinReg__LA_1_1rad__state}{rad\+\_\+state}} \&}]{value }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceLinReg__LA_af69b4e2c8853e7b320535502841f90a4}\label{namespaceLinReg__LA_af69b4e2c8853e7b320535502841f90a4}} 
+\index{LinReg\_LA@{LinReg\_LA}!width\_ps@{width\_ps}}
+\index{width\_ps@{width\_ps}!LinReg\_LA@{LinReg\_LA}}
+\doxysubsubsection{\texorpdfstring{width\_ps()}{width\_ps()}}
+{\footnotesize\ttfamily double Lin\+Reg\+\_\+\+L\+A\+::width\+\_\+ps (\begin{DoxyParamCaption}\item[{long}]{,  }\item[{void $\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespaceLinReg__LA_a1601cf36abf32cc4342a20d8bb3044ff}\label{namespaceLinReg__LA_a1601cf36abf32cc4342a20d8bb3044ff}} 
+\index{LinReg\_LA@{LinReg\_LA}!data@{data}}
+\index{data@{data}!LinReg\_LA@{LinReg\_LA}}
+\doxysubsubsection{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classLinReg__LA_1_1rad__obs}{rad\+\_\+obs}} Lin\+Reg\+\_\+\+L\+A\+::data}
+
+\mbox{\Hypertarget{namespaceLinReg__LA_a9d8527189563c8b923aef9b0bf467fd6}\label{namespaceLinReg__LA_a9d8527189563c8b923aef9b0bf467fd6}} 
+\index{LinReg\_LA@{LinReg\_LA}!lIterates@{lIterates}}
+\index{lIterates@{lIterates}!LinReg\_LA@{LinReg\_LA}}
+\doxysubsubsection{\texorpdfstring{lIterates}{lIterates}}
+{\footnotesize\ttfamily long Lin\+Reg\+\_\+\+L\+A\+::l\+Iterates}
+
+\mbox{\Hypertarget{namespaceLinReg__LA_a2a3655a1a626b64570d1c1532c0c50f4}\label{namespaceLinReg__LA_a2a3655a1a626b64570d1c1532c0c50f4}} 
+\index{LinReg\_LA@{LinReg\_LA}!mean\_x@{mean\_x}}
+\index{mean\_x@{mean\_x}!LinReg\_LA@{LinReg\_LA}}
+\doxysubsubsection{\texorpdfstring{mean\_x}{mean\_x}}
+{\footnotesize\ttfamily double Lin\+Reg\+\_\+\+L\+A\+::mean\+\_\+x}
+
+\mbox{\Hypertarget{namespaceLinReg__LA_a5790550270ce25021beb2f7b6b15f259}\label{namespaceLinReg__LA_a5790550270ce25021beb2f7b6b15f259}} 
+\index{LinReg\_LA@{LinReg\_LA}!myMove@{myMove}}
+\index{myMove@{myMove}!LinReg\_LA@{LinReg\_LA}}
+\doxysubsubsection{\texorpdfstring{myMove}{myMove}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsmc_1_1moveset}{smc\+::moveset}}$<$\mbox{\hyperlink{classLinReg__LA_1_1rad__state}{rad\+\_\+state}},\mbox{\hyperlink{classsmc_1_1nullParams}{smc\+::null\+Params}}$>$$\ast$ Lin\+Reg\+\_\+\+L\+A\+::my\+Move}
+
+\mbox{\Hypertarget{namespaceLinReg__LA_acca84c3c07643b5752a3b95121edffee}\label{namespaceLinReg__LA_acca84c3c07643b5752a3b95121edffee}} 
+\index{LinReg\_LA@{LinReg\_LA}!temps@{temps}}
+\index{temps@{temps}!LinReg\_LA@{LinReg\_LA}}
+\doxysubsubsection{\texorpdfstring{temps}{temps}}
+{\footnotesize\ttfamily arma\+::vec Lin\+Reg\+\_\+\+L\+A\+::temps}
+

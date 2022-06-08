@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classpflineart_1_1pflineart__move" kind="class" language="C++" prot="public">
+    <compoundname>pflineart::pflineart_move</compoundname>
+    <basecompoundref refid="classsmc_1_1moveset" prot="public" virt="non-virtual">smc::moveset&lt; cv_state, smc::nullParams &gt;</basecompoundref>
+    <includes refid="pflineart_8h" local="no">pflineart.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classpflineart_1_1pflineart__move_1a50173f0c0d791a654fea9da8d4e3d23c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void pflineart::pflineart_move::pfInitialise</definition>
+        <argsstring>(cv_state &amp;value, double &amp;logweight, smc::nullParams &amp;param)</argsstring>
+        <name>pfInitialise</name>
+        <param>
+          <type><ref refid="classpflineart_1_1cv__state" kindref="compound">cv_state</ref> &amp;</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>logweight</declname>
+        </param>
+        <param>
+          <type><ref refid="classsmc_1_1nullParams" kindref="compound">smc::nullParams</ref> &amp;</type>
+          <declname>param</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/pflineart.h" line="48" column="6"/>
+      </memberdef>
+      <memberdef kind="function" id="classpflineart_1_1pflineart__move_1a7be256ec5568a47b4dc1972d7dabc08b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void pflineart::pflineart_move::pfMove</definition>
+        <argsstring>(long lTime, cv_state &amp;value, double &amp;logweight, smc::nullParams &amp;param)</argsstring>
+        <name>pfMove</name>
+        <param>
+          <type>long</type>
+          <declname>lTime</declname>
+        </param>
+        <param>
+          <type><ref refid="classpflineart_1_1cv__state" kindref="compound">cv_state</ref> &amp;</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>logweight</declname>
+        </param>
+        <param>
+          <type><ref refid="classsmc_1_1nullParams" kindref="compound">smc::nullParams</ref> &amp;</type>
+          <declname>param</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/pflineart.h" line="49" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classpflineart_1_1pflineart__move_1a8e622b5700a2294e9896969253632fea" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>pflineart::pflineart_move::~pflineart_move</definition>
+        <argsstring>()</argsstring>
+        <name>~pflineart_move</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/pflineart.h" line="51" column="9" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/pflineart.h" bodystart="51" bodyend="51"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>smc::moveset&lt; cv_state, smc::nullParams &gt;</label>
+        <link refid="classsmc_1_1moveset"/>
+      </node>
+      <node id="1">
+        <label>pflineart::pflineart_move</label>
+        <link refid="classpflineart_1_1pflineart__move"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>smc::moveset&lt; cv_state, smc::nullParams &gt;</label>
+        <link refid="classsmc_1_1moveset"/>
+      </node>
+      <node id="1">
+        <label>pflineart::pflineart_move</label>
+        <link refid="classpflineart_1_1pflineart__move"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/pflineart.h" line="45" column="1" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/pflineart.h" bodystart="43" bodyend="53"/>
+    <listofallmembers>
+      <member refid="classsmc_1_1moveset_1af86cd53918ca1a0efaf7339fbf1369e7" prot="private" virt="non-virtual"><scope>pflineart::pflineart_move</scope><name>defaultInitialise</name></member>
+      <member refid="classsmc_1_1moveset_1ac13c8aae10ec4c2c900e2d4dd8b3a5ad" prot="private" virt="non-virtual"><scope>pflineart::pflineart_move</scope><name>defaultMCMC</name></member>
+      <member refid="classsmc_1_1moveset_1ae07933ed6c32e4cc51ab3f060081e7bf" prot="private" virt="non-virtual"><scope>pflineart::pflineart_move</scope><name>defaultMove</name></member>
+      <member refid="classsmc_1_1moveset_1a25f89a568d72e02180751389aaf20baf" prot="private" virt="non-virtual"><scope>pflineart::pflineart_move</scope><name>defaultWeight</name></member>
+      <member refid="classsmc_1_1moveset_1a8f695a635a2469b15ebcff70100297aa" prot="public" virt="virtual"><scope>pflineart::pflineart_move</scope><name>DoConditionalMove</name></member>
+      <member refid="classsmc_1_1moveset_1ab262a9789a6e9204441b8d46ccd4dba9" prot="public" virt="virtual"><scope>pflineart::pflineart_move</scope><name>DoInit</name></member>
+      <member refid="classsmc_1_1moveset_1adbefc0b5ff0d22b94b031a960f8a8c27" prot="public" virt="virtual"><scope>pflineart::pflineart_move</scope><name>DoMCMC</name></member>
+      <member refid="classsmc_1_1moveset_1a1815cd6f6577fa5fe7d558af8061ce0c" prot="public" virt="virtual"><scope>pflineart::pflineart_move</scope><name>DoMove</name></member>
+      <member refid="classsmc_1_1moveset_1a507b985fafe3f1572edafb429bf7c2c1" prot="public" virt="non-virtual"><scope>pflineart::pflineart_move</scope><name>moveset</name></member>
+      <member refid="classsmc_1_1moveset_1a857a88c99a6aa68903d1dd67561f8a19" prot="public" virt="non-virtual"><scope>pflineart::pflineart_move</scope><name>moveset</name></member>
+      <member refid="classsmc_1_1moveset_1a1ef41bba20f71cb92627e01360eb08c2" prot="public" virt="non-virtual"><scope>pflineart::pflineart_move</scope><name>moveset</name></member>
+      <member refid="classpflineart_1_1pflineart__move_1a50173f0c0d791a654fea9da8d4e3d23c" prot="public" virt="non-virtual"><scope>pflineart::pflineart_move</scope><name>pfInitialise</name></member>
+      <member refid="classsmc_1_1moveset_1a7a9de1bcabd9871805dc290444c2f93e" prot="public" virt="virtual" ambiguityscope="moveset&lt; cv_state, smc::nullParams &gt;::"><scope>pflineart::pflineart_move</scope><name>pfInitialise</name></member>
+      <member refid="classsmc_1_1moveset_1aa800251335f4220fa8389e5ea1231acf" prot="public" virt="virtual"><scope>pflineart::pflineart_move</scope><name>pfMCMC</name></member>
+      <member refid="classpflineart_1_1pflineart__move_1a7be256ec5568a47b4dc1972d7dabc08b" prot="public" virt="non-virtual"><scope>pflineart::pflineart_move</scope><name>pfMove</name></member>
+      <member refid="classsmc_1_1moveset_1aadb55d5525fecea2ae41799dc9addd37" prot="public" virt="virtual" ambiguityscope="moveset&lt; cv_state, smc::nullParams &gt;::"><scope>pflineart::pflineart_move</scope><name>pfMove</name></member>
+      <member refid="classsmc_1_1moveset_1aaf4ddcd60382d696729fd55c36c1e4eb" prot="public" virt="virtual"><scope>pflineart::pflineart_move</scope><name>pfWeight</name></member>
+      <member refid="classsmc_1_1moveset_1a0792835f91ecd41230e68d850bd11f75" prot="public" virt="virtual"><scope>pflineart::pflineart_move</scope><name>~moveset</name></member>
+      <member refid="classpflineart_1_1pflineart__move_1a8e622b5700a2294e9896969253632fea" prot="public" virt="non-virtual"><scope>pflineart::pflineart_move</scope><name>~pflineart_move</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

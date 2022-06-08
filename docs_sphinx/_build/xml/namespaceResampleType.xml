@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespaceResampleType" kind="namespace" language="C++">
+    <compoundname>ResampleType</compoundname>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespaceResampleType_1aae1fd87d74ce6bb0168e509df119f6eb" prot="public" static="no" strong="no">
+        <type></type>
+        <name>Enum</name>
+        <enumvalue id="namespaceResampleType_1aae1fd87d74ce6bb0168e509df119f6eba0207afd43440ab190cc0dd07bab5ba78" prot="public">
+          <name>MULTINOMIAL</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceResampleType_1aae1fd87d74ce6bb0168e509df119f6eba87e69e5e3b594ebbaf9b91e3b4c11168" prot="public">
+          <name>RESIDUAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceResampleType_1aae1fd87d74ce6bb0168e509df119f6eba47fcb7a0a69fdf1075e11d616cb8783b" prot="public">
+          <name>STRATIFIED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceResampleType_1aae1fd87d74ce6bb0168e509df119f6ebac25b219e8be6e967aaf5c4011935fe7d" prot="public">
+          <name>SYSTEMATIC</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" line="47" column="14" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" bodystart="47" bodyend="50"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Specifiers for various resampling algorithms: </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" line="46" column="1"/>
+  </compounddef>
+</doxygen>

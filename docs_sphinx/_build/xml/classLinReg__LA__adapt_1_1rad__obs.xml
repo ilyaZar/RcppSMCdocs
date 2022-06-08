@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classLinReg__LA__adapt_1_1rad__obs" kind="class" language="C++" prot="public">
+    <compoundname>LinReg_LA_adapt::rad_obs</compoundname>
+    <includes refid="LinReg__LA__adapt_8h" local="no">LinReg_LA_adapt.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classLinReg__LA__adapt_1_1rad__obs_1a0f58443adffd943afe07f6f0458930de" prot="public" static="no" mutable="no">
+        <type>arma::vec</type>
+        <definition>arma::vec LinReg_LA_adapt::rad_obs::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/LinReg_LA_adapt.h" line="40" column="19" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/LinReg_LA_adapt.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLinReg__LA__adapt_1_1rad__obs_1ad2dcd17c0b16365ec9e01251b4d06751" prot="public" static="no" mutable="no">
+        <type>arma::vec</type>
+        <definition>arma::vec LinReg_LA_adapt::rad_obs::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/LinReg_LA_adapt.h" line="40" column="21" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/LinReg_LA_adapt.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/LinReg_LA_adapt.h" line="38" column="1" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/LinReg_LA_adapt.h" bodystart="37" bodyend="41"/>
+    <listofallmembers>
+      <member refid="classLinReg__LA__adapt_1_1rad__obs_1ad2dcd17c0b16365ec9e01251b4d06751" prot="public" virt="non-virtual"><scope>LinReg_LA_adapt::rad_obs</scope><name>x</name></member>
+      <member refid="classLinReg__LA__adapt_1_1rad__obs_1a0f58443adffd943afe07f6f0458930de" prot="public" virt="non-virtual"><scope>LinReg_LA_adapt::rad_obs</scope><name>y</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

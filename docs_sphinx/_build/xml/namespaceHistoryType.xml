@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespaceHistoryType" kind="namespace" language="C++">
+    <compoundname>HistoryType</compoundname>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespaceHistoryType_1a486dcf426d91692ddbce0dd2e97a9077" prot="public" static="no" strong="no">
+        <type></type>
+        <name>Enum</name>
+        <enumvalue id="namespaceHistoryType_1a486dcf426d91692ddbce0dd2e97a9077a1755a29ac60a2ebeb8a4c4b27f48bcde" prot="public">
+          <name>NONE</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceHistoryType_1a486dcf426d91692ddbce0dd2e97a9077a63a959270994a6dff6ef90da8d618d28" prot="public">
+          <name>RAM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceHistoryType_1a486dcf426d91692ddbce0dd2e97a9077a454abec07203b210d7a9a2662a68f8f1" prot="public">
+          <name>AL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" line="65" column="14" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" bodystart="65" bodyend="67"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Storage types for the history of the particle system. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" line="64" column="1"/>
+  </compounddef>
+</doxygen>

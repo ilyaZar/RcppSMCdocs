@@ -1,0 +1,158 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespaceLinReg__LA" kind="namespace" language="C++">
+    <compoundname>LinReg_LA</compoundname>
+    <innerclass refid="classLinReg__LA_1_1LinReg__LA__move" prot="public">LinReg_LA::LinReg_LA_move</innerclass>
+    <innerclass refid="classLinReg__LA_1_1rad__obs" prot="public">LinReg_LA::rad_obs</innerclass>
+    <innerclass refid="classLinReg__LA_1_1rad__state" prot="public">LinReg_LA::rad_state</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespaceLinReg__LA_1a1601cf36abf32cc4342a20d8bb3044ff" prot="public" static="no" mutable="no">
+        <type><ref refid="classLinReg__LA_1_1rad__obs" kindref="compound">rad_obs</ref></type>
+        <definition>rad_obs LinReg_LA::data</definition>
+        <argsstring></argsstring>
+        <name>data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/LinReg_LA.h" line="41" column="13" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/LinReg_LA.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceLinReg__LA_1a2a3655a1a626b64570d1c1532c0c50f4" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double LinReg_LA::mean_x</definition>
+        <argsstring></argsstring>
+        <name>mean_x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/LinReg_LA.h" line="42" column="12" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/LinReg_LA.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceLinReg__LA_1a9d8527189563c8b923aef9b0bf467fd6" prot="public" static="no" mutable="no">
+        <type>long</type>
+        <definition>long LinReg_LA::lIterates</definition>
+        <argsstring></argsstring>
+        <name>lIterates</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/LinReg_LA.h" line="43" column="10" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/LinReg_LA.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceLinReg__LA_1acca84c3c07643b5752a3b95121edffee" prot="public" static="no" mutable="no">
+        <type>arma::vec</type>
+        <definition>arma::vec LinReg_LA::temps</definition>
+        <argsstring></argsstring>
+        <name>temps</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/LinReg_LA.h" line="44" column="15" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/LinReg_LA.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceLinReg__LA_1a5790550270ce25021beb2f7b6b15f259" prot="public" static="no" mutable="no">
+        <type><ref refid="classsmc_1_1moveset" kindref="compound">smc::moveset</ref>&lt; <ref refid="classLinReg__LA_1_1rad__state" kindref="compound">rad_state</ref>, <ref refid="classsmc_1_1nullParams" kindref="compound">smc::nullParams</ref> &gt; *</type>
+        <definition>smc::moveset&lt;rad_state,smc::nullParams&gt;* LinReg_LA::myMove</definition>
+        <argsstring></argsstring>
+        <name>myMove</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/LinReg_LA.h" line="66" column="14" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/LinReg_LA.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespaceLinReg__LA_1a9b91024cd274f001407c42f17228258c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double LinReg_LA::logLikelihood</definition>
+        <argsstring>(const rad_state &amp;value)</argsstring>
+        <name>logLikelihood</name>
+        <param>
+          <type>const <ref refid="classLinReg__LA_1_1rad__state" kindref="compound">rad_state</ref> &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/LinReg_LA.h" line="46" column="8" declfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/LinReg_LA.h" declline="46" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceLinReg__LA_1aaf4b717f46b46d9c7276ebc2ad9a1592" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double LinReg_LA::logPrior</definition>
+        <argsstring>(const rad_state &amp;value)</argsstring>
+        <name>logPrior</name>
+        <param>
+          <type>const <ref refid="classLinReg__LA_1_1rad__state" kindref="compound">rad_state</ref> &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/LinReg_LA.h" line="47" column="12" declfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/LinReg_LA.h" declline="47" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceLinReg__LA_1a89038def2b61972fa9d5de5f989dd9d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double LinReg_LA::integrand_ps</definition>
+        <argsstring>(long, const rad_state &amp;, void *)</argsstring>
+        <name>integrand_ps</name>
+        <param>
+          <type>long</type>
+        </param>
+        <param>
+          <type>const <ref refid="classLinReg__LA_1_1rad__state" kindref="compound">rad_state</ref> &amp;</type>
+        </param>
+        <param>
+          <type>void *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/LinReg_LA.h" line="63" column="12" declfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/LinReg_LA.h" declline="63" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceLinReg__LA_1af69b4e2c8853e7b320535502841f90a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double LinReg_LA::width_ps</definition>
+        <argsstring>(long, void *)</argsstring>
+        <name>width_ps</name>
+        <param>
+          <type>long</type>
+        </param>
+        <param>
+          <type>void *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/LinReg_LA.h" line="64" column="12" declfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/LinReg_LA.h" declline="64" declcolumn="12"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/LinReg_LA.h" line="25" column="19"/>
+  </compounddef>
+</doxygen>

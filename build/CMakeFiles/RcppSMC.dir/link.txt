@@ -1,0 +1,2 @@
+/usr/bin/ar qc libRcppSMC.a  CMakeFiles/RcppSMC.dir/src/cSMCexamples.cpp.o
+/usr/bin/ranlib libRcppSMC.a

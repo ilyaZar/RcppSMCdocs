@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespacecSMCexamples" kind="namespace" language="C++">
+    <compoundname>cSMCexamples</compoundname>
+    <innerclass refid="classcSMCexamples_1_1cSMCexamples__move" prot="public">cSMCexamples::cSMCexamples_move</innerclass>
+    <innerclass refid="classcSMCexamples_1_1Measurements" prot="public">cSMCexamples::Measurements</innerclass>
+    <innerclass refid="classcSMCexamples_1_1Parameters" prot="public">cSMCexamples::Parameters</innerclass>
+    <innerclass refid="classcSMCexamples_1_1States" prot="public">cSMCexamples::States</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespacecSMCexamples_1a8925729bd0014927e5fc614fa3beb03e" prot="public" static="no" mutable="no">
+        <type><ref refid="classsmc_1_1moveset" kindref="compound">smc::moveset</ref>&lt; <ref refid="classcSMCexamples_1_1States" kindref="compound">States</ref>, <ref refid="classsmc_1_1nullParams" kindref="compound">smc::nullParams</ref> &gt; *</type>
+        <definition>smc::moveset&lt;States, smc::nullParams&gt;* cSMCexamples::MyLGSSmove</definition>
+        <argsstring></argsstring>
+        <name>MyLGSSmove</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/cSMCexamples.h" line="76" column="18" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/cSMCexamples.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespacecSMCexamples_1a305e834a57d2aa26fa9af349e556c1b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double cSMCexamples::computeLogLikelihood</definition>
+        <argsstring>(long lTime, const States &amp;stateValue)</argsstring>
+        <name>computeLogLikelihood</name>
+        <param>
+          <type>long</type>
+          <declname>lTime</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classcSMCexamples_1_1States" kindref="compound">States</ref> &amp;</type>
+          <declname>stateValue</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/cSMCexamples.h" line="70" column="12" declfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/cSMCexamples.h" declline="70" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecSMCexamples_1a0bc2cd801632eba9b4c5e7627ccd5d23" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cSMCexamples::copyReferenceTrajectory</definition>
+        <argsstring>(const arma::vec &amp;refArma, std::vector&lt; States &gt; &amp;refStd)</argsstring>
+        <name>copyReferenceTrajectory</name>
+        <param>
+          <type>const arma::vec &amp;</type>
+          <declname>refArma</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; <ref refid="classcSMCexamples_1_1States" kindref="compound">States</ref> &gt; &amp;</type>
+          <declname>refStd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/cSMCexamples.h" line="72" column="10" declfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/cSMCexamples.h" declline="72" declcolumn="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/cSMCexamples.h" line="22" column="22"/>
+  </compounddef>
+</doxygen>

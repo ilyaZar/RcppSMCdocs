@@ -1,0 +1,344 @@
+\hypertarget{classsmc_1_1population}{}\doxysection{smc\+::population$<$ Space $>$ Class Template Reference}
+\label{classsmc_1_1population}\index{smc::population$<$ Space $>$@{smc::population$<$ Space $>$}}
+
+
+A template class for the particles of an S\+MC algorithm.  
+
+
+
+
+{\ttfamily \#include $<$population.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsmc_1_1population_ad6094100fe3180b18ac6c2f6efeef970}{population}} ()
+\begin{DoxyCompactList}\small\item\em Create a particle with undefined values and weights. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsmc_1_1population_a6e8333ad491897892311ab5331d9a03e}{population}} (const std\+::vector$<$ Space $>$ \&s\+Init, const arma\+::vec \&d\+Log\+Weight)
+\begin{DoxyCompactList}\small\item\em Constructor which initialises the particle values and weights. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsmc_1_1population_a81068f3d29828546afd189b1502c768d}{population}} (const \mbox{\hyperlink{classsmc_1_1population}{population}}$<$ Space $>$ \&p\+From)
+\begin{DoxyCompactList}\small\item\em The copy constructor performs a shallow copy. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsmc_1_1population}{population}}$<$ Space $>$ \& \mbox{\hyperlink{classsmc_1_1population_aa7aa4c48db66d934ec4e32e9c09b105d}{operator=}} (const \mbox{\hyperlink{classsmc_1_1population}{population}}$<$ Space $>$ \&p\+From)
+\begin{DoxyCompactList}\small\item\em The assignment operator performs a shallow copy. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsmc_1_1population_aed412a54f4d33b0cde18adf16cdc10b2}{$\sim$population}} ()
+\begin{DoxyCompactList}\small\item\em Dispose of a population object which is no longer required. \end{DoxyCompactList}\item 
+long \mbox{\hyperlink{classsmc_1_1population_a4209e3a8191069456da6fa6d541ba7a5}{Get\+Number}} (void) const
+\begin{DoxyCompactList}\small\item\em Returns the number of particles within the system. \end{DoxyCompactList}\item 
+const std\+::vector$<$ Space $>$ \& \mbox{\hyperlink{classsmc_1_1population_a51c4bf9fd600f844a75df512845af88a}{Get\+Value}} (void) const
+\begin{DoxyCompactList}\small\item\em Returns the particle values. \end{DoxyCompactList}\item 
+const Space \& \mbox{\hyperlink{classsmc_1_1population_a9f81f8d12af9ba884741be1cfb183c5c}{Get\+ValueN}} (long n) const
+\begin{DoxyCompactList}\small\item\em Returns the value of the nth particle in the population. \end{DoxyCompactList}\item 
+Space \& \mbox{\hyperlink{classsmc_1_1population_afbb861efa2fddf0e9b0c61f14bd6493e}{Get\+Value\+RefN}} (long n)
+\begin{DoxyCompactList}\small\item\em Returns a reference to the value of the nth particle in the population. \end{DoxyCompactList}\item 
+const arma\+::vec \& \mbox{\hyperlink{classsmc_1_1population_aed65bb17ec164b22220502121784072c}{Get\+Log\+Weight}} (void) const
+\begin{DoxyCompactList}\small\item\em Returns the particle log weights. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classsmc_1_1population_a5b42f094323cc2425825d82be7842e77}{Get\+Log\+WeightN}} (long n) const
+\begin{DoxyCompactList}\small\item\em Returns the nth particle\textquotesingle{}s log weight. \end{DoxyCompactList}\item 
+double \& \mbox{\hyperlink{classsmc_1_1population_af2706cf1c455f0cd5b9b3d7d455b6364}{Get\+Log\+Weight\+RefN}} (long n)
+\begin{DoxyCompactList}\small\item\em Returns a reference to the nth particle\textquotesingle{}s log weight. \end{DoxyCompactList}\item 
+arma\+::vec \mbox{\hyperlink{classsmc_1_1population_ac03a39fe7a5199433362f69c0e793dd7}{Get\+Weight}} (void) const
+\begin{DoxyCompactList}\small\item\em Returns the particles\textquotesingle{} unnormalised weights. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classsmc_1_1population_a229bc5706bf6afef8073990a345b5a60}{Get\+WeightN}} (long n) const
+\begin{DoxyCompactList}\small\item\em Returns the nth particle\textquotesingle{}s unnormalised weight. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsmc_1_1population_a228f119bab158b24e6edef17e9e806d3}{Set}} (const std\+::vector$<$ Space $>$ \&s\+Value, const arma\+::vec \&d\+Log\+Weight)
+\begin{DoxyCompactList}\small\item\em Sets the particle values and weights explicitly. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsmc_1_1population_a21eb46b6158da5c74088a461e481a7c7}{Set\+Value}} (const std\+::vector$<$ Space $>$ \&s\+Value)
+\begin{DoxyCompactList}\small\item\em Sets the particle values explicitly. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsmc_1_1population_a7e43dc61d785bf5b88ce6014b53dfb2a}{Set\+ValueN}} (const Space \&s\+Value, long n)
+\begin{DoxyCompactList}\small\item\em Sets the nth particle value explicitly. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsmc_1_1population_aa3e891ee4bac69ea5248e7af20c9e18d}{Set\+Log\+Weight}} (const arma\+::vec \&d\+Log\+Weight)
+\begin{DoxyCompactList}\small\item\em Sets the particle log weights explicitly. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsmc_1_1population_a34976b1339ba0c00a292401e2bf6e1f8}{Set\+Log\+WeightN}} (const double \&d\+Log\+Weight, long n)
+\begin{DoxyCompactList}\small\item\em Sets the nth particle log weight explicitly. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ Space $>$ \mbox{\hyperlink{classsmc_1_1population_af2895b7eeca98bf97ab17b3e281df4ec}{value}}
+\begin{DoxyCompactList}\small\item\em Values of the particles. \end{DoxyCompactList}\item 
+arma\+::vec \mbox{\hyperlink{classsmc_1_1population_a95f5035145d401fb7b8d45c5d3b6d171}{logweight}}
+\begin{DoxyCompactList}\small\item\em Natural logarithm of the particle weights. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$class Space$>$\newline
+class smc\+::population$<$ Space $>$}
+
+A template class for the particles of an S\+MC algorithm. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsmc_1_1population_ad6094100fe3180b18ac6c2f6efeef970}\label{classsmc_1_1population_ad6094100fe3180b18ac6c2f6efeef970}} 
+\index{smc::population$<$ Space $>$@{smc::population$<$ Space $>$}!population@{population}}
+\index{population@{population}!smc::population$<$ Space $>$@{smc::population$<$ Space $>$}}
+\doxysubsubsection{\texorpdfstring{population()}{population()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$class Space $>$ \\
+\mbox{\hyperlink{classsmc_1_1population}{smc\+::population}}$<$ Space $>$\+::\mbox{\hyperlink{classsmc_1_1population}{population}}}
+
+
+
+Create a particle with undefined values and weights. 
+
+\mbox{\Hypertarget{classsmc_1_1population_a6e8333ad491897892311ab5331d9a03e}\label{classsmc_1_1population_a6e8333ad491897892311ab5331d9a03e}} 
+\index{smc::population$<$ Space $>$@{smc::population$<$ Space $>$}!population@{population}}
+\index{population@{population}!smc::population$<$ Space $>$@{smc::population$<$ Space $>$}}
+\doxysubsubsection{\texorpdfstring{population()}{population()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$class Space $>$ \\
+\mbox{\hyperlink{classsmc_1_1population}{smc\+::population}}$<$ Space $>$\+::\mbox{\hyperlink{classsmc_1_1population}{population}} (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ Space $>$ \&}]{s\+Init,  }\item[{const arma\+::vec \&}]{d\+Log\+Weight }\end{DoxyParamCaption})}
+
+
+
+Constructor which initialises the particle values and weights. 
+
+Create particles with values s\+Init and log weights d\+Log\+Weight 
+\begin{DoxyParams}{Parameters}
+{\em s\+Init} & The initial values of the particle \\
+\hline
+{\em d\+Log\+Weight} & The initial values of the natural logarithm of the particle weights \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classsmc_1_1population_a81068f3d29828546afd189b1502c768d}\label{classsmc_1_1population_a81068f3d29828546afd189b1502c768d}} 
+\index{smc::population$<$ Space $>$@{smc::population$<$ Space $>$}!population@{population}}
+\index{population@{population}!smc::population$<$ Space $>$@{smc::population$<$ Space $>$}}
+\doxysubsubsection{\texorpdfstring{population()}{population()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$class Space $>$ \\
+\mbox{\hyperlink{classsmc_1_1population}{smc\+::population}}$<$ Space $>$\+::\mbox{\hyperlink{classsmc_1_1population}{population}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsmc_1_1population}{population}}$<$ Space $>$ \&}]{p\+From }\end{DoxyParamCaption})}
+
+
+
+The copy constructor performs a shallow copy. 
+
+Copy constructor. \mbox{\Hypertarget{classsmc_1_1population_aed412a54f4d33b0cde18adf16cdc10b2}\label{classsmc_1_1population_aed412a54f4d33b0cde18adf16cdc10b2}} 
+\index{smc::population$<$ Space $>$@{smc::population$<$ Space $>$}!````~population@{$\sim$population}}
+\index{````~population@{$\sim$population}!smc::population$<$ Space $>$@{smc::population$<$ Space $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$population()}{~population()}}
+{\footnotesize\ttfamily template$<$class Space $>$ \\
+\mbox{\hyperlink{classsmc_1_1population}{smc\+::population}}$<$ Space $>$\+::$\sim$\mbox{\hyperlink{classsmc_1_1population}{population}}}
+
+
+
+Dispose of a population object which is no longer required. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classsmc_1_1population_aed65bb17ec164b22220502121784072c}\label{classsmc_1_1population_aed65bb17ec164b22220502121784072c}} 
+\index{smc::population$<$ Space $>$@{smc::population$<$ Space $>$}!GetLogWeight@{GetLogWeight}}
+\index{GetLogWeight@{GetLogWeight}!smc::population$<$ Space $>$@{smc::population$<$ Space $>$}}
+\doxysubsubsection{\texorpdfstring{GetLogWeight()}{GetLogWeight()}}
+{\footnotesize\ttfamily template$<$class Space $>$ \\
+const arma\+::vec\& \mbox{\hyperlink{classsmc_1_1population}{smc\+::population}}$<$ Space $>$\+::Get\+Log\+Weight (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the particle log weights. 
+
+\mbox{\Hypertarget{classsmc_1_1population_a5b42f094323cc2425825d82be7842e77}\label{classsmc_1_1population_a5b42f094323cc2425825d82be7842e77}} 
+\index{smc::population$<$ Space $>$@{smc::population$<$ Space $>$}!GetLogWeightN@{GetLogWeightN}}
+\index{GetLogWeightN@{GetLogWeightN}!smc::population$<$ Space $>$@{smc::population$<$ Space $>$}}
+\doxysubsubsection{\texorpdfstring{GetLogWeightN()}{GetLogWeightN()}}
+{\footnotesize\ttfamily template$<$class Space $>$ \\
+double \mbox{\hyperlink{classsmc_1_1population}{smc\+::population}}$<$ Space $>$\+::Get\+Log\+WeightN (\begin{DoxyParamCaption}\item[{long}]{n }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the nth particle\textquotesingle{}s log weight. 
+
+\mbox{\Hypertarget{classsmc_1_1population_af2706cf1c455f0cd5b9b3d7d455b6364}\label{classsmc_1_1population_af2706cf1c455f0cd5b9b3d7d455b6364}} 
+\index{smc::population$<$ Space $>$@{smc::population$<$ Space $>$}!GetLogWeightRefN@{GetLogWeightRefN}}
+\index{GetLogWeightRefN@{GetLogWeightRefN}!smc::population$<$ Space $>$@{smc::population$<$ Space $>$}}
+\doxysubsubsection{\texorpdfstring{GetLogWeightRefN()}{GetLogWeightRefN()}}
+{\footnotesize\ttfamily template$<$class Space $>$ \\
+double\& \mbox{\hyperlink{classsmc_1_1population}{smc\+::population}}$<$ Space $>$\+::Get\+Log\+Weight\+RefN (\begin{DoxyParamCaption}\item[{long}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a reference to the nth particle\textquotesingle{}s log weight. 
+
+\mbox{\Hypertarget{classsmc_1_1population_a4209e3a8191069456da6fa6d541ba7a5}\label{classsmc_1_1population_a4209e3a8191069456da6fa6d541ba7a5}} 
+\index{smc::population$<$ Space $>$@{smc::population$<$ Space $>$}!GetNumber@{GetNumber}}
+\index{GetNumber@{GetNumber}!smc::population$<$ Space $>$@{smc::population$<$ Space $>$}}
+\doxysubsubsection{\texorpdfstring{GetNumber()}{GetNumber()}}
+{\footnotesize\ttfamily template$<$class Space $>$ \\
+long \mbox{\hyperlink{classsmc_1_1population}{smc\+::population}}$<$ Space $>$\+::Get\+Number (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the number of particles within the system. 
+
+\mbox{\Hypertarget{classsmc_1_1population_a51c4bf9fd600f844a75df512845af88a}\label{classsmc_1_1population_a51c4bf9fd600f844a75df512845af88a}} 
+\index{smc::population$<$ Space $>$@{smc::population$<$ Space $>$}!GetValue@{GetValue}}
+\index{GetValue@{GetValue}!smc::population$<$ Space $>$@{smc::population$<$ Space $>$}}
+\doxysubsubsection{\texorpdfstring{GetValue()}{GetValue()}}
+{\footnotesize\ttfamily template$<$class Space $>$ \\
+const std\+::vector$<$Space$>$\& \mbox{\hyperlink{classsmc_1_1population}{smc\+::population}}$<$ Space $>$\+::Get\+Value (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the particle values. 
+
+\mbox{\Hypertarget{classsmc_1_1population_a9f81f8d12af9ba884741be1cfb183c5c}\label{classsmc_1_1population_a9f81f8d12af9ba884741be1cfb183c5c}} 
+\index{smc::population$<$ Space $>$@{smc::population$<$ Space $>$}!GetValueN@{GetValueN}}
+\index{GetValueN@{GetValueN}!smc::population$<$ Space $>$@{smc::population$<$ Space $>$}}
+\doxysubsubsection{\texorpdfstring{GetValueN()}{GetValueN()}}
+{\footnotesize\ttfamily template$<$class Space $>$ \\
+const Space\& \mbox{\hyperlink{classsmc_1_1population}{smc\+::population}}$<$ Space $>$\+::Get\+ValueN (\begin{DoxyParamCaption}\item[{long}]{n }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the value of the nth particle in the population. 
+
+\mbox{\Hypertarget{classsmc_1_1population_afbb861efa2fddf0e9b0c61f14bd6493e}\label{classsmc_1_1population_afbb861efa2fddf0e9b0c61f14bd6493e}} 
+\index{smc::population$<$ Space $>$@{smc::population$<$ Space $>$}!GetValueRefN@{GetValueRefN}}
+\index{GetValueRefN@{GetValueRefN}!smc::population$<$ Space $>$@{smc::population$<$ Space $>$}}
+\doxysubsubsection{\texorpdfstring{GetValueRefN()}{GetValueRefN()}}
+{\footnotesize\ttfamily template$<$class Space $>$ \\
+Space\& \mbox{\hyperlink{classsmc_1_1population}{smc\+::population}}$<$ Space $>$\+::Get\+Value\+RefN (\begin{DoxyParamCaption}\item[{long}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a reference to the value of the nth particle in the population. 
+
+\mbox{\Hypertarget{classsmc_1_1population_ac03a39fe7a5199433362f69c0e793dd7}\label{classsmc_1_1population_ac03a39fe7a5199433362f69c0e793dd7}} 
+\index{smc::population$<$ Space $>$@{smc::population$<$ Space $>$}!GetWeight@{GetWeight}}
+\index{GetWeight@{GetWeight}!smc::population$<$ Space $>$@{smc::population$<$ Space $>$}}
+\doxysubsubsection{\texorpdfstring{GetWeight()}{GetWeight()}}
+{\footnotesize\ttfamily template$<$class Space $>$ \\
+arma\+::vec \mbox{\hyperlink{classsmc_1_1population}{smc\+::population}}$<$ Space $>$\+::Get\+Weight (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the particles\textquotesingle{} unnormalised weights. 
+
+\mbox{\Hypertarget{classsmc_1_1population_a229bc5706bf6afef8073990a345b5a60}\label{classsmc_1_1population_a229bc5706bf6afef8073990a345b5a60}} 
+\index{smc::population$<$ Space $>$@{smc::population$<$ Space $>$}!GetWeightN@{GetWeightN}}
+\index{GetWeightN@{GetWeightN}!smc::population$<$ Space $>$@{smc::population$<$ Space $>$}}
+\doxysubsubsection{\texorpdfstring{GetWeightN()}{GetWeightN()}}
+{\footnotesize\ttfamily template$<$class Space $>$ \\
+double \mbox{\hyperlink{classsmc_1_1population}{smc\+::population}}$<$ Space $>$\+::Get\+WeightN (\begin{DoxyParamCaption}\item[{long}]{n }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the nth particle\textquotesingle{}s unnormalised weight. 
+
+\mbox{\Hypertarget{classsmc_1_1population_aa7aa4c48db66d934ec4e32e9c09b105d}\label{classsmc_1_1population_aa7aa4c48db66d934ec4e32e9c09b105d}} 
+\index{smc::population$<$ Space $>$@{smc::population$<$ Space $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!smc::population$<$ Space $>$@{smc::population$<$ Space $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily template$<$class Space $>$ \\
+\mbox{\hyperlink{classsmc_1_1population}{population}}$<$ Space $>$ \& \mbox{\hyperlink{classsmc_1_1population}{smc\+::population}}$<$ Space $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsmc_1_1population}{population}}$<$ Space $>$ \&}]{p\+From }\end{DoxyParamCaption})}
+
+
+
+The assignment operator performs a shallow copy. 
+
+Copy the values of p\+From to the values of this to set this population identical to p\+From in a deep copy sense. \mbox{\Hypertarget{classsmc_1_1population_a228f119bab158b24e6edef17e9e806d3}\label{classsmc_1_1population_a228f119bab158b24e6edef17e9e806d3}} 
+\index{smc::population$<$ Space $>$@{smc::population$<$ Space $>$}!Set@{Set}}
+\index{Set@{Set}!smc::population$<$ Space $>$@{smc::population$<$ Space $>$}}
+\doxysubsubsection{\texorpdfstring{Set()}{Set()}}
+{\footnotesize\ttfamily template$<$class Space $>$ \\
+void \mbox{\hyperlink{classsmc_1_1population}{smc\+::population}}$<$ Space $>$\+::Set (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ Space $>$ \&}]{s\+Value,  }\item[{const arma\+::vec \&}]{d\+Log\+Weight }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the particle values and weights explicitly. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s\+Value} & The particle values to use \\
+\hline
+{\em d\+Log\+Weight} & The natural logarithm of the new particle weights \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classsmc_1_1population_aa3e891ee4bac69ea5248e7af20c9e18d}\label{classsmc_1_1population_aa3e891ee4bac69ea5248e7af20c9e18d}} 
+\index{smc::population$<$ Space $>$@{smc::population$<$ Space $>$}!SetLogWeight@{SetLogWeight}}
+\index{SetLogWeight@{SetLogWeight}!smc::population$<$ Space $>$@{smc::population$<$ Space $>$}}
+\doxysubsubsection{\texorpdfstring{SetLogWeight()}{SetLogWeight()}}
+{\footnotesize\ttfamily template$<$class Space $>$ \\
+void \mbox{\hyperlink{classsmc_1_1population}{smc\+::population}}$<$ Space $>$\+::Set\+Log\+Weight (\begin{DoxyParamCaption}\item[{const arma\+::vec \&}]{d\+Log\+Weight }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the particle log weights explicitly. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em d\+Log\+Weight} & The natural logarithm of the new particle weights to use \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classsmc_1_1population_a34976b1339ba0c00a292401e2bf6e1f8}\label{classsmc_1_1population_a34976b1339ba0c00a292401e2bf6e1f8}} 
+\index{smc::population$<$ Space $>$@{smc::population$<$ Space $>$}!SetLogWeightN@{SetLogWeightN}}
+\index{SetLogWeightN@{SetLogWeightN}!smc::population$<$ Space $>$@{smc::population$<$ Space $>$}}
+\doxysubsubsection{\texorpdfstring{SetLogWeightN()}{SetLogWeightN()}}
+{\footnotesize\ttfamily template$<$class Space $>$ \\
+void \mbox{\hyperlink{classsmc_1_1population}{smc\+::population}}$<$ Space $>$\+::Set\+Log\+WeightN (\begin{DoxyParamCaption}\item[{const double \&}]{d\+Log\+Weight,  }\item[{long}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the nth particle log weight explicitly. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em d\+Log\+Weight} & The natural logarithm of the new particle weight to use \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classsmc_1_1population_a21eb46b6158da5c74088a461e481a7c7}\label{classsmc_1_1population_a21eb46b6158da5c74088a461e481a7c7}} 
+\index{smc::population$<$ Space $>$@{smc::population$<$ Space $>$}!SetValue@{SetValue}}
+\index{SetValue@{SetValue}!smc::population$<$ Space $>$@{smc::population$<$ Space $>$}}
+\doxysubsubsection{\texorpdfstring{SetValue()}{SetValue()}}
+{\footnotesize\ttfamily template$<$class Space $>$ \\
+void \mbox{\hyperlink{classsmc_1_1population}{smc\+::population}}$<$ Space $>$\+::Set\+Value (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ Space $>$ \&}]{s\+Value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the particle values explicitly. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s\+Value} & The particle values to use \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classsmc_1_1population_a7e43dc61d785bf5b88ce6014b53dfb2a}\label{classsmc_1_1population_a7e43dc61d785bf5b88ce6014b53dfb2a}} 
+\index{smc::population$<$ Space $>$@{smc::population$<$ Space $>$}!SetValueN@{SetValueN}}
+\index{SetValueN@{SetValueN}!smc::population$<$ Space $>$@{smc::population$<$ Space $>$}}
+\doxysubsubsection{\texorpdfstring{SetValueN()}{SetValueN()}}
+{\footnotesize\ttfamily template$<$class Space $>$ \\
+void \mbox{\hyperlink{classsmc_1_1population}{smc\+::population}}$<$ Space $>$\+::Set\+ValueN (\begin{DoxyParamCaption}\item[{const Space \&}]{s\+Value,  }\item[{long}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the nth particle value explicitly. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s\+Value} & The particle value to use \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classsmc_1_1population_a95f5035145d401fb7b8d45c5d3b6d171}\label{classsmc_1_1population_a95f5035145d401fb7b8d45c5d3b6d171}} 
+\index{smc::population$<$ Space $>$@{smc::population$<$ Space $>$}!logweight@{logweight}}
+\index{logweight@{logweight}!smc::population$<$ Space $>$@{smc::population$<$ Space $>$}}
+\doxysubsubsection{\texorpdfstring{logweight}{logweight}}
+{\footnotesize\ttfamily template$<$class Space $>$ \\
+arma\+::vec \mbox{\hyperlink{classsmc_1_1population}{smc\+::population}}$<$ Space $>$\+::logweight\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Natural logarithm of the particle weights. 
+
+\mbox{\Hypertarget{classsmc_1_1population_af2895b7eeca98bf97ab17b3e281df4ec}\label{classsmc_1_1population_af2895b7eeca98bf97ab17b3e281df4ec}} 
+\index{smc::population$<$ Space $>$@{smc::population$<$ Space $>$}!value@{value}}
+\index{value@{value}!smc::population$<$ Space $>$@{smc::population$<$ Space $>$}}
+\doxysubsubsection{\texorpdfstring{value}{value}}
+{\footnotesize\ttfamily template$<$class Space $>$ \\
+std\+::vector$<$Space$>$ \mbox{\hyperlink{classsmc_1_1population}{smc\+::population}}$<$ Space $>$\+::value\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Values of the particles. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/iz/\+Dropbox/projects/rcppsmc/\+Rcpp\+S\+M\+Cdocumentation/include/\mbox{\hyperlink{population_8h}{population.\+h}}\end{DoxyCompactItemize}

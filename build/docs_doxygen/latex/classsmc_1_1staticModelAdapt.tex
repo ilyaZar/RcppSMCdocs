@@ -1,0 +1,281 @@
+\hypertarget{classsmc_1_1staticModelAdapt}{}\doxysection{smc\+::static\+Model\+Adapt Class Reference}
+\label{classsmc_1_1staticModelAdapt}\index{smc::staticModelAdapt@{smc::staticModelAdapt}}
+
+
+A class containing parameters and functions to update these parameters in the context of static Bayesian models.  
+
+
+
+
+{\ttfamily \#include $<$static\+Model\+Adapt.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsmc_1_1staticModelAdapt_a984b8dc9035879b20939de2c217d19b6}{$\sim$static\+Model\+Adapt}} ()
+\item 
+\mbox{\hyperlink{classsmc_1_1staticModelAdapt_a301341fa94dadceecca0337b399f0f9c}{static\+Model\+Adapt}} ()
+\begin{DoxyCompactList}\small\item\em The class constructor which sets the current and previous temperatures to zero. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsmc_1_1staticModelAdapt_a5a865ce472d42b010cdf869debb0deaa}{Choose\+Temp}} (const arma\+::vec \&logweight, const arma\+::vec \&loglike, double desired\+C\+E\+SS, double epsilon=0.\+01)
+\begin{DoxyCompactList}\small\item\em Chooses the next temperature such that a desired conditional E\+SS is maintained. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsmc_1_1staticModelAdapt_a9fbc8a91e10bfc6a2df267c1bad5d02e}{calc\+Emp\+Cov}} (const arma\+::mat \&theta, const arma\+::vec \&logweight)
+\begin{DoxyCompactList}\small\item\em Calculates the empirical covariance matrix based on the current weighted particle set. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsmc_1_1staticModelAdapt_a5a37d9e6bf0c01fabfd01d5fe15ea441}{calc\+Chol\+Cov}} (const arma\+::mat \&theta, const arma\+::vec logweight)
+\begin{DoxyCompactList}\small\item\em Calculates the Cholesky decomposition of the empirical covariance matrix based on the current weighted particle set. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classsmc_1_1staticModelAdapt_ad12fb34bb4cd11ac4223b09eab265e67}{calc\+Mcmc\+Repeats}} (double accept\+Prob, double desired\+Accept\+Prob, int initialN, int max\+Reps)
+\begin{DoxyCompactList}\small\item\em Calculates the number of M\+C\+MC repeats based on the results of the most recent set of M\+C\+MC moves. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classsmc_1_1staticModelAdapt_a269caa0da7e3ffc38aeb84b3dfbf4b73}{Get\+Temp}} (int t) const
+\begin{DoxyCompactList}\small\item\em Returns the t-\/th temperature. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classsmc_1_1staticModelAdapt_a8737306c979de406ce6a3af3e8bf7119}{Get\+Temp\+Curr}} (void) const
+\begin{DoxyCompactList}\small\item\em Returns the current temperature. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classsmc_1_1staticModelAdapt_ab2a71f9ff8be1e99375b849343786a4e}{Get\+Temp\+Previous}} (void) const
+\begin{DoxyCompactList}\small\item\em Returns the previous temperature. \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classsmc_1_1staticModelAdapt_a007292a8429016519ae77181c2ce6178}{Get\+Temps}} (void) const
+\begin{DoxyCompactList}\small\item\em Returns the vector of temperatures. \end{DoxyCompactList}\item 
+arma\+::mat \mbox{\hyperlink{classsmc_1_1staticModelAdapt_af0020436521cead17a9c8e500e5788f8}{Get\+Chol\+Cov}} (void) const
+\begin{DoxyCompactList}\small\item\em Returns the Cholesky decomposition of the empirical covariance matrix based on the current weighted particle set. \end{DoxyCompactList}\item 
+arma\+::mat \mbox{\hyperlink{classsmc_1_1staticModelAdapt_ab669394ae8f88004c37a58afef1fe9ca}{Get\+Emp\+Cov}} (void) const
+\begin{DoxyCompactList}\small\item\em Returns the empirical covariance matrix based on the current weighted particle set. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{classsmc_1_1staticModelAdapt_ada6b5ca553373baba9069a64f45e86c5}{C\+E\+S\+Sdiff}} (const arma\+::vec \&logweight, const arma\+::vec \&loglike, double temp\+Diff, double desired\+C\+E\+SS)
+\begin{DoxyCompactList}\small\item\em Computes the difference between the conditional E\+SS given the specified temperature difference and the desired conditional E\+SS. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classsmc_1_1staticModelAdapt_a85968708aebf062be993c4a7037417f9}{bisection}} (double curr, const arma\+::vec \&logweight, const arma\+::vec \&loglike, double desired\+C\+E\+SS, double epsilon)
+\begin{DoxyCompactList}\small\item\em Performs the bisection method to find the temperature within (temp\+\_\+curr,1) which gives the desired conditional E\+SS. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classsmc_1_1staticModelAdapt_ab98899cba54c9d80480e607f3c9d979f}{temp}}
+\begin{DoxyCompactList}\small\item\em The temperature schedule;. \end{DoxyCompactList}\item 
+arma\+::mat \mbox{\hyperlink{classsmc_1_1staticModelAdapt_a8cb8c1dedfccc7db7ae6d5600cf4ae39}{emp\+Cov}}
+\begin{DoxyCompactList}\small\item\em The empirical covariance matrix estimated from the population of particles. \end{DoxyCompactList}\item 
+arma\+::mat \mbox{\hyperlink{classsmc_1_1staticModelAdapt_a925d2a0b86f3b15a1ec1321b8b8ebb75}{chol\+Cov}}
+\begin{DoxyCompactList}\small\item\em The Cholesky decomposition of the empirical covariance matrix. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class containing parameters and functions to update these parameters in the context of static Bayesian models. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsmc_1_1staticModelAdapt_a984b8dc9035879b20939de2c217d19b6}\label{classsmc_1_1staticModelAdapt_a984b8dc9035879b20939de2c217d19b6}} 
+\index{smc::staticModelAdapt@{smc::staticModelAdapt}!````~staticModelAdapt@{$\sim$staticModelAdapt}}
+\index{````~staticModelAdapt@{$\sim$staticModelAdapt}!smc::staticModelAdapt@{smc::staticModelAdapt}}
+\doxysubsubsection{\texorpdfstring{$\sim$staticModelAdapt()}{~staticModelAdapt()}}
+{\footnotesize\ttfamily smc\+::static\+Model\+Adapt\+::$\sim$static\+Model\+Adapt (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classsmc_1_1staticModelAdapt_a301341fa94dadceecca0337b399f0f9c}\label{classsmc_1_1staticModelAdapt_a301341fa94dadceecca0337b399f0f9c}} 
+\index{smc::staticModelAdapt@{smc::staticModelAdapt}!staticModelAdapt@{staticModelAdapt}}
+\index{staticModelAdapt@{staticModelAdapt}!smc::staticModelAdapt@{smc::staticModelAdapt}}
+\doxysubsubsection{\texorpdfstring{staticModelAdapt()}{staticModelAdapt()}}
+{\footnotesize\ttfamily smc\+::static\+Model\+Adapt\+::static\+Model\+Adapt (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The class constructor which sets the current and previous temperatures to zero. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classsmc_1_1staticModelAdapt_a85968708aebf062be993c4a7037417f9}\label{classsmc_1_1staticModelAdapt_a85968708aebf062be993c4a7037417f9}} 
+\index{smc::staticModelAdapt@{smc::staticModelAdapt}!bisection@{bisection}}
+\index{bisection@{bisection}!smc::staticModelAdapt@{smc::staticModelAdapt}}
+\doxysubsubsection{\texorpdfstring{bisection()}{bisection()}}
+{\footnotesize\ttfamily double smc\+::static\+Model\+Adapt\+::bisection (\begin{DoxyParamCaption}\item[{double}]{curr,  }\item[{const arma\+::vec \&}]{logweight,  }\item[{const arma\+::vec \&}]{loglike,  }\item[{double}]{desired\+C\+E\+SS,  }\item[{double}]{epsilon }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Performs the bisection method to find the temperature within (temp\+\_\+curr,1) which gives the desired conditional E\+SS. 
+
+\mbox{\Hypertarget{classsmc_1_1staticModelAdapt_a5a37d9e6bf0c01fabfd01d5fe15ea441}\label{classsmc_1_1staticModelAdapt_a5a37d9e6bf0c01fabfd01d5fe15ea441}} 
+\index{smc::staticModelAdapt@{smc::staticModelAdapt}!calcCholCov@{calcCholCov}}
+\index{calcCholCov@{calcCholCov}!smc::staticModelAdapt@{smc::staticModelAdapt}}
+\doxysubsubsection{\texorpdfstring{calcCholCov()}{calcCholCov()}}
+{\footnotesize\ttfamily void smc\+::static\+Model\+Adapt\+::calc\+Chol\+Cov (\begin{DoxyParamCaption}\item[{const arma\+::mat \&}]{theta,  }\item[{const arma\+::vec}]{logweight }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Calculates the Cholesky decomposition of the empirical covariance matrix based on the current weighted particle set. 
+
+Calculates the Cholesky decomposition of the empirical covariance matrix based on the current weighted particle set.
+
+
+\begin{DoxyParams}{Parameters}
+{\em theta} & An \mbox{[}Nxd\mbox{]} armadillo matrix of doubles for the current particle values, where N is the number of particles and d is the dimension of the parameter \\
+\hline
+{\em logweight} & An armadillo vector of the logarithm of the current particle weights \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classsmc_1_1staticModelAdapt_a9fbc8a91e10bfc6a2df267c1bad5d02e}\label{classsmc_1_1staticModelAdapt_a9fbc8a91e10bfc6a2df267c1bad5d02e}} 
+\index{smc::staticModelAdapt@{smc::staticModelAdapt}!calcEmpCov@{calcEmpCov}}
+\index{calcEmpCov@{calcEmpCov}!smc::staticModelAdapt@{smc::staticModelAdapt}}
+\doxysubsubsection{\texorpdfstring{calcEmpCov()}{calcEmpCov()}}
+{\footnotesize\ttfamily void smc\+::static\+Model\+Adapt\+::calc\+Emp\+Cov (\begin{DoxyParamCaption}\item[{const arma\+::mat \&}]{theta,  }\item[{const arma\+::vec \&}]{logweight }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Calculates the empirical covariance matrix based on the current weighted particle set. 
+
+Calculates the empirical covariance matrix based on the current weighted particle set.
+
+
+\begin{DoxyParams}{Parameters}
+{\em theta} & An \mbox{[}Nxd\mbox{]} armadillo matrix of doubles for the current particle values, where N is the number of particles and d is the dimension of the parameter. \\
+\hline
+{\em logweight} & An armadillo vector containing the logarithm of the current particle weights. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classsmc_1_1staticModelAdapt_ad12fb34bb4cd11ac4223b09eab265e67}\label{classsmc_1_1staticModelAdapt_ad12fb34bb4cd11ac4223b09eab265e67}} 
+\index{smc::staticModelAdapt@{smc::staticModelAdapt}!calcMcmcRepeats@{calcMcmcRepeats}}
+\index{calcMcmcRepeats@{calcMcmcRepeats}!smc::staticModelAdapt@{smc::staticModelAdapt}}
+\doxysubsubsection{\texorpdfstring{calcMcmcRepeats()}{calcMcmcRepeats()}}
+{\footnotesize\ttfamily int smc\+::static\+Model\+Adapt\+::calc\+Mcmc\+Repeats (\begin{DoxyParamCaption}\item[{double}]{accept\+Prob,  }\item[{double}]{desired\+Accept\+Prob,  }\item[{int}]{initialN,  }\item[{int}]{max\+Reps }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Calculates the number of M\+C\+MC repeats based on the results of the most recent set of M\+C\+MC moves. 
+
+Calculates the number of M\+C\+MC repeats based on the results of the most recent set of M\+C\+MC moves.
+
+
+\begin{DoxyParams}{Parameters}
+{\em accept\+Prob} & The proportion of accepted M\+C\+MC steps in the most recent iteration. \\
+\hline
+{\em desired\+Accept\+Prob} & The desired probability of a successful move for each particle. \\
+\hline
+{\em initialN} & The initial number of M\+C\+MC repeats. \\
+\hline
+{\em max\+Reps} & The maximum number of M\+C\+MC repeats. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classsmc_1_1staticModelAdapt_ada6b5ca553373baba9069a64f45e86c5}\label{classsmc_1_1staticModelAdapt_ada6b5ca553373baba9069a64f45e86c5}} 
+\index{smc::staticModelAdapt@{smc::staticModelAdapt}!CESSdiff@{CESSdiff}}
+\index{CESSdiff@{CESSdiff}!smc::staticModelAdapt@{smc::staticModelAdapt}}
+\doxysubsubsection{\texorpdfstring{CESSdiff()}{CESSdiff()}}
+{\footnotesize\ttfamily double smc\+::static\+Model\+Adapt\+::\+C\+E\+S\+Sdiff (\begin{DoxyParamCaption}\item[{const arma\+::vec \&}]{logweight,  }\item[{const arma\+::vec \&}]{loglike,  }\item[{double}]{temp\+Diff,  }\item[{double}]{desired\+C\+E\+SS }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Computes the difference between the conditional E\+SS given the specified temperature difference and the desired conditional E\+SS. 
+
+\mbox{\Hypertarget{classsmc_1_1staticModelAdapt_a5a865ce472d42b010cdf869debb0deaa}\label{classsmc_1_1staticModelAdapt_a5a865ce472d42b010cdf869debb0deaa}} 
+\index{smc::staticModelAdapt@{smc::staticModelAdapt}!ChooseTemp@{ChooseTemp}}
+\index{ChooseTemp@{ChooseTemp}!smc::staticModelAdapt@{smc::staticModelAdapt}}
+\doxysubsubsection{\texorpdfstring{ChooseTemp()}{ChooseTemp()}}
+{\footnotesize\ttfamily void smc\+::static\+Model\+Adapt\+::\+Choose\+Temp (\begin{DoxyParamCaption}\item[{const arma\+::vec \&}]{logweight,  }\item[{const arma\+::vec \&}]{loglike,  }\item[{double}]{desired\+C\+E\+SS,  }\item[{double}]{epsilon = {\ttfamily 0.01} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Chooses the next temperature such that a desired conditional E\+SS is maintained. 
+
+Chooses the next temperature such that a desired conditional E\+SS is maintained.
+
+
+\begin{DoxyParams}{Parameters}
+{\em logweight} & An armadillo vector containing the logarithm of the current particle weights. \\
+\hline
+{\em loglike} & An armadillo vector containing the log likelihood of the current particle values. \\
+\hline
+{\em desired\+C\+E\+SS} & The target conditional E\+SS for the next temperature (generally fixed). \\
+\hline
+{\em epsilon} & The tolerance for the bisection method (maximum difference between desired and actual conditional E\+SS). \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classsmc_1_1staticModelAdapt_af0020436521cead17a9c8e500e5788f8}\label{classsmc_1_1staticModelAdapt_af0020436521cead17a9c8e500e5788f8}} 
+\index{smc::staticModelAdapt@{smc::staticModelAdapt}!GetCholCov@{GetCholCov}}
+\index{GetCholCov@{GetCholCov}!smc::staticModelAdapt@{smc::staticModelAdapt}}
+\doxysubsubsection{\texorpdfstring{GetCholCov()}{GetCholCov()}}
+{\footnotesize\ttfamily arma\+::mat smc\+::static\+Model\+Adapt\+::\+Get\+Chol\+Cov (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the Cholesky decomposition of the empirical covariance matrix based on the current weighted particle set. 
+
+\mbox{\Hypertarget{classsmc_1_1staticModelAdapt_ab669394ae8f88004c37a58afef1fe9ca}\label{classsmc_1_1staticModelAdapt_ab669394ae8f88004c37a58afef1fe9ca}} 
+\index{smc::staticModelAdapt@{smc::staticModelAdapt}!GetEmpCov@{GetEmpCov}}
+\index{GetEmpCov@{GetEmpCov}!smc::staticModelAdapt@{smc::staticModelAdapt}}
+\doxysubsubsection{\texorpdfstring{GetEmpCov()}{GetEmpCov()}}
+{\footnotesize\ttfamily arma\+::mat smc\+::static\+Model\+Adapt\+::\+Get\+Emp\+Cov (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the empirical covariance matrix based on the current weighted particle set. 
+
+\mbox{\Hypertarget{classsmc_1_1staticModelAdapt_a269caa0da7e3ffc38aeb84b3dfbf4b73}\label{classsmc_1_1staticModelAdapt_a269caa0da7e3ffc38aeb84b3dfbf4b73}} 
+\index{smc::staticModelAdapt@{smc::staticModelAdapt}!GetTemp@{GetTemp}}
+\index{GetTemp@{GetTemp}!smc::staticModelAdapt@{smc::staticModelAdapt}}
+\doxysubsubsection{\texorpdfstring{GetTemp()}{GetTemp()}}
+{\footnotesize\ttfamily double smc\+::static\+Model\+Adapt\+::\+Get\+Temp (\begin{DoxyParamCaption}\item[{int}]{t }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the t-\/th temperature. 
+
+\mbox{\Hypertarget{classsmc_1_1staticModelAdapt_a8737306c979de406ce6a3af3e8bf7119}\label{classsmc_1_1staticModelAdapt_a8737306c979de406ce6a3af3e8bf7119}} 
+\index{smc::staticModelAdapt@{smc::staticModelAdapt}!GetTempCurr@{GetTempCurr}}
+\index{GetTempCurr@{GetTempCurr}!smc::staticModelAdapt@{smc::staticModelAdapt}}
+\doxysubsubsection{\texorpdfstring{GetTempCurr()}{GetTempCurr()}}
+{\footnotesize\ttfamily double smc\+::static\+Model\+Adapt\+::\+Get\+Temp\+Curr (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the current temperature. 
+
+\mbox{\Hypertarget{classsmc_1_1staticModelAdapt_ab2a71f9ff8be1e99375b849343786a4e}\label{classsmc_1_1staticModelAdapt_ab2a71f9ff8be1e99375b849343786a4e}} 
+\index{smc::staticModelAdapt@{smc::staticModelAdapt}!GetTempPrevious@{GetTempPrevious}}
+\index{GetTempPrevious@{GetTempPrevious}!smc::staticModelAdapt@{smc::staticModelAdapt}}
+\doxysubsubsection{\texorpdfstring{GetTempPrevious()}{GetTempPrevious()}}
+{\footnotesize\ttfamily double smc\+::static\+Model\+Adapt\+::\+Get\+Temp\+Previous (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the previous temperature. 
+
+\mbox{\Hypertarget{classsmc_1_1staticModelAdapt_a007292a8429016519ae77181c2ce6178}\label{classsmc_1_1staticModelAdapt_a007292a8429016519ae77181c2ce6178}} 
+\index{smc::staticModelAdapt@{smc::staticModelAdapt}!GetTemps@{GetTemps}}
+\index{GetTemps@{GetTemps}!smc::staticModelAdapt@{smc::staticModelAdapt}}
+\doxysubsubsection{\texorpdfstring{GetTemps()}{GetTemps()}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ smc\+::static\+Model\+Adapt\+::\+Get\+Temps (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the vector of temperatures. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classsmc_1_1staticModelAdapt_a925d2a0b86f3b15a1ec1321b8b8ebb75}\label{classsmc_1_1staticModelAdapt_a925d2a0b86f3b15a1ec1321b8b8ebb75}} 
+\index{smc::staticModelAdapt@{smc::staticModelAdapt}!cholCov@{cholCov}}
+\index{cholCov@{cholCov}!smc::staticModelAdapt@{smc::staticModelAdapt}}
+\doxysubsubsection{\texorpdfstring{cholCov}{cholCov}}
+{\footnotesize\ttfamily arma\+::mat smc\+::static\+Model\+Adapt\+::chol\+Cov\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The Cholesky decomposition of the empirical covariance matrix. 
+
+\mbox{\Hypertarget{classsmc_1_1staticModelAdapt_a8cb8c1dedfccc7db7ae6d5600cf4ae39}\label{classsmc_1_1staticModelAdapt_a8cb8c1dedfccc7db7ae6d5600cf4ae39}} 
+\index{smc::staticModelAdapt@{smc::staticModelAdapt}!empCov@{empCov}}
+\index{empCov@{empCov}!smc::staticModelAdapt@{smc::staticModelAdapt}}
+\doxysubsubsection{\texorpdfstring{empCov}{empCov}}
+{\footnotesize\ttfamily arma\+::mat smc\+::static\+Model\+Adapt\+::emp\+Cov\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The empirical covariance matrix estimated from the population of particles. 
+
+\mbox{\Hypertarget{classsmc_1_1staticModelAdapt_ab98899cba54c9d80480e607f3c9d979f}\label{classsmc_1_1staticModelAdapt_ab98899cba54c9d80480e607f3c9d979f}} 
+\index{smc::staticModelAdapt@{smc::staticModelAdapt}!temp@{temp}}
+\index{temp@{temp}!smc::staticModelAdapt@{smc::staticModelAdapt}}
+\doxysubsubsection{\texorpdfstring{temp}{temp}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ smc\+::static\+Model\+Adapt\+::temp\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The temperature schedule;. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/iz/\+Dropbox/projects/rcppsmc/\+Rcpp\+S\+M\+Cdocumentation/include/\mbox{\hyperlink{staticModelAdapt_8h}{static\+Model\+Adapt.\+h}}\end{DoxyCompactItemize}

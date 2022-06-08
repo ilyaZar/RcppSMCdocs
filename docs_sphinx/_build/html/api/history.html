@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Particle History Storage &mdash; RcppSMC  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Exception handling" href="smcexception.html" />
+    <link rel="prev" title="Static Adaptation" href="staticModelAdapt.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> RcppSMC
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Welcome to the RcppSMC documentation!</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Classes</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="sampler.html">Sampler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conditionalSampler.html">Conditional Sampler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="population.html">Particle Population</a></li>
+<li class="toctree-l2"><a class="reference internal" href="moveset.html">Moving, conditional moving and weighting particles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="adaptMethods.html">Adaptation Methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="staticModelAdapt.html">Static Adaptation</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Particle History Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="smcexception.html">Exception handling</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">RcppSMC</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="index.html">Classes</a> &raquo;</li>
+      <li>Particle History Storage</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/api/history.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="particle-history-storage">
+<span id="api-history"></span><h1>Particle History Storage<a class="headerlink" href="#particle-history-storage" title="Permalink to this headline"></a></h1>
+<p>Classes and function related to the history of the sampler. </p>
+<p>This file contains template definitions for the classes used to store the history of an SMCTC sampler. It defines <a class="reference internal" href="#classsmc_1_1historyflags"><span class="std std-ref">smc::historyflags</span></a> and <a class="reference internal" href="#classsmc_1_1historyelement"><span class="std std-ref">smc::historyelement</span></a>. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-defines">Defines</p>
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.__SMC_HISTORY_HH">
+<span class="target" id="history_8h_1af291cb87cc5b51cecc51fd1b41d82a3f"></span><span class="sig-name descname"><span class="n"><span class="pre">__SMC_HISTORY_HH</span></span></span><a class="headerlink" href="#c.__SMC_HISTORY_HH" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv43smc">
+<span id="_CPPv33smc"></span><span id="_CPPv23smc"></span><span id="smc"></span><span class="target" id="namespacesmc"></span><span class="k"><span class="pre">namespace</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">smc</span></span></span><br /></dt>
+<dd><p>The Sequential Monte Carlo namespace. </p>
+<p>The classes and functions within this namespace are intended to be used for producing implemenetations of SMC samplers and related simulation techniques. </p>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4I0EN3smc14historyelementE">
+<span id="_CPPv3I0EN3smc14historyelementE"></span><span id="_CPPv2I0EN3smc14historyelementE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Space</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classsmc_1_1historyelement"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">historyelement</span></span></span><a class="headerlink" href="#_CPPv4I0EN3smc14historyelementE" title="Permalink to this definition"></a><br /></dt>
+<dd><div class="docutils container">
+<em>#include &lt;history.h&gt;</em></div>
+<p>A template class for the elements of a linked list to be used for the history of the sampler. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3smc14historyelement14historyelementEv">
+<span id="_CPPv3N3smc14historyelement14historyelementEv"></span><span id="_CPPv2N3smc14historyelement14historyelementEv"></span><span id="smc::historyelement::historyelement"></span><span class="target" id="classsmc_1_1historyelement_1acfe01a851a4cee19068c291e2cc9b0d5"></span><span class="sig-name descname"><span class="n"><span class="pre">historyelement</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3smc14historyelement14historyelementEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>The null constructor creates an empty history element. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3smc14historyelement14historyelementEl10populationI5SpaceEii12historyflags">
+<span id="_CPPv3N3smc14historyelement14historyelementEl10populationI5SpaceEii12historyflags"></span><span id="_CPPv2N3smc14historyelement14historyelementEl10populationI5SpaceEii12historyflags"></span><span id="smc::historyelement::historyelement__l.population:Space:.i.i.historyflags"></span><span class="target" id="classsmc_1_1historyelement_1a3ead7752e711387f3f038bdbc016ebcc"></span><span class="sig-name descname"><span class="n"><span class="pre">historyelement</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">lNumber</span></span>, <a class="reference internal" href="population.html#_CPPv4I0EN3smc10populationE" title="smc::population"><span class="n"><span class="pre">population</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN3smc14historyelementE" title="smc::historyelement::Space"><span class="n"><span class="pre">Space</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">pNew</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">nAccepts</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">nRepeats</span></span>, <a class="reference internal" href="#_CPPv4N3smc12historyflagsE" title="smc::historyflags"><span class="n"><span class="pre">historyflags</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">hf</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3smc14historyelement14historyelementEl10populationI5SpaceEii12historyflags" title="Permalink to this definition"></a><br /></dt>
+<dd><p>A constructor with four arguments initialises the particle set. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>lNumber</strong> – The number of particles present in the particle generation </p></li>
+<li><p><strong>New</strong> – The array of particles which are present in the particle generation </p></li>
+<li><p><strong>nAccepts</strong> – The number of MCMC moves that were accepted during this particle generation </p></li>
+<li><p><strong>nRepeats</strong> – The number of MCMC iterations that were performed during this particle generation </p></li>
+<li><p><strong>hf</strong> – The historyflags associated with the particle generation </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3smc14historyelementD0Ev">
+<span id="_CPPv3N3smc14historyelementD0Ev"></span><span id="_CPPv2N3smc14historyelementD0Ev"></span><span id="smc::historyelement::~historyelement"></span><span class="target" id="classsmc_1_1historyelement_1a4428ce46f4dd11a8b99cd93cfdc72b33"></span><span class="sig-name descname"><span class="n"><span class="pre">~historyelement</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3smc14historyelementD0Ev" title="Permalink to this definition"></a><br /></dt>
+<dd><p>The destructor tidies up. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3smc14historyelement6GetESSEv">
+<span id="_CPPv3NK3smc14historyelement6GetESSEv"></span><span id="_CPPv2NK3smc14historyelement6GetESSEv"></span><span id="smc::historyelement::GetESS__voidC"></span><span class="target" id="classsmc_1_1historyelement_1a0fc2b96ec075a38c32f08433b0de7337"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GetESS</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3smc14historyelement6GetESSEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns the effective sample size of this particle generation. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3smc14historyelement8GetFlagsEv">
+<span id="_CPPv3NK3smc14historyelement8GetFlagsEv"></span><span id="_CPPv2NK3smc14historyelement8GetFlagsEv"></span><span id="smc::historyelement::GetFlags__voidC"></span><span class="target" id="classsmc_1_1historyelement_1ad811b285a6b854a99d4285125692b28b"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3smc12historyflagsE" title="smc::historyflags"><span class="n"><span class="pre">historyflags</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GetFlags</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3smc14historyelement8GetFlagsEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns the flags. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3smc14historyelement9GetNumberEv">
+<span id="_CPPv3NK3smc14historyelement9GetNumberEv"></span><span id="_CPPv2NK3smc14historyelement9GetNumberEv"></span><span id="smc::historyelement::GetNumber__voidC"></span><span class="target" id="classsmc_1_1historyelement_1a9524c99e0173d1b2244c30b7fa29f0e6"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GetNumber</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3smc14historyelement9GetNumberEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns the number of particles present. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3smc14historyelement9GetValuesEv">
+<span id="_CPPv3NK3smc14historyelement9GetValuesEv"></span><span id="_CPPv2NK3smc14historyelement9GetValuesEv"></span><span id="smc::historyelement::GetValues__voidC"></span><span class="target" id="classsmc_1_1historyelement_1a7fa5ffc6301ace687069cb2237b0a0df"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="population.html#_CPPv4I0EN3smc10populationE" title="smc::population"><span class="n"><span class="pre">population</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN3smc14historyelementE" title="smc::historyelement::Space"><span class="n"><span class="pre">Space</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GetValues</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3smc14historyelement9GetValuesEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns the current particle set. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3smc14historyelement7GetRefsEv">
+<span id="_CPPv3N3smc14historyelement7GetRefsEv"></span><span id="_CPPv2N3smc14historyelement7GetRefsEv"></span><span id="smc::historyelement::GetRefs__void"></span><span class="target" id="classsmc_1_1historyelement_1a41c634dfaa108fe51b9cf7a66121e9a2"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="population.html#_CPPv4I0EN3smc10populationE" title="smc::population"><span class="n"><span class="pre">population</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN3smc14historyelementE" title="smc::historyelement::Space"><span class="n"><span class="pre">Space</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">GetRefs</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3smc14historyelement7GetRefsEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns a reference to the current particle set. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3smc14historyelement11SetAIndicesERKN4arma3ColIjEE">
+<span id="_CPPv3N3smc14historyelement11SetAIndicesERKN4arma3ColIjEE"></span><span id="_CPPv2N3smc14historyelement11SetAIndicesERKN4arma3ColIjEE"></span><span id="smc::historyelement::SetAIndices__arma::Col:unsigned-i:CR"></span><span class="target" id="classsmc_1_1historyelement_1ae8812a55f616bf65107ad5bc08ca2644"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SetAIndices</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">arma</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Col</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">newAindices</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3smc14historyelement11SetAIndicesERKN4arma3ColIjEE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Sets the ancestor indices of the current particle set. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3smc14historyelement11GetAIndicesEv">
+<span id="_CPPv3NK3smc14historyelement11GetAIndicesEv"></span><span id="_CPPv2NK3smc14historyelement11GetAIndicesEv"></span><span id="smc::historyelement::GetAIndices__voidC"></span><span class="target" id="classsmc_1_1historyelement_1a20dfbaf1b1e0cd4e4fc80ddf6aef7023"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">arma</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Col</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GetAIndices</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3smc14historyelement11GetAIndicesEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns the ancestor indices of the current particle set. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3smc14historyelement9IntegrateElPFdlRK5SpacePvEPv">
+<span id="_CPPv3NK3smc14historyelement9IntegrateElPFdlRK5SpacePvEPv"></span><span id="_CPPv2NK3smc14historyelement9IntegrateElPFdlRK5SpacePvEPv"></span><span class="target" id="classsmc_1_1historyelement_1aca253afff3c7234a966e59fb6ee6a58e"></span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Integrate</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">lTime</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">pIntegrand</span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">(</span></span><span class="kt"><span class="pre">long</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN3smc14historyelementE" title="smc::historyelement::Space"><span class="n"><span class="pre">Space</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">)</span></span>, <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">pAuxiliary</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3smc14historyelement9IntegrateElPFdlRK5SpacePvEPv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Monte Carlo estimate of the expectation of the supplied function with respect to the empirical measure of the particle ensemble. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>lTime</strong> – The timestep at which the integration is to be carried out </p></li>
+<li><p><strong>pIntegrand</strong> – The function which is to be integrated </p></li>
+<li><p><strong>pAuxiliary</strong> – A pointer to additional information which is passed to the integrand function </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3smc14historyelement13Integrate_VarElPFdlRK5SpacePvEdPv">
+<span id="_CPPv3NK3smc14historyelement13Integrate_VarElPFdlRK5SpacePvEdPv"></span><span id="_CPPv2NK3smc14historyelement13Integrate_VarElPFdlRK5SpacePvEdPv"></span><span class="target" id="classsmc_1_1historyelement_1ad64f0a4b0dddd789fc1822d057023ab9"></span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Integrate_Var</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">lTime</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">pIntegrand</span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">(</span></span><span class="kt"><span class="pre">long</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN3smc14historyelementE" title="smc::historyelement::Space"><span class="n"><span class="pre">Space</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">)</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">Expectation</span></span>, <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">pAuxiliary</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3smc14historyelement13Integrate_VarElPFdlRK5SpacePvEdPv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Monte Carlo estimate of the variance of the supplied function with respect to the empirical measure of the particle ensemble (to be used in second order trapezoidal correction). </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>lTime</strong> – The timestep at which the integration is to be carried out </p></li>
+<li><p><strong>pIntegrand</strong> – The function which is to be integrated </p></li>
+<li><p><strong>pAuxiliary</strong> – A pointer to additional information which is passed to the integrand function </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3smc14historyelement3SetElRK10populationI5SpaceEiiRK12historyflags">
+<span id="_CPPv3N3smc14historyelement3SetElRK10populationI5SpaceEiiRK12historyflags"></span><span id="_CPPv2N3smc14historyelement3SetElRK10populationI5SpaceEiiRK12historyflags"></span><span id="smc::historyelement::Set__l.population:Space:CR.i.i.historyflagsCR"></span><span class="target" id="classsmc_1_1historyelement_1a937d74cb8b5ffe8e0aa1e637faef2807"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Set</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">lNumber</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="population.html#_CPPv4I0EN3smc10populationE" title="smc::population"><span class="n"><span class="pre">population</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN3smc14historyelementE" title="smc::historyelement::Space"><span class="n"><span class="pre">Space</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">New</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">inAccepted</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">nRepeats</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3smc12historyflagsE" title="smc::historyflags"><span class="n"><span class="pre">historyflags</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">histflags</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3smc14historyelement3SetElRK10populationI5SpaceEiiRK12historyflags" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Sets the particle set to the specified values excluding ancestors. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3smc14historyelement3SetElRK10populationI5SpaceEiiRK12historyflagsRKN4arma3ColIjEE">
+<span id="_CPPv3N3smc14historyelement3SetElRK10populationI5SpaceEiiRK12historyflagsRKN4arma3ColIjEE"></span><span id="_CPPv2N3smc14historyelement3SetElRK10populationI5SpaceEiiRK12historyflagsRKN4arma3ColIjEE"></span><span id="smc::historyelement::Set__l.population:Space:CR.i.i.historyflagsCR.arma::Col:unsigned-i:CR"></span><span class="target" id="classsmc_1_1historyelement_1a6e16e343752bb1c4403f40b362fc0e7f"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Set</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">lNumber</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="population.html#_CPPv4I0EN3smc10populationE" title="smc::population"><span class="n"><span class="pre">population</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN3smc14historyelementE" title="smc::historyelement::Space"><span class="n"><span class="pre">Space</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">New</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">inAccepted</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">nRepeats</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3smc12historyflagsE" title="smc::historyflags"><span class="n"><span class="pre">historyflags</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">histflags</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">arma</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Col</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">newAindices</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3smc14historyelement3SetElRK10populationI5SpaceEiiRK12historyflagsRKN4arma3ColIjEE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Sets the particle set to the specified values including ancestors. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3smc14historyelement3SetElRK10populationI5SpaceERK12historyflagsRKN4arma3ColIjEE">
+<span id="_CPPv3N3smc14historyelement3SetElRK10populationI5SpaceERK12historyflagsRKN4arma3ColIjEE"></span><span id="_CPPv2N3smc14historyelement3SetElRK10populationI5SpaceERK12historyflagsRKN4arma3ColIjEE"></span><span id="smc::historyelement::Set__l.population:Space:CR.historyflagsCR.arma::Col:unsigned-i:CR"></span><span class="target" id="classsmc_1_1historyelement_1a91d3d8baac02d4cbf08642be106a4384"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Set</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">lNumber</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="population.html#_CPPv4I0EN3smc10populationE" title="smc::population"><span class="n"><span class="pre">population</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN3smc14historyelementE" title="smc::historyelement::Space"><span class="n"><span class="pre">Space</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">New</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3smc12historyflagsE" title="smc::historyflags"><span class="n"><span class="pre">historyflags</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">histflags</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">arma</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Col</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">newAindices</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3smc14historyelement3SetElRK10populationI5SpaceERK12historyflagsRKN4arma3ColIjEE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Sets the particle set to the specified values including ancestors specifically to use with the derived conditional sampler class where adaptation and MCMC moves are not supported. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3smc14historyelement3SetElRK10populationI5SpaceERK12historyflags">
+<span id="_CPPv3N3smc14historyelement3SetElRK10populationI5SpaceERK12historyflags"></span><span id="_CPPv2N3smc14historyelement3SetElRK10populationI5SpaceERK12historyflags"></span><span id="smc::historyelement::Set__l.population:Space:CR.historyflagsCR"></span><span class="target" id="classsmc_1_1historyelement_1a17dc6cf863db8064b7ef6e40b86cd02d"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Set</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">lNumber</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="population.html#_CPPv4I0EN3smc10populationE" title="smc::population"><span class="n"><span class="pre">population</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN3smc14historyelementE" title="smc::historyelement::Space"><span class="n"><span class="pre">Space</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">New</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3smc12historyflagsE" title="smc::historyflags"><span class="n"><span class="pre">historyflags</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">histflags</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3smc14historyelement3SetElRK10populationI5SpaceERK12historyflags" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Sets the particle set to the specified values excluding ancestors for the derived conditional sampler class. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3smc14historyelement11AcceptCountEv">
+<span id="_CPPv3N3smc14historyelement11AcceptCountEv"></span><span id="_CPPv2N3smc14historyelement11AcceptCountEv"></span><span id="smc::historyelement::AcceptCount__void"></span><span class="target" id="classsmc_1_1historyelement_1a703582146b53ef99d37c128e73ab4538"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">AcceptCount</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3smc14historyelement11AcceptCountEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns the number of MCMC moves accepted during this iteration. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3smc14historyelement11mcmcRepeatsEv">
+<span id="_CPPv3N3smc14historyelement11mcmcRepeatsEv"></span><span id="_CPPv2N3smc14historyelement11mcmcRepeatsEv"></span><span id="smc::historyelement::mcmcRepeats__void"></span><span class="target" id="classsmc_1_1historyelement_1aa79e02ab98b7b603c05b9f1af6d18823"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mcmcRepeats</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3smc14historyelement11mcmcRepeatsEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns the number of MCMC iterations performed during this iteration. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3smc14historyelement12WasResampledEv">
+<span id="_CPPv3N3smc14historyelement12WasResampledEv"></span><span id="_CPPv2N3smc14historyelement12WasResampledEv"></span><span id="smc::historyelement::WasResampled__void"></span><span class="target" id="classsmc_1_1historyelement_1abbf23e201874f2d75a615dfd550b8603"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">WasResampled</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3smc14historyelement12WasResampledEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns true if the particle set. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-private-members">Private Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N3smc14historyelement6numberE">
+<span id="_CPPv3N3smc14historyelement6numberE"></span><span id="_CPPv2N3smc14historyelement6numberE"></span><span id="smc::historyelement::number__l"></span><span class="target" id="classsmc_1_1historyelement_1adea5f8dc2ea310f798c4db30548f5197"></span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">number</span></span></span><a class="headerlink" href="#_CPPv4N3smc14historyelement6numberE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>The number of particles (presently redundant as this is not a function of iteration) </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N3smc14historyelement9nAcceptedE">
+<span id="_CPPv3N3smc14historyelement9nAcceptedE"></span><span id="_CPPv2N3smc14historyelement9nAcceptedE"></span><span id="smc::historyelement::nAccepted__i"></span><span class="target" id="classsmc_1_1historyelement_1a015849edb0b8e68761175355625d2ad8"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">nAccepted</span></span></span><a class="headerlink" href="#_CPPv4N3smc14historyelement9nAcceptedE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Number of MCMC moves accepted during this iteration. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N3smc14historyelement7nRepeatE">
+<span id="_CPPv3N3smc14historyelement7nRepeatE"></span><span id="_CPPv2N3smc14historyelement7nRepeatE"></span><span id="smc::historyelement::nRepeat__i"></span><span class="target" id="classsmc_1_1historyelement_1aead93445bfbf78315d4a0dc41d0ef6ce"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">nRepeat</span></span></span><a class="headerlink" href="#_CPPv4N3smc14historyelement7nRepeatE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Number of MCMC iterations performed at this iteration (per particle) </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N3smc14historyelement3popE">
+<span id="_CPPv3N3smc14historyelement3popE"></span><span id="_CPPv2N3smc14historyelement3popE"></span><span id="smc::historyelement::pop__population:Space:"></span><span class="target" id="classsmc_1_1historyelement_1ad5c8283a96e2342ee3108f62119398af"></span><a class="reference internal" href="population.html#_CPPv4I0EN3smc10populationE" title="smc::population"><span class="n"><span class="pre">population</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN3smc14historyelementE" title="smc::historyelement::Space"><span class="n"><span class="pre">Space</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pop</span></span></span><a class="headerlink" href="#_CPPv4N3smc14historyelement3popE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>The particles themselves (values and weights) </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N3smc14historyelement15ancestorIndicesE">
+<span id="_CPPv3N3smc14historyelement15ancestorIndicesE"></span><span id="_CPPv2N3smc14historyelement15ancestorIndicesE"></span><span id="smc::historyelement::ancestorIndices__arma::Col:unsigned-i:"></span><span class="target" id="classsmc_1_1historyelement_1a4453e89a2521144d2946a77ed8be49b4"></span><span class="n"><span class="pre">arma</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Col</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ancestorIndices</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">arma</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Col</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">(</span></span><a class="reference internal" href="#_CPPv4N3smc14historyelement6numberE" title="smc::historyelement::number"><span class="n"><span class="pre">number</span></span></a><span class="p"><span class="pre">)</span></span><a class="headerlink" href="#_CPPv4N3smc14historyelement15ancestorIndicesE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N3smc14historyelement5flagsE">
+<span id="_CPPv3N3smc14historyelement5flagsE"></span><span id="_CPPv2N3smc14historyelement5flagsE"></span><span id="smc::historyelement::flags__historyflags"></span><span class="target" id="classsmc_1_1historyelement_1a7cdc4a207a4fcede8d45f7ca90aac356"></span><a class="reference internal" href="#_CPPv4N3smc12historyflagsE" title="smc::historyflags"><span class="n"><span class="pre">historyflags</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">flags</span></span></span><a class="headerlink" href="#_CPPv4N3smc14historyelement5flagsE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Flags associated with this iteration. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N3smc12historyflagsE">
+<span id="_CPPv3N3smc12historyflagsE"></span><span id="_CPPv2N3smc12historyflagsE"></span><span id="smc::historyflags"></span><span class="target" id="classsmc_1_1historyflags"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">historyflags</span></span></span><a class="headerlink" href="#_CPPv4N3smc12historyflagsE" title="Permalink to this definition"></a><br /></dt>
+<dd><div class="docutils container">
+<em>#include &lt;history.h&gt;</em></div>
+<p>The historyflags class holds a set of flags which describe various properties of the particle system at a given time. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3smc12historyflags12historyflagsEi">
+<span id="_CPPv3N3smc12historyflags12historyflagsEi"></span><span id="_CPPv2N3smc12historyflags12historyflagsEi"></span><span id="smc::historyflags::historyflags__i"></span><span class="target" id="classsmc_1_1historyflags_1a340a91c65c5f693e86b06d098e790c19"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">historyflags</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">wasResampled</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3smc12historyflags12historyflagsEi" title="Permalink to this definition"></a><br /></dt>
+<dd><p>This constructor produces an initialised historyflags instance.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>wasResampled</strong> – An indicator which should be nonzero if the particle system was resampled during the iteration being described </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3smc12historyflags12WasResampledEv">
+<span id="_CPPv3N3smc12historyflags12WasResampledEv"></span><span id="_CPPv2N3smc12historyflags12WasResampledEv"></span><span id="smc::historyflags::WasResampled__void"></span><span class="target" id="classsmc_1_1historyflags_1a3bb24c8a715558f8e51ed41a48e9cb70"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">WasResampled</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3smc12historyflags12WasResampledEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>This function returns true if the flag set indicates that the ensemble was resampled during the described iteration. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-private-members">Private Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N3smc12historyflags9ResampledE">
+<span id="_CPPv3N3smc12historyflags9ResampledE"></span><span id="_CPPv2N3smc12historyflags9ResampledE"></span><span id="smc::historyflags::Resampled__unsigned-i"></span><span class="target" id="classsmc_1_1historyflags_1ab8e88b1774d9f2842f43b6a27d784fb2"></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Resampled</span></span></span><a class="headerlink" href="#_CPPv4N3smc12historyflags9ResampledE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>true if the particle system was resampled during the described iteration. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="staticModelAdapt.html" class="btn btn-neutral float-left" title="Static Adaptation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="smcexception.html" class="btn btn-neutral float-right" title="Exception handling" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Leah South, Ilya Zarubin, Dirk Eddelbuettel, Adam Johansen.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

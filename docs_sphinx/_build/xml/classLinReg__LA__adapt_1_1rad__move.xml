@@ -1,0 +1,157 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classLinReg__LA__adapt_1_1rad__move" kind="class" language="C++" prot="public">
+    <compoundname>LinReg_LA_adapt::rad_move</compoundname>
+    <basecompoundref refid="classsmc_1_1moveset" prot="public" virt="non-virtual">smc::moveset&lt; rad_state, smc::staticModelAdapt &gt;</basecompoundref>
+    <includes refid="LinReg__LA__adapt_8h" local="no">LinReg_LA_adapt.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classLinReg__LA__adapt_1_1rad__move_1a2acc6f1f52cd0f0649dc066c3a4a9308" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LinReg_LA_adapt::rad_move::pfInitialise</definition>
+        <argsstring>(rad_state &amp;value, double &amp;logweight, smc::staticModelAdapt &amp;param)</argsstring>
+        <name>pfInitialise</name>
+        <param>
+          <type><ref refid="classLinReg__LA__adapt_1_1rad__state" kindref="compound">rad_state</ref> &amp;</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>logweight</declname>
+        </param>
+        <param>
+          <type><ref refid="classsmc_1_1staticModelAdapt" kindref="compound">smc::staticModelAdapt</ref> &amp;</type>
+          <declname>param</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/LinReg_LA_adapt.h" line="60" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classLinReg__LA__adapt_1_1rad__move_1afc95ed3fc13a6d77d0093a99359adec5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LinReg_LA_adapt::rad_move::pfMove</definition>
+        <argsstring>(long lTime, rad_state &amp;value, double &amp;logweight, smc::staticModelAdapt &amp;param)</argsstring>
+        <name>pfMove</name>
+        <param>
+          <type>long</type>
+          <declname>lTime</declname>
+        </param>
+        <param>
+          <type><ref refid="classLinReg__LA__adapt_1_1rad__state" kindref="compound">rad_state</ref> &amp;</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>logweight</declname>
+        </param>
+        <param>
+          <type><ref refid="classsmc_1_1staticModelAdapt" kindref="compound">smc::staticModelAdapt</ref> &amp;</type>
+          <declname>param</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/LinReg_LA_adapt.h" line="61" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classLinReg__LA__adapt_1_1rad__move_1ac1c8f1cfec85f1535cb75367f5236872" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool LinReg_LA_adapt::rad_move::pfMCMC</definition>
+        <argsstring>(long lTime, rad_state &amp;value, double &amp;logweight, smc::staticModelAdapt &amp;param)</argsstring>
+        <name>pfMCMC</name>
+        <param>
+          <type>long</type>
+          <declname>lTime</declname>
+        </param>
+        <param>
+          <type><ref refid="classLinReg__LA__adapt_1_1rad__state" kindref="compound">rad_state</ref> &amp;</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>logweight</declname>
+        </param>
+        <param>
+          <type><ref refid="classsmc_1_1staticModelAdapt" kindref="compound">smc::staticModelAdapt</ref> &amp;</type>
+          <declname>param</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/LinReg_LA_adapt.h" line="62" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classLinReg__LA__adapt_1_1rad__move_1a74d3142e056aa48f0264bcfc3051e77b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>LinReg_LA_adapt::rad_move::~rad_move</definition>
+        <argsstring>()</argsstring>
+        <name>~rad_move</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/LinReg_LA_adapt.h" line="64" column="9" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/LinReg_LA_adapt.h" bodystart="64" bodyend="64"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>LinReg_LA_adapt::rad_move</label>
+        <link refid="classLinReg__LA__adapt_1_1rad__move"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>smc::moveset&lt; rad_state, smc::staticModelAdapt &gt;</label>
+        <link refid="classsmc_1_1moveset"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>LinReg_LA_adapt::rad_move</label>
+        <link refid="classLinReg__LA__adapt_1_1rad__move"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>smc::moveset&lt; rad_state, smc::staticModelAdapt &gt;</label>
+        <link refid="classsmc_1_1moveset"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/LinReg_LA_adapt.h" line="57" column="1" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/LinReg_LA_adapt.h" bodystart="55" bodyend="66"/>
+    <listofallmembers>
+      <member refid="classsmc_1_1moveset_1af86cd53918ca1a0efaf7339fbf1369e7" prot="private" virt="non-virtual"><scope>LinReg_LA_adapt::rad_move</scope><name>defaultInitialise</name></member>
+      <member refid="classsmc_1_1moveset_1ac13c8aae10ec4c2c900e2d4dd8b3a5ad" prot="private" virt="non-virtual"><scope>LinReg_LA_adapt::rad_move</scope><name>defaultMCMC</name></member>
+      <member refid="classsmc_1_1moveset_1ae07933ed6c32e4cc51ab3f060081e7bf" prot="private" virt="non-virtual"><scope>LinReg_LA_adapt::rad_move</scope><name>defaultMove</name></member>
+      <member refid="classsmc_1_1moveset_1a25f89a568d72e02180751389aaf20baf" prot="private" virt="non-virtual"><scope>LinReg_LA_adapt::rad_move</scope><name>defaultWeight</name></member>
+      <member refid="classsmc_1_1moveset_1a8f695a635a2469b15ebcff70100297aa" prot="public" virt="virtual"><scope>LinReg_LA_adapt::rad_move</scope><name>DoConditionalMove</name></member>
+      <member refid="classsmc_1_1moveset_1ab262a9789a6e9204441b8d46ccd4dba9" prot="public" virt="virtual"><scope>LinReg_LA_adapt::rad_move</scope><name>DoInit</name></member>
+      <member refid="classsmc_1_1moveset_1adbefc0b5ff0d22b94b031a960f8a8c27" prot="public" virt="virtual"><scope>LinReg_LA_adapt::rad_move</scope><name>DoMCMC</name></member>
+      <member refid="classsmc_1_1moveset_1a1815cd6f6577fa5fe7d558af8061ce0c" prot="public" virt="virtual"><scope>LinReg_LA_adapt::rad_move</scope><name>DoMove</name></member>
+      <member refid="classsmc_1_1moveset_1a507b985fafe3f1572edafb429bf7c2c1" prot="public" virt="non-virtual"><scope>LinReg_LA_adapt::rad_move</scope><name>moveset</name></member>
+      <member refid="classsmc_1_1moveset_1a857a88c99a6aa68903d1dd67561f8a19" prot="public" virt="non-virtual"><scope>LinReg_LA_adapt::rad_move</scope><name>moveset</name></member>
+      <member refid="classsmc_1_1moveset_1a1ef41bba20f71cb92627e01360eb08c2" prot="public" virt="non-virtual"><scope>LinReg_LA_adapt::rad_move</scope><name>moveset</name></member>
+      <member refid="classLinReg__LA__adapt_1_1rad__move_1a2acc6f1f52cd0f0649dc066c3a4a9308" prot="public" virt="non-virtual"><scope>LinReg_LA_adapt::rad_move</scope><name>pfInitialise</name></member>
+      <member refid="classsmc_1_1moveset_1a7a9de1bcabd9871805dc290444c2f93e" prot="public" virt="virtual" ambiguityscope="moveset&lt; rad_state, smc::staticModelAdapt &gt;::"><scope>LinReg_LA_adapt::rad_move</scope><name>pfInitialise</name></member>
+      <member refid="classLinReg__LA__adapt_1_1rad__move_1ac1c8f1cfec85f1535cb75367f5236872" prot="public" virt="non-virtual"><scope>LinReg_LA_adapt::rad_move</scope><name>pfMCMC</name></member>
+      <member refid="classsmc_1_1moveset_1aa800251335f4220fa8389e5ea1231acf" prot="public" virt="virtual" ambiguityscope="moveset&lt; rad_state, smc::staticModelAdapt &gt;::"><scope>LinReg_LA_adapt::rad_move</scope><name>pfMCMC</name></member>
+      <member refid="classLinReg__LA__adapt_1_1rad__move_1afc95ed3fc13a6d77d0093a99359adec5" prot="public" virt="non-virtual"><scope>LinReg_LA_adapt::rad_move</scope><name>pfMove</name></member>
+      <member refid="classsmc_1_1moveset_1aadb55d5525fecea2ae41799dc9addd37" prot="public" virt="virtual" ambiguityscope="moveset&lt; rad_state, smc::staticModelAdapt &gt;::"><scope>LinReg_LA_adapt::rad_move</scope><name>pfMove</name></member>
+      <member refid="classsmc_1_1moveset_1aaf4ddcd60382d696729fd55c36c1e4eb" prot="public" virt="virtual"><scope>LinReg_LA_adapt::rad_move</scope><name>pfWeight</name></member>
+      <member refid="classsmc_1_1moveset_1a0792835f91ecd41230e68d850bd11f75" prot="public" virt="virtual"><scope>LinReg_LA_adapt::rad_move</scope><name>~moveset</name></member>
+      <member refid="classLinReg__LA__adapt_1_1rad__move_1a74d3142e056aa48f0264bcfc3051e77b" prot="public" virt="non-virtual"><scope>LinReg_LA_adapt::rad_move</scope><name>~rad_move</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

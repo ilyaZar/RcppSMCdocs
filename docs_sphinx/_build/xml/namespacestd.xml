@@ -1,0 +1,150 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespacestd" kind="namespace" language="C++">
+    <compoundname>std</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespacestd_1a5009971eadc5b959926350da2ad8ed03" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class Space</type>
+          </param>
+        </templateparamlist>
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream&amp; std::operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;os, smc::population&lt; Space &gt; &amp;p)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>os</declname>
+        </param>
+        <param>
+          <type><ref refid="classsmc_1_1population" kindref="compound">smc::population</ref>&lt; Space &gt; &amp;</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+<para>Produce a human readable display of an <ref refid="classsmc_1_1population" kindref="compound">smc::population</ref> class using the standard stream operators. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>os</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The output stream to which the display should be made. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The population object which is to be displayed. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/population.h" line="163" column="5" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/population.h" bodystart="163" bodyend="173"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacestd_1aabd24cfa371b609f24469d89c0f3b4ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class Space</type>
+          </param>
+          <param>
+            <type>class Params</type>
+          </param>
+        </templateparamlist>
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream&amp; std::operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;os, smc::sampler&lt; Space, Params &gt; &amp;s)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>os</declname>
+        </param>
+        <param>
+          <type><ref refid="classsmc_1_1sampler" kindref="compound">smc::sampler</ref>&lt; Space, Params &gt; &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>Produce a human-readable display of the state of an <ref refid="classsmc_1_1sampler" kindref="compound">smc::sampler</ref> class using the stream operator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>os</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The output stream to which the display should be made. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The sampler which is to be displayed. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" line="957" column="5" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" bodystart="957" bodyend="969"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacestd_1a4678d5a0443b232b2ed4e26c6d9bda35" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream&amp; std::operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;os, smc::exception &amp;e)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>os</declname>
+        </param>
+        <param>
+          <type><ref refid="classsmc_1_1exception" kindref="compound">smc::exception</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Produce a human-readable display of the state of an <ref refid="classsmc_1_1exception" kindref="compound">smc::exception</ref> class using the stream operator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Display a human-readable version of an SMC exception. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>os</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The stream to write to. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The exception class to display. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>os </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/smc-exception.h" line="88" column="10" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/smc-exception.h" bodystart="88" bodyend="94"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The standard namespace. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>The classes provided within the standard libraries reside within this namespace and the TDSMC class library adds a number of additional operator overloads to some of the standard classes to allow them to deal with our structures. </para>
+    </detaileddescription>
+    <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/population.h" line="157" column="13"/>
+  </compounddef>
+</doxygen>

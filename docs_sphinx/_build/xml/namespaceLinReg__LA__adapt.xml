@@ -1,0 +1,185 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespaceLinReg__LA__adapt" kind="namespace" language="C++">
+    <compoundname>LinReg_LA_adapt</compoundname>
+    <innerclass refid="classLinReg__LA__adapt_1_1rad__adapt" prot="public">LinReg_LA_adapt::rad_adapt</innerclass>
+    <innerclass refid="classLinReg__LA__adapt_1_1rad__move" prot="public">LinReg_LA_adapt::rad_move</innerclass>
+    <innerclass refid="classLinReg__LA__adapt_1_1rad__obs" prot="public">LinReg_LA_adapt::rad_obs</innerclass>
+    <innerclass refid="classLinReg__LA__adapt_1_1rad__state" prot="public">LinReg_LA_adapt::rad_state</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespaceLinReg__LA__adapt_1a615aea4becae9ff6868bb56079249ab8" prot="public" static="no" mutable="no">
+        <type><ref refid="classLinReg__LA__adapt_1_1rad__obs" kindref="compound">rad_obs</ref></type>
+        <definition>rad_obs LinReg_LA_adapt::data</definition>
+        <argsstring></argsstring>
+        <name>data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/LinReg_LA_adapt.h" line="43" column="13" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/LinReg_LA_adapt.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceLinReg__LA__adapt_1ac1ec45cf751953c358869ef36298a6be" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double LinReg_LA_adapt::mean_x</definition>
+        <argsstring></argsstring>
+        <name>mean_x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/LinReg_LA_adapt.h" line="44" column="12" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/LinReg_LA_adapt.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceLinReg__LA__adapt_1af1e2034a0de5d8388d8551160efa6083" prot="public" static="no" mutable="no">
+        <type>long</type>
+        <definition>long LinReg_LA_adapt::lIterates</definition>
+        <argsstring></argsstring>
+        <name>lIterates</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/LinReg_LA_adapt.h" line="45" column="10" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/LinReg_LA_adapt.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceLinReg__LA__adapt_1ad7667e98b00321778c32a5e63eaa38e9" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double LinReg_LA_adapt::rho</definition>
+        <argsstring></argsstring>
+        <name>rho</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/LinReg_LA_adapt.h" line="46" column="12" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/LinReg_LA_adapt.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceLinReg__LA__adapt_1a53aa1b71fba24d08561de4d913a0f395" prot="public" static="no" mutable="no">
+        <type><ref refid="classsmc_1_1sampler" kindref="compound">smc::sampler</ref>&lt; <ref refid="classLinReg__LA__adapt_1_1rad__state" kindref="compound">rad_state</ref>, <ref refid="classsmc_1_1staticModelAdapt" kindref="compound">smc::staticModelAdapt</ref> &gt; *</type>
+        <definition>smc::sampler&lt;rad_state,smc::staticModelAdapt&gt;* LinReg_LA_adapt::Sampler</definition>
+        <argsstring></argsstring>
+        <name>Sampler</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/LinReg_LA_adapt.h" line="101" column="19" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/LinReg_LA_adapt.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceLinReg__LA__adapt_1a0978a1526d537e7fd0d8bd9efcdd3bf6" prot="public" static="no" mutable="no">
+        <type><ref refid="classsmc_1_1adaptMethods" kindref="compound">smc::adaptMethods</ref>&lt; <ref refid="classLinReg__LA__adapt_1_1rad__state" kindref="compound">rad_state</ref>, <ref refid="classsmc_1_1staticModelAdapt" kindref="compound">smc::staticModelAdapt</ref> &gt; *</type>
+        <definition>smc::adaptMethods&lt;rad_state,smc::staticModelAdapt&gt;* LinReg_LA_adapt::myAdapt</definition>
+        <argsstring></argsstring>
+        <name>myAdapt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/LinReg_LA_adapt.h" line="102" column="24" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/LinReg_LA_adapt.h" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceLinReg__LA__adapt_1a0206ed27f8148d0a548b2a6a46ede7df" prot="public" static="no" mutable="no">
+        <type><ref refid="classsmc_1_1moveset" kindref="compound">smc::moveset</ref>&lt; <ref refid="classLinReg__LA__adapt_1_1rad__state" kindref="compound">rad_state</ref>, <ref refid="classsmc_1_1staticModelAdapt" kindref="compound">smc::staticModelAdapt</ref> &gt; *</type>
+        <definition>smc::moveset&lt;rad_state,smc::staticModelAdapt&gt;* LinReg_LA_adapt::myMove</definition>
+        <argsstring></argsstring>
+        <name>myMove</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/LinReg_LA_adapt.h" line="103" column="14" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/LinReg_LA_adapt.h" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespaceLinReg__LA__adapt_1a4e259018239f3e9693d6fb4e451e40b7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double LinReg_LA_adapt::integrand_ps</definition>
+        <argsstring>(long, const rad_state &amp;, void *)</argsstring>
+        <name>integrand_ps</name>
+        <param>
+          <type>long</type>
+        </param>
+        <param>
+          <type>const <ref refid="classLinReg__LA__adapt_1_1rad__state" kindref="compound">rad_state</ref> &amp;</type>
+        </param>
+        <param>
+          <type>void *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/LinReg_LA_adapt.h" line="48" column="12" declfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/LinReg_LA_adapt.h" declline="48" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceLinReg__LA__adapt_1a410d2220b546701727a2183e84ae97bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double LinReg_LA_adapt::width_ps</definition>
+        <argsstring>(long, void *)</argsstring>
+        <name>width_ps</name>
+        <param>
+          <type>long</type>
+        </param>
+        <param>
+          <type>void *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/LinReg_LA_adapt.h" line="49" column="12" declfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/LinReg_LA_adapt.h" declline="49" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceLinReg__LA__adapt_1a0a96fb710c3dc63019d83df3ee329d82" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double LinReg_LA_adapt::logLikelihood</definition>
+        <argsstring>(const rad_state &amp;value)</argsstring>
+        <name>logLikelihood</name>
+        <param>
+          <type>const <ref refid="classLinReg__LA__adapt_1_1rad__state" kindref="compound">rad_state</ref> &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/LinReg_LA_adapt.h" line="51" column="8" declfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/LinReg_LA_adapt.h" declline="51" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceLinReg__LA__adapt_1aa0ecf028df85b422a107823a8d102e2d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double LinReg_LA_adapt::logPrior</definition>
+        <argsstring>(const rad_state &amp;value)</argsstring>
+        <name>logPrior</name>
+        <param>
+          <type>const <ref refid="classLinReg__LA__adapt_1_1rad__state" kindref="compound">rad_state</ref> &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/LinReg_LA_adapt.h" line="52" column="12" declfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/LinReg_LA_adapt.h" declline="52" declcolumn="12"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/LinReg_LA_adapt.h" line="27" column="25"/>
+  </compounddef>
+</doxygen>

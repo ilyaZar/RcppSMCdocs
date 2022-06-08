@@ -1,0 +1,271 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="smc-exception_8h" kind="file" language="C++">
+    <compoundname>smc-exception.h</compoundname>
+    <includes local="no">iostream</includes>
+    <includedby refid="smctc_8h" local="yes">/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/smctc.h</includedby>
+    <includedby refid="sampler_8h" local="yes">/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h</includedby>
+    <includedby refid="RcppSMC_8h" local="no">/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/RcppSMC.h</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/smc-exception.h</label>
+        <link refid="smc-exception_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>iostream</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="12">
+        <label>/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/conditionalSampler.h</label>
+        <link refid="conditionalSampler_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/pflineart.h</label>
+        <link refid="pflineart_8h"/>
+      </node>
+      <node id="6">
+        <label>/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/LinReg_LA.h</label>
+        <link refid="LinReg__LA_8h"/>
+      </node>
+      <node id="1">
+        <label>/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/smc-exception.h</label>
+        <link refid="smc-exception_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/cSMCexamples.h</label>
+        <link refid="cSMCexamples_8h"/>
+      </node>
+      <node id="10">
+        <label>/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/pfnonlinbs.h</label>
+        <link refid="pfnonlinbs_8h"/>
+      </node>
+      <node id="3">
+        <label>/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/blockpfgaussianopt.h</label>
+        <link refid="blockpfgaussianopt_8h"/>
+      </node>
+      <node id="4">
+        <label>/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/RcppSMC.h</label>
+        <link refid="RcppSMC_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/nonLinPMMH.h</label>
+        <link refid="nonLinPMMH_8h"/>
+      </node>
+      <node id="7">
+        <label>/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/LinReg_LA_adapt.h</label>
+        <link refid="LinReg__LA__adapt_8h"/>
+      </node>
+      <node id="11">
+        <label>/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h</label>
+        <link refid="sampler_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/smctc.h</label>
+        <link refid="smctc_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classsmc_1_1exception" prot="public">smc::exception</innerclass>
+    <innernamespace refid="namespacesmc">smc</innernamespace>
+    <innernamespace refid="namespacestd">std</innernamespace>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="smc-exception_8h_1ac2c533be72251f8606810417886e783f" prot="public" static="no">
+        <name>__SMC_EXCEPT_HH</name>
+        <initializer>1.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/smc-exception.h" line="29" column="9" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/smc-exception.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="smc-exception_8h_1a3294208165bcb4936a39183596f3b1f6" prot="public" static="no">
+        <name>SMC_EXCEPTION</name>
+        <param><defname>code</defname></param>
+        <param><defname>error</defname></param>
+        <initializer><ref refid="classsmc_1_1exception" kindref="compound">smc::exception</ref>(__FILE__, __LINE__, code, error)</initializer>
+        <briefdescription>
+<para>A macro which autocompletes the housekeeping components of an <ref refid="classsmc_1_1exception" kindref="compound">smc::exception</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/smc-exception.h" line="34" column="9" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/smc-exception.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="smc-exception_8h_1a331ca8981221cf327621afb6ddb21094" prot="public" static="no">
+        <name>SMCX_FILE_NOT_FOUND</name>
+        <initializer>0x0020</initializer>
+        <briefdescription>
+<para>Exception thrown if a file cannot be accessed. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/smc-exception.h" line="37" column="9" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/smc-exception.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="smc-exception_8h_1a984f7b1fde8d8091971664718d5554a3" prot="public" static="no">
+        <name>SMCX_MISSING_HISTORY</name>
+        <initializer>0x0010</initializer>
+        <briefdescription>
+<para>Exception thrown if the sampler attempts to access history data which wasn&apos;t stored. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/smc-exception.h" line="39" column="9" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/smc-exception.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="smc-exception_8h_1ad474b50fb83c193ef0a0b233d01328f9" prot="public" static="no">
+        <name>SMCX_MULTIPLE_INSTANTIATION</name>
+        <initializer>0x1000</initializer>
+        <briefdescription>
+<para>Exception thrown if an attempt is made to instantiate a class of which a single instance is permitted more than once. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/smc-exception.h" line="41" column="9" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/smc-exception.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="smc-exception_8h_1acb94a39a98d8ab105b87237c28481030" prot="public" static="no">
+        <name>CSMCX_USING_MCMC</name>
+        <initializer>0x0100</initializer>
+        <briefdescription>
+<para>Exception thrown if an attempt is made to use facilities of the base sampler class related to MCMC moves. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/smc-exception.h" line="43" column="9" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/smc-exception.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="smc-exception_8h_1ade447afb81db1d9ca2a0016ff04f4dc3" prot="public" static="no">
+        <name>CSMCX_USING_ADAPTATION</name>
+        <initializer>0x0001</initializer>
+        <briefdescription>
+<para>Exception thrown if an attempt is made to use facilities of the base sampler class related to adaptation. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/smc-exception.h" line="45" column="9" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/smc-exception.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This file defines exception-handling facilities. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>The <ref refid="classsmc_1_1exception" kindref="compound">smc::exception</ref> class, which is used for exception handling by SMCTC, is defined. </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>-*-<sp/>mode:<sp/>C++;<sp/>c-indent-level:<sp/>4;<sp/>c-basic-offset:<sp/>4;<sp/>indent-tabs-mode:<sp/>nil;<sp/>-*-</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>exception.h:<sp/>Rcpp<sp/>integration<sp/>of<sp/>SMC<sp/>library<sp/>--<sp/>handling<sp/>exceptions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Copyright<sp/>(C)<sp/>2008<sp/>-<sp/>2020<sp/><sp/>Adam<sp/>Johansen</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Copyright<sp/>(C)<sp/>2021<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Adam<sp/>Johansen<sp/>and<sp/>Ilya<sp/>Zarubin</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>RcppSMC.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/>RcppSMC<sp/>is<sp/>free<sp/>software:<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify<sp/>it</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>as<sp/>published<sp/>by</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//<sp/>the<sp/>Free<sp/>Software<sp/>Foundation,<sp/>either<sp/>version<sp/>2<sp/>of<sp/>the<sp/>License,<sp/>or</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/>(at<sp/>your<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//<sp/>RcppSMC<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,<sp/>but</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">//<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">//<sp/>MERCHANTABILITY<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/>See<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">//<sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">//<sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">//<sp/>along<sp/>with<sp/>RcppSMC.<sp/>If<sp/>not,<sp/>see<sp/>&lt;http://www.gnu.org/licenses/&gt;.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>__SMC_EXCEPT_HH</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="smc-exception_8h_1ac2c533be72251f8606810417886e783f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__SMC_EXCEPT_HH<sp/>1.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="smc-exception_8h_1a3294208165bcb4936a39183596f3b1f6" refkind="member"><highlight class="preprocessor">#define<sp/>SMC_EXCEPTION(code,error)<sp/>smc::exception(__FILE__,<sp/>__LINE__,<sp/>code,<sp/>error)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="smc-exception_8h_1a331ca8981221cf327621afb6ddb21094" refkind="member"><highlight class="preprocessor">#define<sp/>SMCX_FILE_NOT_FOUND<sp/>0x0020</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SMCX_MISSING_HISTORY<sp/>0x0010</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SMCX_MULTIPLE_INSTANTIATION<sp/>0x1000</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CSMCX_USING_MCMC<sp/>0x0100</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CSMCX_USING_ADAPTATION<sp/>0x0001</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacesmc" kindref="compound">smc</ref><sp/>{</highlight></codeline>
+<codeline lineno="49"></codeline>
+<codeline lineno="52" refid="classsmc_1_1exception" refkind="compound"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classsmc_1_1exception" kindref="compound">exception</ref><sp/>{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="54" refid="classsmc_1_1exception_1ae7eaaf46a8fbf4fcebc469afec4fa6de" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>*<sp/><ref refid="classsmc_1_1exception_1ae7eaaf46a8fbf4fcebc469afec4fa6de" kindref="member">szFile</ref>;<sp/></highlight></codeline>
+<codeline lineno="55" refid="classsmc_1_1exception_1a52fa917d7e89cd6532d300549f4f858b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="classsmc_1_1exception_1a52fa917d7e89cd6532d300549f4f858b" kindref="member">lLine</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="56" refid="classsmc_1_1exception_1ad620f37d0bc39955fb2596d4fb892dfa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="classsmc_1_1exception_1ad620f37d0bc39955fb2596d4fb892dfa" kindref="member">lCode</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="57" refid="classsmc_1_1exception_1aca7310cf55883c51a5fbd0665ab9c729" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>*<sp/><ref refid="classsmc_1_1exception_1aca7310cf55883c51a5fbd0665ab9c729" kindref="member">szMessage</ref>;<sp/></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"></codeline>
+<codeline lineno="68" refid="classsmc_1_1exception_1a5745b40a366b5e47323186b1e567d55c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classsmc_1_1exception_1a5745b40a366b5e47323186b1e567d55c" kindref="member">exception</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>*<sp/>szN,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>lL,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>lC,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>*<sp/>szM)</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsmc_1_1exception_1ae7eaaf46a8fbf4fcebc469afec4fa6de" kindref="member">szFile</ref><sp/>=<sp/>szN;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsmc_1_1exception_1a52fa917d7e89cd6532d300549f4f858b" kindref="member">lLine</ref><sp/>=<sp/>lL;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsmc_1_1exception_1ad620f37d0bc39955fb2596d4fb892dfa" kindref="member">lCode</ref><sp/>=<sp/>lC;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsmc_1_1exception_1aca7310cf55883c51a5fbd0665ab9c729" kindref="member">szMessage</ref><sp/>=<sp/>szM;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="76"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacestd" kindref="compound">std</ref><sp/>{</highlight></codeline>
+<codeline lineno="82"></codeline>
+<codeline lineno="84"></codeline>
+<codeline lineno="88" refid="namespacestd_1a4678d5a0443b232b2ed4e26c6d9bda35" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>std::ostream<sp/>&amp;<sp/><ref refid="namespacestd_1a5009971eadc5b959926350da2ad8ed03" kindref="member">operator&lt;&lt; </ref>(std::ostream<sp/>&amp;<sp/>os,<sp/><ref refid="classsmc_1_1exception" kindref="compound">smc::exception</ref><sp/>&amp;<sp/>e)</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>os<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;SMC<sp/>Exception:<sp/>#&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>e.<ref refid="classsmc_1_1exception_1ad620f37d0bc39955fb2596d4fb892dfa" kindref="member">lCode</ref><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>os<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Error<sp/>occured<sp/>in<sp/>file<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>e.<ref refid="classsmc_1_1exception_1ae7eaaf46a8fbf4fcebc469afec4fa6de" kindref="member">szFile</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>at<sp/>line<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>e.<ref refid="classsmc_1_1exception_1a52fa917d7e89cd6532d300549f4f858b" kindref="member">lLine</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;.&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>os<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Details:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl<sp/>&lt;&lt;<sp/></highlight><highlight class="charliteral">&apos;\t&apos;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>e.<ref refid="classsmc_1_1exception_1aca7310cf55883c51a5fbd0665ab9c729" kindref="member">szMessage</ref><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>os;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="95"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/smc-exception.h"/>
+  </compounddef>
+</doxygen>

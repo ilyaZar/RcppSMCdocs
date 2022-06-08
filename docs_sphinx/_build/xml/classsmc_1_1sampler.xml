@@ -1,0 +1,1698 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classsmc_1_1sampler" kind="class" language="C++" prot="public">
+    <compoundname>smc::sampler</compoundname>
+    <includes refid="sampler_8h" local="no">sampler.h</includes>
+    <templateparamlist>
+      <param>
+        <type>class Space</type>
+      </param>
+      <param>
+        <type>class Params</type>
+        <defval><ref refid="classsmc_1_1nullParams" kindref="compound">nullParams</ref></defval>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classsmc_1_1sampler_1aa19bb3728da5cbe6db9211348fb699e6" prot="protected" static="no" mutable="no">
+        <type>long</type>
+        <definition>long smc::sampler&lt; Space, Params &gt;::N</definition>
+        <argsstring></argsstring>
+        <name>N</name>
+        <briefdescription>
+<para>Number of particles in the system. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" line="81" column="14" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsmc_1_1sampler_1a49562c192a35a61bfa8d3cbc0c8e38a2" prot="protected" static="no" mutable="no">
+        <type>long</type>
+        <definition>long smc::sampler&lt; Space, Params &gt;::T</definition>
+        <argsstring></argsstring>
+        <name>T</name>
+        <briefdescription>
+<para>The current evolution time of the system. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" line="83" column="14" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsmc_1_1sampler_1a86ec66749d53010f5e7a0025288ee05e" prot="protected" static="no" mutable="no">
+        <type><ref refid="namespaceResampleType_1aae1fd87d74ce6bb0168e509df119f6eb" kindref="member">ResampleType::Enum</ref></type>
+        <definition>ResampleType::Enum smc::sampler&lt; Space, Params &gt;::rtResampleMode</definition>
+        <argsstring></argsstring>
+        <name>rtResampleMode</name>
+        <briefdescription>
+<para>The resampling mode which is to be employed. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" line="86" column="28" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsmc_1_1sampler_1ab85e9e87029de1d0660d887d7582cfcf" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double smc::sampler&lt; Space, Params &gt;::dResampleThreshold</definition>
+        <argsstring></argsstring>
+        <name>dResampleThreshold</name>
+        <briefdescription>
+<para>The effective sample size at which resampling should be used. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" line="88" column="16" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsmc_1_1sampler_1ae7129c31c690eac51762006b4014e550" prot="protected" static="no" mutable="no">
+        <type>arma::vec</type>
+        <definition>arma::vec smc::sampler&lt; Space, Params &gt;::dRSWeights</definition>
+        <argsstring></argsstring>
+        <name>dRSWeights</name>
+        <briefdescription>
+<para>Structure used internally for resampling. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" line="91" column="19" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsmc_1_1sampler_1a9fe0293cd6610777c5e638761c13bf5f" prot="protected" static="no" mutable="no">
+        <type>arma::Col&lt; int &gt;</type>
+        <definition>arma::Col&lt;int&gt; smc::sampler&lt; Space, Params &gt;::uRSCount</definition>
+        <argsstring></argsstring>
+        <name>uRSCount</name>
+        <briefdescription>
+<para>Structure used internally for resampling. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" line="93" column="19" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsmc_1_1sampler_1a5438b36f90d688120e76289a87dd287c" prot="protected" static="no" mutable="no">
+        <type>arma::Col&lt; unsigned int &gt;</type>
+        <definition>arma::Col&lt;unsigned int&gt; smc::sampler&lt; Space, Params &gt;::uRSIndices</definition>
+        <argsstring></argsstring>
+        <name>uRSIndices</name>
+        <briefdescription>
+<para>Structure used internally for resampling. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" line="95" column="19" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsmc_1_1sampler_1ad9ab90f6fc45429d544031e50047d101" prot="protected" static="no" mutable="no">
+        <type><ref refid="classsmc_1_1population" kindref="compound">population</ref>&lt; Space &gt;</type>
+        <definition>population&lt;Space&gt; smc::sampler&lt; Space, Params &gt;::pPopulation</definition>
+        <argsstring></argsstring>
+        <name>pPopulation</name>
+        <briefdescription>
+<para>The particles within the system. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" line="98" column="20" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsmc_1_1sampler_1a96300615cb900608783ebe2ebf22d001" prot="protected" static="no" mutable="no">
+        <type><ref refid="classsmc_1_1moveset" kindref="compound">moveset</ref>&lt; Space, Params &gt; *</type>
+        <definition>moveset&lt;Space,Params&gt;* smc::sampler&lt; Space, Params &gt;::pMoves</definition>
+        <argsstring></argsstring>
+        <name>pMoves</name>
+        <briefdescription>
+<para>The set of moves available. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" line="100" column="17" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsmc_1_1sampler_1a5f02b1f0615afc33b0daa5d0ae82cfbf" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool smc::sampler&lt; Space, Params &gt;::movesetBelong</definition>
+        <argsstring></argsstring>
+        <name>movesetBelong</name>
+        <briefdescription>
+<para>A flag to track whether the moveset object needs to be included in this destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" line="102" column="14" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsmc_1_1sampler_1a545305926af1a03a471c81fbd72ab431" prot="protected" static="no" mutable="no">
+        <type>Params</type>
+        <definition>Params smc::sampler&lt; Space, Params &gt;::algParams</definition>
+        <argsstring></argsstring>
+        <name>algParams</name>
+        <briefdescription>
+<para>The additional algorithm parameters. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" line="104" column="16" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsmc_1_1sampler_1aaba69d99b529db6c77aa69f07ea605a5" prot="protected" static="no" mutable="no">
+        <type><ref refid="classsmc_1_1adaptMethods" kindref="compound">adaptMethods</ref>&lt; Space, Params &gt; *</type>
+        <definition>adaptMethods&lt;Space,Params&gt;* smc::sampler&lt; Space, Params &gt;::pAdapt</definition>
+        <argsstring></argsstring>
+        <name>pAdapt</name>
+        <briefdescription>
+<para>An object for adapting additional algorithm parameters. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" line="106" column="22" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsmc_1_1sampler_1abaf3a81e80f9f3297a5d67542bfb03ec" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool smc::sampler&lt; Space, Params &gt;::adaptBelong</definition>
+        <argsstring></argsstring>
+        <name>adaptBelong</name>
+        <briefdescription>
+<para>A flag to track whether the adaptation object needs to be included in this destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" line="108" column="14" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsmc_1_1sampler_1a54ae775cd4c20870aee5ca353c3f8cb3" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int smc::sampler&lt; Space, Params &gt;::nAccepted</definition>
+        <argsstring></argsstring>
+        <name>nAccepted</name>
+        <briefdescription>
+<para>The number of MCMC moves which have been accepted during this iteration. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" line="111" column="13" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsmc_1_1sampler_1a82570bda66ba66fecbf675c4f803ab56" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int smc::sampler&lt; Space, Params &gt;::nResampled</definition>
+        <argsstring></argsstring>
+        <name>nResampled</name>
+        <briefdescription>
+<para>A flag which tracks whether the ensemble was resampled during this iteration. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" line="113" column="13" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsmc_1_1sampler_1a978a2613da180ac511f186dc01c92d94" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int smc::sampler&lt; Space, Params &gt;::nRepeats</definition>
+        <argsstring></argsstring>
+        <name>nRepeats</name>
+        <briefdescription>
+<para>The number of MCMC repeats to be performed. The default is 1 if an MCMC step is supplied. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" line="115" column="13" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsmc_1_1sampler_1a46a71bac0445a1793e681717e648bef8" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double smc::sampler&lt; Space, Params &gt;::acceptProb</definition>
+        <argsstring></argsstring>
+        <name>acceptProb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The proportion of accepted MCMC proposals in the most recent MCMC step, with a default of -1 if no MCMC steps have been performed. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" line="118" column="16" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsmc_1_1sampler_1ad1e75bebf7a4377aafb0c4d9e006e921" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double smc::sampler&lt; Space, Params &gt;::dlogNCPath</definition>
+        <argsstring></argsstring>
+        <name>dlogNCPath</name>
+        <briefdescription>
+<para>An estimate of the log normalising constant ratio over the entire path. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" line="121" column="16" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsmc_1_1sampler_1a80eba70fd89db813093dd69ff6015263" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double smc::sampler&lt; Space, Params &gt;::dlogNCIt</definition>
+        <argsstring></argsstring>
+        <name>dlogNCIt</name>
+        <briefdescription>
+<para>An estimate of the log normalising constant ratio over the last step. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" line="123" column="16" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" bodystart="123" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsmc_1_1sampler_1aece26a4146d52c7392594e6d1ffe0968" prot="protected" static="no" mutable="no">
+        <type><ref refid="namespaceHistoryType_1a486dcf426d91692ddbce0dd2e97a9077" kindref="member">HistoryType::Enum</ref></type>
+        <definition>HistoryType::Enum smc::sampler&lt; Space, Params &gt;::htHistoryMode</definition>
+        <argsstring></argsstring>
+        <name>htHistoryMode</name>
+        <briefdescription>
+<para>A mode flag which indicates whether historical information is stored. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" line="126" column="27" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsmc_1_1sampler_1a8b5be5010088140e00206b0995dca5a7" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="classsmc_1_1historyelement" kindref="compound">historyelement</ref>&lt; Space &gt; &gt;</type>
+        <definition>std::vector&lt;historyelement&lt;Space&gt; &gt; smc::sampler&lt; Space, Params &gt;::History</definition>
+        <argsstring></argsstring>
+        <name>History</name>
+        <briefdescription>
+<para>The historical process associated with the particle system. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" line="128" column="21" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" bodystart="128" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classsmc_1_1sampler_1a1ff2ec789f32dbf115823960e5158e6f" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void smc::sampler&lt; Space, Params &gt;::_copy</definition>
+        <argsstring>(const sampler&lt; Space, Params &gt; &amp;sFrom)</argsstring>
+        <name>_copy</name>
+        <param>
+          <type>const <ref refid="classsmc_1_1sampler" kindref="compound">sampler</ref>&lt; Space, Params &gt; &amp;</type>
+          <declname>sFrom</declname>
+        </param>
+        <briefdescription>
+<para>Helper function for copy constructor and assignment overloading. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Number of particles in the system.</para>
+<para>The current evolution time of the system.</para>
+<para>The resampling mode which is to be employed.</para>
+<para>The effective sample size at which resampling should be used.</para>
+<para>Structure used internally for resampling.</para>
+<para>Structure used internally for resampling.</para>
+<para>Structure used internally for resampling.</para>
+<para>The particles within the system.</para>
+<para>The set of moves.</para>
+<para>The additional algorithm parameters.</para>
+<para>The number of MCMC moves which have been accepted during this iteration</para>
+<para>A flag which tracks whether the ensemble was resampled during this iteration</para>
+<para>The number of MCMC repeats to be performed. The default is 1 if an MCMC step is supplied.</para>
+<para>The proportion of accepted MCMC proposals in the most recent MCMC step, with a default of -1 if no MCMC steps have been performed.</para>
+<para>An estimate of the log normalising constant ratio over the entire path.</para>
+<para>An estimate of the log normalising constant ratio over the last step.</para>
+<para>A mode flag which indicates whether historical information is stored</para>
+<para>The historical process associated with the particle system.</para>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" line="131" column="14" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" bodystart="314" bodyend="390"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1sampler_1a5a9865da2c6bc998d865114c574cb426" prot="protected" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double smc::sampler&lt; Space, Params &gt;::CalcLogNC</definition>
+        <argsstring>(void) const</argsstring>
+        <name>CalcLogNC</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Returns the crude normalising constant ratio estimate implied by the weights. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" line="241" column="16" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" bodystart="241" bodyend="241"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classsmc_1_1sampler_1a472b2a204b08daf80dc98794388904ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>smc::sampler&lt; Space, Params &gt;::sampler</definition>
+        <argsstring>(long lSize, HistoryType::Enum htHistoryMode)</argsstring>
+        <name>sampler</name>
+        <param>
+          <type>long</type>
+          <declname>lSize</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceHistoryType_1a486dcf426d91692ddbce0dd2e97a9077" kindref="member">HistoryType::Enum</ref></type>
+          <declname>htHistoryMode</declname>
+          <defname>htHM</defname>
+        </param>
+        <briefdescription>
+<para>Create an particle system containing lSize uninitialised particles with the specified mode. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The constructor prepares a sampler for use but does not assign any moves to the moveset, initialise the particles or otherwise perform any sampling related tasks. Its main function is to allocate a region of memory in which to store the particle set.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of particles present in the ensemble (at time 0 if this is a variable quantity) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>htHM</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The history mode to use: set this to <ref refid="namespaceHistoryType_1a486dcf426d91692ddbce0dd2e97a9077a63a959270994a6dff6ef90da8d618d28" kindref="member">HistoryType::RAM</ref> to store the whole history of the system and <ref refid="namespaceHistoryType_1a486dcf426d91692ddbce0dd2e97a9077a1755a29ac60a2ebeb8a4c4b27f48bcde" kindref="member">HistoryType::NONE</ref> to avoid doing so. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Space</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The class used to represent a point in the sample space. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Params</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(optional) The class used for any additional parameters. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" line="135" column="9" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" bodystart="283" bodyend="301"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1sampler_1aded691199afcc2e24f1faf2886449794" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>smc::sampler&lt; Space, Params &gt;::sampler</definition>
+        <argsstring>(long lSize, HistoryType::Enum htHistoryMode, moveset&lt; Space, Params &gt; *)</argsstring>
+        <name>sampler</name>
+        <param>
+          <type>long</type>
+          <declname>lSize</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceHistoryType_1a486dcf426d91692ddbce0dd2e97a9077" kindref="member">HistoryType::Enum</ref></type>
+          <declname>htHistoryMode</declname>
+          <defname>htHM</defname>
+        </param>
+        <param>
+          <type><ref refid="classsmc_1_1moveset" kindref="compound">moveset</ref>&lt; Space, Params &gt; *</type>
+          <defname>pNewMoves</defname>
+        </param>
+        <briefdescription>
+<para>Create an particle system containing lSize uninitialised particles with the specified mode. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The constructor prepares a sampler for use but does not assign any moves to the moveset, initialise the particles or otherwise perform any sampling related tasks. Its main function is to allocate a region of memory in which to store the particle set.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of particles present in the ensemble (at time 0 if this is a variable quantity) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>htHM</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The history mode to use: set this to <ref refid="namespaceHistoryType_1a486dcf426d91692ddbce0dd2e97a9077a63a959270994a6dff6ef90da8d618d28" kindref="member">HistoryType::RAM</ref> to store the whole history of the system and <ref refid="namespaceHistoryType_1a486dcf426d91692ddbce0dd2e97a9077a1755a29ac60a2ebeb8a4c4b27f48bcde" kindref="member">HistoryType::NONE</ref> to avoid doing so. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pNewMoves</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to a moveset. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Space</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The class used to represent a point in the sample space. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Params</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(optional) The class used for any additional parameters. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" line="137" column="9" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" bodystart="254" bodyend="272"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1sampler_1af9a1977c9da4adbf9b0a01db00eab189" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>smc::sampler&lt; Space, Params &gt;::~sampler</definition>
+        <argsstring>()</argsstring>
+        <name>~sampler</name>
+        <briefdescription>
+<para>Dispose of a sampler. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" line="139" column="9" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" bodystart="304" bodyend="310"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1sampler_1ae72324aabe7dcd082881f45b43f6f750" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>smc::sampler&lt; Space, Params &gt;::sampler</definition>
+        <argsstring>(const sampler&lt; Space, Params &gt; &amp;sFrom)</argsstring>
+        <name>sampler</name>
+        <param>
+          <type>const <ref refid="classsmc_1_1sampler" kindref="compound">sampler</ref>&lt; Space, Params &gt; &amp;</type>
+          <declname>sFrom</declname>
+        </param>
+        <briefdescription>
+<para>Copy constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" line="141" column="9" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" bodystart="393" bodyend="396"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1sampler_1af94b34b4e20b6daad4dd517f0c6006c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classsmc_1_1sampler" kindref="compound">sampler</ref>&lt; Space, Params &gt; &amp;</type>
+        <definition>sampler&lt; Space, Params &gt; &amp; smc::sampler&lt; Space, Params &gt;::operator=</definition>
+        <argsstring>(const sampler&lt; Space, Params &gt; &amp;sFrom)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classsmc_1_1sampler" kindref="compound">sampler</ref>&lt; Space, Params &gt; &amp;</type>
+          <declname>sFrom</declname>
+        </param>
+        <briefdescription>
+<para>Assignment overloading. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" line="143" column="18" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" bodystart="399" bodyend="411"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1sampler_1a0406aa8a7b757523bd7a5c4d98caa9c1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double smc::sampler&lt; Space, Params &gt;::GetESS</definition>
+        <argsstring>(void) const</argsstring>
+        <name>GetESS</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Calculates and Returns the Effective Sample Size. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" line="145" column="16" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" bodystart="414" bodyend="417"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1sampler_1a2f9085247e3f2d87290f561dbfe35004" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int smc::sampler&lt; Space, Params &gt;::GetAccepted</definition>
+        <argsstring>(void) const</argsstring>
+        <name>GetAccepted</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Returns the number of accepted proposals from the most recent MCMC iteration. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" line="147" column="13" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" bodystart="147" bodyend="147"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1sampler_1a7e9fdd095cdcdaba35c93eea378e23be" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int smc::sampler&lt; Space, Params &gt;::GetResampled</definition>
+        <argsstring>(void) const</argsstring>
+        <name>GetResampled</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Returns a flag for whether the ensemble was resampled during the most recent iteration. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" line="149" column="13" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" bodystart="149" bodyend="149"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1sampler_1a6148fbbaa125e4994c336e720478f187" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int smc::sampler&lt; Space, Params &gt;::GetMcmcRepeats</definition>
+        <argsstring>(void) const</argsstring>
+        <name>GetMcmcRepeats</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Returns the number of MCMC repeats used in the most recent iteration. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" line="151" column="13" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" bodystart="151" bodyend="151"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1sampler_1aaa249a5a25153b7cf1f9188af2c4f484" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const std::vector&lt; <ref refid="classsmc_1_1historyelement" kindref="compound">historyelement</ref>&lt; Space &gt; &gt; &amp;</type>
+        <definition>const std::vector&lt;historyelement&lt;Space&gt; &gt;&amp; smc::sampler&lt; Space, Params &gt;::GetHistory</definition>
+        <argsstring>(void) const</argsstring>
+        <name>GetHistory</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Returns the History of the particle system. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" line="153" column="28" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" bodystart="153" bodyend="153"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1sampler_1a3237ecc12bb3f858b6f48f9c2b6eb3ef" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>long</type>
+        <definition>long smc::sampler&lt; Space, Params &gt;::GetNumber</definition>
+        <argsstring>(void) const</argsstring>
+        <name>GetNumber</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Returns the number of particles within the system. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" line="155" column="14" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" bodystart="155" bodyend="155"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1sampler_1ae86060f9971051532a4e6baa8a153763" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>long</type>
+        <definition>long smc::sampler&lt; Space, Params &gt;::GetHistoryLength</definition>
+        <argsstring>(void) const</argsstring>
+        <name>GetHistoryLength</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Returns the number of evolution times stored in the history. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" line="157" column="14" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" bodystart="157" bodyend="157"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1sampler_1a8915daf3ad97533e36ae323dda68dea2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classsmc_1_1population" kindref="compound">population</ref>&lt; Space &gt;</type>
+        <definition>population&lt;Space&gt; smc::sampler&lt; Space, Params &gt;::GetHistoryPopulation</definition>
+        <argsstring>(long n) const</argsstring>
+        <name>GetHistoryPopulation</name>
+        <param>
+          <type>long</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>Returns the current particle set stored in the history. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" line="159" column="20" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" bodystart="159" bodyend="159"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1sampler_1aaf6f7c243bac495d749dc2489b02a5ab" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classsmc_1_1population" kindref="compound">population</ref>&lt; Space &gt; &amp;</type>
+        <definition>const population&lt;Space&gt;&amp; smc::sampler&lt; Space, Params &gt;::GetHistoryPopulationRefs</definition>
+        <argsstring>(long n) const</argsstring>
+        <name>GetHistoryPopulationRefs</name>
+        <param>
+          <type>long</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>Returns a reference to the particle set stored in the history. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" line="161" column="27" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" bodystart="161" bodyend="161"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1sampler_1a0dea2ff19de9e6e1b3fb5c73fe282f3a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classsmc_1_1historyflags" kindref="compound">historyflags</ref></type>
+        <definition>historyflags smc::sampler&lt; Space, Params &gt;::GetHistoryFlags</definition>
+        <argsstring>(long n) const</argsstring>
+        <name>GetHistoryFlags</name>
+        <param>
+          <type>long</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>Returns the history flags. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" line="163" column="22" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" bodystart="163" bodyend="163"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1sampler_1a2488928f15eb62dc87a2ae3c499ca9a9" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double smc::sampler&lt; Space, Params &gt;::GetESS</definition>
+        <argsstring>(long n) const</argsstring>
+        <name>GetESS</name>
+        <param>
+          <type>long</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>Returns the Effective Sample Size of the specified particle generation. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" line="165" column="16" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" bodystart="165" bodyend="165"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1sampler_1a7eb0ba76e8f078b6ce6b5c518d5e3b5c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="classsmc_1_1population" kindref="compound">population</ref>&lt; Space &gt; &gt;</type>
+        <definition>std::vector&lt; population&lt; Space &gt; &gt; smc::sampler&lt; Space, Params &gt;::GetAPop</definition>
+        <argsstring>(void) const</argsstring>
+        <name>GetAPop</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Returns a vector of population objects re-ordered to match ancestral lines of the particle system. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Output container for particle population ancestor lines</para>
+<para>Get final iteration indices</para>
+<para>Get final iteration particle values</para>
+<para>Iterating from last iteration to initiliaization period whereby:<orderedlist>
+<listitem><para>Re-ordering particle population elements for each t=0,...,T-1 accoridng to ancestral lines</para>
+</listitem><listitem><para>Storing these particle population classes in output: populationAL</para>
+</listitem></orderedlist>
+</para>
+<para>Setting each particle population element at indices i=0,...,N-1 to its ancesor index in the output vector populationAL</para>
+<para>Re-mapping ancestor indices to retrieve ancestor indices a period before</para>
+<para>The output container stores population classes re-ordered according to their ancestor lines for t=0,...,T-1. So, for example, the first each element of populationAL[t] is the direct ancestor population class element of populationAL[t+1].</para>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" line="167" column="21" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" bodystart="419" bodyend="444"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1sampler_1ae8a186552e53e040839b98564e91f4a1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>arma::Col&lt; unsigned int &gt;</type>
+        <definition>arma::Col&lt; unsigned int &gt; smc::sampler&lt; Space, Params &gt;::GetALineInd</definition>
+        <argsstring>(long n) const</argsstring>
+        <name>GetALineInd</name>
+        <param>
+          <type>long</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>Returns indices for ancestral line of particle &apos;n&apos;. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Get final iteration indices and final iteration particle values</para>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" line="169" column="19" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" bodystart="446" bodyend="460"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1sampler_1aa9b88abc6028271d0e004dd4a4071ab6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; Space &gt;</type>
+        <definition>std::vector&lt; Space &gt; smc::sampler&lt; Space, Params &gt;::GetALineSpace</definition>
+        <argsstring>(long n) const</argsstring>
+        <name>GetALineSpace</name>
+        <param>
+          <type>long</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>Returns ancestral line of particle &apos;n&apos;. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Get final iteration indices and final iteration particle values</para>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" line="171" column="21" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" bodystart="462" bodyend="476"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1sampler_1aef934b9a2559dce156fae29645ab4089" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>arma::Col&lt; unsigned int &gt;</type>
+        <definition>arma::Col&lt;unsigned int&gt; smc::sampler&lt; Space, Params &gt;::GetuRSIndices</definition>
+        <argsstring>(void) const</argsstring>
+        <name>GetuRSIndices</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Returns current iteration resampled indices. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" line="173" column="19" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" bodystart="173" bodyend="173"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1sampler_1a758b1a6af2c727c43c36de09155db059" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int smc::sampler&lt; Space, Params &gt;::GetuRSIndex</definition>
+        <argsstring>(long n) const</argsstring>
+        <name>GetuRSIndex</name>
+        <param>
+          <type>long</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>Returns current iteration resampled index number &apos;n&apos;. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" line="175" column="13" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" bodystart="175" bodyend="175"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1sampler_1a29473291fd6cba8202718214cc8c2516" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int smc::sampler&lt; Space, Params &gt;::GetHistorymcmcRepeats</definition>
+        <argsstring>(long n)</argsstring>
+        <name>GetHistorymcmcRepeats</name>
+        <param>
+          <type>long</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>Returns the history number of MCMC iterations performed during this iteration. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" line="177" column="13" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" bodystart="177" bodyend="177"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1sampler_1a3f9b62085c0162b2afb951944cefbbe7" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const Params &amp;</type>
+        <definition>const Params&amp; smc::sampler&lt; Space, Params &gt;::GetAlgParams</definition>
+        <argsstring>(void) const</argsstring>
+        <name>GetAlgParams</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Returns the additional algorithm parameters. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" line="179" column="23" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" bodystart="179" bodyend="179"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1sampler_1ade4aede0b9ad6001c02e4953bbb90557" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const Space &amp;</type>
+        <definition>const Space&amp; smc::sampler&lt; Space, Params &gt;::GetParticleValueN</definition>
+        <argsstring>(long n) const</argsstring>
+        <name>GetParticleValueN</name>
+        <param>
+          <type>long</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>Return the value of particle n. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" line="181" column="23" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" bodystart="181" bodyend="181"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1sampler_1a5393edbfe9e1daa3cceb0ea9e20f0d45" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double smc::sampler&lt; Space, Params &gt;::GetParticleLogWeightN</definition>
+        <argsstring>(long n) const</argsstring>
+        <name>GetParticleLogWeightN</name>
+        <param>
+          <type>long</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>Return the logarithmic unnormalized weight of particle n. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" line="183" column="16" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" bodystart="183" bodyend="183"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1sampler_1a02f231667a23e4ea95af2ff559984b5b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double smc::sampler&lt; Space, Params &gt;::GetParticleWeightN</definition>
+        <argsstring>(long n) const</argsstring>
+        <name>GetParticleWeightN</name>
+        <param>
+          <type>long</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>Return the unnormalized weight of particle n. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" line="185" column="16" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" bodystart="185" bodyend="185"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1sampler_1a396dcf31c7bbe9a53b9a499042489a5b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>arma::vec</type>
+        <definition>arma::vec smc::sampler&lt; Space, Params &gt;::GetParticleWeight</definition>
+        <argsstring>(void) const</argsstring>
+        <name>GetParticleWeight</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Return the unnormalized particle weights. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" line="187" column="19" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" bodystart="187" bodyend="187"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1sampler_1ab9d45cfd0a2787bab0c111d5df0c3b77" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>long</type>
+        <definition>long smc::sampler&lt; Space, Params &gt;::GetTime</definition>
+        <argsstring>(void) const</argsstring>
+        <name>GetTime</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Returns the current evolution time of the system. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" line="189" column="14" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" bodystart="189" bodyend="189"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1sampler_1a4df9333a991d86b8ebf9ff348ee9f485" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double smc::sampler&lt; Space, Params &gt;::GetLogNCPath</definition>
+        <argsstring>(void) const</argsstring>
+        <name>GetLogNCPath</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Returns the current estimate of the log normalising constant ratio over the entire path. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" line="191" column="16" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" bodystart="191" bodyend="191"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1sampler_1a0ebe5470f04d674a1de0f4600bd5e893" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double smc::sampler&lt; Space, Params &gt;::GetLogNCStep</definition>
+        <argsstring>(void) const</argsstring>
+        <name>GetLogNCStep</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Returns the current estimate of the log normalising constant ratio over the last step. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" line="193" column="16" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" bodystart="193" bodyend="193"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1sampler_1ae09ba8feb389b3446f15f861a0272c17" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double smc::sampler&lt; Space, Params &gt;::GetNCPath</definition>
+        <argsstring>(void) const</argsstring>
+        <name>GetNCPath</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Returns the current estimate of the normalising constant ratio over the entire path. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" line="195" column="16" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" bodystart="195" bodyend="195"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1sampler_1a4f551a266ddf05e99c27c794087f3ded" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double smc::sampler&lt; Space, Params &gt;::GetNCStep</definition>
+        <argsstring>(void) const</argsstring>
+        <name>GetNCStep</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Returns the current estimate of the normalising constant ratio over the last step. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" line="197" column="16" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" bodystart="197" bodyend="197"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1sampler_1a1dc27a34f7ab2c35751caf9cc88c8e8a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void smc::sampler&lt; Space, Params &gt;::Initialise</definition>
+        <argsstring>(void)</argsstring>
+        <name>Initialise</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Initialise the sampler and its constituent particles. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>At present this function resets the system evolution time to 0 and calls the moveset initialisor to assign each particle in the ensemble.</para>
+<para>Note that the initialisation function must be specified before calling this function. </para>
+        </detaileddescription>
+        <inbodydescription>
+<para>To avoid compiler warnings, <ref refid="namespaceHistoryType_1a486dcf426d91692ddbce0dd2e97a9077a1755a29ac60a2ebeb8a4c4b27f48bcde" kindref="member">HistoryType::NONE</ref> is handled</para>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" line="199" column="14" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" bodystart="482" bodyend="550"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1sampler_1a666b56f6f8b32f43d357db96a5b5c6f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double smc::sampler&lt; Space, Params &gt;::Integrate</definition>
+        <argsstring>(double(*pIntegrand)(const Space &amp;, void *), void *pAuxiliary)</argsstring>
+        <name>Integrate</name>
+        <param>
+          <type>double(*)(const Space &amp;, void *)</type>
+          <declname>pIntegrand</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>pAuxiliary</declname>
+        </param>
+        <briefdescription>
+<para>Integrate the supplied function with respect to the current particle set. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function returns the result of integrating the supplied function under the empirical measure associated with the particle set at the present time. The final argument of the integrand function is a pointer which will be supplied with pAuxiliary to allow for arbitrary additional information to be passed to the function being integrated.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pIntegrand</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The function to integrate with respect to the particle set </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pAuxiliary</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to any auxiliary data which should be passed to the function </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" line="201" column="16" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" bodystart="560" bodyend="571"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1sampler_1ac7314f471000c8f7dca1cc5d42ca2a64" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double smc::sampler&lt; Space, Params &gt;::IntegratePathSampling</definition>
+        <argsstring>(PathSamplingType::Enum, double(*pIntegrand)(long, const Space &amp;, void *), double(*pWidth)(long, void *), void *pAuxiliary)</argsstring>
+        <name>IntegratePathSampling</name>
+        <param>
+          <type><ref refid="namespacePathSamplingType_1a180b59ee4c6c2fa015480c609640614d" kindref="member">PathSamplingType::Enum</ref></type>
+          <defname>PStype</defname>
+        </param>
+        <param>
+          <type>double(*)(long, const Space &amp;, void *)</type>
+          <declname>pIntegrand</declname>
+        </param>
+        <param>
+          <type>double(*)(long, void *)</type>
+          <declname>pWidth</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>pAuxiliary</declname>
+        </param>
+        <briefdescription>
+<para>Integrate the supplied function over the path using the supplied width function and integration method. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function is intended to be used to estimate integrals of the sort which must be evaluated to determine the normalising constant of a distribution obtained using a sequence of potential functions proportional to densities with respect to the initial distribution to define a sequence of distributions leading up to the terminal, interesting distribution.</para>
+<para>In this context, the particle set at each time is used to make an estimate of the path sampling integrand, and numerical integration is then performed to obtain an estimate of the path sampling integral which is the natural logarithm of the ratio of normalising densities.</para>
+<para>The integrand is integrated at every time point in the population history. The results of this integration are taken to be point-evaluations of the path sampling integrand which are spaced on a grid of intervals given by the width function. The path sampling integral is then calculated by performing a suitable numerical integration and the results of this integration is returned.</para>
+<para>pAuxiliary is passed to both of the user specified functions to allow the user to pass additional data to either or both of these functions in a convenient manner. It is safe to use NULL if no such data is used by either function.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>PStype</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The numerical integration method to use </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pIntegrand</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The function to integrated. The first argument is evolution time, the second the particle value at which the function is to be evaluated and the final argument is always pAuxiliary. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pWidth</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The function which returns the width of the path sampling grid at the specified evolution time. The final argument is always pAuxiliary </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pAuxiliary</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to auxiliary data to pass to both of the above functions </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Space</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The class used to represent a point in the sample space. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Params</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(optional) The class used for any additional parameters.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The PStype parameter should be set to one of the following:<orderedlist>
+<listitem><para><ref refid="namespacePathSamplingType_1a180b59ee4c6c2fa015480c609640614da42f1f053b9781a7ec871027d81b52e59" kindref="member">PathSamplingType::RECTANGLE</ref> to use the rectangle rule for integration.</para>
+</listitem><listitem><para><ref refid="namespacePathSamplingType_1a180b59ee4c6c2fa015480c609640614dac3287e3782a18e753ff2d3a888f7a2a6" kindref="member">PathSamplingType::TRAPEZOID1</ref> to use the trapezoidal rule for integration.</para>
+</listitem><listitem><para><ref refid="namespacePathSamplingType_1a180b59ee4c6c2fa015480c609640614da32bc9c84af00767367ced38e687869da" kindref="member">PathSamplingType::TRAPEZOID2</ref> to use the trapezoidal rule for integration with a second order correction. </para>
+</listitem></orderedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" line="203" column="16" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" bodystart="603" bodyend="669"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1sampler_1a62bbf526a0c5c504dee165b75cc4c420" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double smc::sampler&lt; Space, Params &gt;::IntegratePathSampling</definition>
+        <argsstring>(double(*pIntegrand)(long, const Space &amp;, void *), double(*pWidth)(long, void *), void *pAuxiliary)</argsstring>
+        <name>IntegratePathSampling</name>
+        <param>
+          <type>double(*)(long, const Space &amp;, void *)</type>
+          <declname>pIntegrand</declname>
+        </param>
+        <param>
+          <type>double(*)(long, void *)</type>
+          <declname>pWidth</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>pAuxiliary</declname>
+        </param>
+        <briefdescription>
+<para>Integrate the supplied function over the path using the supplied width function and the default integration method (the corrected trapezoid rule). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" line="205" column="16" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" bodystart="205" bodyend="205"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1sampler_1ae7d9eafdf6a741541425f1b57bde4cc8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void smc::sampler&lt; Space, Params &gt;::Iterate</definition>
+        <argsstring>(void)</argsstring>
+        <name>Iterate</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Perform one iteration of the simulation algorithm. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The iterate function:<orderedlist>
+<listitem><para>moves the current particle set</para>
+</listitem><listitem><para>checks the effective sample size and resamples if necessary</para>
+</listitem><listitem><para>performs a mcmc step if required</para>
+</listitem><listitem><para>appends the current particle set to the history if desired</para>
+</listitem><listitem><para>increments the current evolution time </para>
+</listitem></orderedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" line="207" column="14" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" bodystart="678" bodyend="682"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1sampler_1a625924dbea2b9e202ac36a49d558aeb1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void smc::sampler&lt; Space, Params &gt;::IterateBack</definition>
+        <argsstring>(void)</argsstring>
+        <name>IterateBack</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Cancel one iteration of the simulation algorithm. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" line="209" column="14" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" bodystart="685" bodyend="699"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1sampler_1ac5528d39e667d64956261451517ff2e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double smc::sampler&lt; Space, Params &gt;::IterateEss</definition>
+        <argsstring>(void)</argsstring>
+        <name>IterateEss</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Perform one iteration of the simulation algorithm and return the resulting ess. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>To avoid compiler warnings, <ref refid="namespaceHistoryType_1a486dcf426d91692ddbce0dd2e97a9077a1755a29ac60a2ebeb8a4c4b27f48bcde" kindref="member">HistoryType::NONE</ref> is handled</para>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" line="211" column="16" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" bodystart="702" bodyend="764"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1sampler_1ad787394d903686a67c92e2ec4a41816c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void smc::sampler&lt; Space, Params &gt;::IterateUntil</definition>
+        <argsstring>(long lTerminate)</argsstring>
+        <name>IterateUntil</name>
+        <param>
+          <type>long</type>
+          <declname>lTerminate</declname>
+        </param>
+        <briefdescription>
+<para>Perform iterations until the specified evolution time is reached. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" line="213" column="14" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" bodystart="767" bodyend="771"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1sampler_1ac4e9ce4b69d34c4ae9d0cb923dc6b2ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void smc::sampler&lt; Space, Params &gt;::MoveParticles</definition>
+        <argsstring>(void)</argsstring>
+        <name>MoveParticles</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Move the particle set by proposing and applying an appropriate move to each particle. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" line="215" column="14" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" bodystart="774" bodyend="777"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1sampler_1a899baefc9c092a8162a7f1f775bda983" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void smc::sampler&lt; Space, Params &gt;::Resample</definition>
+        <argsstring>(ResampleType::Enum lMode)</argsstring>
+        <name>Resample</name>
+        <param>
+          <type><ref refid="namespaceResampleType_1aae1fd87d74ce6bb0168e509df119f6eb" kindref="member">ResampleType::Enum</ref></type>
+          <declname>lMode</declname>
+        </param>
+        <briefdescription>
+<para>Resample the particle set using the specified resampling scheme. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" line="217" column="14" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" bodystart="780" bodyend="868"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1sampler_1a2de74263c4be0fdc81779485bec9d5e9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void smc::sampler&lt; Space, Params &gt;::SetMoveSet</definition>
+        <argsstring>(moveset&lt; Space, Params &gt; *pNewMoves)</argsstring>
+        <name>SetMoveSet</name>
+        <param>
+          <type><ref refid="classsmc_1_1moveset" kindref="compound">moveset</ref>&lt; Space, Params &gt; *</type>
+          <declname>pNewMoves</declname>
+        </param>
+        <briefdescription>
+<para>Sets the entire moveset to the one which is supplied. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" line="219" column="14" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" bodystart="219" bodyend="219"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1sampler_1a8c1a6e83082941584894bfdf4e4a1de0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void smc::sampler&lt; Space, Params &gt;::SetMoveSet</definition>
+        <argsstring>(moveset&lt; Space, Params &gt; &amp;NewMoves)</argsstring>
+        <name>SetMoveSet</name>
+        <param>
+          <type><ref refid="classsmc_1_1moveset" kindref="compound">moveset</ref>&lt; Space, Params &gt; &amp;</type>
+          <declname>NewMoves</declname>
+        </param>
+        <briefdescription>
+<para>Sets the entire moveset to the one which is supplied - backwards compatibility. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" line="221" column="14" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" bodystart="221" bodyend="221"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1sampler_1ada0a4d9961ed7f5f4d5849fb6911c146" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void smc::sampler&lt; Space, Params &gt;::SetResampleParams</definition>
+        <argsstring>(ResampleType::Enum rtMode, double dThreshold)</argsstring>
+        <name>SetResampleParams</name>
+        <param>
+          <type><ref refid="namespaceResampleType_1aae1fd87d74ce6bb0168e509df119f6eb" kindref="member">ResampleType::Enum</ref></type>
+          <declname>rtMode</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dThreshold</declname>
+        </param>
+        <briefdescription>
+<para>Set Resampling Parameters. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function configures the resampling parameters, allowing the specification of both the resampling mode and the threshold at which resampling is used.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rtMode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The resampling mode to be used. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dThreshold</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The threshold at which resampling is deemed necesary.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The rtMode parameter should be set to one of the following:<orderedlist>
+<listitem><para><ref refid="namespaceResampleType_1aae1fd87d74ce6bb0168e509df119f6eba0207afd43440ab190cc0dd07bab5ba78" kindref="member">ResampleType::MULTINOMIAL</ref> to use multinomial resampling</para>
+</listitem><listitem><para><ref refid="namespaceResampleType_1aae1fd87d74ce6bb0168e509df119f6eba87e69e5e3b594ebbaf9b91e3b4c11168" kindref="member">ResampleType::RESIDUAL</ref> to use residual resampling</para>
+</listitem><listitem><para><ref refid="namespaceResampleType_1aae1fd87d74ce6bb0168e509df119f6eba47fcb7a0a69fdf1075e11d616cb8783b" kindref="member">ResampleType::STRATIFIED</ref> to use stratified resampling</para>
+</listitem><listitem><para><ref refid="namespaceResampleType_1aae1fd87d74ce6bb0168e509df119f6ebac25b219e8be6e967aaf5c4011935fe7d" kindref="member">ResampleType::SYSTEMATIC</ref> to use systematic resampling</para>
+</listitem></orderedlist>
+</para>
+<para>The dThreshold parameter can be set to a value in the range [0,1) corresponding to a fraction of the size of the particle set or it may be set to an integer corresponding to an actual effective sample size. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" line="223" column="14" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" bodystart="886" bodyend="893"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1sampler_1ae83b30eb2cb7f8bb3d975bda840f6119" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void smc::sampler&lt; Space, Params &gt;::SetAlgParam</definition>
+        <argsstring>(Params parameters)</argsstring>
+        <name>SetAlgParam</name>
+        <param>
+          <type>Params</type>
+          <declname>parameters</declname>
+        </param>
+        <briefdescription>
+<para>Set additional algorithm parameters. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" line="225" column="14" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" bodystart="225" bodyend="225"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1sampler_1a179a809335bde824bed2f4c11aee1b93" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void smc::sampler&lt; Space, Params &gt;::SetAdaptMethods</definition>
+        <argsstring>(adaptMethods&lt; Space, Params &gt; *adaptMethod)</argsstring>
+        <name>SetAdaptMethods</name>
+        <param>
+          <type><ref refid="classsmc_1_1adaptMethods" kindref="compound">adaptMethods</ref>&lt; Space, Params &gt; *</type>
+          <declname>adaptMethod</declname>
+        </param>
+        <briefdescription>
+<para>Set the methods to adapt the additional algorithm parameters. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" line="227" column="14" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" bodystart="227" bodyend="227"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1sampler_1a9360d394cfb5bba57775235a930be017" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void smc::sampler&lt; Space, Params &gt;::SetMcmcRepeats</definition>
+        <argsstring>(int reps)</argsstring>
+        <name>SetMcmcRepeats</name>
+        <param>
+          <type>int</type>
+          <declname>reps</declname>
+        </param>
+        <briefdescription>
+<para>Sets the number of MCMC repeats. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" line="229" column="14" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" bodystart="229" bodyend="229"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1sampler_1a1baaee3a9ae3ec89c636f1e6ec55f38c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream &amp; smc::sampler&lt; Space, Params &gt;::StreamParticle</definition>
+        <argsstring>(std::ostream &amp;os, long n) const</argsstring>
+        <name>StreamParticle</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>os</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>Dump a specified particle to the specified output stream in a human readable form. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Produce a human-readable display of the current nth particle value and log weight.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>os</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The output stream to which the display should be made. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index of the particle of interest </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" line="231" column="23" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" bodystart="900" bodyend="904"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1sampler_1a0b10f998db4499d5e60887060b6d0ad3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream &amp; smc::sampler&lt; Space, Params &gt;::StreamParticles</definition>
+        <argsstring>(std::ostream &amp;os) const</argsstring>
+        <name>StreamParticles</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>os</declname>
+        </param>
+        <briefdescription>
+<para>Dump the entire particle set to the specified output stream in a human readable form. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Produce a human-readable display of the current particle values and log weights.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>os</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The output stream to which the display should be made. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" line="233" column="23" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" bodystart="910" bodyend="914"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1sampler_1a53807d342ac4a41e4ac4044fed2885d3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void smc::sampler&lt; Space, Params &gt;::OstreamMCMCRecordToStream</definition>
+        <argsstring>(std::ostream &amp;os) const</argsstring>
+        <name>OstreamMCMCRecordToStream</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>os</declname>
+        </param>
+        <briefdescription>
+<para>Output a vector indicating the number of accepted MCMC moves at each time instance. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function records the MCMC acceptance history to the specified output stream as a list of the number of moves accepted at each time instant.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>os</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The output stream to send the data to. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" line="235" column="14" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" bodystart="921" bodyend="928"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1sampler_1a448d1939002343af0369b696f0761689" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void smc::sampler&lt; Space, Params &gt;::OstreamResamplingRecordToStream</definition>
+        <argsstring>(std::ostream &amp;os) const</argsstring>
+        <name>OstreamResamplingRecordToStream</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>os</declname>
+        </param>
+        <briefdescription>
+<para>Output a 0-1 value vector indicating the times at which resampling occured to an output stream. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function records the resampling history to the specified output stream as a 0-1 valued list which takes the value 1 for those time instances when resampling occured and 0 otherwise.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>os</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The output stream to send the data to. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" line="237" column="14" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" bodystart="934" bodyend="947"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A template class for an interacting particle system suitable for SMC sampling. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="4">
+        <label>smc::moveset&lt; Space, nullParams &gt;</label>
+        <link refid="classsmc_1_1moveset"/>
+      </node>
+      <node id="2">
+        <label>smc::nullParams</label>
+        <link refid="classsmc_1_1nullParams"/>
+      </node>
+      <node id="3">
+        <label>smc::adaptMethods&lt; Space, nullParams &gt;</label>
+        <link refid="classsmc_1_1adaptMethods"/>
+      </node>
+      <node id="1">
+        <label>smc::sampler&lt; Space, Params &gt;</label>
+        <link refid="classsmc_1_1sampler"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>algParams</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>pAdapt</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>pMoves</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" line="78" column="1" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h" bodystart="77" bodyend="242"/>
+    <listofallmembers>
+      <member refid="classsmc_1_1sampler_1a1ff2ec789f32dbf115823960e5158e6f" prot="protected" virt="non-virtual"><scope>smc::sampler</scope><name>_copy</name></member>
+      <member refid="classsmc_1_1sampler_1a46a71bac0445a1793e681717e648bef8" prot="protected" virt="non-virtual"><scope>smc::sampler</scope><name>acceptProb</name></member>
+      <member refid="classsmc_1_1sampler_1abaf3a81e80f9f3297a5d67542bfb03ec" prot="protected" virt="non-virtual"><scope>smc::sampler</scope><name>adaptBelong</name></member>
+      <member refid="classsmc_1_1sampler_1a545305926af1a03a471c81fbd72ab431" prot="protected" virt="non-virtual"><scope>smc::sampler</scope><name>algParams</name></member>
+      <member refid="classsmc_1_1sampler_1a5a9865da2c6bc998d865114c574cb426" prot="protected" virt="non-virtual"><scope>smc::sampler</scope><name>CalcLogNC</name></member>
+      <member refid="classsmc_1_1sampler_1a80eba70fd89db813093dd69ff6015263" prot="protected" virt="non-virtual"><scope>smc::sampler</scope><name>dlogNCIt</name></member>
+      <member refid="classsmc_1_1sampler_1ad1e75bebf7a4377aafb0c4d9e006e921" prot="protected" virt="non-virtual"><scope>smc::sampler</scope><name>dlogNCPath</name></member>
+      <member refid="classsmc_1_1sampler_1ab85e9e87029de1d0660d887d7582cfcf" prot="protected" virt="non-virtual"><scope>smc::sampler</scope><name>dResampleThreshold</name></member>
+      <member refid="classsmc_1_1sampler_1ae7129c31c690eac51762006b4014e550" prot="protected" virt="non-virtual"><scope>smc::sampler</scope><name>dRSWeights</name></member>
+      <member refid="classsmc_1_1sampler_1a2f9085247e3f2d87290f561dbfe35004" prot="public" virt="non-virtual"><scope>smc::sampler</scope><name>GetAccepted</name></member>
+      <member refid="classsmc_1_1sampler_1a3f9b62085c0162b2afb951944cefbbe7" prot="public" virt="non-virtual"><scope>smc::sampler</scope><name>GetAlgParams</name></member>
+      <member refid="classsmc_1_1sampler_1ae8a186552e53e040839b98564e91f4a1" prot="public" virt="non-virtual"><scope>smc::sampler</scope><name>GetALineInd</name></member>
+      <member refid="classsmc_1_1sampler_1aa9b88abc6028271d0e004dd4a4071ab6" prot="public" virt="non-virtual"><scope>smc::sampler</scope><name>GetALineSpace</name></member>
+      <member refid="classsmc_1_1sampler_1a7eb0ba76e8f078b6ce6b5c518d5e3b5c" prot="public" virt="non-virtual"><scope>smc::sampler</scope><name>GetAPop</name></member>
+      <member refid="classsmc_1_1sampler_1a0406aa8a7b757523bd7a5c4d98caa9c1" prot="public" virt="non-virtual"><scope>smc::sampler</scope><name>GetESS</name></member>
+      <member refid="classsmc_1_1sampler_1a2488928f15eb62dc87a2ae3c499ca9a9" prot="public" virt="non-virtual"><scope>smc::sampler</scope><name>GetESS</name></member>
+      <member refid="classsmc_1_1sampler_1aaa249a5a25153b7cf1f9188af2c4f484" prot="public" virt="non-virtual"><scope>smc::sampler</scope><name>GetHistory</name></member>
+      <member refid="classsmc_1_1sampler_1a0dea2ff19de9e6e1b3fb5c73fe282f3a" prot="public" virt="non-virtual"><scope>smc::sampler</scope><name>GetHistoryFlags</name></member>
+      <member refid="classsmc_1_1sampler_1ae86060f9971051532a4e6baa8a153763" prot="public" virt="non-virtual"><scope>smc::sampler</scope><name>GetHistoryLength</name></member>
+      <member refid="classsmc_1_1sampler_1a29473291fd6cba8202718214cc8c2516" prot="public" virt="non-virtual"><scope>smc::sampler</scope><name>GetHistorymcmcRepeats</name></member>
+      <member refid="classsmc_1_1sampler_1a8915daf3ad97533e36ae323dda68dea2" prot="public" virt="non-virtual"><scope>smc::sampler</scope><name>GetHistoryPopulation</name></member>
+      <member refid="classsmc_1_1sampler_1aaf6f7c243bac495d749dc2489b02a5ab" prot="public" virt="non-virtual"><scope>smc::sampler</scope><name>GetHistoryPopulationRefs</name></member>
+      <member refid="classsmc_1_1sampler_1a4df9333a991d86b8ebf9ff348ee9f485" prot="public" virt="non-virtual"><scope>smc::sampler</scope><name>GetLogNCPath</name></member>
+      <member refid="classsmc_1_1sampler_1a0ebe5470f04d674a1de0f4600bd5e893" prot="public" virt="non-virtual"><scope>smc::sampler</scope><name>GetLogNCStep</name></member>
+      <member refid="classsmc_1_1sampler_1a6148fbbaa125e4994c336e720478f187" prot="public" virt="non-virtual"><scope>smc::sampler</scope><name>GetMcmcRepeats</name></member>
+      <member refid="classsmc_1_1sampler_1ae09ba8feb389b3446f15f861a0272c17" prot="public" virt="non-virtual"><scope>smc::sampler</scope><name>GetNCPath</name></member>
+      <member refid="classsmc_1_1sampler_1a4f551a266ddf05e99c27c794087f3ded" prot="public" virt="non-virtual"><scope>smc::sampler</scope><name>GetNCStep</name></member>
+      <member refid="classsmc_1_1sampler_1a3237ecc12bb3f858b6f48f9c2b6eb3ef" prot="public" virt="non-virtual"><scope>smc::sampler</scope><name>GetNumber</name></member>
+      <member refid="classsmc_1_1sampler_1a5393edbfe9e1daa3cceb0ea9e20f0d45" prot="public" virt="non-virtual"><scope>smc::sampler</scope><name>GetParticleLogWeightN</name></member>
+      <member refid="classsmc_1_1sampler_1ade4aede0b9ad6001c02e4953bbb90557" prot="public" virt="non-virtual"><scope>smc::sampler</scope><name>GetParticleValueN</name></member>
+      <member refid="classsmc_1_1sampler_1a396dcf31c7bbe9a53b9a499042489a5b" prot="public" virt="non-virtual"><scope>smc::sampler</scope><name>GetParticleWeight</name></member>
+      <member refid="classsmc_1_1sampler_1a02f231667a23e4ea95af2ff559984b5b" prot="public" virt="non-virtual"><scope>smc::sampler</scope><name>GetParticleWeightN</name></member>
+      <member refid="classsmc_1_1sampler_1a7e9fdd095cdcdaba35c93eea378e23be" prot="public" virt="non-virtual"><scope>smc::sampler</scope><name>GetResampled</name></member>
+      <member refid="classsmc_1_1sampler_1ab9d45cfd0a2787bab0c111d5df0c3b77" prot="public" virt="non-virtual"><scope>smc::sampler</scope><name>GetTime</name></member>
+      <member refid="classsmc_1_1sampler_1a758b1a6af2c727c43c36de09155db059" prot="public" virt="non-virtual"><scope>smc::sampler</scope><name>GetuRSIndex</name></member>
+      <member refid="classsmc_1_1sampler_1aef934b9a2559dce156fae29645ab4089" prot="public" virt="non-virtual"><scope>smc::sampler</scope><name>GetuRSIndices</name></member>
+      <member refid="classsmc_1_1sampler_1a8b5be5010088140e00206b0995dca5a7" prot="protected" virt="non-virtual"><scope>smc::sampler</scope><name>History</name></member>
+      <member refid="classsmc_1_1sampler_1aece26a4146d52c7392594e6d1ffe0968" prot="protected" virt="non-virtual"><scope>smc::sampler</scope><name>htHistoryMode</name></member>
+      <member refid="classsmc_1_1sampler_1a1dc27a34f7ab2c35751caf9cc88c8e8a" prot="public" virt="non-virtual"><scope>smc::sampler</scope><name>Initialise</name></member>
+      <member refid="classsmc_1_1sampler_1a666b56f6f8b32f43d357db96a5b5c6f2" prot="public" virt="non-virtual"><scope>smc::sampler</scope><name>Integrate</name></member>
+      <member refid="classsmc_1_1sampler_1ac7314f471000c8f7dca1cc5d42ca2a64" prot="public" virt="non-virtual"><scope>smc::sampler</scope><name>IntegratePathSampling</name></member>
+      <member refid="classsmc_1_1sampler_1a62bbf526a0c5c504dee165b75cc4c420" prot="public" virt="non-virtual"><scope>smc::sampler</scope><name>IntegratePathSampling</name></member>
+      <member refid="classsmc_1_1sampler_1ae7d9eafdf6a741541425f1b57bde4cc8" prot="public" virt="non-virtual"><scope>smc::sampler</scope><name>Iterate</name></member>
+      <member refid="classsmc_1_1sampler_1a625924dbea2b9e202ac36a49d558aeb1" prot="public" virt="non-virtual"><scope>smc::sampler</scope><name>IterateBack</name></member>
+      <member refid="classsmc_1_1sampler_1ac5528d39e667d64956261451517ff2e5" prot="public" virt="non-virtual"><scope>smc::sampler</scope><name>IterateEss</name></member>
+      <member refid="classsmc_1_1sampler_1ad787394d903686a67c92e2ec4a41816c" prot="public" virt="non-virtual"><scope>smc::sampler</scope><name>IterateUntil</name></member>
+      <member refid="classsmc_1_1sampler_1ac4e9ce4b69d34c4ae9d0cb923dc6b2ed" prot="public" virt="non-virtual"><scope>smc::sampler</scope><name>MoveParticles</name></member>
+      <member refid="classsmc_1_1sampler_1a5f02b1f0615afc33b0daa5d0ae82cfbf" prot="protected" virt="non-virtual"><scope>smc::sampler</scope><name>movesetBelong</name></member>
+      <member refid="classsmc_1_1sampler_1aa19bb3728da5cbe6db9211348fb699e6" prot="protected" virt="non-virtual"><scope>smc::sampler</scope><name>N</name></member>
+      <member refid="classsmc_1_1sampler_1a54ae775cd4c20870aee5ca353c3f8cb3" prot="protected" virt="non-virtual"><scope>smc::sampler</scope><name>nAccepted</name></member>
+      <member refid="classsmc_1_1sampler_1a978a2613da180ac511f186dc01c92d94" prot="protected" virt="non-virtual"><scope>smc::sampler</scope><name>nRepeats</name></member>
+      <member refid="classsmc_1_1sampler_1a82570bda66ba66fecbf675c4f803ab56" prot="protected" virt="non-virtual"><scope>smc::sampler</scope><name>nResampled</name></member>
+      <member refid="classsmc_1_1sampler_1af94b34b4e20b6daad4dd517f0c6006c4" prot="public" virt="non-virtual"><scope>smc::sampler</scope><name>operator=</name></member>
+      <member refid="classsmc_1_1sampler_1a53807d342ac4a41e4ac4044fed2885d3" prot="public" virt="non-virtual"><scope>smc::sampler</scope><name>OstreamMCMCRecordToStream</name></member>
+      <member refid="classsmc_1_1sampler_1a448d1939002343af0369b696f0761689" prot="public" virt="non-virtual"><scope>smc::sampler</scope><name>OstreamResamplingRecordToStream</name></member>
+      <member refid="classsmc_1_1sampler_1aaba69d99b529db6c77aa69f07ea605a5" prot="protected" virt="non-virtual"><scope>smc::sampler</scope><name>pAdapt</name></member>
+      <member refid="classsmc_1_1sampler_1a96300615cb900608783ebe2ebf22d001" prot="protected" virt="non-virtual"><scope>smc::sampler</scope><name>pMoves</name></member>
+      <member refid="classsmc_1_1sampler_1ad9ab90f6fc45429d544031e50047d101" prot="protected" virt="non-virtual"><scope>smc::sampler</scope><name>pPopulation</name></member>
+      <member refid="classsmc_1_1sampler_1a899baefc9c092a8162a7f1f775bda983" prot="public" virt="non-virtual"><scope>smc::sampler</scope><name>Resample</name></member>
+      <member refid="classsmc_1_1sampler_1a86ec66749d53010f5e7a0025288ee05e" prot="protected" virt="non-virtual"><scope>smc::sampler</scope><name>rtResampleMode</name></member>
+      <member refid="classsmc_1_1sampler_1a472b2a204b08daf80dc98794388904ee" prot="public" virt="non-virtual"><scope>smc::sampler</scope><name>sampler</name></member>
+      <member refid="classsmc_1_1sampler_1aded691199afcc2e24f1faf2886449794" prot="public" virt="non-virtual"><scope>smc::sampler</scope><name>sampler</name></member>
+      <member refid="classsmc_1_1sampler_1ae72324aabe7dcd082881f45b43f6f750" prot="public" virt="non-virtual"><scope>smc::sampler</scope><name>sampler</name></member>
+      <member refid="classsmc_1_1sampler_1a179a809335bde824bed2f4c11aee1b93" prot="public" virt="non-virtual"><scope>smc::sampler</scope><name>SetAdaptMethods</name></member>
+      <member refid="classsmc_1_1sampler_1ae83b30eb2cb7f8bb3d975bda840f6119" prot="public" virt="non-virtual"><scope>smc::sampler</scope><name>SetAlgParam</name></member>
+      <member refid="classsmc_1_1sampler_1a9360d394cfb5bba57775235a930be017" prot="public" virt="non-virtual"><scope>smc::sampler</scope><name>SetMcmcRepeats</name></member>
+      <member refid="classsmc_1_1sampler_1a2de74263c4be0fdc81779485bec9d5e9" prot="public" virt="non-virtual"><scope>smc::sampler</scope><name>SetMoveSet</name></member>
+      <member refid="classsmc_1_1sampler_1a8c1a6e83082941584894bfdf4e4a1de0" prot="public" virt="non-virtual"><scope>smc::sampler</scope><name>SetMoveSet</name></member>
+      <member refid="classsmc_1_1sampler_1ada0a4d9961ed7f5f4d5849fb6911c146" prot="public" virt="non-virtual"><scope>smc::sampler</scope><name>SetResampleParams</name></member>
+      <member refid="classsmc_1_1sampler_1a1baaee3a9ae3ec89c636f1e6ec55f38c" prot="public" virt="non-virtual"><scope>smc::sampler</scope><name>StreamParticle</name></member>
+      <member refid="classsmc_1_1sampler_1a0b10f998db4499d5e60887060b6d0ad3" prot="public" virt="non-virtual"><scope>smc::sampler</scope><name>StreamParticles</name></member>
+      <member refid="classsmc_1_1sampler_1a49562c192a35a61bfa8d3cbc0c8e38a2" prot="protected" virt="non-virtual"><scope>smc::sampler</scope><name>T</name></member>
+      <member refid="classsmc_1_1sampler_1a9fe0293cd6610777c5e638761c13bf5f" prot="protected" virt="non-virtual"><scope>smc::sampler</scope><name>uRSCount</name></member>
+      <member refid="classsmc_1_1sampler_1a5438b36f90d688120e76289a87dd287c" prot="protected" virt="non-virtual"><scope>smc::sampler</scope><name>uRSIndices</name></member>
+      <member refid="classsmc_1_1sampler_1af9a1977c9da4adbf9b0a01db00eab189" prot="public" virt="non-virtual"><scope>smc::sampler</scope><name>~sampler</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

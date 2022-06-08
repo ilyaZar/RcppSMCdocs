@@ -1,0 +1,93 @@
+\hypertarget{sampler_8h}{}\doxysection{/home/iz/\+Dropbox/projects/rcppsmc/\+Rcpp\+S\+M\+Cdocumentation/include/sampler.h File Reference}
+\label{sampler_8h}\index{/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h@{/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h}}
+
+
+Defines the overall sampler object.  
+
+
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$cstdlib$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include \char`\"{}population.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}history.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}moveset.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}adapt\+Methods.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}smc-\/exception.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}static\+Model\+Adapt.\+h\char`\"{}}\newline
+Include dependency graph for sampler.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{sampler_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{sampler_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classsmc_1_1nullParams}{smc\+::null\+Params}}
+\begin{DoxyCompactList}\small\item\em An empty class for use when additional algorithm parameters are not required. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsmc_1_1sampler}{smc\+::sampler$<$ Space, Params $>$}}
+\begin{DoxyCompactList}\small\item\em A template class for an interacting particle system suitable for S\+MC sampling. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceResampleType}{Resample\+Type}}
+\begin{DoxyCompactList}\small\item\em Specifiers for various resampling algorithms\+: \end{DoxyCompactList}\item 
+ \mbox{\hyperlink{namespacePathSamplingType}{Path\+Sampling\+Type}}
+\begin{DoxyCompactList}\small\item\em Specifiers for various path sampling methods\+: \end{DoxyCompactList}\item 
+ \mbox{\hyperlink{namespaceHistoryType}{History\+Type}}
+\begin{DoxyCompactList}\small\item\em Storage types for the history of the particle system. \end{DoxyCompactList}\item 
+ \mbox{\hyperlink{namespacesmc}{smc}}
+\begin{DoxyCompactList}\small\item\em The Sequential Monte Carlo namespace. \end{DoxyCompactList}\item 
+ \mbox{\hyperlink{namespacestd}{std}}
+\begin{DoxyCompactList}\small\item\em The standard namespace. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{sampler_8h_a96556358c5d5335159eb80b6529feadf}{\+\_\+\+\_\+\+S\+M\+C\+\_\+\+S\+A\+M\+P\+L\+E\+R\+\_\+\+HH}}~1.\+0
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespaceResampleType_aae1fd87d74ce6bb0168e509df119f6eb}{Resample\+Type\+::\+Enum}} \{ \mbox{\hyperlink{namespaceResampleType_aae1fd87d74ce6bb0168e509df119f6eba0207afd43440ab190cc0dd07bab5ba78}{Resample\+Type\+::\+M\+U\+L\+T\+I\+N\+O\+M\+I\+AL}} = 0, 
+\mbox{\hyperlink{namespaceResampleType_aae1fd87d74ce6bb0168e509df119f6eba87e69e5e3b594ebbaf9b91e3b4c11168}{Resample\+Type\+::\+R\+E\+S\+I\+D\+U\+AL}}, 
+\mbox{\hyperlink{namespaceResampleType_aae1fd87d74ce6bb0168e509df119f6eba47fcb7a0a69fdf1075e11d616cb8783b}{Resample\+Type\+::\+S\+T\+R\+A\+T\+I\+F\+I\+ED}}, 
+\mbox{\hyperlink{namespaceResampleType_aae1fd87d74ce6bb0168e509df119f6ebac25b219e8be6e967aaf5c4011935fe7d}{Resample\+Type\+::\+S\+Y\+S\+T\+E\+M\+A\+T\+IC}}
+ \}
+\item 
+enum \mbox{\hyperlink{namespacePathSamplingType_a180b59ee4c6c2fa015480c609640614d}{Path\+Sampling\+Type\+::\+Enum}} \{ \mbox{\hyperlink{namespacePathSamplingType_a180b59ee4c6c2fa015480c609640614da32bc9c84af00767367ced38e687869da}{Path\+Sampling\+Type\+::\+T\+R\+A\+P\+E\+Z\+O\+I\+D2}} = 0, 
+\mbox{\hyperlink{namespacePathSamplingType_a180b59ee4c6c2fa015480c609640614dac3287e3782a18e753ff2d3a888f7a2a6}{Path\+Sampling\+Type\+::\+T\+R\+A\+P\+E\+Z\+O\+I\+D1}}, 
+\mbox{\hyperlink{namespacePathSamplingType_a180b59ee4c6c2fa015480c609640614da42f1f053b9781a7ec871027d81b52e59}{Path\+Sampling\+Type\+::\+R\+E\+C\+T\+A\+N\+G\+LE}}
+ \}
+\item 
+enum \mbox{\hyperlink{namespaceHistoryType_a486dcf426d91692ddbce0dd2e97a9077}{History\+Type\+::\+Enum}} \{ \mbox{\hyperlink{namespaceHistoryType_a486dcf426d91692ddbce0dd2e97a9077a1755a29ac60a2ebeb8a4c4b27f48bcde}{History\+Type\+::\+N\+O\+NE}} = 0, 
+\mbox{\hyperlink{namespaceHistoryType_a486dcf426d91692ddbce0dd2e97a9077a63a959270994a6dff6ef90da8d618d28}{History\+Type\+::\+R\+AM}}, 
+\mbox{\hyperlink{namespaceHistoryType_a486dcf426d91692ddbce0dd2e97a9077a454abec07203b210d7a9a2662a68f8f1}{History\+Type\+::\+AL}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class Space , class Params $>$ }\\std\+::ostream \& \mbox{\hyperlink{namespacestd_aabd24cfa371b609f24469d89c0f3b4ef}{std\+::operator$<$$<$}} (std\+::ostream \&os, \mbox{\hyperlink{classsmc_1_1sampler}{smc\+::sampler}}$<$ Space, Params $>$ \&s)
+\begin{DoxyCompactList}\small\item\em Produce a human-\/readable display of the state of an \mbox{\hyperlink{classsmc_1_1sampler}{smc\+::sampler}} class using the stream operator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Defines the overall sampler object. 
+
+This file defines the \mbox{\hyperlink{classsmc_1_1sampler}{smc\+::sampler}} class which is used to implement entire particle systems. 
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{sampler_8h_a96556358c5d5335159eb80b6529feadf}\label{sampler_8h_a96556358c5d5335159eb80b6529feadf}} 
+\index{sampler.h@{sampler.h}!\_\_SMC\_SAMPLER\_HH@{\_\_SMC\_SAMPLER\_HH}}
+\index{\_\_SMC\_SAMPLER\_HH@{\_\_SMC\_SAMPLER\_HH}!sampler.h@{sampler.h}}
+\doxysubsubsection{\texorpdfstring{\_\_SMC\_SAMPLER\_HH}{\_\_SMC\_SAMPLER\_HH}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+S\+M\+C\+\_\+\+S\+A\+M\+P\+L\+E\+R\+\_\+\+HH~1.\+0}
+

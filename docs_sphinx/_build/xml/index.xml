@@ -1,0 +1,439 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.17">
+  <compound refid="classsmc_1_1adaptMethods" kind="class"><name>smc::adaptMethods</name>
+    <member refid="classsmc_1_1adaptMethods_1a6cd01df7136b41a40b2030a9606154e4" kind="function"><name>~adaptMethods</name></member>
+    <member refid="classsmc_1_1adaptMethods_1a96614576030dc76fbf7d64d0416d6f52" kind="function"><name>updateForMove</name></member>
+    <member refid="classsmc_1_1adaptMethods_1a642c9827bc6ed466160886219a0c0d8f" kind="function"><name>updateForMCMC</name></member>
+    <member refid="classsmc_1_1adaptMethods_1a2f8373020e442ab65ef657097e2d4c03" kind="function"><name>updateEnd</name></member>
+  </compound>
+  <compound refid="classBSPFG_1_1BSPFG__move" kind="class"><name>BSPFG::BSPFG_move</name>
+    <member refid="classBSPFG_1_1BSPFG__move_1a7ef22bae2f2b07cedd399f83cb151283" kind="function"><name>pfInitialise</name></member>
+    <member refid="classBSPFG_1_1BSPFG__move_1a1388700e124be80b7438cbe077da6eff" kind="function"><name>pfMove</name></member>
+    <member refid="classBSPFG_1_1BSPFG__move_1a5b6199ab6ed5f84da00b1219c3f2d5cb" kind="function"><name>~BSPFG_move</name></member>
+  </compound>
+  <compound refid="classsmc_1_1conditionalSampler" kind="class"><name>smc::conditionalSampler</name>
+    <member refid="classsmc_1_1conditionalSampler_1abdf893a9b8c857e14736551c215a2904" kind="variable"><name>referenceTrajectory</name></member>
+    <member refid="classsmc_1_1conditionalSampler_1ae2685bbe6aae5d6a6bfe443463724f42" kind="variable"><name>maxT</name></member>
+    <member refid="classsmc_1_1conditionalSampler_1a50143e1f52e9939ae789eac84222d07c" kind="variable"><name>referenceTrajectoryIndices</name></member>
+    <member refid="classsmc_1_1conditionalSampler_1afe26462b634bc1f4907cb295528955e0" kind="variable"><name>digitsPrint</name></member>
+    <member refid="classsmc_1_1conditionalSampler_1a49c8b41f8d53145456a4e6fe570c6a70" kind="function"><name>conditionalSampler</name></member>
+    <member refid="classsmc_1_1conditionalSampler_1a39f32e4513a3a1ebfaa1e29b91a149ca" kind="function"><name>conditionalSampler</name></member>
+    <member refid="classsmc_1_1conditionalSampler_1a37813f208d8438ffd9c0e860ca9323c6" kind="function"><name>GetDigitsPrint</name></member>
+    <member refid="classsmc_1_1conditionalSampler_1a54958b76587872c308fd187b3d816eac" kind="function"><name>SetDigitsPrint</name></member>
+    <member refid="classsmc_1_1conditionalSampler_1aa59a8a5ab41daaf58851b9edaf04c6fa" kind="function"><name>GetReferenceTrajectory</name></member>
+    <member refid="classsmc_1_1conditionalSampler_1a4656dca677a96573b0a4c6a5c0d522a0" kind="function"><name>GetReferenceTrajectoryRefs</name></member>
+    <member refid="classsmc_1_1conditionalSampler_1a9b11181e2493bfbda730fd06044fb75c" kind="function"><name>GetReferenceValue</name></member>
+    <member refid="classsmc_1_1conditionalSampler_1ac7f05a0e26a3969d15d995f5b3389740" kind="function"><name>GetReferenceValueRefs</name></member>
+    <member refid="classsmc_1_1conditionalSampler_1a234aa40e48cd361d469ed9b2ca15fd8e" kind="function"><name>GetReferenceValueIndex</name></member>
+    <member refid="classsmc_1_1conditionalSampler_1a9ec349f8b96a7a9ed429672f3b38a526" kind="function"><name>SetReferenceTrajectory</name></member>
+    <member refid="classsmc_1_1conditionalSampler_1a7a2dab045105c1cf5d38665ef04ffa02" kind="function"><name>SetReferenceValue</name></member>
+    <member refid="classsmc_1_1conditionalSampler_1ae906b8685eec7f3bbaf1bcefb82397f3" kind="function"><name>Initialise</name></member>
+    <member refid="classsmc_1_1conditionalSampler_1a2bc4aa6c9ccd10fd0571780eb68989c7" kind="function"><name>Initialise</name></member>
+    <member refid="classsmc_1_1conditionalSampler_1a395adfb581d81d289b7e092bac9e67eb" kind="function"><name>Iterate</name></member>
+    <member refid="classsmc_1_1conditionalSampler_1acc84d393087acb54897b01d9c4c31e9e" kind="function"><name>IterateEss</name></member>
+    <member refid="classsmc_1_1conditionalSampler_1a3d1b5064b90ee24b14a980c857eea6e0" kind="function"><name>IterateUntil</name></member>
+    <member refid="classsmc_1_1conditionalSampler_1ad7404f268ac8e27490c9d1bea4d11d36" kind="function"><name>conditionalResample</name></member>
+    <member refid="classsmc_1_1conditionalSampler_1a7d0c9bf096c898b19b8fa5ef77f4bfb4" kind="function"><name>MoveReferenceParticle</name></member>
+    <member refid="classsmc_1_1conditionalSampler_1a2dbdc428dd532386637821500c9d8ee5" kind="function"><name>StreamParticle</name></member>
+    <member refid="classsmc_1_1conditionalSampler_1abd4f8ff812617b616fce87115f6be554" kind="function"><name>StreamParticles</name></member>
+    <member refid="classsmc_1_1conditionalSampler_1a19e56bae4c5af2dcabdeec27aedc3413" kind="function"><name>SetAdaptMethods</name></member>
+    <member refid="classsmc_1_1conditionalSampler_1a6405be81a56dbf5ab41301033ee16ede" kind="function"><name>SetMcmcRepeats</name></member>
+    <member refid="classsmc_1_1conditionalSampler_1acbb2adc565693c36b7e71e6a32969c75" kind="function"><name>OstreamMCMCRecordToStream</name></member>
+    <member refid="classsmc_1_1conditionalSampler_1a8472a0acd9578bdd94b5c08a7428135f" kind="function"><name>GetAccepted</name></member>
+    <member refid="classsmc_1_1conditionalSampler_1a2f2cf5a113c495bcf6a17c6ac11e0bbf" kind="function"><name>GetMcmcRepeats</name></member>
+    <member refid="classsmc_1_1conditionalSampler_1ae5038f0bf1465ba16c4e27465f38a0bf" kind="function"><name>GetHistorymcmcRepeats</name></member>
+    <member refid="classsmc_1_1conditionalSampler_1a5978a76877529f7ef636b19d92f094f2" kind="function"><name>SetMcmcRepeats</name></member>
+    <member refid="classsmc_1_1conditionalSampler_1a63d082b0e064edd6281eed9ce4543af1" kind="friend"><name>operator&lt;&lt;</name></member>
+  </compound>
+  <compound refid="classcSMCexamples_1_1cSMCexamples__move" kind="class"><name>cSMCexamples::cSMCexamples_move</name>
+    <member refid="classcSMCexamples_1_1cSMCexamples__move_1ab45f3cada59dbf7876f121d6da41d3f5" kind="function"><name>pfInitialise</name></member>
+    <member refid="classcSMCexamples_1_1cSMCexamples__move_1a239a42ced918a2b1686599f37c2d28b1" kind="function"><name>pfMove</name></member>
+    <member refid="classcSMCexamples_1_1cSMCexamples__move_1afc7693b90ef0e64990e14f19fce0cd4f" kind="function"><name>pfWeight</name></member>
+    <member refid="classcSMCexamples_1_1cSMCexamples__move_1aab48df6bb3ab8034596c6b654f18070d" kind="function"><name>~cSMCexamples_move</name></member>
+  </compound>
+  <compound refid="classpflineart_1_1cv__obs" kind="class"><name>pflineart::cv_obs</name>
+    <member refid="classpflineart_1_1cv__obs_1a46a063cc37d3135e08691b983984d7fb" kind="variable"><name>x_pos</name></member>
+    <member refid="classpflineart_1_1cv__obs_1a9fa938ad0b5ccd5d6282d55f465203c9" kind="variable"><name>y_pos</name></member>
+  </compound>
+  <compound refid="classpflineart_1_1cv__state" kind="class"><name>pflineart::cv_state</name>
+    <member refid="classpflineart_1_1cv__state_1a1d26b3e6a180124a20ae2d2322cb49fd" kind="variable"><name>x_pos</name></member>
+    <member refid="classpflineart_1_1cv__state_1a658facf987849f465136ca42bedf94f1" kind="variable"><name>y_pos</name></member>
+    <member refid="classpflineart_1_1cv__state_1ada24b6bc10e7e24bda9cdfe4fbb75e3a" kind="variable"><name>x_vel</name></member>
+    <member refid="classpflineart_1_1cv__state_1a6eb3f8e13d1f358ce96bc2b22a56ad9e" kind="variable"><name>y_vel</name></member>
+  </compound>
+  <compound refid="classsmc_1_1exception" kind="class"><name>smc::exception</name>
+    <member refid="classsmc_1_1exception_1ae7eaaf46a8fbf4fcebc469afec4fa6de" kind="variable"><name>szFile</name></member>
+    <member refid="classsmc_1_1exception_1a52fa917d7e89cd6532d300549f4f858b" kind="variable"><name>lLine</name></member>
+    <member refid="classsmc_1_1exception_1ad620f37d0bc39955fb2596d4fb892dfa" kind="variable"><name>lCode</name></member>
+    <member refid="classsmc_1_1exception_1aca7310cf55883c51a5fbd0665ab9c729" kind="variable"><name>szMessage</name></member>
+    <member refid="classsmc_1_1exception_1a5745b40a366b5e47323186b1e567d55c" kind="function"><name>exception</name></member>
+  </compound>
+  <compound refid="classsmc_1_1historyelement" kind="class"><name>smc::historyelement</name>
+    <member refid="classsmc_1_1historyelement_1adea5f8dc2ea310f798c4db30548f5197" kind="variable"><name>number</name></member>
+    <member refid="classsmc_1_1historyelement_1a015849edb0b8e68761175355625d2ad8" kind="variable"><name>nAccepted</name></member>
+    <member refid="classsmc_1_1historyelement_1aead93445bfbf78315d4a0dc41d0ef6ce" kind="variable"><name>nRepeat</name></member>
+    <member refid="classsmc_1_1historyelement_1ad5c8283a96e2342ee3108f62119398af" kind="variable"><name>pop</name></member>
+    <member refid="classsmc_1_1historyelement_1a4453e89a2521144d2946a77ed8be49b4" kind="variable"><name>ancestorIndices</name></member>
+    <member refid="classsmc_1_1historyelement_1a7cdc4a207a4fcede8d45f7ca90aac356" kind="variable"><name>flags</name></member>
+    <member refid="classsmc_1_1historyelement_1acfe01a851a4cee19068c291e2cc9b0d5" kind="function"><name>historyelement</name></member>
+    <member refid="classsmc_1_1historyelement_1a3ead7752e711387f3f038bdbc016ebcc" kind="function"><name>historyelement</name></member>
+    <member refid="classsmc_1_1historyelement_1a4428ce46f4dd11a8b99cd93cfdc72b33" kind="function"><name>~historyelement</name></member>
+    <member refid="classsmc_1_1historyelement_1a0fc2b96ec075a38c32f08433b0de7337" kind="function"><name>GetESS</name></member>
+    <member refid="classsmc_1_1historyelement_1ad811b285a6b854a99d4285125692b28b" kind="function"><name>GetFlags</name></member>
+    <member refid="classsmc_1_1historyelement_1a9524c99e0173d1b2244c30b7fa29f0e6" kind="function"><name>GetNumber</name></member>
+    <member refid="classsmc_1_1historyelement_1a7fa5ffc6301ace687069cb2237b0a0df" kind="function"><name>GetValues</name></member>
+    <member refid="classsmc_1_1historyelement_1a41c634dfaa108fe51b9cf7a66121e9a2" kind="function"><name>GetRefs</name></member>
+    <member refid="classsmc_1_1historyelement_1ae8812a55f616bf65107ad5bc08ca2644" kind="function"><name>SetAIndices</name></member>
+    <member refid="classsmc_1_1historyelement_1a20dfbaf1b1e0cd4e4fc80ddf6aef7023" kind="function"><name>GetAIndices</name></member>
+    <member refid="classsmc_1_1historyelement_1aca253afff3c7234a966e59fb6ee6a58e" kind="function"><name>Integrate</name></member>
+    <member refid="classsmc_1_1historyelement_1ad64f0a4b0dddd789fc1822d057023ab9" kind="function"><name>Integrate_Var</name></member>
+    <member refid="classsmc_1_1historyelement_1a937d74cb8b5ffe8e0aa1e637faef2807" kind="function"><name>Set</name></member>
+    <member refid="classsmc_1_1historyelement_1a6e16e343752bb1c4403f40b362fc0e7f" kind="function"><name>Set</name></member>
+    <member refid="classsmc_1_1historyelement_1a91d3d8baac02d4cbf08642be106a4384" kind="function"><name>Set</name></member>
+    <member refid="classsmc_1_1historyelement_1a17dc6cf863db8064b7ef6e40b86cd02d" kind="function"><name>Set</name></member>
+    <member refid="classsmc_1_1historyelement_1a703582146b53ef99d37c128e73ab4538" kind="function"><name>AcceptCount</name></member>
+    <member refid="classsmc_1_1historyelement_1aa79e02ab98b7b603c05b9f1af6d18823" kind="function"><name>mcmcRepeats</name></member>
+    <member refid="classsmc_1_1historyelement_1abbf23e201874f2d75a615dfd550b8603" kind="function"><name>WasResampled</name></member>
+  </compound>
+  <compound refid="classsmc_1_1historyflags" kind="class"><name>smc::historyflags</name>
+    <member refid="classsmc_1_1historyflags_1ab8e88b1774d9f2842f43b6a27d784fb2" kind="variable"><name>Resampled</name></member>
+    <member refid="classsmc_1_1historyflags_1a340a91c65c5f693e86b06d098e790c19" kind="function"><name>historyflags</name></member>
+    <member refid="classsmc_1_1historyflags_1a3bb24c8a715558f8e51ed41a48e9cb70" kind="function"><name>WasResampled</name></member>
+  </compound>
+  <compound refid="classLinReg__LA_1_1LinReg__LA__move" kind="class"><name>LinReg_LA::LinReg_LA_move</name>
+    <member refid="classLinReg__LA_1_1LinReg__LA__move_1a651fa1fa03f9addc0b149d2ad076a74d" kind="function"><name>pfInitialise</name></member>
+    <member refid="classLinReg__LA_1_1LinReg__LA__move_1a52184c660e3b1de90ad533b354b96a4c" kind="function"><name>pfMove</name></member>
+    <member refid="classLinReg__LA_1_1LinReg__LA__move_1a082152cae98aff26be4fc77b4656d72e" kind="function"><name>pfMCMC</name></member>
+    <member refid="classLinReg__LA_1_1LinReg__LA__move_1ae39a7bd4554f3fe2e51d48adf0f26c28" kind="function"><name>~LinReg_LA_move</name></member>
+  </compound>
+  <compound refid="classcSMCexamples_1_1Measurements" kind="class"><name>cSMCexamples::Measurements</name>
+    <member refid="classcSMCexamples_1_1Measurements_1abf66b361d4004648b9f0cbbd6bd17982" kind="variable"><name>yObs</name></member>
+  </compound>
+  <compound refid="classsmc_1_1moveset" kind="class"><name>smc::moveset</name>
+    <member refid="classsmc_1_1moveset_1af86cd53918ca1a0efaf7339fbf1369e7" kind="variable"><name>defaultInitialise</name></member>
+    <member refid="classsmc_1_1moveset_1ae07933ed6c32e4cc51ab3f060081e7bf" kind="variable"><name>defaultMove</name></member>
+    <member refid="classsmc_1_1moveset_1ac13c8aae10ec4c2c900e2d4dd8b3a5ad" kind="variable"><name>defaultMCMC</name></member>
+    <member refid="classsmc_1_1moveset_1a25f89a568d72e02180751389aaf20baf" kind="variable"><name>defaultWeight</name></member>
+    <member refid="classsmc_1_1moveset_1a507b985fafe3f1572edafb429bf7c2c1" kind="function"><name>moveset</name></member>
+    <member refid="classsmc_1_1moveset_1a857a88c99a6aa68903d1dd67561f8a19" kind="function"><name>moveset</name></member>
+    <member refid="classsmc_1_1moveset_1a1ef41bba20f71cb92627e01360eb08c2" kind="function"><name>moveset</name></member>
+    <member refid="classsmc_1_1moveset_1a0792835f91ecd41230e68d850bd11f75" kind="function"><name>~moveset</name></member>
+    <member refid="classsmc_1_1moveset_1a7a9de1bcabd9871805dc290444c2f93e" kind="function"><name>pfInitialise</name></member>
+    <member refid="classsmc_1_1moveset_1aadb55d5525fecea2ae41799dc9addd37" kind="function"><name>pfMove</name></member>
+    <member refid="classsmc_1_1moveset_1aa800251335f4220fa8389e5ea1231acf" kind="function"><name>pfMCMC</name></member>
+    <member refid="classsmc_1_1moveset_1aaf4ddcd60382d696729fd55c36c1e4eb" kind="function"><name>pfWeight</name></member>
+    <member refid="classsmc_1_1moveset_1ab262a9789a6e9204441b8d46ccd4dba9" kind="function"><name>DoInit</name></member>
+    <member refid="classsmc_1_1moveset_1adbefc0b5ff0d22b94b031a960f8a8c27" kind="function"><name>DoMCMC</name></member>
+    <member refid="classsmc_1_1moveset_1a1815cd6f6577fa5fe7d558af8061ce0c" kind="function"><name>DoMove</name></member>
+    <member refid="classsmc_1_1moveset_1a8f695a635a2469b15ebcff70100297aa" kind="function"><name>DoConditionalMove</name></member>
+  </compound>
+  <compound refid="classnonlinbs_1_1nonlinbs__move" kind="class"><name>nonlinbs::nonlinbs_move</name>
+    <member refid="classnonlinbs_1_1nonlinbs__move_1a9044ad5bcc1fab7325ba193264153b1a" kind="function"><name>pfInitialise</name></member>
+    <member refid="classnonlinbs_1_1nonlinbs__move_1a1971a5b12b0234f30d45ec234db8acb0" kind="function"><name>pfMove</name></member>
+    <member refid="classnonlinbs_1_1nonlinbs__move_1ae007a1c8919ac7e9eee8a188443f8fb3" kind="function"><name>~nonlinbs_move</name></member>
+  </compound>
+  <compound refid="classnonLinPMMH_1_1nonLinPMMH__move" kind="class"><name>nonLinPMMH::nonLinPMMH_move</name>
+    <member refid="classnonLinPMMH_1_1nonLinPMMH__move_1a0bf71a1cce2607766ee7a7744e291975" kind="function"><name>pfInitialise</name></member>
+    <member refid="classnonLinPMMH_1_1nonLinPMMH__move_1a49287819605b5975606fb12a76e1d545" kind="function"><name>pfMove</name></member>
+    <member refid="classnonLinPMMH_1_1nonLinPMMH__move_1aa807a7567b06a9e2a2a1649d4333ef7f" kind="function"><name>~nonLinPMMH_move</name></member>
+  </compound>
+  <compound refid="classsmc_1_1nullParams" kind="class"><name>smc::nullParams</name>
+  </compound>
+  <compound refid="classcSMCexamples_1_1Parameters" kind="class"><name>cSMCexamples::Parameters</name>
+    <member refid="classcSMCexamples_1_1Parameters_1a17b02346ded85bb54d17c5de6723dce3" kind="variable"><name>statePhi</name></member>
+    <member refid="classcSMCexamples_1_1Parameters_1a2747581ae39083e0be362a1e18af0d1f" kind="variable"><name>stateVarEvol</name></member>
+  </compound>
+  <compound refid="classnonLinPMMH_1_1parameters" kind="class"><name>nonLinPMMH::parameters</name>
+    <member refid="classnonLinPMMH_1_1parameters_1a4a3c06036653812cdad69583b6fd3905" kind="variable"><name>sigv</name></member>
+    <member refid="classnonLinPMMH_1_1parameters_1abfbbe72aeed2188596cb3dfbd20f1fd9" kind="variable"><name>sigw</name></member>
+  </compound>
+  <compound refid="classpflineart_1_1pflineart__move" kind="class"><name>pflineart::pflineart_move</name>
+    <member refid="classpflineart_1_1pflineart__move_1a50173f0c0d791a654fea9da8d4e3d23c" kind="function"><name>pfInitialise</name></member>
+    <member refid="classpflineart_1_1pflineart__move_1a7be256ec5568a47b4dc1972d7dabc08b" kind="function"><name>pfMove</name></member>
+    <member refid="classpflineart_1_1pflineart__move_1a8e622b5700a2294e9896969253632fea" kind="function"><name>~pflineart_move</name></member>
+  </compound>
+  <compound refid="classsmc_1_1population" kind="class"><name>smc::population</name>
+    <member refid="classsmc_1_1population_1af2895b7eeca98bf97ab17b3e281df4ec" kind="variable"><name>value</name></member>
+    <member refid="classsmc_1_1population_1a95f5035145d401fb7b8d45c5d3b6d171" kind="variable"><name>logweight</name></member>
+    <member refid="classsmc_1_1population_1ad6094100fe3180b18ac6c2f6efeef970" kind="function"><name>population</name></member>
+    <member refid="classsmc_1_1population_1a6e8333ad491897892311ab5331d9a03e" kind="function"><name>population</name></member>
+    <member refid="classsmc_1_1population_1a81068f3d29828546afd189b1502c768d" kind="function"><name>population</name></member>
+    <member refid="classsmc_1_1population_1aa7aa4c48db66d934ec4e32e9c09b105d" kind="function"><name>operator=</name></member>
+    <member refid="classsmc_1_1population_1aed412a54f4d33b0cde18adf16cdc10b2" kind="function"><name>~population</name></member>
+    <member refid="classsmc_1_1population_1a4209e3a8191069456da6fa6d541ba7a5" kind="function"><name>GetNumber</name></member>
+    <member refid="classsmc_1_1population_1a51c4bf9fd600f844a75df512845af88a" kind="function"><name>GetValue</name></member>
+    <member refid="classsmc_1_1population_1a9f81f8d12af9ba884741be1cfb183c5c" kind="function"><name>GetValueN</name></member>
+    <member refid="classsmc_1_1population_1afbb861efa2fddf0e9b0c61f14bd6493e" kind="function"><name>GetValueRefN</name></member>
+    <member refid="classsmc_1_1population_1aed65bb17ec164b22220502121784072c" kind="function"><name>GetLogWeight</name></member>
+    <member refid="classsmc_1_1population_1a5b42f094323cc2425825d82be7842e77" kind="function"><name>GetLogWeightN</name></member>
+    <member refid="classsmc_1_1population_1af2706cf1c455f0cd5b9b3d7d455b6364" kind="function"><name>GetLogWeightRefN</name></member>
+    <member refid="classsmc_1_1population_1ac03a39fe7a5199433362f69c0e793dd7" kind="function"><name>GetWeight</name></member>
+    <member refid="classsmc_1_1population_1a229bc5706bf6afef8073990a345b5a60" kind="function"><name>GetWeightN</name></member>
+    <member refid="classsmc_1_1population_1a228f119bab158b24e6edef17e9e806d3" kind="function"><name>Set</name></member>
+    <member refid="classsmc_1_1population_1a21eb46b6158da5c74088a461e481a7c7" kind="function"><name>SetValue</name></member>
+    <member refid="classsmc_1_1population_1a7e43dc61d785bf5b88ce6014b53dfb2a" kind="function"><name>SetValueN</name></member>
+    <member refid="classsmc_1_1population_1aa3e891ee4bac69ea5248e7af20c9e18d" kind="function"><name>SetLogWeight</name></member>
+    <member refid="classsmc_1_1population_1a34976b1339ba0c00a292401e2bf6e1f8" kind="function"><name>SetLogWeightN</name></member>
+  </compound>
+  <compound refid="classLinReg__LA__adapt_1_1rad__adapt" kind="class"><name>LinReg_LA_adapt::rad_adapt</name>
+    <member refid="classLinReg__LA__adapt_1_1rad__adapt_1ad965f934a5e6ca743307667891d8ecb0" kind="function"><name>updateForMove</name></member>
+    <member refid="classLinReg__LA__adapt_1_1rad__adapt_1a4c8b43f2be7bfa917bc85f97197bc09f" kind="function"><name>updateForMCMC</name></member>
+    <member refid="classLinReg__LA__adapt_1_1rad__adapt_1a4e95c2ecea2dfd8cf0fb897c46a8a69d" kind="function"><name>~rad_adapt</name></member>
+  </compound>
+  <compound refid="classLinReg__LA__adapt_1_1rad__move" kind="class"><name>LinReg_LA_adapt::rad_move</name>
+    <member refid="classLinReg__LA__adapt_1_1rad__move_1a2acc6f1f52cd0f0649dc066c3a4a9308" kind="function"><name>pfInitialise</name></member>
+    <member refid="classLinReg__LA__adapt_1_1rad__move_1afc95ed3fc13a6d77d0093a99359adec5" kind="function"><name>pfMove</name></member>
+    <member refid="classLinReg__LA__adapt_1_1rad__move_1ac1c8f1cfec85f1535cb75367f5236872" kind="function"><name>pfMCMC</name></member>
+    <member refid="classLinReg__LA__adapt_1_1rad__move_1a74d3142e056aa48f0264bcfc3051e77b" kind="function"><name>~rad_move</name></member>
+  </compound>
+  <compound refid="classLinReg__LA__adapt_1_1rad__obs" kind="class"><name>LinReg_LA_adapt::rad_obs</name>
+    <member refid="classLinReg__LA__adapt_1_1rad__obs_1a0f58443adffd943afe07f6f0458930de" kind="variable"><name>y</name></member>
+    <member refid="classLinReg__LA__adapt_1_1rad__obs_1ad2dcd17c0b16365ec9e01251b4d06751" kind="variable"><name>x</name></member>
+  </compound>
+  <compound refid="classLinReg__LA_1_1rad__obs" kind="class"><name>LinReg_LA::rad_obs</name>
+    <member refid="classLinReg__LA_1_1rad__obs_1a50518046df6e259b7acbf6bc012110a9" kind="variable"><name>y</name></member>
+    <member refid="classLinReg__LA_1_1rad__obs_1a3a31329522b786e6aaedbf885295ab10" kind="variable"><name>x</name></member>
+  </compound>
+  <compound refid="classLinReg__LA_1_1rad__state" kind="class"><name>LinReg_LA::rad_state</name>
+    <member refid="classLinReg__LA_1_1rad__state_1a8cf81e465b65cbe907002d1021b800be" kind="variable"><name>theta</name></member>
+    <member refid="classLinReg__LA_1_1rad__state_1a6963bd3c941e7e66031802cf4400a435" kind="variable"><name>loglike</name></member>
+    <member refid="classLinReg__LA_1_1rad__state_1acc40054b5fa4f43f5b468c584f97a499" kind="variable"><name>logprior</name></member>
+  </compound>
+  <compound refid="classLinReg__LA__adapt_1_1rad__state" kind="class"><name>LinReg_LA_adapt::rad_state</name>
+    <member refid="classLinReg__LA__adapt_1_1rad__state_1a0cf25918b34b51310a9b5abc6804a3f2" kind="variable"><name>theta</name></member>
+    <member refid="classLinReg__LA__adapt_1_1rad__state_1ae243f33abd334fe7c9ec55a8f164d362" kind="variable"><name>loglike</name></member>
+    <member refid="classLinReg__LA__adapt_1_1rad__state_1aa56d6823e39e0fc5170c8ecc8c0e96b4" kind="variable"><name>logprior</name></member>
+  </compound>
+  <compound refid="classsmc_1_1sampler" kind="class"><name>smc::sampler</name>
+    <member refid="classsmc_1_1sampler_1aa19bb3728da5cbe6db9211348fb699e6" kind="variable"><name>N</name></member>
+    <member refid="classsmc_1_1sampler_1a49562c192a35a61bfa8d3cbc0c8e38a2" kind="variable"><name>T</name></member>
+    <member refid="classsmc_1_1sampler_1a86ec66749d53010f5e7a0025288ee05e" kind="variable"><name>rtResampleMode</name></member>
+    <member refid="classsmc_1_1sampler_1ab85e9e87029de1d0660d887d7582cfcf" kind="variable"><name>dResampleThreshold</name></member>
+    <member refid="classsmc_1_1sampler_1ae7129c31c690eac51762006b4014e550" kind="variable"><name>dRSWeights</name></member>
+    <member refid="classsmc_1_1sampler_1a9fe0293cd6610777c5e638761c13bf5f" kind="variable"><name>uRSCount</name></member>
+    <member refid="classsmc_1_1sampler_1a5438b36f90d688120e76289a87dd287c" kind="variable"><name>uRSIndices</name></member>
+    <member refid="classsmc_1_1sampler_1ad9ab90f6fc45429d544031e50047d101" kind="variable"><name>pPopulation</name></member>
+    <member refid="classsmc_1_1sampler_1a96300615cb900608783ebe2ebf22d001" kind="variable"><name>pMoves</name></member>
+    <member refid="classsmc_1_1sampler_1a5f02b1f0615afc33b0daa5d0ae82cfbf" kind="variable"><name>movesetBelong</name></member>
+    <member refid="classsmc_1_1sampler_1a545305926af1a03a471c81fbd72ab431" kind="variable"><name>algParams</name></member>
+    <member refid="classsmc_1_1sampler_1aaba69d99b529db6c77aa69f07ea605a5" kind="variable"><name>pAdapt</name></member>
+    <member refid="classsmc_1_1sampler_1abaf3a81e80f9f3297a5d67542bfb03ec" kind="variable"><name>adaptBelong</name></member>
+    <member refid="classsmc_1_1sampler_1a54ae775cd4c20870aee5ca353c3f8cb3" kind="variable"><name>nAccepted</name></member>
+    <member refid="classsmc_1_1sampler_1a82570bda66ba66fecbf675c4f803ab56" kind="variable"><name>nResampled</name></member>
+    <member refid="classsmc_1_1sampler_1a978a2613da180ac511f186dc01c92d94" kind="variable"><name>nRepeats</name></member>
+    <member refid="classsmc_1_1sampler_1a46a71bac0445a1793e681717e648bef8" kind="variable"><name>acceptProb</name></member>
+    <member refid="classsmc_1_1sampler_1ad1e75bebf7a4377aafb0c4d9e006e921" kind="variable"><name>dlogNCPath</name></member>
+    <member refid="classsmc_1_1sampler_1a80eba70fd89db813093dd69ff6015263" kind="variable"><name>dlogNCIt</name></member>
+    <member refid="classsmc_1_1sampler_1aece26a4146d52c7392594e6d1ffe0968" kind="variable"><name>htHistoryMode</name></member>
+    <member refid="classsmc_1_1sampler_1a8b5be5010088140e00206b0995dca5a7" kind="variable"><name>History</name></member>
+    <member refid="classsmc_1_1sampler_1a1ff2ec789f32dbf115823960e5158e6f" kind="function"><name>_copy</name></member>
+    <member refid="classsmc_1_1sampler_1a5a9865da2c6bc998d865114c574cb426" kind="function"><name>CalcLogNC</name></member>
+    <member refid="classsmc_1_1sampler_1a472b2a204b08daf80dc98794388904ee" kind="function"><name>sampler</name></member>
+    <member refid="classsmc_1_1sampler_1aded691199afcc2e24f1faf2886449794" kind="function"><name>sampler</name></member>
+    <member refid="classsmc_1_1sampler_1af9a1977c9da4adbf9b0a01db00eab189" kind="function"><name>~sampler</name></member>
+    <member refid="classsmc_1_1sampler_1ae72324aabe7dcd082881f45b43f6f750" kind="function"><name>sampler</name></member>
+    <member refid="classsmc_1_1sampler_1af94b34b4e20b6daad4dd517f0c6006c4" kind="function"><name>operator=</name></member>
+    <member refid="classsmc_1_1sampler_1a0406aa8a7b757523bd7a5c4d98caa9c1" kind="function"><name>GetESS</name></member>
+    <member refid="classsmc_1_1sampler_1a2f9085247e3f2d87290f561dbfe35004" kind="function"><name>GetAccepted</name></member>
+    <member refid="classsmc_1_1sampler_1a7e9fdd095cdcdaba35c93eea378e23be" kind="function"><name>GetResampled</name></member>
+    <member refid="classsmc_1_1sampler_1a6148fbbaa125e4994c336e720478f187" kind="function"><name>GetMcmcRepeats</name></member>
+    <member refid="classsmc_1_1sampler_1aaa249a5a25153b7cf1f9188af2c4f484" kind="function"><name>GetHistory</name></member>
+    <member refid="classsmc_1_1sampler_1a3237ecc12bb3f858b6f48f9c2b6eb3ef" kind="function"><name>GetNumber</name></member>
+    <member refid="classsmc_1_1sampler_1ae86060f9971051532a4e6baa8a153763" kind="function"><name>GetHistoryLength</name></member>
+    <member refid="classsmc_1_1sampler_1a8915daf3ad97533e36ae323dda68dea2" kind="function"><name>GetHistoryPopulation</name></member>
+    <member refid="classsmc_1_1sampler_1aaf6f7c243bac495d749dc2489b02a5ab" kind="function"><name>GetHistoryPopulationRefs</name></member>
+    <member refid="classsmc_1_1sampler_1a0dea2ff19de9e6e1b3fb5c73fe282f3a" kind="function"><name>GetHistoryFlags</name></member>
+    <member refid="classsmc_1_1sampler_1a2488928f15eb62dc87a2ae3c499ca9a9" kind="function"><name>GetESS</name></member>
+    <member refid="classsmc_1_1sampler_1a7eb0ba76e8f078b6ce6b5c518d5e3b5c" kind="function"><name>GetAPop</name></member>
+    <member refid="classsmc_1_1sampler_1ae8a186552e53e040839b98564e91f4a1" kind="function"><name>GetALineInd</name></member>
+    <member refid="classsmc_1_1sampler_1aa9b88abc6028271d0e004dd4a4071ab6" kind="function"><name>GetALineSpace</name></member>
+    <member refid="classsmc_1_1sampler_1aef934b9a2559dce156fae29645ab4089" kind="function"><name>GetuRSIndices</name></member>
+    <member refid="classsmc_1_1sampler_1a758b1a6af2c727c43c36de09155db059" kind="function"><name>GetuRSIndex</name></member>
+    <member refid="classsmc_1_1sampler_1a29473291fd6cba8202718214cc8c2516" kind="function"><name>GetHistorymcmcRepeats</name></member>
+    <member refid="classsmc_1_1sampler_1a3f9b62085c0162b2afb951944cefbbe7" kind="function"><name>GetAlgParams</name></member>
+    <member refid="classsmc_1_1sampler_1ade4aede0b9ad6001c02e4953bbb90557" kind="function"><name>GetParticleValueN</name></member>
+    <member refid="classsmc_1_1sampler_1a5393edbfe9e1daa3cceb0ea9e20f0d45" kind="function"><name>GetParticleLogWeightN</name></member>
+    <member refid="classsmc_1_1sampler_1a02f231667a23e4ea95af2ff559984b5b" kind="function"><name>GetParticleWeightN</name></member>
+    <member refid="classsmc_1_1sampler_1a396dcf31c7bbe9a53b9a499042489a5b" kind="function"><name>GetParticleWeight</name></member>
+    <member refid="classsmc_1_1sampler_1ab9d45cfd0a2787bab0c111d5df0c3b77" kind="function"><name>GetTime</name></member>
+    <member refid="classsmc_1_1sampler_1a4df9333a991d86b8ebf9ff348ee9f485" kind="function"><name>GetLogNCPath</name></member>
+    <member refid="classsmc_1_1sampler_1a0ebe5470f04d674a1de0f4600bd5e893" kind="function"><name>GetLogNCStep</name></member>
+    <member refid="classsmc_1_1sampler_1ae09ba8feb389b3446f15f861a0272c17" kind="function"><name>GetNCPath</name></member>
+    <member refid="classsmc_1_1sampler_1a4f551a266ddf05e99c27c794087f3ded" kind="function"><name>GetNCStep</name></member>
+    <member refid="classsmc_1_1sampler_1a1dc27a34f7ab2c35751caf9cc88c8e8a" kind="function"><name>Initialise</name></member>
+    <member refid="classsmc_1_1sampler_1a666b56f6f8b32f43d357db96a5b5c6f2" kind="function"><name>Integrate</name></member>
+    <member refid="classsmc_1_1sampler_1ac7314f471000c8f7dca1cc5d42ca2a64" kind="function"><name>IntegratePathSampling</name></member>
+    <member refid="classsmc_1_1sampler_1a62bbf526a0c5c504dee165b75cc4c420" kind="function"><name>IntegratePathSampling</name></member>
+    <member refid="classsmc_1_1sampler_1ae7d9eafdf6a741541425f1b57bde4cc8" kind="function"><name>Iterate</name></member>
+    <member refid="classsmc_1_1sampler_1a625924dbea2b9e202ac36a49d558aeb1" kind="function"><name>IterateBack</name></member>
+    <member refid="classsmc_1_1sampler_1ac5528d39e667d64956261451517ff2e5" kind="function"><name>IterateEss</name></member>
+    <member refid="classsmc_1_1sampler_1ad787394d903686a67c92e2ec4a41816c" kind="function"><name>IterateUntil</name></member>
+    <member refid="classsmc_1_1sampler_1ac4e9ce4b69d34c4ae9d0cb923dc6b2ed" kind="function"><name>MoveParticles</name></member>
+    <member refid="classsmc_1_1sampler_1a899baefc9c092a8162a7f1f775bda983" kind="function"><name>Resample</name></member>
+    <member refid="classsmc_1_1sampler_1a2de74263c4be0fdc81779485bec9d5e9" kind="function"><name>SetMoveSet</name></member>
+    <member refid="classsmc_1_1sampler_1a8c1a6e83082941584894bfdf4e4a1de0" kind="function"><name>SetMoveSet</name></member>
+    <member refid="classsmc_1_1sampler_1ada0a4d9961ed7f5f4d5849fb6911c146" kind="function"><name>SetResampleParams</name></member>
+    <member refid="classsmc_1_1sampler_1ae83b30eb2cb7f8bb3d975bda840f6119" kind="function"><name>SetAlgParam</name></member>
+    <member refid="classsmc_1_1sampler_1a179a809335bde824bed2f4c11aee1b93" kind="function"><name>SetAdaptMethods</name></member>
+    <member refid="classsmc_1_1sampler_1a9360d394cfb5bba57775235a930be017" kind="function"><name>SetMcmcRepeats</name></member>
+    <member refid="classsmc_1_1sampler_1a1baaee3a9ae3ec89c636f1e6ec55f38c" kind="function"><name>StreamParticle</name></member>
+    <member refid="classsmc_1_1sampler_1a0b10f998db4499d5e60887060b6d0ad3" kind="function"><name>StreamParticles</name></member>
+    <member refid="classsmc_1_1sampler_1a53807d342ac4a41e4ac4044fed2885d3" kind="function"><name>OstreamMCMCRecordToStream</name></member>
+    <member refid="classsmc_1_1sampler_1a448d1939002343af0369b696f0761689" kind="function"><name>OstreamResamplingRecordToStream</name></member>
+  </compound>
+  <compound refid="classcSMCexamples_1_1States" kind="class"><name>cSMCexamples::States</name>
+    <member refid="classcSMCexamples_1_1States_1acf3dee1fbac5bf799d3826a607d3b052" kind="variable"><name>xState</name></member>
+  </compound>
+  <compound refid="classsmc_1_1staticModelAdapt" kind="class"><name>smc::staticModelAdapt</name>
+    <member refid="classsmc_1_1staticModelAdapt_1ab98899cba54c9d80480e607f3c9d979f" kind="variable"><name>temp</name></member>
+    <member refid="classsmc_1_1staticModelAdapt_1a8cb8c1dedfccc7db7ae6d5600cf4ae39" kind="variable"><name>empCov</name></member>
+    <member refid="classsmc_1_1staticModelAdapt_1a925d2a0b86f3b15a1ec1321b8b8ebb75" kind="variable"><name>cholCov</name></member>
+    <member refid="classsmc_1_1staticModelAdapt_1ada6b5ca553373baba9069a64f45e86c5" kind="function"><name>CESSdiff</name></member>
+    <member refid="classsmc_1_1staticModelAdapt_1a85968708aebf062be993c4a7037417f9" kind="function"><name>bisection</name></member>
+    <member refid="classsmc_1_1staticModelAdapt_1a984b8dc9035879b20939de2c217d19b6" kind="function"><name>~staticModelAdapt</name></member>
+    <member refid="classsmc_1_1staticModelAdapt_1a301341fa94dadceecca0337b399f0f9c" kind="function"><name>staticModelAdapt</name></member>
+    <member refid="classsmc_1_1staticModelAdapt_1a5a865ce472d42b010cdf869debb0deaa" kind="function"><name>ChooseTemp</name></member>
+    <member refid="classsmc_1_1staticModelAdapt_1a9fbc8a91e10bfc6a2df267c1bad5d02e" kind="function"><name>calcEmpCov</name></member>
+    <member refid="classsmc_1_1staticModelAdapt_1a5a37d9e6bf0c01fabfd01d5fe15ea441" kind="function"><name>calcCholCov</name></member>
+    <member refid="classsmc_1_1staticModelAdapt_1ad12fb34bb4cd11ac4223b09eab265e67" kind="function"><name>calcMcmcRepeats</name></member>
+    <member refid="classsmc_1_1staticModelAdapt_1a269caa0da7e3ffc38aeb84b3dfbf4b73" kind="function"><name>GetTemp</name></member>
+    <member refid="classsmc_1_1staticModelAdapt_1a8737306c979de406ce6a3af3e8bf7119" kind="function"><name>GetTempCurr</name></member>
+    <member refid="classsmc_1_1staticModelAdapt_1ab2a71f9ff8be1e99375b849343786a4e" kind="function"><name>GetTempPrevious</name></member>
+    <member refid="classsmc_1_1staticModelAdapt_1a007292a8429016519ae77181c2ce6178" kind="function"><name>GetTemps</name></member>
+    <member refid="classsmc_1_1staticModelAdapt_1af0020436521cead17a9c8e500e5788f8" kind="function"><name>GetCholCov</name></member>
+    <member refid="classsmc_1_1staticModelAdapt_1ab669394ae8f88004c37a58afef1fe9ca" kind="function"><name>GetEmpCov</name></member>
+  </compound>
+  <compound refid="namespaceBSPFG" kind="namespace"><name>BSPFG</name>
+    <member refid="namespaceBSPFG_1ae46539669060b1a7229a20419a6c494b" kind="variable"><name>myMove</name></member>
+  </compound>
+  <compound refid="namespacecSMCexamples" kind="namespace"><name>cSMCexamples</name>
+    <member refid="namespacecSMCexamples_1a8925729bd0014927e5fc614fa3beb03e" kind="variable"><name>MyLGSSmove</name></member>
+    <member refid="namespacecSMCexamples_1a305e834a57d2aa26fa9af349e556c1b1" kind="function"><name>computeLogLikelihood</name></member>
+    <member refid="namespacecSMCexamples_1a0bc2cd801632eba9b4c5e7627ccd5d23" kind="function"><name>copyReferenceTrajectory</name></member>
+  </compound>
+  <compound refid="namespaceHistoryType" kind="namespace"><name>HistoryType</name>
+    <member refid="namespaceHistoryType_1a486dcf426d91692ddbce0dd2e97a9077" kind="enum"><name>Enum</name></member>
+    <member refid="namespaceHistoryType_1a486dcf426d91692ddbce0dd2e97a9077a1755a29ac60a2ebeb8a4c4b27f48bcde" kind="enumvalue"><name>NONE</name></member>
+    <member refid="namespaceHistoryType_1a486dcf426d91692ddbce0dd2e97a9077a63a959270994a6dff6ef90da8d618d28" kind="enumvalue"><name>RAM</name></member>
+    <member refid="namespaceHistoryType_1a486dcf426d91692ddbce0dd2e97a9077a454abec07203b210d7a9a2662a68f8f1" kind="enumvalue"><name>AL</name></member>
+  </compound>
+  <compound refid="namespaceLinReg__LA" kind="namespace"><name>LinReg_LA</name>
+    <member refid="namespaceLinReg__LA_1a1601cf36abf32cc4342a20d8bb3044ff" kind="variable"><name>data</name></member>
+    <member refid="namespaceLinReg__LA_1a2a3655a1a626b64570d1c1532c0c50f4" kind="variable"><name>mean_x</name></member>
+    <member refid="namespaceLinReg__LA_1a9d8527189563c8b923aef9b0bf467fd6" kind="variable"><name>lIterates</name></member>
+    <member refid="namespaceLinReg__LA_1acca84c3c07643b5752a3b95121edffee" kind="variable"><name>temps</name></member>
+    <member refid="namespaceLinReg__LA_1a5790550270ce25021beb2f7b6b15f259" kind="variable"><name>myMove</name></member>
+    <member refid="namespaceLinReg__LA_1a9b91024cd274f001407c42f17228258c" kind="function"><name>logLikelihood</name></member>
+    <member refid="namespaceLinReg__LA_1aaf4b717f46b46d9c7276ebc2ad9a1592" kind="function"><name>logPrior</name></member>
+    <member refid="namespaceLinReg__LA_1a89038def2b61972fa9d5de5f989dd9d6" kind="function"><name>integrand_ps</name></member>
+    <member refid="namespaceLinReg__LA_1af69b4e2c8853e7b320535502841f90a4" kind="function"><name>width_ps</name></member>
+  </compound>
+  <compound refid="namespaceLinReg__LA__adapt" kind="namespace"><name>LinReg_LA_adapt</name>
+    <member refid="namespaceLinReg__LA__adapt_1a615aea4becae9ff6868bb56079249ab8" kind="variable"><name>data</name></member>
+    <member refid="namespaceLinReg__LA__adapt_1ac1ec45cf751953c358869ef36298a6be" kind="variable"><name>mean_x</name></member>
+    <member refid="namespaceLinReg__LA__adapt_1af1e2034a0de5d8388d8551160efa6083" kind="variable"><name>lIterates</name></member>
+    <member refid="namespaceLinReg__LA__adapt_1ad7667e98b00321778c32a5e63eaa38e9" kind="variable"><name>rho</name></member>
+    <member refid="namespaceLinReg__LA__adapt_1a53aa1b71fba24d08561de4d913a0f395" kind="variable"><name>Sampler</name></member>
+    <member refid="namespaceLinReg__LA__adapt_1a0978a1526d537e7fd0d8bd9efcdd3bf6" kind="variable"><name>myAdapt</name></member>
+    <member refid="namespaceLinReg__LA__adapt_1a0206ed27f8148d0a548b2a6a46ede7df" kind="variable"><name>myMove</name></member>
+    <member refid="namespaceLinReg__LA__adapt_1a4e259018239f3e9693d6fb4e451e40b7" kind="function"><name>integrand_ps</name></member>
+    <member refid="namespaceLinReg__LA__adapt_1a410d2220b546701727a2183e84ae97bd" kind="function"><name>width_ps</name></member>
+    <member refid="namespaceLinReg__LA__adapt_1a0a96fb710c3dc63019d83df3ee329d82" kind="function"><name>logLikelihood</name></member>
+    <member refid="namespaceLinReg__LA__adapt_1aa0ecf028df85b422a107823a8d102e2d" kind="function"><name>logPrior</name></member>
+  </compound>
+  <compound refid="namespacenonlinbs" kind="namespace"><name>nonlinbs</name>
+    <member refid="namespacenonlinbs_1a62285904f0a236ce1b8e0b25c6845645" kind="variable"><name>myMove</name></member>
+    <member refid="namespacenonlinbs_1a209e69c70da37b9a075ee9b6418f8feb" kind="function"><name>logLikelihood</name></member>
+    <member refid="namespacenonlinbs_1a2a880f1f810cf5e3f41bfce943ac62f9" kind="function"><name>integrand_mean_x</name></member>
+    <member refid="namespacenonlinbs_1a7384237adce15f3e534dd91a1268e44b" kind="function"><name>integrand_var_x</name></member>
+  </compound>
+  <compound refid="namespacenonLinPMMH" kind="namespace"><name>nonLinPMMH</name>
+    <member refid="namespacenonLinPMMH_1adb4124074391d719ca63d7d84334a850" kind="variable"><name>y</name></member>
+    <member refid="namespacenonLinPMMH_1a29d94f67a1d9de989eb9d956eee3b5bf" kind="variable"><name>theta_prop</name></member>
+    <member refid="namespacenonLinPMMH_1aa206ed06249d3d0f2f6c079519958281" kind="variable"><name>myMove</name></member>
+    <member refid="namespacenonLinPMMH_1aab2bf10f89475b5cd745b80fd86754cd" kind="function"><name>logPrior</name></member>
+  </compound>
+  <compound refid="namespacePathSamplingType" kind="namespace"><name>PathSamplingType</name>
+    <member refid="namespacePathSamplingType_1a180b59ee4c6c2fa015480c609640614d" kind="enum"><name>Enum</name></member>
+    <member refid="namespacePathSamplingType_1a180b59ee4c6c2fa015480c609640614da32bc9c84af00767367ced38e687869da" kind="enumvalue"><name>TRAPEZOID2</name></member>
+    <member refid="namespacePathSamplingType_1a180b59ee4c6c2fa015480c609640614dac3287e3782a18e753ff2d3a888f7a2a6" kind="enumvalue"><name>TRAPEZOID1</name></member>
+    <member refid="namespacePathSamplingType_1a180b59ee4c6c2fa015480c609640614da42f1f053b9781a7ec871027d81b52e59" kind="enumvalue"><name>RECTANGLE</name></member>
+  </compound>
+  <compound refid="namespacepflineart" kind="namespace"><name>pflineart</name>
+    <member refid="namespacepflineart_1a0f24895ed711bad87b80467ae07197a1" kind="variable"><name>myMove</name></member>
+    <member refid="namespacepflineart_1ad51c007aa1ed1638b582a1750b215435" kind="function"><name>logLikelihood</name></member>
+    <member refid="namespacepflineart_1ab29384a0aa26099c95b1725d0f8e9224" kind="function"><name>integrand_mean_x</name></member>
+    <member refid="namespacepflineart_1af4999d50b3858b7edc1d749e88fcd7c8" kind="function"><name>integrand_mean_y</name></member>
+    <member refid="namespacepflineart_1ab2b5ee87587f99f0f993020734f26112" kind="function"><name>integrand_var_x</name></member>
+    <member refid="namespacepflineart_1a1c45c5851db4e626b618acce00fad456" kind="function"><name>integrand_var_y</name></member>
+  </compound>
+  <compound refid="namespaceResampleType" kind="namespace"><name>ResampleType</name>
+    <member refid="namespaceResampleType_1aae1fd87d74ce6bb0168e509df119f6eb" kind="enum"><name>Enum</name></member>
+    <member refid="namespaceResampleType_1aae1fd87d74ce6bb0168e509df119f6eba0207afd43440ab190cc0dd07bab5ba78" kind="enumvalue"><name>MULTINOMIAL</name></member>
+    <member refid="namespaceResampleType_1aae1fd87d74ce6bb0168e509df119f6eba87e69e5e3b594ebbaf9b91e3b4c11168" kind="enumvalue"><name>RESIDUAL</name></member>
+    <member refid="namespaceResampleType_1aae1fd87d74ce6bb0168e509df119f6eba47fcb7a0a69fdf1075e11d616cb8783b" kind="enumvalue"><name>STRATIFIED</name></member>
+    <member refid="namespaceResampleType_1aae1fd87d74ce6bb0168e509df119f6ebac25b219e8be6e967aaf5c4011935fe7d" kind="enumvalue"><name>SYSTEMATIC</name></member>
+  </compound>
+  <compound refid="namespacesmc" kind="namespace"><name>smc</name>
+    <member refid="namespacesmc_1afa9d36a4e701d48e0db9c8f0be9d9ea4" kind="function"><name>operator&lt;&lt;</name></member>
+    <member refid="namespacesmc_1aaa30e89b2e4c9913d9a8b9b79d482308" kind="function"><name>stableLogSumWeights</name></member>
+  </compound>
+  <compound refid="namespacestd" kind="namespace"><name>std</name>
+    <member refid="namespacestd_1a5009971eadc5b959926350da2ad8ed03" kind="function"><name>operator&lt;&lt;</name></member>
+    <member refid="namespacestd_1aabd24cfa371b609f24469d89c0f3b4ef" kind="function"><name>operator&lt;&lt;</name></member>
+    <member refid="namespacestd_1a4678d5a0443b232b2ed4e26c6d9bda35" kind="function"><name>operator&lt;&lt;</name></member>
+  </compound>
+  <compound refid="adaptMethods_8h" kind="file"><name>adaptMethods.h</name>
+    <member refid="adaptMethods_8h_1ab2b18eafe8ee009db1c5c478a77a31d6" kind="define"><name>__SMC_ADAPTMETHODS_H</name></member>
+  </compound>
+  <compound refid="blockpfgaussianopt_8h" kind="file"><name>blockpfgaussianopt.h</name>
+  </compound>
+  <compound refid="conditionalSampler_8h" kind="file"><name>conditionalSampler.h</name>
+    <member refid="conditionalSampler_8h_1ad24c995bf7e4cc84c98cfc17017e4b6a" kind="define"><name>__SMC_CONDITIONAL_SAMPLER_HH</name></member>
+  </compound>
+  <compound refid="cSMCexamples_8h" kind="file"><name>cSMCexamples.h</name>
+  </compound>
+  <compound refid="history_8h" kind="file"><name>history.h</name>
+    <member refid="history_8h_1af291cb87cc5b51cecc51fd1b41d82a3f" kind="define"><name>__SMC_HISTORY_HH</name></member>
+  </compound>
+  <compound refid="LinReg__LA_8h" kind="file"><name>LinReg_LA.h</name>
+  </compound>
+  <compound refid="LinReg__LA__adapt_8h" kind="file"><name>LinReg_LA_adapt.h</name>
+  </compound>
+  <compound refid="moveset_8h" kind="file"><name>moveset.h</name>
+    <member refid="moveset_8h_1ad37b85afd19fcad9abe5adab29f7e968" kind="define"><name>__SMC_MOVESET_HH</name></member>
+  </compound>
+  <compound refid="nonLinPMMH_8h" kind="file"><name>nonLinPMMH.h</name>
+  </compound>
+  <compound refid="pflineart_8h" kind="file"><name>pflineart.h</name>
+  </compound>
+  <compound refid="pfnonlinbs_8h" kind="file"><name>pfnonlinbs.h</name>
+  </compound>
+  <compound refid="population_8h" kind="file"><name>population.h</name>
+    <member refid="population_8h_1a3c4cf6d4466e9cbe7d0168e707f55286" kind="define"><name>__SMC_POPULATION_HH</name></member>
+  </compound>
+  <compound refid="RcppSMC_8h" kind="file"><name>RcppSMC.h</name>
+  </compound>
+  <compound refid="sampler_8h" kind="file"><name>sampler.h</name>
+    <member refid="sampler_8h_1a96556358c5d5335159eb80b6529feadf" kind="define"><name>__SMC_SAMPLER_HH</name></member>
+  </compound>
+  <compound refid="smc-exception_8h" kind="file"><name>smc-exception.h</name>
+    <member refid="smc-exception_8h_1ac2c533be72251f8606810417886e783f" kind="define"><name>__SMC_EXCEPT_HH</name></member>
+    <member refid="smc-exception_8h_1a3294208165bcb4936a39183596f3b1f6" kind="define"><name>SMC_EXCEPTION</name></member>
+    <member refid="smc-exception_8h_1a331ca8981221cf327621afb6ddb21094" kind="define"><name>SMCX_FILE_NOT_FOUND</name></member>
+    <member refid="smc-exception_8h_1a984f7b1fde8d8091971664718d5554a3" kind="define"><name>SMCX_MISSING_HISTORY</name></member>
+    <member refid="smc-exception_8h_1ad474b50fb83c193ef0a0b233d01328f9" kind="define"><name>SMCX_MULTIPLE_INSTANTIATION</name></member>
+    <member refid="smc-exception_8h_1acb94a39a98d8ab105b87237c28481030" kind="define"><name>CSMCX_USING_MCMC</name></member>
+    <member refid="smc-exception_8h_1ade447afb81db1d9ca2a0016ff04f4dc3" kind="define"><name>CSMCX_USING_ADAPTATION</name></member>
+  </compound>
+  <compound refid="smctc_8h" kind="file"><name>smctc.h</name>
+    <member refid="smctc_8h_1a5af00a11c9b6e844372ff1af28903e03" kind="define"><name>__SMC_TDSMC_HH</name></member>
+  </compound>
+  <compound refid="staticModelAdapt_8h" kind="file"><name>staticModelAdapt.h</name>
+    <member refid="staticModelAdapt_8h_1a8d51011a2c57c6b3012142d816fa59d2" kind="define"><name>__SMC_STATICMODELADAPT_HH</name></member>
+  </compound>
+  <compound refid="dir_d44c64559bbebec7f509842c48db8b23" kind="dir"><name>/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include</name>
+  </compound>
+  <compound refid="indexpage" kind="page"><name>index</name>
+  </compound>
+</doxygenindex>

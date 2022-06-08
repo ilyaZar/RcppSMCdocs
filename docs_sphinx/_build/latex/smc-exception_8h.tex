@@ -1,0 +1,130 @@
+\hypertarget{smc-exception_8h}{}\doxysection{/home/iz/\+Dropbox/projects/rcppsmc/\+Rcpp\+S\+M\+Cdocumentation/include/smc-\/exception.h File Reference}
+\label{smc-exception_8h}\index{/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/smc-\/exception.h@{/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/smc-\/exception.h}}
+
+
+This file defines exception-\/handling facilities.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+Include dependency graph for smc-\/exception.h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=263pt]{smc-exception_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{smc-exception_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classsmc_1_1exception}{smc\+::exception}}
+\begin{DoxyCompactList}\small\item\em S\+MC Exception class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacesmc}{smc}}
+\begin{DoxyCompactList}\small\item\em The Sequential Monte Carlo namespace. \end{DoxyCompactList}\item 
+ \mbox{\hyperlink{namespacestd}{std}}
+\begin{DoxyCompactList}\small\item\em The standard namespace. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{smc-exception_8h_ac2c533be72251f8606810417886e783f}{\+\_\+\+\_\+\+S\+M\+C\+\_\+\+E\+X\+C\+E\+P\+T\+\_\+\+HH}}~1.\+0
+\item 
+\#define \mbox{\hyperlink{smc-exception_8h_a3294208165bcb4936a39183596f3b1f6}{S\+M\+C\+\_\+\+E\+X\+C\+E\+P\+T\+I\+ON}}(code,  error)~\mbox{\hyperlink{classsmc_1_1exception}{smc\+::exception}}(\+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+\_\+, \+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+, code, error)
+\begin{DoxyCompactList}\small\item\em A macro which autocompletes the housekeeping components of an \mbox{\hyperlink{classsmc_1_1exception}{smc\+::exception}}. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{smc-exception_8h_a331ca8981221cf327621afb6ddb21094}{S\+M\+C\+X\+\_\+\+F\+I\+L\+E\+\_\+\+N\+O\+T\+\_\+\+F\+O\+U\+ND}}~0x0020
+\begin{DoxyCompactList}\small\item\em Exception thrown if a file cannot be accessed. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{smc-exception_8h_a984f7b1fde8d8091971664718d5554a3}{S\+M\+C\+X\+\_\+\+M\+I\+S\+S\+I\+N\+G\+\_\+\+H\+I\+S\+T\+O\+RY}}~0x0010
+\begin{DoxyCompactList}\small\item\em Exception thrown if the sampler attempts to access history data which wasn\textquotesingle{}t stored. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{smc-exception_8h_ad474b50fb83c193ef0a0b233d01328f9}{S\+M\+C\+X\+\_\+\+M\+U\+L\+T\+I\+P\+L\+E\+\_\+\+I\+N\+S\+T\+A\+N\+T\+I\+A\+T\+I\+ON}}~0x1000
+\begin{DoxyCompactList}\small\item\em Exception thrown if an attempt is made to instantiate a class of which a single instance is permitted more than once. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{smc-exception_8h_acb94a39a98d8ab105b87237c28481030}{C\+S\+M\+C\+X\+\_\+\+U\+S\+I\+N\+G\+\_\+\+M\+C\+MC}}~0x0100
+\begin{DoxyCompactList}\small\item\em Exception thrown if an attempt is made to use facilities of the base sampler class related to M\+C\+MC moves. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{smc-exception_8h_ade447afb81db1d9ca2a0016ff04f4dc3}{C\+S\+M\+C\+X\+\_\+\+U\+S\+I\+N\+G\+\_\+\+A\+D\+A\+P\+T\+A\+T\+I\+ON}}~0x0001
+\begin{DoxyCompactList}\small\item\em Exception thrown if an attempt is made to use facilities of the base sampler class related to adaptation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{namespacestd_a4678d5a0443b232b2ed4e26c6d9bda35}{std\+::operator$<$$<$}} (std\+::ostream \&os, \mbox{\hyperlink{classsmc_1_1exception}{smc\+::exception}} \&e)
+\begin{DoxyCompactList}\small\item\em Produce a human-\/readable display of the state of an \mbox{\hyperlink{classsmc_1_1exception}{smc\+::exception}} class using the stream operator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file defines exception-\/handling facilities. 
+
+The \mbox{\hyperlink{classsmc_1_1exception}{smc\+::exception}} class, which is used for exception handling by S\+M\+C\+TC, is defined. 
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{smc-exception_8h_ac2c533be72251f8606810417886e783f}\label{smc-exception_8h_ac2c533be72251f8606810417886e783f}} 
+\index{smc-\/exception.h@{smc-\/exception.h}!\_\_SMC\_EXCEPT\_HH@{\_\_SMC\_EXCEPT\_HH}}
+\index{\_\_SMC\_EXCEPT\_HH@{\_\_SMC\_EXCEPT\_HH}!smc-\/exception.h@{smc-\/exception.h}}
+\doxysubsubsection{\texorpdfstring{\_\_SMC\_EXCEPT\_HH}{\_\_SMC\_EXCEPT\_HH}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+S\+M\+C\+\_\+\+E\+X\+C\+E\+P\+T\+\_\+\+HH~1.\+0}
+
+\mbox{\Hypertarget{smc-exception_8h_ade447afb81db1d9ca2a0016ff04f4dc3}\label{smc-exception_8h_ade447afb81db1d9ca2a0016ff04f4dc3}} 
+\index{smc-\/exception.h@{smc-\/exception.h}!CSMCX\_USING\_ADAPTATION@{CSMCX\_USING\_ADAPTATION}}
+\index{CSMCX\_USING\_ADAPTATION@{CSMCX\_USING\_ADAPTATION}!smc-\/exception.h@{smc-\/exception.h}}
+\doxysubsubsection{\texorpdfstring{CSMCX\_USING\_ADAPTATION}{CSMCX\_USING\_ADAPTATION}}
+{\footnotesize\ttfamily \#define C\+S\+M\+C\+X\+\_\+\+U\+S\+I\+N\+G\+\_\+\+A\+D\+A\+P\+T\+A\+T\+I\+ON~0x0001}
+
+
+
+Exception thrown if an attempt is made to use facilities of the base sampler class related to adaptation. 
+
+\mbox{\Hypertarget{smc-exception_8h_acb94a39a98d8ab105b87237c28481030}\label{smc-exception_8h_acb94a39a98d8ab105b87237c28481030}} 
+\index{smc-\/exception.h@{smc-\/exception.h}!CSMCX\_USING\_MCMC@{CSMCX\_USING\_MCMC}}
+\index{CSMCX\_USING\_MCMC@{CSMCX\_USING\_MCMC}!smc-\/exception.h@{smc-\/exception.h}}
+\doxysubsubsection{\texorpdfstring{CSMCX\_USING\_MCMC}{CSMCX\_USING\_MCMC}}
+{\footnotesize\ttfamily \#define C\+S\+M\+C\+X\+\_\+\+U\+S\+I\+N\+G\+\_\+\+M\+C\+MC~0x0100}
+
+
+
+Exception thrown if an attempt is made to use facilities of the base sampler class related to M\+C\+MC moves. 
+
+\mbox{\Hypertarget{smc-exception_8h_a3294208165bcb4936a39183596f3b1f6}\label{smc-exception_8h_a3294208165bcb4936a39183596f3b1f6}} 
+\index{smc-\/exception.h@{smc-\/exception.h}!SMC\_EXCEPTION@{SMC\_EXCEPTION}}
+\index{SMC\_EXCEPTION@{SMC\_EXCEPTION}!smc-\/exception.h@{smc-\/exception.h}}
+\doxysubsubsection{\texorpdfstring{SMC\_EXCEPTION}{SMC\_EXCEPTION}}
+{\footnotesize\ttfamily \#define S\+M\+C\+\_\+\+E\+X\+C\+E\+P\+T\+I\+ON(\begin{DoxyParamCaption}\item[{}]{code,  }\item[{}]{error }\end{DoxyParamCaption})~\mbox{\hyperlink{classsmc_1_1exception}{smc\+::exception}}(\+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+\_\+, \+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+, code, error)}
+
+
+
+A macro which autocompletes the housekeeping components of an \mbox{\hyperlink{classsmc_1_1exception}{smc\+::exception}}. 
+
+\mbox{\Hypertarget{smc-exception_8h_a331ca8981221cf327621afb6ddb21094}\label{smc-exception_8h_a331ca8981221cf327621afb6ddb21094}} 
+\index{smc-\/exception.h@{smc-\/exception.h}!SMCX\_FILE\_NOT\_FOUND@{SMCX\_FILE\_NOT\_FOUND}}
+\index{SMCX\_FILE\_NOT\_FOUND@{SMCX\_FILE\_NOT\_FOUND}!smc-\/exception.h@{smc-\/exception.h}}
+\doxysubsubsection{\texorpdfstring{SMCX\_FILE\_NOT\_FOUND}{SMCX\_FILE\_NOT\_FOUND}}
+{\footnotesize\ttfamily \#define S\+M\+C\+X\+\_\+\+F\+I\+L\+E\+\_\+\+N\+O\+T\+\_\+\+F\+O\+U\+ND~0x0020}
+
+
+
+Exception thrown if a file cannot be accessed. 
+
+\mbox{\Hypertarget{smc-exception_8h_a984f7b1fde8d8091971664718d5554a3}\label{smc-exception_8h_a984f7b1fde8d8091971664718d5554a3}} 
+\index{smc-\/exception.h@{smc-\/exception.h}!SMCX\_MISSING\_HISTORY@{SMCX\_MISSING\_HISTORY}}
+\index{SMCX\_MISSING\_HISTORY@{SMCX\_MISSING\_HISTORY}!smc-\/exception.h@{smc-\/exception.h}}
+\doxysubsubsection{\texorpdfstring{SMCX\_MISSING\_HISTORY}{SMCX\_MISSING\_HISTORY}}
+{\footnotesize\ttfamily \#define S\+M\+C\+X\+\_\+\+M\+I\+S\+S\+I\+N\+G\+\_\+\+H\+I\+S\+T\+O\+RY~0x0010}
+
+
+
+Exception thrown if the sampler attempts to access history data which wasn\textquotesingle{}t stored. 
+
+\mbox{\Hypertarget{smc-exception_8h_ad474b50fb83c193ef0a0b233d01328f9}\label{smc-exception_8h_ad474b50fb83c193ef0a0b233d01328f9}} 
+\index{smc-\/exception.h@{smc-\/exception.h}!SMCX\_MULTIPLE\_INSTANTIATION@{SMCX\_MULTIPLE\_INSTANTIATION}}
+\index{SMCX\_MULTIPLE\_INSTANTIATION@{SMCX\_MULTIPLE\_INSTANTIATION}!smc-\/exception.h@{smc-\/exception.h}}
+\doxysubsubsection{\texorpdfstring{SMCX\_MULTIPLE\_INSTANTIATION}{SMCX\_MULTIPLE\_INSTANTIATION}}
+{\footnotesize\ttfamily \#define S\+M\+C\+X\+\_\+\+M\+U\+L\+T\+I\+P\+L\+E\+\_\+\+I\+N\+S\+T\+A\+N\+T\+I\+A\+T\+I\+ON~0x1000}
+
+
+
+Exception thrown if an attempt is made to instantiate a class of which a single instance is permitted more than once. 
+

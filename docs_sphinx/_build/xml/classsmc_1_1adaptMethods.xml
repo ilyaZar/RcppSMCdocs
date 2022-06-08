@@ -1,0 +1,118 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classsmc_1_1adaptMethods" kind="class" language="C++" prot="public">
+    <compoundname>smc::adaptMethods</compoundname>
+    <includes refid="adaptMethods_8h" local="no">adaptMethods.h</includes>
+    <templateparamlist>
+      <param>
+        <type>class Space</type>
+      </param>
+      <param>
+        <type>class Params</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classsmc_1_1adaptMethods_1a6cd01df7136b41a40b2030a9606154e4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual smc::adaptMethods&lt; Space, Params &gt;::~adaptMethods</definition>
+        <argsstring>()</argsstring>
+        <name>~adaptMethods</name>
+        <briefdescription>
+<para>Free the workspace allocated for the algorithm parameters. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/adaptMethods.h" line="41" column="17" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/adaptMethods.h" bodystart="41" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1adaptMethods_1a96614576030dc76fbf7d64d0416d6f52" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void smc::adaptMethods&lt; Space, Params &gt;::updateForMove</definition>
+        <argsstring>(Params &amp;, const population&lt; Space &gt; &amp;pop)</argsstring>
+        <name>updateForMove</name>
+        <param>
+          <type>Params &amp;</type>
+        </param>
+        <param>
+          <type>const <ref refid="classsmc_1_1population" kindref="compound">population</ref>&lt; Space &gt; &amp;</type>
+          <declname>pop</declname>
+        </param>
+        <briefdescription>
+<para>Holder function for updates to be done before the move step. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/adaptMethods.h" line="45" column="22" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/adaptMethods.h" bodystart="45" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1adaptMethods_1a642c9827bc6ed466160886219a0c0d8f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void smc::adaptMethods&lt; Space, Params &gt;::updateForMCMC</definition>
+        <argsstring>(Params &amp;, const population&lt; Space &gt; &amp;pop, double acceptProb, int nResampled, int &amp;nRepeats)</argsstring>
+        <name>updateForMCMC</name>
+        <param>
+          <type>Params &amp;</type>
+        </param>
+        <param>
+          <type>const <ref refid="classsmc_1_1population" kindref="compound">population</ref>&lt; Space &gt; &amp;</type>
+          <declname>pop</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>acceptProb</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nResampled</declname>
+        </param>
+        <param>
+          <type>int &amp;</type>
+          <declname>nRepeats</declname>
+        </param>
+        <briefdescription>
+<para>Holder function for updates to be done before the MCMC step. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/adaptMethods.h" line="48" column="22" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/adaptMethods.h" bodystart="48" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1adaptMethods_1a2f8373020e442ab65ef657097e2d4c03" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void smc::adaptMethods&lt; Space, Params &gt;::updateEnd</definition>
+        <argsstring>(Params &amp;, const population&lt; Space &gt; &amp;pop)</argsstring>
+        <name>updateEnd</name>
+        <param>
+          <type>Params &amp;</type>
+        </param>
+        <param>
+          <type>const <ref refid="classsmc_1_1population" kindref="compound">population</ref>&lt; Space &gt; &amp;</type>
+          <declname>pop</declname>
+        </param>
+        <briefdescription>
+<para>Holder function for updates to be done at the end of each iteration. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/adaptMethods.h" line="51" column="22" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/adaptMethods.h" bodystart="51" bodyend="51"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A base class which contains the algorithm parameters and virtual functions to adapt them. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/adaptMethods.h" line="36" column="37" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/adaptMethods.h" bodystart="36" bodyend="52"/>
+    <listofallmembers>
+      <member refid="classsmc_1_1adaptMethods_1a2f8373020e442ab65ef657097e2d4c03" prot="public" virt="virtual"><scope>smc::adaptMethods</scope><name>updateEnd</name></member>
+      <member refid="classsmc_1_1adaptMethods_1a642c9827bc6ed466160886219a0c0d8f" prot="public" virt="virtual"><scope>smc::adaptMethods</scope><name>updateForMCMC</name></member>
+      <member refid="classsmc_1_1adaptMethods_1a96614576030dc76fbf7d64d0416d6f52" prot="public" virt="virtual"><scope>smc::adaptMethods</scope><name>updateForMove</name></member>
+      <member refid="classsmc_1_1adaptMethods_1a6cd01df7136b41a40b2030a9606154e4" prot="public" virt="virtual"><scope>smc::adaptMethods</scope><name>~adaptMethods</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

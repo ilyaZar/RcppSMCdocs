@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classpflineart_1_1cv__obs" kind="class" language="C++" prot="public">
+    <compoundname>pflineart::cv_obs</compoundname>
+    <includes refid="pflineart_8h" local="no">pflineart.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classpflineart_1_1cv__obs_1a46a063cc37d3135e08691b983984d7fb" prot="public" static="no" mutable="no">
+        <type>arma::vec</type>
+        <definition>arma::vec pflineart::cv_obs::x_pos</definition>
+        <argsstring></argsstring>
+        <name>x_pos</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/pflineart.h" line="37" column="19" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/pflineart.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classpflineart_1_1cv__obs_1a9fa938ad0b5ccd5d6282d55f465203c9" prot="public" static="no" mutable="no">
+        <type>arma::vec</type>
+        <definition>arma::vec pflineart::cv_obs::y_pos</definition>
+        <argsstring></argsstring>
+        <name>y_pos</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/pflineart.h" line="37" column="25" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/pflineart.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/pflineart.h" line="35" column="1" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/pflineart.h" bodystart="34" bodyend="38"/>
+    <listofallmembers>
+      <member refid="classpflineart_1_1cv__obs_1a46a063cc37d3135e08691b983984d7fb" prot="public" virt="non-virtual"><scope>pflineart::cv_obs</scope><name>x_pos</name></member>
+      <member refid="classpflineart_1_1cv__obs_1a9fa938ad0b5ccd5d6282d55f465203c9" prot="public" virt="non-virtual"><scope>pflineart::cv_obs</scope><name>y_pos</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

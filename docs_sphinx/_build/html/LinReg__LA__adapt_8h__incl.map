@@ -1,0 +1,18 @@
+<map id="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/LinReg_LA_adapt.h" name="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/LinReg_LA_adapt.h">
+<area shape="rect" id="node1" title=" " alt="" coords="693,5,937,61"/>
+<area shape="rect" id="node2" href="$smctc_8h.html" title="The main header file for SMCTC." alt="" coords="778,109,851,136"/>
+<area shape="rect" id="node3" title=" " alt="" coords="83,408,146,435"/>
+<area shape="rect" id="node4" title=" " alt="" coords="782,259,847,285"/>
+<area shape="rect" id="node5" title=" " alt="" coords="897,333,977,360"/>
+<area shape="rect" id="node6" href="$smc-exception_8h.html" title="This file defines exception&#45;handling facilities." alt="" coords="872,259,1003,285"/>
+<area shape="rect" id="node7" href="$sampler_8h.html" title="Defines the overall sampler object." alt="" coords="571,184,658,211"/>
+<area shape="rect" id="node8" title=" " alt="" coords="181,259,267,285"/>
+<area shape="rect" id="node9" href="$population_8h.html" title="Class used to store and manipulate the population of particles." alt="" coords="370,333,473,360"/>
+<area shape="rect" id="node13" href="$history_8h.html" title="Classes and function related to the history of the sampler." alt="" coords="629,259,707,285"/>
+<area shape="rect" id="node14" href="$moveset_8h.html" title="Classes and functions which deal with collections of sampler proposal &quot;moves&quot;." alt="" coords="515,259,605,285"/>
+<area shape="rect" id="node15" href="$adaptMethods_8h.html" title="A base class with virtual functions to adapt parameters." alt="" coords="30,259,157,285"/>
+<area shape="rect" id="node16" href="$staticModelAdapt_8h.html" title=" " alt="" coords="291,259,439,285"/>
+<area shape="rect" id="node10" title=" " alt="" coords="237,408,366,435"/>
+<area shape="rect" id="node11" title=" " alt="" coords="390,408,453,435"/>
+<area shape="rect" id="node12" title=" " alt="" coords="477,408,536,435"/>
+</map>

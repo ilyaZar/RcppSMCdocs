@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespacenonLinPMMH" kind="namespace" language="C++">
+    <compoundname>nonLinPMMH</compoundname>
+    <innerclass refid="classnonLinPMMH_1_1nonLinPMMH__move" prot="public">nonLinPMMH::nonLinPMMH_move</innerclass>
+    <innerclass refid="classnonLinPMMH_1_1parameters" prot="public">nonLinPMMH::parameters</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespacenonLinPMMH_1adb4124074391d719ca63d7d84334a850" prot="public" static="no" mutable="no">
+        <type>arma::vec</type>
+        <definition>arma::vec nonLinPMMH::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/nonLinPMMH.h" line="33" column="15" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/nonLinPMMH.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacenonLinPMMH_1a29d94f67a1d9de989eb9d956eee3b5bf" prot="public" static="no" mutable="no">
+        <type><ref refid="classnonLinPMMH_1_1parameters" kindref="compound">parameters</ref></type>
+        <definition>parameters nonLinPMMH::theta_prop</definition>
+        <argsstring></argsstring>
+        <name>theta_prop</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/nonLinPMMH.h" line="50" column="16" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/nonLinPMMH.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacenonLinPMMH_1aa206ed06249d3d0f2f6c079519958281" prot="public" static="no" mutable="no">
+        <type><ref refid="classsmc_1_1moveset" kindref="compound">smc::moveset</ref>&lt; double, <ref refid="classsmc_1_1nullParams" kindref="compound">smc::nullParams</ref> &gt; *</type>
+        <definition>smc::moveset&lt;double,smc::nullParams&gt;* nonLinPMMH::myMove</definition>
+        <argsstring></argsstring>
+        <name>myMove</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/nonLinPMMH.h" line="51" column="14" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/nonLinPMMH.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespacenonLinPMMH_1aab2bf10f89475b5cd745b80fd86754cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double nonLinPMMH::logPrior</definition>
+        <argsstring>(const parameters &amp;proposal)</argsstring>
+        <name>logPrior</name>
+        <param>
+          <type>const <ref refid="classnonLinPMMH_1_1parameters" kindref="compound">parameters</ref> &amp;</type>
+          <declname>proposal</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/nonLinPMMH.h" line="35" column="12" declfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/nonLinPMMH.h" declline="35" declcolumn="12"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/nonLinPMMH.h" line="26" column="20"/>
+  </compounddef>
+</doxygen>

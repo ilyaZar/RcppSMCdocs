@@ -1,0 +1,436 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classsmc_1_1moveset" kind="class" language="C++" prot="public">
+    <compoundname>smc::moveset</compoundname>
+    <includes refid="moveset_8h" local="no">moveset.h</includes>
+    <templateparamlist>
+      <param>
+        <type>class Space</type>
+      </param>
+      <param>
+        <type>class Params</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classsmc_1_1moveset_1af86cd53918ca1a0efaf7339fbf1369e7" prot="private" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* smc::moveset&lt; Space, Params &gt;::defaultInitialise) (Space &amp;, double &amp;, Params &amp;)</definition>
+        <argsstring>)(Space &amp;, double &amp;, Params &amp;)</argsstring>
+        <name>defaultInitialise</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Default functions (only needed so that they can be overriden for backwards compatibility) The function which initialises a single particle. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/moveset.h" line="44" column="9" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/moveset.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsmc_1_1moveset_1ae07933ed6c32e4cc51ab3f060081e7bf" prot="private" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* smc::moveset&lt; Space, Params &gt;::defaultMove) (long, Space &amp;, double &amp;, Params &amp;)</definition>
+        <argsstring>)(long, Space &amp;, double &amp;, Params &amp;)</argsstring>
+        <name>defaultMove</name>
+        <briefdescription>
+<para>The functions which perform actual moves on a single particle. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/moveset.h" line="46" column="9" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/moveset.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsmc_1_1moveset_1ac13c8aae10ec4c2c900e2d4dd8b3a5ad" prot="private" static="no" mutable="no">
+        <type>bool(*</type>
+        <definition>bool(* smc::moveset&lt; Space, Params &gt;::defaultMCMC) (long, Space &amp;, double &amp;, Params &amp;)</definition>
+        <argsstring>)(long, Space &amp;, double &amp;, Params &amp;)</argsstring>
+        <name>defaultMCMC</name>
+        <briefdescription>
+<para>One iteration of a Markov Chain Monte Carlo move for a single particle. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/moveset.h" line="48" column="9" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/moveset.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsmc_1_1moveset_1a25f89a568d72e02180751389aaf20baf" prot="private" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* smc::moveset&lt; Space, Params &gt;::defaultWeight) (long, Space &amp;, double &amp;, Params &amp;)</definition>
+        <argsstring>)(long, Space &amp;, double &amp;, Params &amp;)</argsstring>
+        <name>defaultWeight</name>
+        <briefdescription>
+<para>The function which weights a single (reference) particle coordinate. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/moveset.h" line="50" column="9" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/moveset.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classsmc_1_1moveset_1a507b985fafe3f1572edafb429bf7c2c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>smc::moveset&lt; Space, Params &gt;::moveset</definition>
+        <argsstring>()</argsstring>
+        <name>moveset</name>
+        <briefdescription>
+<para>Create a completely unspecified moveset. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The argument free <ref refid="classsmc_1_1moveset" kindref="compound">smc::moveset</ref> constructor simply sets the number of available moves to zero and sets all of the associated function pointers to NULL. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/moveset.h" line="55" column="9" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/moveset.h" bodystart="103" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1moveset_1a857a88c99a6aa68903d1dd67561f8a19" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>smc::moveset&lt; Space, Params &gt;::moveset</definition>
+        <argsstring>(void(*pfInit)(Space &amp;, double &amp;, Params &amp;), void(*pfNewMove)(long, Space &amp;, double &amp;, Params &amp;), bool(*pfNewMCMC)(long, Space &amp;, double &amp;, Params &amp;))</argsstring>
+        <name>moveset</name>
+        <param>
+          <type>void(*)(Space &amp;, double &amp;, Params &amp;)</type>
+          <declname>pfInit</declname>
+        </param>
+        <param>
+          <type>void(*)(long, Space &amp;, double &amp;, Params &amp;)</type>
+          <declname>pfNewMove</declname>
+        </param>
+        <param>
+          <type>bool(*)(long, Space &amp;, double &amp;, Params &amp;)</type>
+          <declname>pfNewMCMC</declname>
+        </param>
+        <briefdescription>
+<para>An alternative constructor for backwards compatibility. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/moveset.h" line="58" column="9" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/moveset.h" bodystart="112" bodyend="119"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1moveset_1a1ef41bba20f71cb92627e01360eb08c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>smc::moveset&lt; Space, Params &gt;::moveset</definition>
+        <argsstring>(void(*pfInit)(Space &amp;, double &amp;, Params &amp;), void(*pfNewMove)(long, Space &amp;, double &amp;, Params &amp;), bool(*pfNewMCMC)(long, Space &amp;, double &amp;, Params &amp;), void(*pfNewWeight)(long, Space &amp;, double &amp;, Params &amp;))</argsstring>
+        <name>moveset</name>
+        <param>
+          <type>void(*)(Space &amp;, double &amp;, Params &amp;)</type>
+          <declname>pfInit</declname>
+        </param>
+        <param>
+          <type>void(*)(long, Space &amp;, double &amp;, Params &amp;)</type>
+          <declname>pfNewMove</declname>
+        </param>
+        <param>
+          <type>bool(*)(long, Space &amp;, double &amp;, Params &amp;)</type>
+          <declname>pfNewMCMC</declname>
+        </param>
+        <param>
+          <type>void(*)(long, Space &amp;, double &amp;, Params &amp;)</type>
+          <declname>pfNewWeight</declname>
+        </param>
+        <briefdescription>
+<para>An alternative constructor used for conditional SMC specifically. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/moveset.h" line="63" column="9" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/moveset.h" bodystart="122" bodyend="131"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1moveset_1a0792835f91ecd41230e68d850bd11f75" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual smc::moveset&lt; Space, Params &gt;::~moveset</definition>
+        <argsstring>()</argsstring>
+        <name>~moveset</name>
+        <briefdescription>
+<para>Free the workspace allocated for the algorithm parameters. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/moveset.h" line="69" column="17" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/moveset.h" bodystart="69" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1moveset_1a7a9de1bcabd9871805dc290444c2f93e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void smc::moveset&lt; Space, Params &gt;::pfInitialise</definition>
+        <argsstring>(Space &amp;value, double &amp;weight, Params &amp;myParams)</argsstring>
+        <name>pfInitialise</name>
+        <reimplementedby refid="classBSPFG_1_1BSPFG__move_1a7ef22bae2f2b07cedd399f83cb151283">pfInitialise</reimplementedby>
+        <reimplementedby refid="classnonlinbs_1_1nonlinbs__move_1a9044ad5bcc1fab7325ba193264153b1a">pfInitialise</reimplementedby>
+        <reimplementedby refid="classnonLinPMMH_1_1nonLinPMMH__move_1a0bf71a1cce2607766ee7a7744e291975">pfInitialise</reimplementedby>
+        <param>
+          <type>Space &amp;</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>weight</declname>
+        </param>
+        <param>
+          <type>Params &amp;</type>
+          <declname>myParams</declname>
+        </param>
+        <briefdescription>
+<para>Holder function for updates to be done before the move step. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/moveset.h" line="73" column="22" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/moveset.h" bodystart="73" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1moveset_1aadb55d5525fecea2ae41799dc9addd37" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void smc::moveset&lt; Space, Params &gt;::pfMove</definition>
+        <argsstring>(long time, Space &amp;value, double &amp;weight, Params &amp;myParams)</argsstring>
+        <name>pfMove</name>
+        <reimplementedby refid="classBSPFG_1_1BSPFG__move_1a1388700e124be80b7438cbe077da6eff">pfMove</reimplementedby>
+        <reimplementedby refid="classnonlinbs_1_1nonlinbs__move_1a1971a5b12b0234f30d45ec234db8acb0">pfMove</reimplementedby>
+        <reimplementedby refid="classnonLinPMMH_1_1nonLinPMMH__move_1a49287819605b5975606fb12a76e1d545">pfMove</reimplementedby>
+        <param>
+          <type>long</type>
+          <declname>time</declname>
+        </param>
+        <param>
+          <type>Space &amp;</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>weight</declname>
+        </param>
+        <param>
+          <type>Params &amp;</type>
+          <declname>myParams</declname>
+        </param>
+        <briefdescription>
+<para>Holder function for updates to be done before the MCMC step. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/moveset.h" line="76" column="22" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/moveset.h" bodystart="76" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1moveset_1aa800251335f4220fa8389e5ea1231acf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool smc::moveset&lt; Space, Params &gt;::pfMCMC</definition>
+        <argsstring>(long time, Space &amp;value, double &amp;weight, Params &amp;myParams)</argsstring>
+        <name>pfMCMC</name>
+        <param>
+          <type>long</type>
+          <declname>time</declname>
+        </param>
+        <param>
+          <type>Space &amp;</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>weight</declname>
+        </param>
+        <param>
+          <type>Params &amp;</type>
+          <declname>myParams</declname>
+        </param>
+        <briefdescription>
+<para>Holder function for updates to be done at the end of each iteration. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/moveset.h" line="79" column="22" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/moveset.h" bodystart="79" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1moveset_1aaf4ddcd60382d696729fd55c36c1e4eb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void smc::moveset&lt; Space, Params &gt;::pfWeight</definition>
+        <argsstring>(long time, Space &amp;referenceValue, double &amp;referenceWeight, Params &amp;myParams)</argsstring>
+        <name>pfWeight</name>
+        <param>
+          <type>long</type>
+          <declname>time</declname>
+        </param>
+        <param>
+          <type>Space &amp;</type>
+          <declname>referenceValue</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>referenceWeight</declname>
+        </param>
+        <param>
+          <type>Params &amp;</type>
+          <declname>myParams</declname>
+        </param>
+        <briefdescription>
+<para>Holder function for weighting of conditioning reference trajectory. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/moveset.h" line="87" column="22" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/moveset.h" bodystart="87" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1moveset_1ab262a9789a6e9204441b8d46ccd4dba9" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void smc::moveset&lt; Space, Params &gt;::DoInit</definition>
+        <argsstring>(population&lt; Space &gt; &amp;pFrom, long N, Params &amp;)</argsstring>
+        <name>DoInit</name>
+        <param>
+          <type><ref refid="classsmc_1_1population" kindref="compound">population</ref>&lt; Space &gt; &amp;</type>
+          <declname>pFrom</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>N</declname>
+        </param>
+        <param>
+          <type>Params &amp;</type>
+          <defname>params</defname>
+        </param>
+        <briefdescription>
+<para>Initialise the population of particles. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/moveset.h" line="90" column="22" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/moveset.h" bodystart="134" bodyend="138"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1moveset_1adbefc0b5ff0d22b94b031a960f8a8c27" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool smc::moveset&lt; Space, Params &gt;::DoMCMC</definition>
+        <argsstring>(long lTime, population&lt; Space &gt; &amp;pFrom, long N, int nRepeats, int &amp;nAccepted, Params &amp;)</argsstring>
+        <name>DoMCMC</name>
+        <param>
+          <type>long</type>
+          <declname>lTime</declname>
+        </param>
+        <param>
+          <type><ref refid="classsmc_1_1population" kindref="compound">population</ref>&lt; Space &gt; &amp;</type>
+          <declname>pFrom</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>N</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nRepeats</declname>
+        </param>
+        <param>
+          <type>int &amp;</type>
+          <declname>nAccepted</declname>
+        </param>
+        <param>
+          <type>Params &amp;</type>
+          <defname>params</defname>
+        </param>
+        <briefdescription>
+<para>Perform an MCMC move on the particles. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/moveset.h" line="92" column="22" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/moveset.h" bodystart="141" bodyend="160"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1moveset_1a1815cd6f6577fa5fe7d558af8061ce0c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void smc::moveset&lt; Space, Params &gt;::DoMove</definition>
+        <argsstring>(long lTime, population&lt; Space &gt; &amp;pFrom, long N, Params &amp;)</argsstring>
+        <name>DoMove</name>
+        <param>
+          <type>long</type>
+          <declname>lTime</declname>
+        </param>
+        <param>
+          <type><ref refid="classsmc_1_1population" kindref="compound">population</ref>&lt; Space &gt; &amp;</type>
+          <declname>pFrom</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>N</declname>
+        </param>
+        <param>
+          <type>Params &amp;</type>
+          <defname>params</defname>
+        </param>
+        <briefdescription>
+<para>Select an appropriate move at time lTime and apply it to pFrom. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/moveset.h" line="94" column="22" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/moveset.h" bodystart="163" bodyend="168"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1moveset_1a8f695a635a2469b15ebcff70100297aa" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void smc::moveset&lt; Space, Params &gt;::DoConditionalMove</definition>
+        <argsstring>(long lTime, population&lt; Space &gt; &amp;pFrom, const Space &amp;referenceValue, long lReferenceIndex, Params &amp;params)</argsstring>
+        <name>DoConditionalMove</name>
+        <param>
+          <type>long</type>
+          <declname>lTime</declname>
+        </param>
+        <param>
+          <type><ref refid="classsmc_1_1population" kindref="compound">population</ref>&lt; Space &gt; &amp;</type>
+          <declname>pFrom</declname>
+        </param>
+        <param>
+          <type>const Space &amp;</type>
+          <declname>referenceValue</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>lReferenceIndex</declname>
+        </param>
+        <param>
+          <type>Params &amp;</type>
+          <declname>params</declname>
+        </param>
+        <briefdescription>
+<para>Performs a conditional move: sets conditional reference value and re-weights corresponding particle coordinate. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Sets conditional reference value of lTime-coordinate.</para>
+<para>Re-weights this coordinate.</para>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/moveset.h" line="96" column="22" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/moveset.h" bodystart="171" bodyend="180"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A template class for a set of moves for use in an SMC samplers framework. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/moveset.h" line="38" column="32" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/moveset.h" bodystart="38" bodyend="97"/>
+    <listofallmembers>
+      <member refid="classsmc_1_1moveset_1af86cd53918ca1a0efaf7339fbf1369e7" prot="private" virt="non-virtual"><scope>smc::moveset</scope><name>defaultInitialise</name></member>
+      <member refid="classsmc_1_1moveset_1ac13c8aae10ec4c2c900e2d4dd8b3a5ad" prot="private" virt="non-virtual"><scope>smc::moveset</scope><name>defaultMCMC</name></member>
+      <member refid="classsmc_1_1moveset_1ae07933ed6c32e4cc51ab3f060081e7bf" prot="private" virt="non-virtual"><scope>smc::moveset</scope><name>defaultMove</name></member>
+      <member refid="classsmc_1_1moveset_1a25f89a568d72e02180751389aaf20baf" prot="private" virt="non-virtual"><scope>smc::moveset</scope><name>defaultWeight</name></member>
+      <member refid="classsmc_1_1moveset_1a8f695a635a2469b15ebcff70100297aa" prot="public" virt="virtual"><scope>smc::moveset</scope><name>DoConditionalMove</name></member>
+      <member refid="classsmc_1_1moveset_1ab262a9789a6e9204441b8d46ccd4dba9" prot="public" virt="virtual"><scope>smc::moveset</scope><name>DoInit</name></member>
+      <member refid="classsmc_1_1moveset_1adbefc0b5ff0d22b94b031a960f8a8c27" prot="public" virt="virtual"><scope>smc::moveset</scope><name>DoMCMC</name></member>
+      <member refid="classsmc_1_1moveset_1a1815cd6f6577fa5fe7d558af8061ce0c" prot="public" virt="virtual"><scope>smc::moveset</scope><name>DoMove</name></member>
+      <member refid="classsmc_1_1moveset_1a507b985fafe3f1572edafb429bf7c2c1" prot="public" virt="non-virtual"><scope>smc::moveset</scope><name>moveset</name></member>
+      <member refid="classsmc_1_1moveset_1a857a88c99a6aa68903d1dd67561f8a19" prot="public" virt="non-virtual"><scope>smc::moveset</scope><name>moveset</name></member>
+      <member refid="classsmc_1_1moveset_1a1ef41bba20f71cb92627e01360eb08c2" prot="public" virt="non-virtual"><scope>smc::moveset</scope><name>moveset</name></member>
+      <member refid="classsmc_1_1moveset_1a7a9de1bcabd9871805dc290444c2f93e" prot="public" virt="virtual"><scope>smc::moveset</scope><name>pfInitialise</name></member>
+      <member refid="classsmc_1_1moveset_1aa800251335f4220fa8389e5ea1231acf" prot="public" virt="virtual"><scope>smc::moveset</scope><name>pfMCMC</name></member>
+      <member refid="classsmc_1_1moveset_1aadb55d5525fecea2ae41799dc9addd37" prot="public" virt="virtual"><scope>smc::moveset</scope><name>pfMove</name></member>
+      <member refid="classsmc_1_1moveset_1aaf4ddcd60382d696729fd55c36c1e4eb" prot="public" virt="virtual"><scope>smc::moveset</scope><name>pfWeight</name></member>
+      <member refid="classsmc_1_1moveset_1a0792835f91ecd41230e68d850bd11f75" prot="public" virt="virtual"><scope>smc::moveset</scope><name>~moveset</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

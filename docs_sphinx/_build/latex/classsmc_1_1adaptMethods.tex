@@ -1,0 +1,83 @@
+\hypertarget{classsmc_1_1adaptMethods}{}\doxysection{smc\+::adapt\+Methods$<$ Space, Params $>$ Class Template Reference}
+\label{classsmc_1_1adaptMethods}\index{smc::adaptMethods$<$ Space, Params $>$@{smc::adaptMethods$<$ Space, Params $>$}}
+
+
+A base class which contains the algorithm parameters and virtual functions to adapt them.  
+
+
+
+
+{\ttfamily \#include $<$adapt\+Methods.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classsmc_1_1adaptMethods_a6cd01df7136b41a40b2030a9606154e4}{$\sim$adapt\+Methods}} ()
+\begin{DoxyCompactList}\small\item\em Free the workspace allocated for the algorithm parameters. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classsmc_1_1adaptMethods_a96614576030dc76fbf7d64d0416d6f52}{update\+For\+Move}} (Params \&, const \mbox{\hyperlink{classsmc_1_1population}{population}}$<$ Space $>$ \&pop)
+\begin{DoxyCompactList}\small\item\em Holder function for updates to be done before the move step. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classsmc_1_1adaptMethods_a642c9827bc6ed466160886219a0c0d8f}{update\+For\+M\+C\+MC}} (Params \&, const \mbox{\hyperlink{classsmc_1_1population}{population}}$<$ Space $>$ \&pop, double accept\+Prob, int n\+Resampled, int \&n\+Repeats)
+\begin{DoxyCompactList}\small\item\em Holder function for updates to be done before the M\+C\+MC step. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classsmc_1_1adaptMethods_a2f8373020e442ab65ef657097e2d4c03}{update\+End}} (Params \&, const \mbox{\hyperlink{classsmc_1_1population}{population}}$<$ Space $>$ \&pop)
+\begin{DoxyCompactList}\small\item\em Holder function for updates to be done at the end of each iteration. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$class Space, class Params$>$\newline
+class smc\+::adapt\+Methods$<$ Space, Params $>$}
+
+A base class which contains the algorithm parameters and virtual functions to adapt them. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsmc_1_1adaptMethods_a6cd01df7136b41a40b2030a9606154e4}\label{classsmc_1_1adaptMethods_a6cd01df7136b41a40b2030a9606154e4}} 
+\index{smc::adaptMethods$<$ Space, Params $>$@{smc::adaptMethods$<$ Space, Params $>$}!````~adaptMethods@{$\sim$adaptMethods}}
+\index{````~adaptMethods@{$\sim$adaptMethods}!smc::adaptMethods$<$ Space, Params $>$@{smc::adaptMethods$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$adaptMethods()}{~adaptMethods()}}
+{\footnotesize\ttfamily template$<$class Space , class Params $>$ \\
+virtual \mbox{\hyperlink{classsmc_1_1adaptMethods}{smc\+::adapt\+Methods}}$<$ Space, Params $>$\+::$\sim$\mbox{\hyperlink{classsmc_1_1adaptMethods}{adapt\+Methods}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Free the workspace allocated for the algorithm parameters. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classsmc_1_1adaptMethods_a2f8373020e442ab65ef657097e2d4c03}\label{classsmc_1_1adaptMethods_a2f8373020e442ab65ef657097e2d4c03}} 
+\index{smc::adaptMethods$<$ Space, Params $>$@{smc::adaptMethods$<$ Space, Params $>$}!updateEnd@{updateEnd}}
+\index{updateEnd@{updateEnd}!smc::adaptMethods$<$ Space, Params $>$@{smc::adaptMethods$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{updateEnd()}{updateEnd()}}
+{\footnotesize\ttfamily template$<$class Space , class Params $>$ \\
+virtual void \mbox{\hyperlink{classsmc_1_1adaptMethods}{smc\+::adapt\+Methods}}$<$ Space, Params $>$\+::update\+End (\begin{DoxyParamCaption}\item[{Params \&}]{,  }\item[{const \mbox{\hyperlink{classsmc_1_1population}{population}}$<$ Space $>$ \&}]{pop }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Holder function for updates to be done at the end of each iteration. 
+
+\mbox{\Hypertarget{classsmc_1_1adaptMethods_a642c9827bc6ed466160886219a0c0d8f}\label{classsmc_1_1adaptMethods_a642c9827bc6ed466160886219a0c0d8f}} 
+\index{smc::adaptMethods$<$ Space, Params $>$@{smc::adaptMethods$<$ Space, Params $>$}!updateForMCMC@{updateForMCMC}}
+\index{updateForMCMC@{updateForMCMC}!smc::adaptMethods$<$ Space, Params $>$@{smc::adaptMethods$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{updateForMCMC()}{updateForMCMC()}}
+{\footnotesize\ttfamily template$<$class Space , class Params $>$ \\
+virtual void \mbox{\hyperlink{classsmc_1_1adaptMethods}{smc\+::adapt\+Methods}}$<$ Space, Params $>$\+::update\+For\+M\+C\+MC (\begin{DoxyParamCaption}\item[{Params \&}]{,  }\item[{const \mbox{\hyperlink{classsmc_1_1population}{population}}$<$ Space $>$ \&}]{pop,  }\item[{double}]{accept\+Prob,  }\item[{int}]{n\+Resampled,  }\item[{int \&}]{n\+Repeats }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Holder function for updates to be done before the M\+C\+MC step. 
+
+\mbox{\Hypertarget{classsmc_1_1adaptMethods_a96614576030dc76fbf7d64d0416d6f52}\label{classsmc_1_1adaptMethods_a96614576030dc76fbf7d64d0416d6f52}} 
+\index{smc::adaptMethods$<$ Space, Params $>$@{smc::adaptMethods$<$ Space, Params $>$}!updateForMove@{updateForMove}}
+\index{updateForMove@{updateForMove}!smc::adaptMethods$<$ Space, Params $>$@{smc::adaptMethods$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{updateForMove()}{updateForMove()}}
+{\footnotesize\ttfamily template$<$class Space , class Params $>$ \\
+virtual void \mbox{\hyperlink{classsmc_1_1adaptMethods}{smc\+::adapt\+Methods}}$<$ Space, Params $>$\+::update\+For\+Move (\begin{DoxyParamCaption}\item[{Params \&}]{,  }\item[{const \mbox{\hyperlink{classsmc_1_1population}{population}}$<$ Space $>$ \&}]{pop }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Holder function for updates to be done before the move step. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/iz/\+Dropbox/projects/rcppsmc/\+Rcpp\+S\+M\+Cdocumentation/include/\mbox{\hyperlink{adaptMethods_8h}{adapt\+Methods.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,487 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classsmc_1_1staticModelAdapt" kind="class" language="C++" prot="public">
+    <compoundname>smc::staticModelAdapt</compoundname>
+    <includes refid="staticModelAdapt_8h" local="no">staticModelAdapt.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classsmc_1_1staticModelAdapt_1ab98899cba54c9d80480e607f3c9d979f" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; smc::staticModelAdapt::temp</definition>
+        <argsstring></argsstring>
+        <name>temp</name>
+        <briefdescription>
+<para>The temperature schedule;. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/staticModelAdapt.h" line="41" column="21" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/staticModelAdapt.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsmc_1_1staticModelAdapt_1a8cb8c1dedfccc7db7ae6d5600cf4ae39" prot="private" static="no" mutable="no">
+        <type>arma::mat</type>
+        <definition>arma::mat smc::staticModelAdapt::empCov</definition>
+        <argsstring></argsstring>
+        <name>empCov</name>
+        <briefdescription>
+<para>The empirical covariance matrix estimated from the population of particles. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/staticModelAdapt.h" line="43" column="19" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/staticModelAdapt.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsmc_1_1staticModelAdapt_1a925d2a0b86f3b15a1ec1321b8b8ebb75" prot="private" static="no" mutable="no">
+        <type>arma::mat</type>
+        <definition>arma::mat smc::staticModelAdapt::cholCov</definition>
+        <argsstring></argsstring>
+        <name>cholCov</name>
+        <briefdescription>
+<para>The Cholesky decomposition of the empirical covariance matrix. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/staticModelAdapt.h" line="45" column="19" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/staticModelAdapt.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classsmc_1_1staticModelAdapt_1ada6b5ca553373baba9069a64f45e86c5" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double smc::staticModelAdapt::CESSdiff</definition>
+        <argsstring>(const arma::vec &amp;logweight, const arma::vec &amp;loglike, double tempDiff, double desiredCESS)</argsstring>
+        <name>CESSdiff</name>
+        <param>
+          <type>const arma::vec &amp;</type>
+          <declname>logweight</declname>
+        </param>
+        <param>
+          <type>const arma::vec &amp;</type>
+          <declname>loglike</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>tempDiff</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>desiredCESS</declname>
+        </param>
+        <briefdescription>
+<para>Computes the difference between the conditional ESS given the specified temperature difference and the desired conditional ESS. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/staticModelAdapt.h" line="48" column="16" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/staticModelAdapt.h" bodystart="81" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1staticModelAdapt_1a85968708aebf062be993c4a7037417f9" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double smc::staticModelAdapt::bisection</definition>
+        <argsstring>(double curr, const arma::vec &amp;logweight, const arma::vec &amp;loglike, double desiredCESS, double epsilon)</argsstring>
+        <name>bisection</name>
+        <param>
+          <type>double</type>
+          <declname>curr</declname>
+        </param>
+        <param>
+          <type>const arma::vec &amp;</type>
+          <declname>logweight</declname>
+        </param>
+        <param>
+          <type>const arma::vec &amp;</type>
+          <declname>loglike</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>desiredCESS</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>epsilon</declname>
+        </param>
+        <briefdescription>
+<para>Performs the bisection method to find the temperature within (temp_curr,1) which gives the desired conditional ESS. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/staticModelAdapt.h" line="50" column="16" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/staticModelAdapt.h" bodystart="89" bodyend="115"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classsmc_1_1staticModelAdapt_1a984b8dc9035879b20939de2c217d19b6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>smc::staticModelAdapt::~staticModelAdapt</definition>
+        <argsstring>()</argsstring>
+        <name>~staticModelAdapt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/staticModelAdapt.h" line="53" column="9" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/staticModelAdapt.h" bodystart="53" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1staticModelAdapt_1a301341fa94dadceecca0337b399f0f9c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>smc::staticModelAdapt::staticModelAdapt</definition>
+        <argsstring>()</argsstring>
+        <name>staticModelAdapt</name>
+        <briefdescription>
+<para>The class constructor which sets the current and previous temperatures to zero. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/staticModelAdapt.h" line="55" column="9" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/staticModelAdapt.h" bodystart="55" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1staticModelAdapt_1a5a865ce472d42b010cdf869debb0deaa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void smc::staticModelAdapt::ChooseTemp</definition>
+        <argsstring>(const arma::vec &amp;logweight, const arma::vec &amp;loglike, double desiredCESS, double epsilon=0.01)</argsstring>
+        <name>ChooseTemp</name>
+        <param>
+          <type>const arma::vec &amp;</type>
+          <declname>logweight</declname>
+        </param>
+        <param>
+          <type>const arma::vec &amp;</type>
+          <declname>loglike</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>desiredCESS</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>epsilon</declname>
+          <defval>0.01</defval>
+        </param>
+        <briefdescription>
+<para>Chooses the next temperature such that a desired conditional ESS is maintained. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Chooses the next temperature such that a desired conditional ESS is maintained.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>logweight</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An armadillo vector containing the logarithm of the current particle weights. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>loglike</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An armadillo vector containing the log likelihood of the current particle values. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>desiredCESS</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The target conditional ESS for the next temperature (generally fixed). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>epsilon</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The tolerance for the bisection method (maximum difference between desired and actual conditional ESS). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/staticModelAdapt.h" line="58" column="14" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/staticModelAdapt.h" bodystart="123" bodyend="130"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1staticModelAdapt_1a9fbc8a91e10bfc6a2df267c1bad5d02e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void smc::staticModelAdapt::calcEmpCov</definition>
+        <argsstring>(const arma::mat &amp;theta, const arma::vec &amp;logweight)</argsstring>
+        <name>calcEmpCov</name>
+        <param>
+          <type>const arma::mat &amp;</type>
+          <declname>theta</declname>
+        </param>
+        <param>
+          <type>const arma::vec &amp;</type>
+          <declname>logweight</declname>
+        </param>
+        <briefdescription>
+<para>Calculates the empirical covariance matrix based on the current weighted particle set. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Calculates the empirical covariance matrix based on the current weighted particle set.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>theta</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An [Nxd] armadillo matrix of doubles for the current particle values, where N is the number of particles and d is the dimension of the parameter. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>logweight</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An armadillo vector containing the logarithm of the current particle weights. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/staticModelAdapt.h" line="60" column="14" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/staticModelAdapt.h" bodystart="137" bodyend="143"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1staticModelAdapt_1a5a37d9e6bf0c01fabfd01d5fe15ea441" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void smc::staticModelAdapt::calcCholCov</definition>
+        <argsstring>(const arma::mat &amp;theta, const arma::vec logweight)</argsstring>
+        <name>calcCholCov</name>
+        <param>
+          <type>const arma::mat &amp;</type>
+          <declname>theta</declname>
+        </param>
+        <param>
+          <type>const arma::vec</type>
+          <declname>logweight</declname>
+        </param>
+        <briefdescription>
+<para>Calculates the Cholesky decomposition of the empirical covariance matrix based on the current weighted particle set. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Calculates the Cholesky decomposition of the empirical covariance matrix based on the current weighted particle set.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>theta</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An [Nxd] armadillo matrix of doubles for the current particle values, where N is the number of particles and d is the dimension of the parameter </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>logweight</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An armadillo vector of the logarithm of the current particle weights </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/staticModelAdapt.h" line="62" column="14" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/staticModelAdapt.h" bodystart="150" bodyend="153"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1staticModelAdapt_1ad12fb34bb4cd11ac4223b09eab265e67" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int smc::staticModelAdapt::calcMcmcRepeats</definition>
+        <argsstring>(double acceptProb, double desiredAcceptProb, int initialN, int maxReps)</argsstring>
+        <name>calcMcmcRepeats</name>
+        <param>
+          <type>double</type>
+          <declname>acceptProb</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>desiredAcceptProb</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>initialN</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>maxReps</declname>
+        </param>
+        <briefdescription>
+<para>Calculates the number of MCMC repeats based on the results of the most recent set of MCMC moves. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Calculates the number of MCMC repeats based on the results of the most recent set of MCMC moves.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>acceptProb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The proportion of accepted MCMC steps in the most recent iteration. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>desiredAcceptProb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The desired probability of a successful move for each particle. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>initialN</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The initial number of MCMC repeats. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>maxReps</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The maximum number of MCMC repeats. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/staticModelAdapt.h" line="64" column="13" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/staticModelAdapt.h" bodystart="161" bodyend="171"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1staticModelAdapt_1a269caa0da7e3ffc38aeb84b3dfbf4b73" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double smc::staticModelAdapt::GetTemp</definition>
+        <argsstring>(int t) const</argsstring>
+        <name>GetTemp</name>
+        <param>
+          <type>int</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+<para>Returns the t-th temperature. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/staticModelAdapt.h" line="67" column="16" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/staticModelAdapt.h" bodystart="67" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1staticModelAdapt_1a8737306c979de406ce6a3af3e8bf7119" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double smc::staticModelAdapt::GetTempCurr</definition>
+        <argsstring>(void) const</argsstring>
+        <name>GetTempCurr</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Returns the current temperature. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/staticModelAdapt.h" line="69" column="16" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/staticModelAdapt.h" bodystart="69" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1staticModelAdapt_1ab2a71f9ff8be1e99375b849343786a4e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double smc::staticModelAdapt::GetTempPrevious</definition>
+        <argsstring>(void) const</argsstring>
+        <name>GetTempPrevious</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Returns the previous temperature. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/staticModelAdapt.h" line="71" column="16" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/staticModelAdapt.h" bodystart="71" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1staticModelAdapt_1a007292a8429016519ae77181c2ce6178" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; smc::staticModelAdapt::GetTemps</definition>
+        <argsstring>(void) const</argsstring>
+        <name>GetTemps</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Returns the vector of temperatures. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/staticModelAdapt.h" line="73" column="21" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/staticModelAdapt.h" bodystart="73" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1staticModelAdapt_1af0020436521cead17a9c8e500e5788f8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>arma::mat</type>
+        <definition>arma::mat smc::staticModelAdapt::GetCholCov</definition>
+        <argsstring>(void) const</argsstring>
+        <name>GetCholCov</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Returns the Cholesky decomposition of the empirical covariance matrix based on the current weighted particle set. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/staticModelAdapt.h" line="75" column="19" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/staticModelAdapt.h" bodystart="75" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1staticModelAdapt_1ab669394ae8f88004c37a58afef1fe9ca" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>arma::mat</type>
+        <definition>arma::mat smc::staticModelAdapt::GetEmpCov</definition>
+        <argsstring>(void) const</argsstring>
+        <name>GetEmpCov</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Returns the empirical covariance matrix based on the current weighted particle set. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/staticModelAdapt.h" line="77" column="19" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/staticModelAdapt.h" bodystart="77" bodyend="77"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A class containing parameters and functions to update these parameters in the context of static Bayesian models. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/staticModelAdapt.h" line="38" column="27" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/staticModelAdapt.h" bodystart="38" bodyend="78"/>
+    <listofallmembers>
+      <member refid="classsmc_1_1staticModelAdapt_1a85968708aebf062be993c4a7037417f9" prot="private" virt="non-virtual"><scope>smc::staticModelAdapt</scope><name>bisection</name></member>
+      <member refid="classsmc_1_1staticModelAdapt_1a5a37d9e6bf0c01fabfd01d5fe15ea441" prot="public" virt="non-virtual"><scope>smc::staticModelAdapt</scope><name>calcCholCov</name></member>
+      <member refid="classsmc_1_1staticModelAdapt_1a9fbc8a91e10bfc6a2df267c1bad5d02e" prot="public" virt="non-virtual"><scope>smc::staticModelAdapt</scope><name>calcEmpCov</name></member>
+      <member refid="classsmc_1_1staticModelAdapt_1ad12fb34bb4cd11ac4223b09eab265e67" prot="public" virt="non-virtual"><scope>smc::staticModelAdapt</scope><name>calcMcmcRepeats</name></member>
+      <member refid="classsmc_1_1staticModelAdapt_1ada6b5ca553373baba9069a64f45e86c5" prot="private" virt="non-virtual"><scope>smc::staticModelAdapt</scope><name>CESSdiff</name></member>
+      <member refid="classsmc_1_1staticModelAdapt_1a925d2a0b86f3b15a1ec1321b8b8ebb75" prot="private" virt="non-virtual"><scope>smc::staticModelAdapt</scope><name>cholCov</name></member>
+      <member refid="classsmc_1_1staticModelAdapt_1a5a865ce472d42b010cdf869debb0deaa" prot="public" virt="non-virtual"><scope>smc::staticModelAdapt</scope><name>ChooseTemp</name></member>
+      <member refid="classsmc_1_1staticModelAdapt_1a8cb8c1dedfccc7db7ae6d5600cf4ae39" prot="private" virt="non-virtual"><scope>smc::staticModelAdapt</scope><name>empCov</name></member>
+      <member refid="classsmc_1_1staticModelAdapt_1af0020436521cead17a9c8e500e5788f8" prot="public" virt="non-virtual"><scope>smc::staticModelAdapt</scope><name>GetCholCov</name></member>
+      <member refid="classsmc_1_1staticModelAdapt_1ab669394ae8f88004c37a58afef1fe9ca" prot="public" virt="non-virtual"><scope>smc::staticModelAdapt</scope><name>GetEmpCov</name></member>
+      <member refid="classsmc_1_1staticModelAdapt_1a269caa0da7e3ffc38aeb84b3dfbf4b73" prot="public" virt="non-virtual"><scope>smc::staticModelAdapt</scope><name>GetTemp</name></member>
+      <member refid="classsmc_1_1staticModelAdapt_1a8737306c979de406ce6a3af3e8bf7119" prot="public" virt="non-virtual"><scope>smc::staticModelAdapt</scope><name>GetTempCurr</name></member>
+      <member refid="classsmc_1_1staticModelAdapt_1ab2a71f9ff8be1e99375b849343786a4e" prot="public" virt="non-virtual"><scope>smc::staticModelAdapt</scope><name>GetTempPrevious</name></member>
+      <member refid="classsmc_1_1staticModelAdapt_1a007292a8429016519ae77181c2ce6178" prot="public" virt="non-virtual"><scope>smc::staticModelAdapt</scope><name>GetTemps</name></member>
+      <member refid="classsmc_1_1staticModelAdapt_1a301341fa94dadceecca0337b399f0f9c" prot="public" virt="non-virtual"><scope>smc::staticModelAdapt</scope><name>staticModelAdapt</name></member>
+      <member refid="classsmc_1_1staticModelAdapt_1ab98899cba54c9d80480e607f3c9d979f" prot="private" virt="non-virtual"><scope>smc::staticModelAdapt</scope><name>temp</name></member>
+      <member refid="classsmc_1_1staticModelAdapt_1a984b8dc9035879b20939de2c217d19b6" prot="public" virt="non-virtual"><scope>smc::staticModelAdapt</scope><name>~staticModelAdapt</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

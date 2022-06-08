@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classLinReg__LA__adapt_1_1rad__state" kind="class" language="C++" prot="public">
+    <compoundname>LinReg_LA_adapt::rad_state</compoundname>
+    <includes refid="LinReg__LA__adapt_8h" local="no">LinReg_LA_adapt.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classLinReg__LA__adapt_1_1rad__state_1a0cf25918b34b51310a9b5abc6804a3f2" prot="public" static="no" mutable="no">
+        <type>arma::vec</type>
+        <definition>arma::vec LinReg_LA_adapt::rad_state::theta</definition>
+        <argsstring></argsstring>
+        <name>theta</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/LinReg_LA_adapt.h" line="32" column="19" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/LinReg_LA_adapt.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLinReg__LA__adapt_1_1rad__state_1ae243f33abd334fe7c9ec55a8f164d362" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double LinReg_LA_adapt::rad_state::loglike</definition>
+        <argsstring></argsstring>
+        <name>loglike</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/LinReg_LA_adapt.h" line="33" column="16" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/LinReg_LA_adapt.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLinReg__LA__adapt_1_1rad__state_1aa56d6823e39e0fc5170c8ecc8c0e96b4" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double LinReg_LA_adapt::rad_state::logprior</definition>
+        <argsstring></argsstring>
+        <name>logprior</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/LinReg_LA_adapt.h" line="34" column="16" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/LinReg_LA_adapt.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/LinReg_LA_adapt.h" line="30" column="1" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/LinReg_LA_adapt.h" bodystart="29" bodyend="35"/>
+    <listofallmembers>
+      <member refid="classLinReg__LA__adapt_1_1rad__state_1ae243f33abd334fe7c9ec55a8f164d362" prot="public" virt="non-virtual"><scope>LinReg_LA_adapt::rad_state</scope><name>loglike</name></member>
+      <member refid="classLinReg__LA__adapt_1_1rad__state_1aa56d6823e39e0fc5170c8ecc8c0e96b4" prot="public" virt="non-virtual"><scope>LinReg_LA_adapt::rad_state</scope><name>logprior</name></member>
+      <member refid="classLinReg__LA__adapt_1_1rad__state_1a0cf25918b34b51310a9b5abc6804a3f2" prot="public" virt="non-virtual"><scope>LinReg_LA_adapt::rad_state</scope><name>theta</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

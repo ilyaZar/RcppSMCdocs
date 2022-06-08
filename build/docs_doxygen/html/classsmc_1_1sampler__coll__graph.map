@@ -1,0 +1,6 @@
+<map id="smc::sampler&lt; Space, Params &gt;" name="smc::sampler&lt; Space, Params &gt;">
+<area shape="rect" id="node1" title="A template class for an interacting particle system suitable for SMC sampling." alt="" coords="299,57,467,98"/>
+<area shape="rect" id="node2" href="$classsmc_1_1nullParams.html" title="An empty class for use when additional algorithm parameters are not required." alt="" coords="27,5,156,32"/>
+<area shape="rect" id="node3" href="$classsmc_1_1adaptMethods.html" title=" " alt="" coords="11,57,172,98"/>
+<area shape="rect" id="node4" href="$classsmc_1_1moveset.html" title=" " alt="" coords="5,122,177,163"/>
+</map>

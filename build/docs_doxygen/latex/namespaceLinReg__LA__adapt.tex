@@ -1,0 +1,113 @@
+\hypertarget{namespaceLinReg__LA__adapt}{}\doxysection{Lin\+Reg\+\_\+\+L\+A\+\_\+adapt Namespace Reference}
+\label{namespaceLinReg__LA__adapt}\index{LinReg\_LA\_adapt@{LinReg\_LA\_adapt}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classLinReg__LA__adapt_1_1rad__adapt}{rad\+\_\+adapt}}
+\item 
+class \mbox{\hyperlink{classLinReg__LA__adapt_1_1rad__move}{rad\+\_\+move}}
+\item 
+class \mbox{\hyperlink{classLinReg__LA__adapt_1_1rad__obs}{rad\+\_\+obs}}
+\item 
+class \mbox{\hyperlink{classLinReg__LA__adapt_1_1rad__state}{rad\+\_\+state}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{namespaceLinReg__LA__adapt_a4e259018239f3e9693d6fb4e451e40b7}{integrand\+\_\+ps}} (long, const \mbox{\hyperlink{classLinReg__LA__adapt_1_1rad__state}{rad\+\_\+state}} \&, void $\ast$)
+\item 
+double \mbox{\hyperlink{namespaceLinReg__LA__adapt_a410d2220b546701727a2183e84ae97bd}{width\+\_\+ps}} (long, void $\ast$)
+\item 
+double \mbox{\hyperlink{namespaceLinReg__LA__adapt_a0a96fb710c3dc63019d83df3ee329d82}{log\+Likelihood}} (const \mbox{\hyperlink{classLinReg__LA__adapt_1_1rad__state}{rad\+\_\+state}} \&value)
+\item 
+double \mbox{\hyperlink{namespaceLinReg__LA__adapt_aa0ecf028df85b422a107823a8d102e2d}{log\+Prior}} (const \mbox{\hyperlink{classLinReg__LA__adapt_1_1rad__state}{rad\+\_\+state}} \&value)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classLinReg__LA__adapt_1_1rad__obs}{rad\+\_\+obs}} \mbox{\hyperlink{namespaceLinReg__LA__adapt_a615aea4becae9ff6868bb56079249ab8}{data}}
+\item 
+double \mbox{\hyperlink{namespaceLinReg__LA__adapt_ac1ec45cf751953c358869ef36298a6be}{mean\+\_\+x}}
+\item 
+long \mbox{\hyperlink{namespaceLinReg__LA__adapt_af1e2034a0de5d8388d8551160efa6083}{l\+Iterates}}
+\item 
+double \mbox{\hyperlink{namespaceLinReg__LA__adapt_ad7667e98b00321778c32a5e63eaa38e9}{rho}}
+\item 
+\mbox{\hyperlink{classsmc_1_1sampler}{smc\+::sampler}}$<$ \mbox{\hyperlink{classLinReg__LA__adapt_1_1rad__state}{rad\+\_\+state}}, \mbox{\hyperlink{classsmc_1_1staticModelAdapt}{smc\+::static\+Model\+Adapt}} $>$ $\ast$ \mbox{\hyperlink{namespaceLinReg__LA__adapt_a53aa1b71fba24d08561de4d913a0f395}{Sampler}}
+\item 
+\mbox{\hyperlink{classsmc_1_1adaptMethods}{smc\+::adapt\+Methods}}$<$ \mbox{\hyperlink{classLinReg__LA__adapt_1_1rad__state}{rad\+\_\+state}}, \mbox{\hyperlink{classsmc_1_1staticModelAdapt}{smc\+::static\+Model\+Adapt}} $>$ $\ast$ \mbox{\hyperlink{namespaceLinReg__LA__adapt_a0978a1526d537e7fd0d8bd9efcdd3bf6}{my\+Adapt}}
+\item 
+\mbox{\hyperlink{classsmc_1_1moveset}{smc\+::moveset}}$<$ \mbox{\hyperlink{classLinReg__LA__adapt_1_1rad__state}{rad\+\_\+state}}, \mbox{\hyperlink{classsmc_1_1staticModelAdapt}{smc\+::static\+Model\+Adapt}} $>$ $\ast$ \mbox{\hyperlink{namespaceLinReg__LA__adapt_a0206ed27f8148d0a548b2a6a46ede7df}{my\+Move}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespaceLinReg__LA__adapt_a4e259018239f3e9693d6fb4e451e40b7}\label{namespaceLinReg__LA__adapt_a4e259018239f3e9693d6fb4e451e40b7}} 
+\index{LinReg\_LA\_adapt@{LinReg\_LA\_adapt}!integrand\_ps@{integrand\_ps}}
+\index{integrand\_ps@{integrand\_ps}!LinReg\_LA\_adapt@{LinReg\_LA\_adapt}}
+\doxysubsubsection{\texorpdfstring{integrand\_ps()}{integrand\_ps()}}
+{\footnotesize\ttfamily double Lin\+Reg\+\_\+\+L\+A\+\_\+adapt\+::integrand\+\_\+ps (\begin{DoxyParamCaption}\item[{long}]{,  }\item[{const \mbox{\hyperlink{classLinReg__LA__adapt_1_1rad__state}{rad\+\_\+state}} \&}]{,  }\item[{void $\ast$}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceLinReg__LA__adapt_a0a96fb710c3dc63019d83df3ee329d82}\label{namespaceLinReg__LA__adapt_a0a96fb710c3dc63019d83df3ee329d82}} 
+\index{LinReg\_LA\_adapt@{LinReg\_LA\_adapt}!logLikelihood@{logLikelihood}}
+\index{logLikelihood@{logLikelihood}!LinReg\_LA\_adapt@{LinReg\_LA\_adapt}}
+\doxysubsubsection{\texorpdfstring{logLikelihood()}{logLikelihood()}}
+{\footnotesize\ttfamily double Lin\+Reg\+\_\+\+L\+A\+\_\+adapt\+::log\+Likelihood (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classLinReg__LA__adapt_1_1rad__state}{rad\+\_\+state}} \&}]{value }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceLinReg__LA__adapt_aa0ecf028df85b422a107823a8d102e2d}\label{namespaceLinReg__LA__adapt_aa0ecf028df85b422a107823a8d102e2d}} 
+\index{LinReg\_LA\_adapt@{LinReg\_LA\_adapt}!logPrior@{logPrior}}
+\index{logPrior@{logPrior}!LinReg\_LA\_adapt@{LinReg\_LA\_adapt}}
+\doxysubsubsection{\texorpdfstring{logPrior()}{logPrior()}}
+{\footnotesize\ttfamily double Lin\+Reg\+\_\+\+L\+A\+\_\+adapt\+::log\+Prior (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classLinReg__LA__adapt_1_1rad__state}{rad\+\_\+state}} \&}]{value }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceLinReg__LA__adapt_a410d2220b546701727a2183e84ae97bd}\label{namespaceLinReg__LA__adapt_a410d2220b546701727a2183e84ae97bd}} 
+\index{LinReg\_LA\_adapt@{LinReg\_LA\_adapt}!width\_ps@{width\_ps}}
+\index{width\_ps@{width\_ps}!LinReg\_LA\_adapt@{LinReg\_LA\_adapt}}
+\doxysubsubsection{\texorpdfstring{width\_ps()}{width\_ps()}}
+{\footnotesize\ttfamily double Lin\+Reg\+\_\+\+L\+A\+\_\+adapt\+::width\+\_\+ps (\begin{DoxyParamCaption}\item[{long}]{,  }\item[{void $\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespaceLinReg__LA__adapt_a615aea4becae9ff6868bb56079249ab8}\label{namespaceLinReg__LA__adapt_a615aea4becae9ff6868bb56079249ab8}} 
+\index{LinReg\_LA\_adapt@{LinReg\_LA\_adapt}!data@{data}}
+\index{data@{data}!LinReg\_LA\_adapt@{LinReg\_LA\_adapt}}
+\doxysubsubsection{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classLinReg__LA__adapt_1_1rad__obs}{rad\+\_\+obs}} Lin\+Reg\+\_\+\+L\+A\+\_\+adapt\+::data}
+
+\mbox{\Hypertarget{namespaceLinReg__LA__adapt_af1e2034a0de5d8388d8551160efa6083}\label{namespaceLinReg__LA__adapt_af1e2034a0de5d8388d8551160efa6083}} 
+\index{LinReg\_LA\_adapt@{LinReg\_LA\_adapt}!lIterates@{lIterates}}
+\index{lIterates@{lIterates}!LinReg\_LA\_adapt@{LinReg\_LA\_adapt}}
+\doxysubsubsection{\texorpdfstring{lIterates}{lIterates}}
+{\footnotesize\ttfamily long Lin\+Reg\+\_\+\+L\+A\+\_\+adapt\+::l\+Iterates}
+
+\mbox{\Hypertarget{namespaceLinReg__LA__adapt_ac1ec45cf751953c358869ef36298a6be}\label{namespaceLinReg__LA__adapt_ac1ec45cf751953c358869ef36298a6be}} 
+\index{LinReg\_LA\_adapt@{LinReg\_LA\_adapt}!mean\_x@{mean\_x}}
+\index{mean\_x@{mean\_x}!LinReg\_LA\_adapt@{LinReg\_LA\_adapt}}
+\doxysubsubsection{\texorpdfstring{mean\_x}{mean\_x}}
+{\footnotesize\ttfamily double Lin\+Reg\+\_\+\+L\+A\+\_\+adapt\+::mean\+\_\+x}
+
+\mbox{\Hypertarget{namespaceLinReg__LA__adapt_a0978a1526d537e7fd0d8bd9efcdd3bf6}\label{namespaceLinReg__LA__adapt_a0978a1526d537e7fd0d8bd9efcdd3bf6}} 
+\index{LinReg\_LA\_adapt@{LinReg\_LA\_adapt}!myAdapt@{myAdapt}}
+\index{myAdapt@{myAdapt}!LinReg\_LA\_adapt@{LinReg\_LA\_adapt}}
+\doxysubsubsection{\texorpdfstring{myAdapt}{myAdapt}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsmc_1_1adaptMethods}{smc\+::adapt\+Methods}}$<$\mbox{\hyperlink{classLinReg__LA__adapt_1_1rad__state}{rad\+\_\+state}},\mbox{\hyperlink{classsmc_1_1staticModelAdapt}{smc\+::static\+Model\+Adapt}}$>$$\ast$ Lin\+Reg\+\_\+\+L\+A\+\_\+adapt\+::my\+Adapt}
+
+\mbox{\Hypertarget{namespaceLinReg__LA__adapt_a0206ed27f8148d0a548b2a6a46ede7df}\label{namespaceLinReg__LA__adapt_a0206ed27f8148d0a548b2a6a46ede7df}} 
+\index{LinReg\_LA\_adapt@{LinReg\_LA\_adapt}!myMove@{myMove}}
+\index{myMove@{myMove}!LinReg\_LA\_adapt@{LinReg\_LA\_adapt}}
+\doxysubsubsection{\texorpdfstring{myMove}{myMove}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsmc_1_1moveset}{smc\+::moveset}}$<$\mbox{\hyperlink{classLinReg__LA__adapt_1_1rad__state}{rad\+\_\+state}},\mbox{\hyperlink{classsmc_1_1staticModelAdapt}{smc\+::static\+Model\+Adapt}}$>$$\ast$ Lin\+Reg\+\_\+\+L\+A\+\_\+adapt\+::my\+Move}
+
+\mbox{\Hypertarget{namespaceLinReg__LA__adapt_ad7667e98b00321778c32a5e63eaa38e9}\label{namespaceLinReg__LA__adapt_ad7667e98b00321778c32a5e63eaa38e9}} 
+\index{LinReg\_LA\_adapt@{LinReg\_LA\_adapt}!rho@{rho}}
+\index{rho@{rho}!LinReg\_LA\_adapt@{LinReg\_LA\_adapt}}
+\doxysubsubsection{\texorpdfstring{rho}{rho}}
+{\footnotesize\ttfamily double Lin\+Reg\+\_\+\+L\+A\+\_\+adapt\+::rho}
+
+\mbox{\Hypertarget{namespaceLinReg__LA__adapt_a53aa1b71fba24d08561de4d913a0f395}\label{namespaceLinReg__LA__adapt_a53aa1b71fba24d08561de4d913a0f395}} 
+\index{LinReg\_LA\_adapt@{LinReg\_LA\_adapt}!Sampler@{Sampler}}
+\index{Sampler@{Sampler}!LinReg\_LA\_adapt@{LinReg\_LA\_adapt}}
+\doxysubsubsection{\texorpdfstring{Sampler}{Sampler}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsmc_1_1sampler}{smc\+::sampler}}$<$\mbox{\hyperlink{classLinReg__LA__adapt_1_1rad__state}{rad\+\_\+state}},\mbox{\hyperlink{classsmc_1_1staticModelAdapt}{smc\+::static\+Model\+Adapt}}$>$$\ast$ Lin\+Reg\+\_\+\+L\+A\+\_\+adapt\+::\+Sampler}
+

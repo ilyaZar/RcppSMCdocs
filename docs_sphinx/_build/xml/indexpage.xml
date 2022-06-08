@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="indexpage" kind="page">
+    <compoundname>index</compoundname>
+    <title>smctc – A Template Class Library for SMC Simulation</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="version"><para>1.0 </para>
+</simplesect>
+<simplesect kind="author"><para>Adam M. Johansen</para>
+</simplesect>
+</para>
+<sect1 id="index_1intro_sec">
+<title>Summary</title>
+<para>The SMC template class library (SMCTC) is intended to be used to implement SMC algorithms ranging from simple particle filter to complicated SMC algorithms from simple particle filters to the SMC samplers of Del Moral, Doucet and Jasra (2006) within a generic framework.</para>
+</sect1>
+<sect1 id="index_1license">
+<title>License</title>
+<para>SMCTC is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.</para>
+<para>SMCTC is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</para>
+<para>You should have received a copy of the GNU General Public License along with SMCTC. If not, see <ulink url="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</ulink>.</para>
+<para>The software is still in development but is thought to be sufficiently fully-featured and stable for use.</para>
+</sect1>
+<sect1 id="index_1using_sec">
+<title>Using the Template Library</title>
+<para>In order to use the template libary it is necessary to place the set of header files in a suitable include directory and then to instantiate the various classes with the appropriate type for your sampler.</para>
+<para>For implementation details, please see the accompanying user guide.</para>
+</sect1>
+<sect1 id="index_1example_sec">
+<title>Examples</title>
+<sect2 id="index_1A">
+<title>Simple Particle Filter</title>
+<para>This example provides a simple particle filter for the approximate filtering of nonlinear, nongaussian state space models.</para>
+</sect2>
+<sect2 id="index_1SMC">
+<title>Samplers for Rare Event Simulation</title>
+<para>The main.cc file provides an example of a use of the template library to estimate Gaussian tail probabilities within an SMC samplers framework by making use of a sequence of intermediate distributions defined by introducing a potential function which varies from flat to being very close to an indicator function on the tail event.</para>
+<para>This example is taken from from Johansen, Del Moral and Doucet (2006).</para>
+</sect2>
+<sect2 id="index_1Acknowledgements">
+<title>Acknowledgements</title>
+<para>Thanks are due to Edmund Jackson and Mark Briers for testing SMCTC on a variety of platforms. The Visual C++ project and solution files are kindly provided by Mark Briers. </para>
+</sect2>
+</sect1>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,230 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="LinReg__LA__adapt_8h" kind="file" language="C++">
+    <compoundname>LinReg_LA_adapt.h</compoundname>
+    <includes refid="smctc_8h" local="yes">smctc.h</includes>
+    <incdepgraph>
+      <node id="16">
+        <label>staticModelAdapt.h</label>
+        <link refid="staticModelAdapt_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>moveset.h</label>
+        <link refid="moveset_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>limits</label>
+      </node>
+      <node id="11">
+        <label>float.h</label>
+      </node>
+      <node id="3">
+        <label>cmath</label>
+      </node>
+      <node id="10">
+        <label>RcppArmadillo.h</label>
+      </node>
+      <node id="6">
+        <label>smc-exception.h</label>
+        <link refid="smc-exception_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>adaptMethods.h</label>
+        <link refid="adaptMethods_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>population.h</label>
+        <link refid="population_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>cstdlib</label>
+      </node>
+      <node id="5">
+        <label>iostream</label>
+      </node>
+      <node id="13">
+        <label>history.h</label>
+        <link refid="history_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/LinReg_LA_adapt.h</label>
+        <link refid="LinReg__LA__adapt_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>sampler.h</label>
+        <link refid="sampler_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>smctc.h</label>
+        <link refid="smctc_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>algorithm</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classLinReg__LA__adapt_1_1rad__state" prot="public">LinReg_LA_adapt::rad_state</innerclass>
+    <innerclass refid="classLinReg__LA__adapt_1_1rad__obs" prot="public">LinReg_LA_adapt::rad_obs</innerclass>
+    <innerclass refid="classLinReg__LA__adapt_1_1rad__move" prot="public">LinReg_LA_adapt::rad_move</innerclass>
+    <innerclass refid="classLinReg__LA__adapt_1_1rad__adapt" prot="public">LinReg_LA_adapt::rad_adapt</innerclass>
+    <innernamespace refid="namespaceLinReg__LA__adapt">LinReg_LA_adapt</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>-*-<sp/>mode:<sp/>C++;<sp/>c-indent-level:<sp/>4;<sp/>c-basic-offset:<sp/>4;<sp/>indent-tabs-mode:<sp/>nil;<sp/>-*-</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>LinReg_LA_adapt.h:<sp/>Rcpp<sp/>wrapper<sp/>for<sp/>SMC<sp/>library<sp/>--<sp/>A<sp/>simple<sp/>example<sp/>for</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>estimating<sp/>the<sp/>parameters<sp/>of<sp/>a<sp/>linear<sp/>regression<sp/>model<sp/>using<sp/>likelihood</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>annealing<sp/>SMC,<sp/>with<sp/>adaptation<sp/>of<sp/>the<sp/>temperature<sp/>schedule,<sp/>the<sp/>multivariate</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/>normal<sp/>random<sp/>walk<sp/>covariance<sp/>matrix<sp/>and<sp/>the<sp/>number<sp/>of<sp/>MCMC<sp/>repeats.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Copyright<sp/>(C)<sp/>2017<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Dirk<sp/>Eddelbuettel,<sp/>Adam<sp/>Johansen<sp/>and<sp/>Leah<sp/>South</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>RcppSMC.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//<sp/>RcppSMC<sp/>is<sp/>free<sp/>software:<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify<sp/>it</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>as<sp/>published<sp/>by</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//<sp/>the<sp/>Free<sp/>Software<sp/>Foundation,<sp/>either<sp/>version<sp/>2<sp/>of<sp/>the<sp/>License,<sp/>or</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//<sp/>(at<sp/>your<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">//<sp/>RcppSMC<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,<sp/>but</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">//<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//<sp/>MERCHANTABILITY<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">//<sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">//<sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">//<sp/>along<sp/>with<sp/>RcppSMC.<sp/><sp/>If<sp/>not,<sp/>see<sp/>&lt;http://www.gnu.org/licenses/&gt;.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="smctc_8h" kindref="compound">smctc.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="namespaceLinReg__LA__adapt" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceLinReg__LA__adapt" kindref="compound">LinReg_LA_adapt</ref><sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="29" refid="classLinReg__LA__adapt_1_1rad__state" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classLinReg__LA__adapt_1_1rad__state" kindref="compound">rad_state</ref></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="32" refid="classLinReg__LA__adapt_1_1rad__state_1a0cf25918b34b51310a9b5abc6804a3f2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>arma::vec<sp/><ref refid="classLinReg__LA__adapt_1_1rad__state_1a0cf25918b34b51310a9b5abc6804a3f2" kindref="member">theta</ref>;<sp/></highlight><highlight class="comment">//<sp/>(alpha,beta,phi)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="classLinReg__LA__adapt_1_1rad__state_1ae243f33abd334fe7c9ec55a8f164d362" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classLinReg__LA__adapt_1_1rad__state_1ae243f33abd334fe7c9ec55a8f164d362" kindref="member">loglike</ref>;</highlight></codeline>
+<codeline lineno="34" refid="classLinReg__LA__adapt_1_1rad__state_1aa56d6823e39e0fc5170c8ecc8c0e96b4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classLinReg__LA__adapt_1_1rad__state_1aa56d6823e39e0fc5170c8ecc8c0e96b4" kindref="member">logprior</ref>;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="classLinReg__LA__adapt_1_1rad__obs" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classLinReg__LA__adapt_1_1rad__obs" kindref="compound">rad_obs</ref></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="40" refid="classLinReg__LA__adapt_1_1rad__obs_1a0f58443adffd943afe07f6f0458930de" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>arma::vec<sp/><ref refid="classLinReg__LA__adapt_1_1rad__obs_1a0f58443adffd943afe07f6f0458930de" kindref="member">y</ref>,<sp/><ref refid="classLinReg__LA__adapt_1_1rad__obs_1ad2dcd17c0b16365ec9e01251b4d06751" kindref="member">x</ref>;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="namespaceLinReg__LA__adapt_1a615aea4becae9ff6868bb56079249ab8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classLinReg__LA__adapt_1_1rad__obs" kindref="compound">rad_obs</ref><sp/><ref refid="namespaceLinReg__LA__adapt_1a615aea4becae9ff6868bb56079249ab8" kindref="member">data</ref>;</highlight></codeline>
+<codeline lineno="44" refid="namespaceLinReg__LA__adapt_1ac1ec45cf751953c358869ef36298a6be" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="namespaceLinReg__LA__adapt_1ac1ec45cf751953c358869ef36298a6be" kindref="member">mean_x</ref>;</highlight></codeline>
+<codeline lineno="45" refid="namespaceLinReg__LA__adapt_1af1e2034a0de5d8388d8551160efa6083" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="namespaceLinReg__LA__adapt_1af1e2034a0de5d8388d8551160efa6083" kindref="member">lIterates</ref>;</highlight></codeline>
+<codeline lineno="46" refid="namespaceLinReg__LA__adapt_1ad7667e98b00321778c32a5e63eaa38e9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="namespaceLinReg__LA__adapt_1ad7667e98b00321778c32a5e63eaa38e9" kindref="member">rho</ref>;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="namespaceLinReg__LA__adapt_1a4e259018239f3e9693d6fb4e451e40b7" kindref="member">integrand_ps</ref>(</highlight><highlight class="keywordtype">long</highlight><highlight class="normal">,</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classLinReg__LA__adapt_1_1rad__state" kindref="compound">rad_state</ref><sp/>&amp;,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="namespaceLinReg__LA__adapt_1a410d2220b546701727a2183e84ae97bd" kindref="member">width_ps</ref>(</highlight><highlight class="keywordtype">long</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="namespaceLinReg__LA__adapt_1a0a96fb710c3dc63019d83df3ee329d82" kindref="member">logLikelihood</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classLinReg__LA__adapt_1_1rad__state" kindref="compound">rad_state</ref><sp/>&amp;<sp/>value);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="namespaceLinReg__LA__adapt_1aa0ecf028df85b422a107823a8d102e2d" kindref="member">logPrior</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classLinReg__LA__adapt_1_1rad__state" kindref="compound">rad_state</ref><sp/>&amp;<sp/>value);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//A<sp/>derived<sp/>class<sp/>for<sp/>the<sp/>moves</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="classLinReg__LA__adapt_1_1rad__move" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classLinReg__LA__adapt_1_1rad__move" kindref="compound">rad_move</ref>:</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classsmc_1_1moveset" kindref="compound">smc::moveset</ref>&lt;rad_state,smc::staticModelAdapt&gt;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classLinReg__LA__adapt_1_1rad__move_1a2acc6f1f52cd0f0649dc066c3a4a9308" kindref="member">pfInitialise</ref>(<ref refid="classLinReg__LA__adapt_1_1rad__state" kindref="compound">rad_state</ref><sp/>&amp;<sp/>value,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>&amp;<sp/>logweight,<sp/><ref refid="classsmc_1_1staticModelAdapt" kindref="compound">smc::staticModelAdapt</ref><sp/>&amp;<sp/>param);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classLinReg__LA__adapt_1_1rad__move_1afc95ed3fc13a6d77d0093a99359adec5" kindref="member">pfMove</ref>(</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>lTime,<sp/><ref refid="classLinReg__LA__adapt_1_1rad__state" kindref="compound">rad_state</ref><sp/>&amp;<sp/>value,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>&amp;<sp/>logweight,<sp/><ref refid="classsmc_1_1staticModelAdapt" kindref="compound">smc::staticModelAdapt</ref><sp/>&amp;<sp/>param);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classLinReg__LA__adapt_1_1rad__move_1ac1c8f1cfec85f1535cb75367f5236872" kindref="member">pfMCMC</ref>(</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>lTime,<sp/><ref refid="classLinReg__LA__adapt_1_1rad__state" kindref="compound">rad_state</ref><sp/>&amp;<sp/>value,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>&amp;<sp/>logweight,<sp/><ref refid="classsmc_1_1staticModelAdapt" kindref="compound">smc::staticModelAdapt</ref><sp/>&amp;<sp/>param);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="classLinReg__LA__adapt_1_1rad__move_1a74d3142e056aa48f0264bcfc3051e77b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classLinReg__LA__adapt_1_1rad__move_1a74d3142e056aa48f0264bcfc3051e77b" kindref="member">~rad_move</ref>()<sp/>{};</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//A<sp/>derived<sp/>class<sp/>for<sp/>adaptation<sp/>which<sp/>adapts<sp/>parameters<sp/>of<sp/>type<sp/>smc::staticModelAdapt</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69" refid="classLinReg__LA__adapt_1_1rad__adapt" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classLinReg__LA__adapt_1_1rad__adapt" kindref="compound">rad_adapt</ref>:</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classsmc_1_1adaptMethods" kindref="compound">smc::adaptMethods</ref>&lt;rad_state,smc::staticModelAdapt&gt;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74" refid="classLinReg__LA__adapt_1_1rad__adapt_1ad965f934a5e6ca743307667891d8ecb0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classLinReg__LA__adapt_1_1rad__adapt_1ad965f934a5e6ca743307667891d8ecb0" kindref="member">updateForMove</ref>(<ref refid="classsmc_1_1staticModelAdapt" kindref="compound">smc::staticModelAdapt</ref><sp/>&amp;<sp/>param,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classsmc_1_1population" kindref="compound">smc::population&lt;rad_state&gt;</ref><sp/>&amp;<sp/>pop)<sp/>{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>N<sp/>=<sp/>pop.<ref refid="classsmc_1_1population_1a4209e3a8191069456da6fa6d541ba7a5" kindref="member">GetNumber</ref>();</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>arma::vec<sp/>loglike(N);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i=0;<sp/>i&lt;N;<sp/>i++){</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>loglike(i)<sp/>=<sp/>pop.<ref refid="classsmc_1_1population_1a9f81f8d12af9ba884741be1cfb183c5c" kindref="member">GetValueN</ref>(i).loglike;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>param.<ref refid="classsmc_1_1staticModelAdapt_1a5a865ce472d42b010cdf869debb0deaa" kindref="member">ChooseTemp</ref>(pop.<ref refid="classsmc_1_1population_1aed65bb17ec164b22220502121784072c" kindref="member">GetLogWeight</ref>(),loglike,<ref refid="namespaceLinReg__LA__adapt_1ad7667e98b00321778c32a5e63eaa38e9" kindref="member">rho</ref>*N);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83" refid="classLinReg__LA__adapt_1_1rad__adapt_1a4c8b43f2be7bfa917bc85f97197bc09f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classLinReg__LA__adapt_1_1rad__adapt_1a4c8b43f2be7bfa917bc85f97197bc09f" kindref="member">updateForMCMC</ref>(<ref refid="classsmc_1_1staticModelAdapt" kindref="compound">smc::staticModelAdapt</ref><sp/>&amp;<sp/>param,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classsmc_1_1population" kindref="compound">smc::population&lt;rad_state&gt;</ref><sp/>&amp;<sp/>pop,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>acceptProb,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nResampled,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;<sp/>nRepeats)<sp/>{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(nResampled<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nRepeats<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nRepeats<sp/>=<sp/>param.<ref refid="classsmc_1_1staticModelAdapt_1ad12fb34bb4cd11ac4223b09eab265e67" kindref="member">calcMcmcRepeats</ref>(acceptProb,<sp/>0.99,<sp/>10,<sp/>1000);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>arma::mat<sp/>thetaMat(pop.<ref refid="classsmc_1_1population_1a4209e3a8191069456da6fa6d541ba7a5" kindref="member">GetNumber</ref>(),3);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>i=0;<sp/>i&lt;pop.<ref refid="classsmc_1_1population_1a4209e3a8191069456da6fa6d541ba7a5" kindref="member">GetNumber</ref>();<sp/>i++){</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>thetaMat.row(i)<sp/>=<sp/>pop.<ref refid="classsmc_1_1population_1a9f81f8d12af9ba884741be1cfb183c5c" kindref="member">GetValueN</ref>(i).theta.t();</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>param.<ref refid="classsmc_1_1staticModelAdapt_1a5a37d9e6bf0c01fabfd01d5fe15ea441" kindref="member">calcCholCov</ref>(thetaMat,pop.<ref refid="classsmc_1_1population_1aed65bb17ec164b22220502121784072c" kindref="member">GetLogWeight</ref>());</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97" refid="classLinReg__LA__adapt_1_1rad__adapt_1a4e95c2ecea2dfd8cf0fb897c46a8a69d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classLinReg__LA__adapt_1_1rad__adapt_1a4e95c2ecea2dfd8cf0fb897c46a8a69d" kindref="member">~rad_adapt</ref>()<sp/>{};</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101" refid="namespaceLinReg__LA__adapt_1a53aa1b71fba24d08561de4d913a0f395" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classsmc_1_1sampler" kindref="compound">smc::sampler&lt;rad_state,smc::staticModelAdapt&gt;</ref><sp/>*<sp/><ref refid="namespaceLinReg__LA__adapt_1a53aa1b71fba24d08561de4d913a0f395" kindref="member">Sampler</ref>;</highlight></codeline>
+<codeline lineno="102" refid="namespaceLinReg__LA__adapt_1a0978a1526d537e7fd0d8bd9efcdd3bf6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classsmc_1_1adaptMethods" kindref="compound">smc::adaptMethods&lt;rad_state,smc::staticModelAdapt&gt;</ref><sp/>*<sp/><ref refid="namespaceLinReg__LA__adapt_1a0978a1526d537e7fd0d8bd9efcdd3bf6" kindref="member">myAdapt</ref>;</highlight></codeline>
+<codeline lineno="103" refid="namespaceLinReg__LA__adapt_1a0206ed27f8148d0a548b2a6a46ede7df" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classsmc_1_1moveset" kindref="compound">smc::moveset&lt;rad_state,smc::staticModelAdapt&gt;</ref>*<sp/><ref refid="namespaceLinReg__LA__adapt_1a0206ed27f8148d0a548b2a6a46ede7df" kindref="member">myMove</ref>;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/LinReg_LA_adapt.h"/>
+  </compounddef>
+</doxygen>

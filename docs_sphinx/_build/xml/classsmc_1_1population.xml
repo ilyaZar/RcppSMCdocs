@@ -1,0 +1,497 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classsmc_1_1population" kind="class" language="C++" prot="public">
+    <compoundname>smc::population</compoundname>
+    <includes refid="population_8h" local="no">population.h</includes>
+    <templateparamlist>
+      <param>
+        <type>class Space</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classsmc_1_1population_1af2895b7eeca98bf97ab17b3e281df4ec" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; Space &gt;</type>
+        <definition>std::vector&lt;Space&gt; smc::population&lt; Space &gt;::value</definition>
+        <argsstring></argsstring>
+        <name>value</name>
+        <briefdescription>
+<para>Values of the particles. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/population.h" line="57" column="21" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/population.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsmc_1_1population_1a95f5035145d401fb7b8d45c5d3b6d171" prot="private" static="no" mutable="no">
+        <type>arma::vec</type>
+        <definition>arma::vec smc::population&lt; Space &gt;::logweight</definition>
+        <argsstring></argsstring>
+        <name>logweight</name>
+        <briefdescription>
+<para>Natural logarithm of the particle weights. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/population.h" line="59" column="19" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/population.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classsmc_1_1population_1ad6094100fe3180b18ac6c2f6efeef970" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>smc::population&lt; Space &gt;::population</definition>
+        <argsstring>()</argsstring>
+        <name>population</name>
+        <briefdescription>
+<para>Create a particle with undefined values and weights. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/population.h" line="62" column="9" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/population.h" bodystart="117" bodyend="119"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1population_1a6e8333ad491897892311ab5331d9a03e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>smc::population&lt; Space &gt;::population</definition>
+        <argsstring>(const std::vector&lt; Space &gt; &amp;sInit, const arma::vec &amp;dLogWeight)</argsstring>
+        <name>population</name>
+        <param>
+          <type>const std::vector&lt; Space &gt; &amp;</type>
+          <declname>sInit</declname>
+        </param>
+        <param>
+          <type>const arma::vec &amp;</type>
+          <declname>dLogWeight</declname>
+        </param>
+        <briefdescription>
+<para>Constructor which initialises the particle values and weights. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Create particles with values sInit and log weights dLogWeight <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sInit</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The initial values of the particle </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dLogWeight</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The initial values of the natural logarithm of the particle weights </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/population.h" line="64" column="9" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/population.h" bodystart="133" bodyend="137"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1population_1a81068f3d29828546afd189b1502c768d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>smc::population&lt; Space &gt;::population</definition>
+        <argsstring>(const population&lt; Space &gt; &amp;pFrom)</argsstring>
+        <name>population</name>
+        <param>
+          <type>const <ref refid="classsmc_1_1population" kindref="compound">population</ref>&lt; Space &gt; &amp;</type>
+          <declname>pFrom</declname>
+        </param>
+        <briefdescription>
+<para>The copy constructor performs a shallow copy. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Copy constructor. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/population.h" line="66" column="9" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/population.h" bodystart="123" bodyend="127"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1population_1aa7aa4c48db66d934ec4e32e9c09b105d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classsmc_1_1population" kindref="compound">population</ref>&lt; Space &gt; &amp;</type>
+        <definition>population&lt; Space &gt; &amp; smc::population&lt; Space &gt;::operator=</definition>
+        <argsstring>(const population&lt; Space &gt; &amp;pFrom)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classsmc_1_1population" kindref="compound">population</ref>&lt; Space &gt; &amp;</type>
+          <declname>pFrom</declname>
+        </param>
+        <briefdescription>
+<para>The assignment operator performs a shallow copy. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Copy the values of pFrom to the values of this to set this population identical to pFrom in a deep copy sense. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/population.h" line="68" column="21" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/population.h" bodystart="148" bodyend="154"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1population_1aed412a54f4d33b0cde18adf16cdc10b2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>smc::population&lt; Space &gt;::~population</definition>
+        <argsstring>()</argsstring>
+        <name>~population</name>
+        <briefdescription>
+<para>Dispose of a population object which is no longer required. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/population.h" line="70" column="9" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/population.h" bodystart="141" bodyend="143"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1population_1a4209e3a8191069456da6fa6d541ba7a5" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>long</type>
+        <definition>long smc::population&lt; Space &gt;::GetNumber</definition>
+        <argsstring>(void) const</argsstring>
+        <name>GetNumber</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Returns the number of particles within the system. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/population.h" line="73" column="14" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/population.h" bodystart="73" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1population_1a51c4bf9fd600f844a75df512845af88a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const std::vector&lt; Space &gt; &amp;</type>
+        <definition>const std::vector&lt;Space&gt;&amp; smc::population&lt; Space &gt;::GetValue</definition>
+        <argsstring>(void) const</argsstring>
+        <name>GetValue</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Returns the particle values. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/population.h" line="75" column="28" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/population.h" bodystart="75" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1population_1a9f81f8d12af9ba884741be1cfb183c5c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const Space &amp;</type>
+        <definition>const Space&amp; smc::population&lt; Space &gt;::GetValueN</definition>
+        <argsstring>(long n) const</argsstring>
+        <name>GetValueN</name>
+        <param>
+          <type>long</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>Returns the value of the nth particle in the population. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/population.h" line="77" column="22" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/population.h" bodystart="77" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1population_1afbb861efa2fddf0e9b0c61f14bd6493e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Space &amp;</type>
+        <definition>Space&amp; smc::population&lt; Space &gt;::GetValueRefN</definition>
+        <argsstring>(long n)</argsstring>
+        <name>GetValueRefN</name>
+        <param>
+          <type>long</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>Returns a reference to the value of the nth particle in the population. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/population.h" line="79" column="16" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/population.h" bodystart="79" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1population_1aed65bb17ec164b22220502121784072c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const arma::vec &amp;</type>
+        <definition>const arma::vec&amp; smc::population&lt; Space &gt;::GetLogWeight</definition>
+        <argsstring>(void) const</argsstring>
+        <name>GetLogWeight</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Returns the particle log weights. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/population.h" line="81" column="26" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/population.h" bodystart="81" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1population_1a5b42f094323cc2425825d82be7842e77" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double smc::population&lt; Space &gt;::GetLogWeightN</definition>
+        <argsstring>(long n) const</argsstring>
+        <name>GetLogWeightN</name>
+        <param>
+          <type>long</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>Returns the nth particle&apos;s log weight. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/population.h" line="83" column="16" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/population.h" bodystart="83" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1population_1af2706cf1c455f0cd5b9b3d7d455b6364" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double &amp;</type>
+        <definition>double&amp; smc::population&lt; Space &gt;::GetLogWeightRefN</definition>
+        <argsstring>(long n)</argsstring>
+        <name>GetLogWeightRefN</name>
+        <param>
+          <type>long</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>Returns a reference to the nth particle&apos;s log weight. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/population.h" line="85" column="17" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/population.h" bodystart="85" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1population_1ac03a39fe7a5199433362f69c0e793dd7" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>arma::vec</type>
+        <definition>arma::vec smc::population&lt; Space &gt;::GetWeight</definition>
+        <argsstring>(void) const</argsstring>
+        <name>GetWeight</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Returns the particles&apos; unnormalised weights. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/population.h" line="87" column="19" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/population.h" bodystart="87" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1population_1a229bc5706bf6afef8073990a345b5a60" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double smc::population&lt; Space &gt;::GetWeightN</definition>
+        <argsstring>(long n) const</argsstring>
+        <name>GetWeightN</name>
+        <param>
+          <type>long</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>Returns the nth particle&apos;s unnormalised weight. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/population.h" line="89" column="16" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/population.h" bodystart="89" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1population_1a228f119bab158b24e6edef17e9e806d3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void smc::population&lt; Space &gt;::Set</definition>
+        <argsstring>(const std::vector&lt; Space &gt; &amp;sValue, const arma::vec &amp;dLogWeight)</argsstring>
+        <name>Set</name>
+        <param>
+          <type>const std::vector&lt; Space &gt; &amp;</type>
+          <declname>sValue</declname>
+        </param>
+        <param>
+          <type>const arma::vec &amp;</type>
+          <declname>dLogWeight</declname>
+        </param>
+        <briefdescription>
+<para>Sets the particle values and weights explicitly. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sValue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The particle values to use </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dLogWeight</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The natural logarithm of the new particle weights </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/population.h" line="95" column="14" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/population.h" bodystart="95" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1population_1a21eb46b6158da5c74088a461e481a7c7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void smc::population&lt; Space &gt;::SetValue</definition>
+        <argsstring>(const std::vector&lt; Space &gt; &amp;sValue)</argsstring>
+        <name>SetValue</name>
+        <param>
+          <type>const std::vector&lt; Space &gt; &amp;</type>
+          <declname>sValue</declname>
+        </param>
+        <briefdescription>
+<para>Sets the particle values explicitly. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sValue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The particle values to use </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/population.h" line="99" column="14" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/population.h" bodystart="99" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1population_1a7e43dc61d785bf5b88ce6014b53dfb2a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void smc::population&lt; Space &gt;::SetValueN</definition>
+        <argsstring>(const Space &amp;sValue, long n)</argsstring>
+        <name>SetValueN</name>
+        <param>
+          <type>const Space &amp;</type>
+          <declname>sValue</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>Sets the nth particle value explicitly. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sValue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The particle value to use </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/population.h" line="103" column="14" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/population.h" bodystart="103" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1population_1aa3e891ee4bac69ea5248e7af20c9e18d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void smc::population&lt; Space &gt;::SetLogWeight</definition>
+        <argsstring>(const arma::vec &amp;dLogWeight)</argsstring>
+        <name>SetLogWeight</name>
+        <param>
+          <type>const arma::vec &amp;</type>
+          <declname>dLogWeight</declname>
+        </param>
+        <briefdescription>
+<para>Sets the particle log weights explicitly. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dLogWeight</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The natural logarithm of the new particle weights to use </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/population.h" line="107" column="14" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/population.h" bodystart="107" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1population_1a34976b1339ba0c00a292401e2bf6e1f8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void smc::population&lt; Space &gt;::SetLogWeightN</definition>
+        <argsstring>(const double &amp;dLogWeight, long n)</argsstring>
+        <name>SetLogWeightN</name>
+        <param>
+          <type>const double &amp;</type>
+          <declname>dLogWeight</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>Sets the nth particle log weight explicitly. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dLogWeight</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The natural logarithm of the new particle weight to use </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/population.h" line="111" column="14" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/population.h" bodystart="111" bodyend="111"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A template class for the particles of an SMC algorithm. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/population.h" line="54" column="1" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/population.h" bodystart="53" bodyend="112"/>
+    <listofallmembers>
+      <member refid="classsmc_1_1population_1aed65bb17ec164b22220502121784072c" prot="public" virt="non-virtual"><scope>smc::population</scope><name>GetLogWeight</name></member>
+      <member refid="classsmc_1_1population_1a5b42f094323cc2425825d82be7842e77" prot="public" virt="non-virtual"><scope>smc::population</scope><name>GetLogWeightN</name></member>
+      <member refid="classsmc_1_1population_1af2706cf1c455f0cd5b9b3d7d455b6364" prot="public" virt="non-virtual"><scope>smc::population</scope><name>GetLogWeightRefN</name></member>
+      <member refid="classsmc_1_1population_1a4209e3a8191069456da6fa6d541ba7a5" prot="public" virt="non-virtual"><scope>smc::population</scope><name>GetNumber</name></member>
+      <member refid="classsmc_1_1population_1a51c4bf9fd600f844a75df512845af88a" prot="public" virt="non-virtual"><scope>smc::population</scope><name>GetValue</name></member>
+      <member refid="classsmc_1_1population_1a9f81f8d12af9ba884741be1cfb183c5c" prot="public" virt="non-virtual"><scope>smc::population</scope><name>GetValueN</name></member>
+      <member refid="classsmc_1_1population_1afbb861efa2fddf0e9b0c61f14bd6493e" prot="public" virt="non-virtual"><scope>smc::population</scope><name>GetValueRefN</name></member>
+      <member refid="classsmc_1_1population_1ac03a39fe7a5199433362f69c0e793dd7" prot="public" virt="non-virtual"><scope>smc::population</scope><name>GetWeight</name></member>
+      <member refid="classsmc_1_1population_1a229bc5706bf6afef8073990a345b5a60" prot="public" virt="non-virtual"><scope>smc::population</scope><name>GetWeightN</name></member>
+      <member refid="classsmc_1_1population_1a95f5035145d401fb7b8d45c5d3b6d171" prot="private" virt="non-virtual"><scope>smc::population</scope><name>logweight</name></member>
+      <member refid="classsmc_1_1population_1aa7aa4c48db66d934ec4e32e9c09b105d" prot="public" virt="non-virtual"><scope>smc::population</scope><name>operator=</name></member>
+      <member refid="classsmc_1_1population_1ad6094100fe3180b18ac6c2f6efeef970" prot="public" virt="non-virtual"><scope>smc::population</scope><name>population</name></member>
+      <member refid="classsmc_1_1population_1a6e8333ad491897892311ab5331d9a03e" prot="public" virt="non-virtual"><scope>smc::population</scope><name>population</name></member>
+      <member refid="classsmc_1_1population_1a81068f3d29828546afd189b1502c768d" prot="public" virt="non-virtual"><scope>smc::population</scope><name>population</name></member>
+      <member refid="classsmc_1_1population_1a228f119bab158b24e6edef17e9e806d3" prot="public" virt="non-virtual"><scope>smc::population</scope><name>Set</name></member>
+      <member refid="classsmc_1_1population_1aa3e891ee4bac69ea5248e7af20c9e18d" prot="public" virt="non-virtual"><scope>smc::population</scope><name>SetLogWeight</name></member>
+      <member refid="classsmc_1_1population_1a34976b1339ba0c00a292401e2bf6e1f8" prot="public" virt="non-virtual"><scope>smc::population</scope><name>SetLogWeightN</name></member>
+      <member refid="classsmc_1_1population_1a21eb46b6158da5c74088a461e481a7c7" prot="public" virt="non-virtual"><scope>smc::population</scope><name>SetValue</name></member>
+      <member refid="classsmc_1_1population_1a7e43dc61d785bf5b88ce6014b53dfb2a" prot="public" virt="non-virtual"><scope>smc::population</scope><name>SetValueN</name></member>
+      <member refid="classsmc_1_1population_1af2895b7eeca98bf97ab17b3e281df4ec" prot="private" virt="non-virtual"><scope>smc::population</scope><name>value</name></member>
+      <member refid="classsmc_1_1population_1aed412a54f4d33b0cde18adf16cdc10b2" prot="public" virt="non-virtual"><scope>smc::population</scope><name>~population</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adaptation Methods &mdash; RcppSMC  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Static Adaptation" href="staticModelAdapt.html" />
+    <link rel="prev" title="Moving, conditional moving and weighting particles" href="moveset.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> RcppSMC
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Welcome to the RcppSMC documentation!</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Classes</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="sampler.html">Sampler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conditionalSampler.html">Conditional Sampler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="population.html">Particle Population</a></li>
+<li class="toctree-l2"><a class="reference internal" href="moveset.html">Moving, conditional moving and weighting particles</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Adaptation Methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="staticModelAdapt.html">Static Adaptation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="history.html">Particle History Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="smcexception.html">Exception handling</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">RcppSMC</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="index.html">Classes</a> &raquo;</li>
+      <li>Adaptation Methods</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/api/adaptMethods.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="adaptation-methods">
+<span id="api-adaptmethods"></span><h1>Adaptation Methods<a class="headerlink" href="#adaptation-methods" title="Permalink to this headline"></a></h1>
+<p>A base class with virtual functions to adapt parameters. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-defines">Defines</p>
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.__SMC_ADAPTMETHODS_H">
+<span class="target" id="adaptMethods_8h_1ab2b18eafe8ee009db1c5c478a77a31d6"></span><span class="sig-name descname"><span class="n"><span class="pre">__SMC_ADAPTMETHODS_H</span></span></span><a class="headerlink" href="#c.__SMC_ADAPTMETHODS_H" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv43smc">
+<span id="_CPPv33smc"></span><span id="_CPPv23smc"></span><span id="smc"></span><span class="target" id="namespacesmc"></span><span class="k"><span class="pre">namespace</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">smc</span></span></span><br /></dt>
+<dd><p>The Sequential Monte Carlo namespace. </p>
+<p>The classes and functions within this namespace are intended to be used for producing implemenetations of SMC samplers and related simulation techniques. </p>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4I00EN3smc12adaptMethodsE">
+<span id="_CPPv3I00EN3smc12adaptMethodsE"></span><span id="_CPPv2I00EN3smc12adaptMethodsE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Space</span></span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Params</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classsmc_1_1adaptMethods"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">adaptMethods</span></span></span><a class="headerlink" href="#_CPPv4I00EN3smc12adaptMethodsE" title="Permalink to this definition"></a><br /></dt>
+<dd><div class="docutils container">
+<em>#include &lt;adaptMethods.h&gt;</em></div>
+<p>A base class which contains the algorithm parameters and virtual functions to adapt them. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3smc12adaptMethodsD0Ev">
+<span id="_CPPv3N3smc12adaptMethodsD0Ev"></span><span id="_CPPv2N3smc12adaptMethodsD0Ev"></span><span id="smc::adaptMethods::~adaptMethods"></span><span class="target" id="classsmc_1_1adaptMethods_1a6cd01df7136b41a40b2030a9606154e4"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">~adaptMethods</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3smc12adaptMethodsD0Ev" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Free the workspace allocated for the algorithm parameters. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3smc12adaptMethods13updateForMoveER6ParamsRK10populationI5SpaceE">
+<span id="_CPPv3N3smc12adaptMethods13updateForMoveER6ParamsRK10populationI5SpaceE"></span><span id="_CPPv2N3smc12adaptMethods13updateForMoveER6ParamsRK10populationI5SpaceE"></span><span id="smc::adaptMethods::updateForMove__ParamsR.population:Space:CR"></span><span class="target" id="classsmc_1_1adaptMethods_1a96614576030dc76fbf7d64d0416d6f52"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">updateForMove</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I00EN3smc12adaptMethodsE" title="smc::adaptMethods::Params"><span class="n"><span class="pre">Params</span></span></a><span class="p"><span class="pre">&amp;</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="population.html#_CPPv4I0EN3smc10populationE" title="smc::population"><span class="n"><span class="pre">population</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I00EN3smc12adaptMethodsE" title="smc::adaptMethods::Space"><span class="n"><span class="pre">Space</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">pop</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3smc12adaptMethods13updateForMoveER6ParamsRK10populationI5SpaceE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Holder function for updates to be done before the move step. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3smc12adaptMethods13updateForMCMCER6ParamsRK10populationI5SpaceEdiRi">
+<span id="_CPPv3N3smc12adaptMethods13updateForMCMCER6ParamsRK10populationI5SpaceEdiRi"></span><span id="_CPPv2N3smc12adaptMethods13updateForMCMCER6ParamsRK10populationI5SpaceEdiRi"></span><span id="smc::adaptMethods::updateForMCMC__ParamsR.population:Space:CR.double.i.iR"></span><span class="target" id="classsmc_1_1adaptMethods_1a642c9827bc6ed466160886219a0c0d8f"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">updateForMCMC</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I00EN3smc12adaptMethodsE" title="smc::adaptMethods::Params"><span class="n"><span class="pre">Params</span></span></a><span class="p"><span class="pre">&amp;</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="population.html#_CPPv4I0EN3smc10populationE" title="smc::population"><span class="n"><span class="pre">population</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I00EN3smc12adaptMethodsE" title="smc::adaptMethods::Space"><span class="n"><span class="pre">Space</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">pop</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">acceptProb</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">nResampled</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">nRepeats</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3smc12adaptMethods13updateForMCMCER6ParamsRK10populationI5SpaceEdiRi" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Holder function for updates to be done before the MCMC step. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3smc12adaptMethods9updateEndER6ParamsRK10populationI5SpaceE">
+<span id="_CPPv3N3smc12adaptMethods9updateEndER6ParamsRK10populationI5SpaceE"></span><span id="_CPPv2N3smc12adaptMethods9updateEndER6ParamsRK10populationI5SpaceE"></span><span id="smc::adaptMethods::updateEnd__ParamsR.population:Space:CR"></span><span class="target" id="classsmc_1_1adaptMethods_1a2f8373020e442ab65ef657097e2d4c03"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">updateEnd</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I00EN3smc12adaptMethodsE" title="smc::adaptMethods::Params"><span class="n"><span class="pre">Params</span></span></a><span class="p"><span class="pre">&amp;</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="population.html#_CPPv4I0EN3smc10populationE" title="smc::population"><span class="n"><span class="pre">population</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I00EN3smc12adaptMethodsE" title="smc::adaptMethods::Space"><span class="n"><span class="pre">Space</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">pop</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3smc12adaptMethods9updateEndER6ParamsRK10populationI5SpaceE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Holder function for updates to be done at the end of each iteration. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="moveset.html" class="btn btn-neutral float-left" title="Moving, conditional moving and weighting particles" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="staticModelAdapt.html" class="btn btn-neutral float-right" title="Static Adaptation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Leah South, Ilya Zarubin, Dirk Eddelbuettel, Adam Johansen.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

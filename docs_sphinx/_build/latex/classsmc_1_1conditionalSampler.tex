@@ -1,0 +1,457 @@
+\hypertarget{classsmc_1_1conditionalSampler}{}\doxysection{smc\+::conditional\+Sampler$<$ Space, Params $>$ Class Template Reference}
+\label{classsmc_1_1conditionalSampler}\index{smc::conditionalSampler$<$ Space, Params $>$@{smc::conditionalSampler$<$ Space, Params $>$}}
+
+
+{\ttfamily \#include $<$conditional\+Sampler.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsmc_1_1conditionalSampler_a49c8b41f8d53145456a4e6fe570c6a70}{conditional\+Sampler}} (long l\+Size, \mbox{\hyperlink{namespaceHistoryType_a486dcf426d91692ddbce0dd2e97a9077}{History\+Type\+::\+Enum}} ht\+History\+Mode, std\+::vector$<$ Space $>$ reference\+Trajectory\+Init)
+\begin{DoxyCompactList}\small\item\em Create an particle system containing l\+Size uninitialised particles with the specified mode. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsmc_1_1conditionalSampler_a39f32e4513a3a1ebfaa1e29b91a149ca}{conditional\+Sampler}} (long l\+Size, \mbox{\hyperlink{namespaceHistoryType_a486dcf426d91692ddbce0dd2e97a9077}{History\+Type\+::\+Enum}} ht\+History\+Mode, \mbox{\hyperlink{classsmc_1_1moveset}{moveset}}$<$ Space, Params $>$ $\ast$p\+New\+Moves, std\+::vector$<$ Space $>$ reference\+Trajectory\+Init)
+\begin{DoxyCompactList}\small\item\em Create an particle system containing l\+Size uninitialised particles with the specified mode, additionally passing a moveset-\/object. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classsmc_1_1conditionalSampler_a37813f208d8438ffd9c0e860ca9323c6}{Get\+Digits\+Print}} (void) const
+\begin{DoxyCompactList}\small\item\em Get the number of digits used in ostream$<$$<$ operator printing. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsmc_1_1conditionalSampler_a54958b76587872c308fd187b3d816eac}{Set\+Digits\+Print}} (int new\+Digits\+Print)
+\begin{DoxyCompactList}\small\item\em Set the number of digits used in ostream$<$$<$ operator printing. \end{DoxyCompactList}\item 
+std\+::vector$<$ Space $>$ \mbox{\hyperlink{classsmc_1_1conditionalSampler_aa59a8a5ab41daaf58851b9edaf04c6fa}{Get\+Reference\+Trajectory}} (void) const
+\begin{DoxyCompactList}\small\item\em Returns the reference trajectory. \end{DoxyCompactList}\item 
+const std\+::vector$<$ Space $>$ \& \mbox{\hyperlink{classsmc_1_1conditionalSampler_a4656dca677a96573b0a4c6a5c0d522a0}{Get\+Reference\+Trajectory\+Refs}} (void) const
+\begin{DoxyCompactList}\small\item\em Returns a constant reference to the reference trajectory. \end{DoxyCompactList}\item 
+Space \mbox{\hyperlink{classsmc_1_1conditionalSampler_a9b11181e2493bfbda730fd06044fb75c}{Get\+Reference\+Value}} (long n) const
+\begin{DoxyCompactList}\small\item\em Returns the n\textquotesingle{}th element of the reference trajectory. \end{DoxyCompactList}\item 
+const Space \& \mbox{\hyperlink{classsmc_1_1conditionalSampler_ac7f05a0e26a3969d15d995f5b3389740}{Get\+Reference\+Value\+Refs}} (long n) const
+\begin{DoxyCompactList}\small\item\em Returns a constant reference to the n\textquotesingle{}th element of the reference trajectory. \end{DoxyCompactList}\item 
+const long \mbox{\hyperlink{classsmc_1_1conditionalSampler_a234aa40e48cd361d469ed9b2ca15fd8e}{Get\+Reference\+Value\+Index}} (long l\+Time) const
+\begin{DoxyCompactList}\small\item\em Returns index of conditional reference Trajectory. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsmc_1_1conditionalSampler_a9ec349f8b96a7a9ed429672f3b38a526}{Set\+Reference\+Trajectory}} (const std\+::vector$<$ Space $>$ \&new\+Reference\+Trajectory)
+\begin{DoxyCompactList}\small\item\em Sets the reference trajectory. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsmc_1_1conditionalSampler_a7a2dab045105c1cf5d38665ef04ffa02}{Set\+Reference\+Value}} (const Space \&new\+Reference\+Value, long n)
+\begin{DoxyCompactList}\small\item\em Sets the n\textquotesingle{}elment of the reference trajectory. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsmc_1_1conditionalSampler_ae906b8685eec7f3bbaf1bcefb82397f3}{Initialise}} (void)
+\begin{DoxyCompactList}\small\item\em Initialise the conditional sampler and its constituent particles. The reference trajectory used to set the first coordinate at T=0 is either from the last call to \mbox{\hyperlink{classsmc_1_1conditionalSampler_a9ec349f8b96a7a9ed429672f3b38a526}{conditional\+Sampler.\+Set\+Reference\+Trajectory()}}, or defaults to the trajectory passed to the constructor at the time the object is created. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsmc_1_1conditionalSampler_a2bc4aa6c9ccd10fd0571780eb68989c7}{Initialise}} (const std\+::vector$<$ Space $>$ \&new\+Reference\+Trajectory)
+\begin{DoxyCompactList}\small\item\em Initialise the sampler and its constituent particles. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsmc_1_1conditionalSampler_a395adfb581d81d289b7e092bac9e67eb}{Iterate}} (void)
+\begin{DoxyCompactList}\small\item\em Perform one conditional iteration of the simulation algorithm. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classsmc_1_1conditionalSampler_acc84d393087acb54897b01d9c4c31e9e}{Iterate\+Ess}} (void)
+\begin{DoxyCompactList}\small\item\em Perform one conditional iteration of the simulation algorithm and return the resulting ess. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsmc_1_1conditionalSampler_a3d1b5064b90ee24b14a980c857eea6e0}{Iterate\+Until}} (long l\+Terminate)
+\begin{DoxyCompactList}\small\item\em Perform conditional iterations until the specified evolution time is reached. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsmc_1_1conditionalSampler_ad7404f268ac8e27490c9d1bea4d11d36}{conditional\+Resample}} (\mbox{\hyperlink{namespaceResampleType_aae1fd87d74ce6bb0168e509df119f6eb}{Resample\+Type\+::\+Enum}} l\+Mode)
+\begin{DoxyCompactList}\small\item\em Resample the particle set using the specified resampling scheme specifically adjusted for conditional resampling. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsmc_1_1conditionalSampler_a7d0c9bf096c898b19b8fa5ef77f4bfb4}{Move\+Reference\+Particle}} (void)
+\begin{DoxyCompactList}\small\item\em Move the reference particle by setting the coordinate to the reference value and re-\/weighting. \end{DoxyCompactList}\item 
+std\+::ostream \& \mbox{\hyperlink{classsmc_1_1conditionalSampler_a2dbdc428dd532386637821500c9d8ee5}{Stream\+Particle}} (std\+::ostream \&os, long n) const
+\begin{DoxyCompactList}\small\item\em Dump a specified particle to the specified output stream in a human readable form. \end{DoxyCompactList}\item 
+std\+::ostream \& \mbox{\hyperlink{classsmc_1_1conditionalSampler_abd4f8ff812617b616fce87115f6be554}{Stream\+Particles}} (std\+::ostream \&os, int digits) const
+\begin{DoxyCompactList}\small\item\em Dump the entire particle set to the specified output stream in a human readable form. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsmc_1_1conditionalSampler_a19e56bae4c5af2dcabdeec27aedc3413}{Set\+Adapt\+Methods}} (\mbox{\hyperlink{classsmc_1_1adaptMethods}{adapt\+Methods}}$<$ Space, Params $>$ $\ast$adapt\+Method)
+\begin{DoxyCompactList}\small\item\em Throws exception when adaptation related members of the base sampler class are used\+: \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsmc_1_1conditionalSampler_a6405be81a56dbf5ab41301033ee16ede}{Set\+Mcmc\+Repeats}} (\mbox{\hyperlink{classsmc_1_1adaptMethods}{adapt\+Methods}}$<$ Space, Params $>$ $\ast$adapt\+Method)
+\begin{DoxyCompactList}\small\item\em Throws exception when members related to M\+C\+MC moves of the base sampler class are used\+: \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsmc_1_1conditionalSampler_acbb2adc565693c36b7e71e6a32969c75}{Ostream\+M\+C\+M\+C\+Record\+To\+Stream}} (std\+::ostream \&os) const
+\item 
+int \mbox{\hyperlink{classsmc_1_1conditionalSampler_a8472a0acd9578bdd94b5c08a7428135f}{Get\+Accepted}} (void) const
+\item 
+int \mbox{\hyperlink{classsmc_1_1conditionalSampler_a2f2cf5a113c495bcf6a17c6ac11e0bbf}{Get\+Mcmc\+Repeats}} (void) const
+\item 
+int \mbox{\hyperlink{classsmc_1_1conditionalSampler_ae5038f0bf1465ba16c4e27465f38a0bf}{Get\+Historymcmc\+Repeats}} (long n)
+\item 
+void \mbox{\hyperlink{classsmc_1_1conditionalSampler_a5978a76877529f7ef636b19d92f094f2}{Set\+Mcmc\+Repeats}} (int reps)
+\begin{DoxyCompactList}\small\item\em Sets the number of M\+C\+MC repeats. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ Space $>$ \mbox{\hyperlink{classsmc_1_1conditionalSampler_abdf893a9b8c857e14736551c215a2904}{reference\+Trajectory}}
+\item 
+long \mbox{\hyperlink{classsmc_1_1conditionalSampler_ae2685bbe6aae5d6a6bfe443463724f42}{maxT}} = reference\+Trajectory.\+size()
+\item 
+arma\+::\+Col$<$ unsigned int $>$ \mbox{\hyperlink{classsmc_1_1conditionalSampler_a50143e1f52e9939ae789eac84222d07c}{reference\+Trajectory\+Indices}}
+\item 
+int \mbox{\hyperlink{classsmc_1_1conditionalSampler_afe26462b634bc1f4907cb295528955e0}{digits\+Print}} = 6
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{classsmc_1_1conditionalSampler_a63d082b0e064edd6281eed9ce4543af1}{operator$<$$<$}} (std\+::ostream \&, const \mbox{\hyperlink{classsmc_1_1conditionalSampler}{conditional\+Sampler}}$<$ Space, Params $>$ \&)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsmc_1_1conditionalSampler_a49c8b41f8d53145456a4e6fe570c6a70}\label{classsmc_1_1conditionalSampler_a49c8b41f8d53145456a4e6fe570c6a70}} 
+\index{smc::conditionalSampler$<$ Space, Params $>$@{smc::conditionalSampler$<$ Space, Params $>$}!conditionalSampler@{conditionalSampler}}
+\index{conditionalSampler@{conditionalSampler}!smc::conditionalSampler$<$ Space, Params $>$@{smc::conditionalSampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{conditionalSampler()}{conditionalSampler()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class Space , class Params  = null\+Params$>$ \\
+\mbox{\hyperlink{classsmc_1_1conditionalSampler}{smc\+::conditional\+Sampler}}$<$ Space, Params $>$\+::\mbox{\hyperlink{classsmc_1_1conditionalSampler}{conditional\+Sampler}} (\begin{DoxyParamCaption}\item[{long}]{l\+Size,  }\item[{\mbox{\hyperlink{namespaceHistoryType_a486dcf426d91692ddbce0dd2e97a9077}{History\+Type\+::\+Enum}}}]{ht\+History\+Mode,  }\item[{std\+::vector$<$ Space $>$}]{reference\+Trajectory\+Init }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Create an particle system containing l\+Size uninitialised particles with the specified mode. 
+
+\mbox{\Hypertarget{classsmc_1_1conditionalSampler_a39f32e4513a3a1ebfaa1e29b91a149ca}\label{classsmc_1_1conditionalSampler_a39f32e4513a3a1ebfaa1e29b91a149ca}} 
+\index{smc::conditionalSampler$<$ Space, Params $>$@{smc::conditionalSampler$<$ Space, Params $>$}!conditionalSampler@{conditionalSampler}}
+\index{conditionalSampler@{conditionalSampler}!smc::conditionalSampler$<$ Space, Params $>$@{smc::conditionalSampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{conditionalSampler()}{conditionalSampler()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class Space , class Params  = null\+Params$>$ \\
+\mbox{\hyperlink{classsmc_1_1conditionalSampler}{smc\+::conditional\+Sampler}}$<$ Space, Params $>$\+::\mbox{\hyperlink{classsmc_1_1conditionalSampler}{conditional\+Sampler}} (\begin{DoxyParamCaption}\item[{long}]{l\+Size,  }\item[{\mbox{\hyperlink{namespaceHistoryType_a486dcf426d91692ddbce0dd2e97a9077}{History\+Type\+::\+Enum}}}]{ht\+History\+Mode,  }\item[{\mbox{\hyperlink{classsmc_1_1moveset}{moveset}}$<$ Space, Params $>$ $\ast$}]{p\+New\+Moves,  }\item[{std\+::vector$<$ Space $>$}]{reference\+Trajectory\+Init }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Create an particle system containing l\+Size uninitialised particles with the specified mode, additionally passing a moveset-\/object. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classsmc_1_1conditionalSampler_ad7404f268ac8e27490c9d1bea4d11d36}\label{classsmc_1_1conditionalSampler_ad7404f268ac8e27490c9d1bea4d11d36}} 
+\index{smc::conditionalSampler$<$ Space, Params $>$@{smc::conditionalSampler$<$ Space, Params $>$}!conditionalResample@{conditionalResample}}
+\index{conditionalResample@{conditionalResample}!smc::conditionalSampler$<$ Space, Params $>$@{smc::conditionalSampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{conditionalResample()}{conditionalResample()}}
+{\footnotesize\ttfamily template$<$class Space , class Params $>$ \\
+void \mbox{\hyperlink{classsmc_1_1conditionalSampler}{smc\+::conditional\+Sampler}}$<$ Space, Params $>$\+::conditional\+Resample (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceResampleType_aae1fd87d74ce6bb0168e509df119f6eb}{Resample\+Type\+::\+Enum}}}]{l\+Mode }\end{DoxyParamCaption})}
+
+
+
+Resample the particle set using the specified resampling scheme specifically adjusted for conditional resampling. 
+
+upper sequence part\+: 1/N,2/N,...c/N,...,1
+
+lower sequence part\+: 0/N,1/N,...c/N,...,(N-\/1)/N
+
+particle k\+\_\+\{t-\/1\} weight for all strata k\+\_\+t=1,...,N
+
+weights of \textbackslash{}lambda(k\+\_\+t$\vert$.) distribution for k\+\_\+t sampling
+
+upper sequence part\+: 1/N,2/N,...c/N,...,1
+
+lower sequence part\+: 0/N,1/N,...c/N,...,(N-\/1)/N
+
+particle k\+\_\+\{t-\/1\} weight for all strata k\+\_\+t=1,...,N
+
+weights of \textbackslash{}lambda(k\+\_\+t$\vert$.) distribution for k\+\_\+t sampling\mbox{\Hypertarget{classsmc_1_1conditionalSampler_a8472a0acd9578bdd94b5c08a7428135f}\label{classsmc_1_1conditionalSampler_a8472a0acd9578bdd94b5c08a7428135f}} 
+\index{smc::conditionalSampler$<$ Space, Params $>$@{smc::conditionalSampler$<$ Space, Params $>$}!GetAccepted@{GetAccepted}}
+\index{GetAccepted@{GetAccepted}!smc::conditionalSampler$<$ Space, Params $>$@{smc::conditionalSampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{GetAccepted()}{GetAccepted()}}
+{\footnotesize\ttfamily template$<$class Space , class Params  = null\+Params$>$ \\
+int \mbox{\hyperlink{classsmc_1_1conditionalSampler}{smc\+::conditional\+Sampler}}$<$ Space, Params $>$\+::Get\+Accepted (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classsmc_1_1conditionalSampler_a37813f208d8438ffd9c0e860ca9323c6}\label{classsmc_1_1conditionalSampler_a37813f208d8438ffd9c0e860ca9323c6}} 
+\index{smc::conditionalSampler$<$ Space, Params $>$@{smc::conditionalSampler$<$ Space, Params $>$}!GetDigitsPrint@{GetDigitsPrint}}
+\index{GetDigitsPrint@{GetDigitsPrint}!smc::conditionalSampler$<$ Space, Params $>$@{smc::conditionalSampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{GetDigitsPrint()}{GetDigitsPrint()}}
+{\footnotesize\ttfamily template$<$class Space , class Params  = null\+Params$>$ \\
+int \mbox{\hyperlink{classsmc_1_1conditionalSampler}{smc\+::conditional\+Sampler}}$<$ Space, Params $>$\+::Get\+Digits\+Print (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the number of digits used in ostream$<$$<$ operator printing. 
+
+\mbox{\Hypertarget{classsmc_1_1conditionalSampler_ae5038f0bf1465ba16c4e27465f38a0bf}\label{classsmc_1_1conditionalSampler_ae5038f0bf1465ba16c4e27465f38a0bf}} 
+\index{smc::conditionalSampler$<$ Space, Params $>$@{smc::conditionalSampler$<$ Space, Params $>$}!GetHistorymcmcRepeats@{GetHistorymcmcRepeats}}
+\index{GetHistorymcmcRepeats@{GetHistorymcmcRepeats}!smc::conditionalSampler$<$ Space, Params $>$@{smc::conditionalSampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{GetHistorymcmcRepeats()}{GetHistorymcmcRepeats()}}
+{\footnotesize\ttfamily template$<$class Space , class Params  = null\+Params$>$ \\
+int \mbox{\hyperlink{classsmc_1_1conditionalSampler}{smc\+::conditional\+Sampler}}$<$ Space, Params $>$\+::Get\+Historymcmc\+Repeats (\begin{DoxyParamCaption}\item[{long}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classsmc_1_1conditionalSampler_a2f2cf5a113c495bcf6a17c6ac11e0bbf}\label{classsmc_1_1conditionalSampler_a2f2cf5a113c495bcf6a17c6ac11e0bbf}} 
+\index{smc::conditionalSampler$<$ Space, Params $>$@{smc::conditionalSampler$<$ Space, Params $>$}!GetMcmcRepeats@{GetMcmcRepeats}}
+\index{GetMcmcRepeats@{GetMcmcRepeats}!smc::conditionalSampler$<$ Space, Params $>$@{smc::conditionalSampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{GetMcmcRepeats()}{GetMcmcRepeats()}}
+{\footnotesize\ttfamily template$<$class Space , class Params  = null\+Params$>$ \\
+int \mbox{\hyperlink{classsmc_1_1conditionalSampler}{smc\+::conditional\+Sampler}}$<$ Space, Params $>$\+::Get\+Mcmc\+Repeats (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classsmc_1_1conditionalSampler_aa59a8a5ab41daaf58851b9edaf04c6fa}\label{classsmc_1_1conditionalSampler_aa59a8a5ab41daaf58851b9edaf04c6fa}} 
+\index{smc::conditionalSampler$<$ Space, Params $>$@{smc::conditionalSampler$<$ Space, Params $>$}!GetReferenceTrajectory@{GetReferenceTrajectory}}
+\index{GetReferenceTrajectory@{GetReferenceTrajectory}!smc::conditionalSampler$<$ Space, Params $>$@{smc::conditionalSampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{GetReferenceTrajectory()}{GetReferenceTrajectory()}}
+{\footnotesize\ttfamily template$<$class Space , class Params  = null\+Params$>$ \\
+std\+::vector$<$Space$>$ \mbox{\hyperlink{classsmc_1_1conditionalSampler}{smc\+::conditional\+Sampler}}$<$ Space, Params $>$\+::Get\+Reference\+Trajectory (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the reference trajectory. 
+
+\mbox{\Hypertarget{classsmc_1_1conditionalSampler_a4656dca677a96573b0a4c6a5c0d522a0}\label{classsmc_1_1conditionalSampler_a4656dca677a96573b0a4c6a5c0d522a0}} 
+\index{smc::conditionalSampler$<$ Space, Params $>$@{smc::conditionalSampler$<$ Space, Params $>$}!GetReferenceTrajectoryRefs@{GetReferenceTrajectoryRefs}}
+\index{GetReferenceTrajectoryRefs@{GetReferenceTrajectoryRefs}!smc::conditionalSampler$<$ Space, Params $>$@{smc::conditionalSampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{GetReferenceTrajectoryRefs()}{GetReferenceTrajectoryRefs()}}
+{\footnotesize\ttfamily template$<$class Space , class Params  = null\+Params$>$ \\
+const std\+::vector$<$Space$>$\& \mbox{\hyperlink{classsmc_1_1conditionalSampler}{smc\+::conditional\+Sampler}}$<$ Space, Params $>$\+::Get\+Reference\+Trajectory\+Refs (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a constant reference to the reference trajectory. 
+
+\mbox{\Hypertarget{classsmc_1_1conditionalSampler_a9b11181e2493bfbda730fd06044fb75c}\label{classsmc_1_1conditionalSampler_a9b11181e2493bfbda730fd06044fb75c}} 
+\index{smc::conditionalSampler$<$ Space, Params $>$@{smc::conditionalSampler$<$ Space, Params $>$}!GetReferenceValue@{GetReferenceValue}}
+\index{GetReferenceValue@{GetReferenceValue}!smc::conditionalSampler$<$ Space, Params $>$@{smc::conditionalSampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{GetReferenceValue()}{GetReferenceValue()}}
+{\footnotesize\ttfamily template$<$class Space , class Params  = null\+Params$>$ \\
+Space \mbox{\hyperlink{classsmc_1_1conditionalSampler}{smc\+::conditional\+Sampler}}$<$ Space, Params $>$\+::Get\+Reference\+Value (\begin{DoxyParamCaption}\item[{long}]{n }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the n\textquotesingle{}th element of the reference trajectory. 
+
+\mbox{\Hypertarget{classsmc_1_1conditionalSampler_a234aa40e48cd361d469ed9b2ca15fd8e}\label{classsmc_1_1conditionalSampler_a234aa40e48cd361d469ed9b2ca15fd8e}} 
+\index{smc::conditionalSampler$<$ Space, Params $>$@{smc::conditionalSampler$<$ Space, Params $>$}!GetReferenceValueIndex@{GetReferenceValueIndex}}
+\index{GetReferenceValueIndex@{GetReferenceValueIndex}!smc::conditionalSampler$<$ Space, Params $>$@{smc::conditionalSampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{GetReferenceValueIndex()}{GetReferenceValueIndex()}}
+{\footnotesize\ttfamily template$<$class Space , class Params  = null\+Params$>$ \\
+const long \mbox{\hyperlink{classsmc_1_1conditionalSampler}{smc\+::conditional\+Sampler}}$<$ Space, Params $>$\+::Get\+Reference\+Value\+Index (\begin{DoxyParamCaption}\item[{long}]{l\+Time }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns index of conditional reference Trajectory. 
+
+\mbox{\Hypertarget{classsmc_1_1conditionalSampler_ac7f05a0e26a3969d15d995f5b3389740}\label{classsmc_1_1conditionalSampler_ac7f05a0e26a3969d15d995f5b3389740}} 
+\index{smc::conditionalSampler$<$ Space, Params $>$@{smc::conditionalSampler$<$ Space, Params $>$}!GetReferenceValueRefs@{GetReferenceValueRefs}}
+\index{GetReferenceValueRefs@{GetReferenceValueRefs}!smc::conditionalSampler$<$ Space, Params $>$@{smc::conditionalSampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{GetReferenceValueRefs()}{GetReferenceValueRefs()}}
+{\footnotesize\ttfamily template$<$class Space , class Params  = null\+Params$>$ \\
+const Space\& \mbox{\hyperlink{classsmc_1_1conditionalSampler}{smc\+::conditional\+Sampler}}$<$ Space, Params $>$\+::Get\+Reference\+Value\+Refs (\begin{DoxyParamCaption}\item[{long}]{n }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a constant reference to the n\textquotesingle{}th element of the reference trajectory. 
+
+\mbox{\Hypertarget{classsmc_1_1conditionalSampler_a2bc4aa6c9ccd10fd0571780eb68989c7}\label{classsmc_1_1conditionalSampler_a2bc4aa6c9ccd10fd0571780eb68989c7}} 
+\index{smc::conditionalSampler$<$ Space, Params $>$@{smc::conditionalSampler$<$ Space, Params $>$}!Initialise@{Initialise}}
+\index{Initialise@{Initialise}!smc::conditionalSampler$<$ Space, Params $>$@{smc::conditionalSampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{Initialise()}{Initialise()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class Space , class Params $>$ \\
+void \mbox{\hyperlink{classsmc_1_1conditionalSampler}{smc\+::conditional\+Sampler}}$<$ Space, Params $>$\+::Initialise (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ Space $>$ \&}]{reference\+Trajectory\+Init }\end{DoxyParamCaption})}
+
+
+
+Initialise the sampler and its constituent particles. 
+
+At present this function resets the system evolution time to 0 and calls the moveset initialisor to assign each particle in the ensemble.
+
+Note that the initialisation function must be specified before calling this function.
+
+Additionally, a conditional particle trajectory is set and the t=0 particle coordinate is set to the conditional reference value and re-\/weighted. To avoid compiler warnings, \mbox{\hyperlink{namespaceHistoryType_a486dcf426d91692ddbce0dd2e97a9077a1755a29ac60a2ebeb8a4c4b27f48bcde}{History\+Type\+::\+N\+O\+NE}} is handled\mbox{\Hypertarget{classsmc_1_1conditionalSampler_ae906b8685eec7f3bbaf1bcefb82397f3}\label{classsmc_1_1conditionalSampler_ae906b8685eec7f3bbaf1bcefb82397f3}} 
+\index{smc::conditionalSampler$<$ Space, Params $>$@{smc::conditionalSampler$<$ Space, Params $>$}!Initialise@{Initialise}}
+\index{Initialise@{Initialise}!smc::conditionalSampler$<$ Space, Params $>$@{smc::conditionalSampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{Initialise()}{Initialise()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class Space , class Params $>$ \\
+void \mbox{\hyperlink{classsmc_1_1conditionalSampler}{smc\+::conditional\+Sampler}}$<$ Space, Params $>$\+::Initialise (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initialise the conditional sampler and its constituent particles. The reference trajectory used to set the first coordinate at T=0 is either from the last call to \mbox{\hyperlink{classsmc_1_1conditionalSampler_a9ec349f8b96a7a9ed429672f3b38a526}{conditional\+Sampler.\+Set\+Reference\+Trajectory()}}, or defaults to the trajectory passed to the constructor at the time the object is created. 
+
+At present this function resets the system evolution time to 0 and calls the moveset initialisor to assign each particle in the ensemble.
+
+Note that the initialisation function must be specified before calling this function.
+
+Additionally, the t=0 particle coordinate is set to the conditional reference value and re-\/weighted. To avoid compiler warnings, \mbox{\hyperlink{namespaceHistoryType_a486dcf426d91692ddbce0dd2e97a9077a1755a29ac60a2ebeb8a4c4b27f48bcde}{History\+Type\+::\+N\+O\+NE}} is handled\mbox{\Hypertarget{classsmc_1_1conditionalSampler_a395adfb581d81d289b7e092bac9e67eb}\label{classsmc_1_1conditionalSampler_a395adfb581d81d289b7e092bac9e67eb}} 
+\index{smc::conditionalSampler$<$ Space, Params $>$@{smc::conditionalSampler$<$ Space, Params $>$}!Iterate@{Iterate}}
+\index{Iterate@{Iterate}!smc::conditionalSampler$<$ Space, Params $>$@{smc::conditionalSampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{Iterate()}{Iterate()}}
+{\footnotesize\ttfamily template$<$class Space , class Params $>$ \\
+void \mbox{\hyperlink{classsmc_1_1conditionalSampler}{smc\+::conditional\+Sampler}}$<$ Space, Params $>$\+::Iterate (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Perform one conditional iteration of the simulation algorithm. 
+
+\mbox{\Hypertarget{classsmc_1_1conditionalSampler_acc84d393087acb54897b01d9c4c31e9e}\label{classsmc_1_1conditionalSampler_acc84d393087acb54897b01d9c4c31e9e}} 
+\index{smc::conditionalSampler$<$ Space, Params $>$@{smc::conditionalSampler$<$ Space, Params $>$}!IterateEss@{IterateEss}}
+\index{IterateEss@{IterateEss}!smc::conditionalSampler$<$ Space, Params $>$@{smc::conditionalSampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{IterateEss()}{IterateEss()}}
+{\footnotesize\ttfamily template$<$class Space , class Params $>$ \\
+double \mbox{\hyperlink{classsmc_1_1conditionalSampler}{smc\+::conditional\+Sampler}}$<$ Space, Params $>$\+::Iterate\+Ess (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Perform one conditional iteration of the simulation algorithm and return the resulting ess. 
+
+\mbox{\Hypertarget{classsmc_1_1conditionalSampler_a3d1b5064b90ee24b14a980c857eea6e0}\label{classsmc_1_1conditionalSampler_a3d1b5064b90ee24b14a980c857eea6e0}} 
+\index{smc::conditionalSampler$<$ Space, Params $>$@{smc::conditionalSampler$<$ Space, Params $>$}!IterateUntil@{IterateUntil}}
+\index{IterateUntil@{IterateUntil}!smc::conditionalSampler$<$ Space, Params $>$@{smc::conditionalSampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{IterateUntil()}{IterateUntil()}}
+{\footnotesize\ttfamily template$<$class Space , class Params $>$ \\
+void \mbox{\hyperlink{classsmc_1_1conditionalSampler}{smc\+::conditional\+Sampler}}$<$ Space, Params $>$\+::Iterate\+Until (\begin{DoxyParamCaption}\item[{long}]{l\+Terminate }\end{DoxyParamCaption})}
+
+
+
+Perform conditional iterations until the specified evolution time is reached. 
+
+\mbox{\Hypertarget{classsmc_1_1conditionalSampler_a7d0c9bf096c898b19b8fa5ef77f4bfb4}\label{classsmc_1_1conditionalSampler_a7d0c9bf096c898b19b8fa5ef77f4bfb4}} 
+\index{smc::conditionalSampler$<$ Space, Params $>$@{smc::conditionalSampler$<$ Space, Params $>$}!MoveReferenceParticle@{MoveReferenceParticle}}
+\index{MoveReferenceParticle@{MoveReferenceParticle}!smc::conditionalSampler$<$ Space, Params $>$@{smc::conditionalSampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{MoveReferenceParticle()}{MoveReferenceParticle()}}
+{\footnotesize\ttfamily template$<$class Space , class Params $>$ \\
+void \mbox{\hyperlink{classsmc_1_1conditionalSampler}{smc\+::conditional\+Sampler}}$<$ Space, Params $>$\+::Move\+Reference\+Particle (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Move the reference particle by setting the coordinate to the reference value and re-\/weighting. 
+
+\mbox{\Hypertarget{classsmc_1_1conditionalSampler_acbb2adc565693c36b7e71e6a32969c75}\label{classsmc_1_1conditionalSampler_acbb2adc565693c36b7e71e6a32969c75}} 
+\index{smc::conditionalSampler$<$ Space, Params $>$@{smc::conditionalSampler$<$ Space, Params $>$}!OstreamMCMCRecordToStream@{OstreamMCMCRecordToStream}}
+\index{OstreamMCMCRecordToStream@{OstreamMCMCRecordToStream}!smc::conditionalSampler$<$ Space, Params $>$@{smc::conditionalSampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{OstreamMCMCRecordToStream()}{OstreamMCMCRecordToStream()}}
+{\footnotesize\ttfamily template$<$class Space , class Params  = null\+Params$>$ \\
+void \mbox{\hyperlink{classsmc_1_1conditionalSampler}{smc\+::conditional\+Sampler}}$<$ Space, Params $>$\+::Ostream\+M\+C\+M\+C\+Record\+To\+Stream (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classsmc_1_1conditionalSampler_a19e56bae4c5af2dcabdeec27aedc3413}\label{classsmc_1_1conditionalSampler_a19e56bae4c5af2dcabdeec27aedc3413}} 
+\index{smc::conditionalSampler$<$ Space, Params $>$@{smc::conditionalSampler$<$ Space, Params $>$}!SetAdaptMethods@{SetAdaptMethods}}
+\index{SetAdaptMethods@{SetAdaptMethods}!smc::conditionalSampler$<$ Space, Params $>$@{smc::conditionalSampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{SetAdaptMethods()}{SetAdaptMethods()}}
+{\footnotesize\ttfamily template$<$class Space , class Params  = null\+Params$>$ \\
+void \mbox{\hyperlink{classsmc_1_1conditionalSampler}{smc\+::conditional\+Sampler}}$<$ Space, Params $>$\+::Set\+Adapt\+Methods (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsmc_1_1adaptMethods}{adapt\+Methods}}$<$ Space, Params $>$ $\ast$}]{adapt\+Method }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Throws exception when adaptation related members of the base sampler class are used\+: 
+
+\mbox{\Hypertarget{classsmc_1_1conditionalSampler_a54958b76587872c308fd187b3d816eac}\label{classsmc_1_1conditionalSampler_a54958b76587872c308fd187b3d816eac}} 
+\index{smc::conditionalSampler$<$ Space, Params $>$@{smc::conditionalSampler$<$ Space, Params $>$}!SetDigitsPrint@{SetDigitsPrint}}
+\index{SetDigitsPrint@{SetDigitsPrint}!smc::conditionalSampler$<$ Space, Params $>$@{smc::conditionalSampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{SetDigitsPrint()}{SetDigitsPrint()}}
+{\footnotesize\ttfamily template$<$class Space , class Params  = null\+Params$>$ \\
+void \mbox{\hyperlink{classsmc_1_1conditionalSampler}{smc\+::conditional\+Sampler}}$<$ Space, Params $>$\+::Set\+Digits\+Print (\begin{DoxyParamCaption}\item[{int}]{new\+Digits\+Print }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the number of digits used in ostream$<$$<$ operator printing. 
+
+\mbox{\Hypertarget{classsmc_1_1conditionalSampler_a6405be81a56dbf5ab41301033ee16ede}\label{classsmc_1_1conditionalSampler_a6405be81a56dbf5ab41301033ee16ede}} 
+\index{smc::conditionalSampler$<$ Space, Params $>$@{smc::conditionalSampler$<$ Space, Params $>$}!SetMcmcRepeats@{SetMcmcRepeats}}
+\index{SetMcmcRepeats@{SetMcmcRepeats}!smc::conditionalSampler$<$ Space, Params $>$@{smc::conditionalSampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{SetMcmcRepeats()}{SetMcmcRepeats()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class Space , class Params  = null\+Params$>$ \\
+void \mbox{\hyperlink{classsmc_1_1conditionalSampler}{smc\+::conditional\+Sampler}}$<$ Space, Params $>$\+::Set\+Mcmc\+Repeats (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsmc_1_1adaptMethods}{adapt\+Methods}}$<$ Space, Params $>$ $\ast$}]{adapt\+Method }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Throws exception when members related to M\+C\+MC moves of the base sampler class are used\+: 
+
+\mbox{\Hypertarget{classsmc_1_1conditionalSampler_a5978a76877529f7ef636b19d92f094f2}\label{classsmc_1_1conditionalSampler_a5978a76877529f7ef636b19d92f094f2}} 
+\index{smc::conditionalSampler$<$ Space, Params $>$@{smc::conditionalSampler$<$ Space, Params $>$}!SetMcmcRepeats@{SetMcmcRepeats}}
+\index{SetMcmcRepeats@{SetMcmcRepeats}!smc::conditionalSampler$<$ Space, Params $>$@{smc::conditionalSampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{SetMcmcRepeats()}{SetMcmcRepeats()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class Space , class Params  = null\+Params$>$ \\
+void \mbox{\hyperlink{classsmc_1_1conditionalSampler}{smc\+::conditional\+Sampler}}$<$ Space, Params $>$\+::Set\+Mcmc\+Repeats (\begin{DoxyParamCaption}\item[{int}]{reps }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the number of M\+C\+MC repeats. 
+
+\mbox{\Hypertarget{classsmc_1_1conditionalSampler_a9ec349f8b96a7a9ed429672f3b38a526}\label{classsmc_1_1conditionalSampler_a9ec349f8b96a7a9ed429672f3b38a526}} 
+\index{smc::conditionalSampler$<$ Space, Params $>$@{smc::conditionalSampler$<$ Space, Params $>$}!SetReferenceTrajectory@{SetReferenceTrajectory}}
+\index{SetReferenceTrajectory@{SetReferenceTrajectory}!smc::conditionalSampler$<$ Space, Params $>$@{smc::conditionalSampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{SetReferenceTrajectory()}{SetReferenceTrajectory()}}
+{\footnotesize\ttfamily template$<$class Space , class Params  = null\+Params$>$ \\
+void \mbox{\hyperlink{classsmc_1_1conditionalSampler}{smc\+::conditional\+Sampler}}$<$ Space, Params $>$\+::Set\+Reference\+Trajectory (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ Space $>$ \&}]{new\+Reference\+Trajectory }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the reference trajectory. 
+
+\mbox{\Hypertarget{classsmc_1_1conditionalSampler_a7a2dab045105c1cf5d38665ef04ffa02}\label{classsmc_1_1conditionalSampler_a7a2dab045105c1cf5d38665ef04ffa02}} 
+\index{smc::conditionalSampler$<$ Space, Params $>$@{smc::conditionalSampler$<$ Space, Params $>$}!SetReferenceValue@{SetReferenceValue}}
+\index{SetReferenceValue@{SetReferenceValue}!smc::conditionalSampler$<$ Space, Params $>$@{smc::conditionalSampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{SetReferenceValue()}{SetReferenceValue()}}
+{\footnotesize\ttfamily template$<$class Space , class Params  = null\+Params$>$ \\
+void \mbox{\hyperlink{classsmc_1_1conditionalSampler}{smc\+::conditional\+Sampler}}$<$ Space, Params $>$\+::Set\+Reference\+Value (\begin{DoxyParamCaption}\item[{const Space \&}]{new\+Reference\+Value,  }\item[{long}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the n\textquotesingle{}elment of the reference trajectory. 
+
+\mbox{\Hypertarget{classsmc_1_1conditionalSampler_a2dbdc428dd532386637821500c9d8ee5}\label{classsmc_1_1conditionalSampler_a2dbdc428dd532386637821500c9d8ee5}} 
+\index{smc::conditionalSampler$<$ Space, Params $>$@{smc::conditionalSampler$<$ Space, Params $>$}!StreamParticle@{StreamParticle}}
+\index{StreamParticle@{StreamParticle}!smc::conditionalSampler$<$ Space, Params $>$@{smc::conditionalSampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{StreamParticle()}{StreamParticle()}}
+{\footnotesize\ttfamily template$<$class Space , class Params $>$ \\
+std\+::ostream \& \mbox{\hyperlink{classsmc_1_1conditionalSampler}{smc\+::conditional\+Sampler}}$<$ Space, Params $>$\+::Stream\+Particle (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{long}]{n }\end{DoxyParamCaption}) const}
+
+
+
+Dump a specified particle to the specified output stream in a human readable form. 
+
+Produce a human-\/readable display of the current n\textquotesingle{}th particle value and log weight.
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & The output stream to which the display should be made. \\
+\hline
+{\em n} & The index of the particle of interest \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classsmc_1_1conditionalSampler_abd4f8ff812617b616fce87115f6be554}\label{classsmc_1_1conditionalSampler_abd4f8ff812617b616fce87115f6be554}} 
+\index{smc::conditionalSampler$<$ Space, Params $>$@{smc::conditionalSampler$<$ Space, Params $>$}!StreamParticles@{StreamParticles}}
+\index{StreamParticles@{StreamParticles}!smc::conditionalSampler$<$ Space, Params $>$@{smc::conditionalSampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{StreamParticles()}{StreamParticles()}}
+{\footnotesize\ttfamily template$<$class Space , class Params $>$ \\
+std\+::ostream \& \mbox{\hyperlink{classsmc_1_1conditionalSampler}{smc\+::conditional\+Sampler}}$<$ Space, Params $>$\+::Stream\+Particles (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{int}]{digits }\end{DoxyParamCaption}) const}
+
+
+
+Dump the entire particle set to the specified output stream in a human readable form. 
+
+Produce a human-\/readable display of the current particle values and log weights.
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & The output stream to which the display should be made. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classsmc_1_1conditionalSampler_a63d082b0e064edd6281eed9ce4543af1}\label{classsmc_1_1conditionalSampler_a63d082b0e064edd6281eed9ce4543af1}} 
+\index{smc::conditionalSampler$<$ Space, Params $>$@{smc::conditionalSampler$<$ Space, Params $>$}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!smc::conditionalSampler$<$ Space, Params $>$@{smc::conditionalSampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily template$<$class Space , class Params  = null\+Params$>$ \\
+std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \mbox{\hyperlink{classsmc_1_1conditionalSampler}{conditional\+Sampler}}$<$ Space, Params $>$ \&}]{CS }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+Produce a human-\/readable display of the state of an \mbox{\hyperlink{classsmc_1_1sampler}{smc\+::sampler}} class using the stream operator. 
+\begin{DoxyParams}{Parameters}
+{\em os} & The output stream to which the display should be made. \\
+\hline
+{\em s} & The sampler which is to be displayed. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classsmc_1_1conditionalSampler_afe26462b634bc1f4907cb295528955e0}\label{classsmc_1_1conditionalSampler_afe26462b634bc1f4907cb295528955e0}} 
+\index{smc::conditionalSampler$<$ Space, Params $>$@{smc::conditionalSampler$<$ Space, Params $>$}!digitsPrint@{digitsPrint}}
+\index{digitsPrint@{digitsPrint}!smc::conditionalSampler$<$ Space, Params $>$@{smc::conditionalSampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{digitsPrint}{digitsPrint}}
+{\footnotesize\ttfamily template$<$class Space , class Params  = null\+Params$>$ \\
+int \mbox{\hyperlink{classsmc_1_1conditionalSampler}{smc\+::conditional\+Sampler}}$<$ Space, Params $>$\+::digits\+Print = 6\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classsmc_1_1conditionalSampler_ae2685bbe6aae5d6a6bfe443463724f42}\label{classsmc_1_1conditionalSampler_ae2685bbe6aae5d6a6bfe443463724f42}} 
+\index{smc::conditionalSampler$<$ Space, Params $>$@{smc::conditionalSampler$<$ Space, Params $>$}!maxT@{maxT}}
+\index{maxT@{maxT}!smc::conditionalSampler$<$ Space, Params $>$@{smc::conditionalSampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{maxT}{maxT}}
+{\footnotesize\ttfamily template$<$class Space , class Params  = null\+Params$>$ \\
+long \mbox{\hyperlink{classsmc_1_1conditionalSampler}{smc\+::conditional\+Sampler}}$<$ Space, Params $>$\+::maxT = reference\+Trajectory.\+size()\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classsmc_1_1conditionalSampler_abdf893a9b8c857e14736551c215a2904}\label{classsmc_1_1conditionalSampler_abdf893a9b8c857e14736551c215a2904}} 
+\index{smc::conditionalSampler$<$ Space, Params $>$@{smc::conditionalSampler$<$ Space, Params $>$}!referenceTrajectory@{referenceTrajectory}}
+\index{referenceTrajectory@{referenceTrajectory}!smc::conditionalSampler$<$ Space, Params $>$@{smc::conditionalSampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{referenceTrajectory}{referenceTrajectory}}
+{\footnotesize\ttfamily template$<$class Space , class Params  = null\+Params$>$ \\
+std\+::vector$<$Space$>$ \mbox{\hyperlink{classsmc_1_1conditionalSampler}{smc\+::conditional\+Sampler}}$<$ Space, Params $>$\+::reference\+Trajectory\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classsmc_1_1conditionalSampler_a50143e1f52e9939ae789eac84222d07c}\label{classsmc_1_1conditionalSampler_a50143e1f52e9939ae789eac84222d07c}} 
+\index{smc::conditionalSampler$<$ Space, Params $>$@{smc::conditionalSampler$<$ Space, Params $>$}!referenceTrajectoryIndices@{referenceTrajectoryIndices}}
+\index{referenceTrajectoryIndices@{referenceTrajectoryIndices}!smc::conditionalSampler$<$ Space, Params $>$@{smc::conditionalSampler$<$ Space, Params $>$}}
+\doxysubsubsection{\texorpdfstring{referenceTrajectoryIndices}{referenceTrajectoryIndices}}
+{\footnotesize\ttfamily template$<$class Space , class Params  = null\+Params$>$ \\
+arma\+::\+Col$<$unsigned int$>$ \mbox{\hyperlink{classsmc_1_1conditionalSampler}{smc\+::conditional\+Sampler}}$<$ Space, Params $>$\+::reference\+Trajectory\+Indices\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/iz/\+Dropbox/projects/rcppsmc/\+Rcpp\+S\+M\+Cdocumentation/include/\mbox{\hyperlink{conditionalSampler_8h}{conditional\+Sampler.\+h}}\end{DoxyCompactItemize}

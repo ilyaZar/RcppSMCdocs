@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classFoo" kind="class" language="C++" prot="public">
+    <compoundname>Foo</compoundname>
+    <includes refid="cpp__doxygen__sphinx_8hpp" local="no">cpp_doxygen_sphinx.hpp</includes>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classFoo_1abf88c4997abff7e0244459cca65f3a94" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Foo::say_hello</definition>
+        <argsstring>(std::string message) const</argsstring>
+        <name>say_hello</name>
+        <param>
+          <type>std::string</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Say hello <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The message to print </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/testing/doxygen-spinx-breathe/mini-setup/include/cpp_doxygen_sphinx.hpp" line="9" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="classFoo" kindref="compound">Foo</ref>. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/iz/Dropbox/projects/testing/doxygen-spinx-breathe/mini-setup/include/cpp_doxygen_sphinx.hpp" line="5" column="10" bodyfile="/home/iz/Dropbox/projects/testing/doxygen-spinx-breathe/mini-setup/include/cpp_doxygen_sphinx.hpp" bodystart="5" bodyend="11"/>
+    <listofallmembers>
+      <member refid="classFoo_1abf88c4997abff7e0244459cca65f3a94" prot="private" virt="non-virtual"><scope>Foo</scope><name>say_hello</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

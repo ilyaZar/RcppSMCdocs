@@ -1,0 +1,399 @@
+\hypertarget{classsmc_1_1historyelement}{}\doxysection{smc\+::historyelement$<$ Space $>$ Class Template Reference}
+\label{classsmc_1_1historyelement}\index{smc::historyelement$<$ Space $>$@{smc::historyelement$<$ Space $>$}}
+
+
+A template class for the elements of a linked list to be used for the history of the sampler.  
+
+
+
+
+{\ttfamily \#include $<$history.\+h$>$}
+
+
+
+Collaboration diagram for smc\+::historyelement$<$ Space $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=197pt]{classsmc_1_1historyelement__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsmc_1_1historyelement_acfe01a851a4cee19068c291e2cc9b0d5}{historyelement}} ()
+\begin{DoxyCompactList}\small\item\em The null constructor creates an empty history element. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsmc_1_1historyelement_a3ead7752e711387f3f038bdbc016ebcc}{historyelement}} (long l\+Number, \mbox{\hyperlink{classsmc_1_1population}{population}}$<$ Space $>$ p\+New, int n\+Accepts, int n\+Repeats, \mbox{\hyperlink{classsmc_1_1historyflags}{historyflags}} hf)
+\begin{DoxyCompactList}\small\item\em A constructor with four arguments initialises the particle set. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsmc_1_1historyelement_a4428ce46f4dd11a8b99cd93cfdc72b33}{$\sim$historyelement}} ()
+\begin{DoxyCompactList}\small\item\em The destructor tidies up. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classsmc_1_1historyelement_a0fc2b96ec075a38c32f08433b0de7337}{Get\+E\+SS}} (void) const
+\begin{DoxyCompactList}\small\item\em Returns the effective sample size of this particle generation. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsmc_1_1historyflags}{historyflags}} \mbox{\hyperlink{classsmc_1_1historyelement_ad811b285a6b854a99d4285125692b28b}{Get\+Flags}} (void) const
+\begin{DoxyCompactList}\small\item\em Returns the flags. \end{DoxyCompactList}\item 
+long \mbox{\hyperlink{classsmc_1_1historyelement_a9524c99e0173d1b2244c30b7fa29f0e6}{Get\+Number}} (void) const
+\begin{DoxyCompactList}\small\item\em Returns the number of particles present. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsmc_1_1population}{population}}$<$ Space $>$ \mbox{\hyperlink{classsmc_1_1historyelement_a7fa5ffc6301ace687069cb2237b0a0df}{Get\+Values}} (void) const
+\begin{DoxyCompactList}\small\item\em Returns the current particle set. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsmc_1_1population}{population}}$<$ Space $>$ \& \mbox{\hyperlink{classsmc_1_1historyelement_a41c634dfaa108fe51b9cf7a66121e9a2}{Get\+Refs}} (void)
+\begin{DoxyCompactList}\small\item\em Returns a reference to the current particle set. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsmc_1_1historyelement_ae8812a55f616bf65107ad5bc08ca2644}{Set\+A\+Indices}} (const arma\+::\+Col$<$ unsigned int $>$ \&new\+Aindices)
+\begin{DoxyCompactList}\small\item\em Sets the ancestor indices of the current particle set. \end{DoxyCompactList}\item 
+arma\+::\+Col$<$ unsigned int $>$ \mbox{\hyperlink{classsmc_1_1historyelement_a20dfbaf1b1e0cd4e4fc80ddf6aef7023}{Get\+A\+Indices}} (void) const
+\begin{DoxyCompactList}\small\item\em Returns the ancestor indices of the current particle set. \end{DoxyCompactList}\item 
+long double \mbox{\hyperlink{classsmc_1_1historyelement_aca253afff3c7234a966e59fb6ee6a58e}{Integrate}} (long l\+Time, double($\ast$p\+Integrand)(long, const Space \&, void $\ast$), void $\ast$p\+Auxiliary) const
+\begin{DoxyCompactList}\small\item\em Monte Carlo estimate of the expectation of the supplied function with respect to the empirical measure of the particle ensemble. \end{DoxyCompactList}\item 
+long double \mbox{\hyperlink{classsmc_1_1historyelement_ad64f0a4b0dddd789fc1822d057023ab9}{Integrate\+\_\+\+Var}} (long l\+Time, double($\ast$p\+Integrand)(long, const Space \&, void $\ast$), double Expectation, void $\ast$p\+Auxiliary) const
+\begin{DoxyCompactList}\small\item\em Monte Carlo estimate of the variance of the supplied function with respect to the empirical measure of the particle ensemble (to be used in second order trapezoidal correction). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsmc_1_1historyelement_a937d74cb8b5ffe8e0aa1e637faef2807}{Set}} (long l\+Number, const \mbox{\hyperlink{classsmc_1_1population}{population}}$<$ Space $>$ \&New, int in\+Accepted, int n\+Repeats, const \mbox{\hyperlink{classsmc_1_1historyflags}{historyflags}} \&histflags)
+\begin{DoxyCompactList}\small\item\em Sets the particle set to the specified values excluding ancestors. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsmc_1_1historyelement_a6e16e343752bb1c4403f40b362fc0e7f}{Set}} (long l\+Number, const \mbox{\hyperlink{classsmc_1_1population}{population}}$<$ Space $>$ \&New, int in\+Accepted, int n\+Repeats, const \mbox{\hyperlink{classsmc_1_1historyflags}{historyflags}} \&histflags, const arma\+::\+Col$<$ unsigned int $>$ \&new\+Aindices)
+\begin{DoxyCompactList}\small\item\em Sets the particle set to the specified values including ancestors. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsmc_1_1historyelement_a91d3d8baac02d4cbf08642be106a4384}{Set}} (long l\+Number, const \mbox{\hyperlink{classsmc_1_1population}{population}}$<$ Space $>$ \&New, const \mbox{\hyperlink{classsmc_1_1historyflags}{historyflags}} \&histflags, const arma\+::\+Col$<$ unsigned int $>$ \&new\+Aindices)
+\begin{DoxyCompactList}\small\item\em Sets the particle set to the specified values including ancestors specifically to use with the derived conditional sampler class where adaptation and M\+C\+MC moves are not supported. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsmc_1_1historyelement_a17dc6cf863db8064b7ef6e40b86cd02d}{Set}} (long l\+Number, const \mbox{\hyperlink{classsmc_1_1population}{population}}$<$ Space $>$ \&New, const \mbox{\hyperlink{classsmc_1_1historyflags}{historyflags}} \&histflags)
+\begin{DoxyCompactList}\small\item\em Sets the particle set to the specified values excluding ancestors for the derived conditional sampler class. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classsmc_1_1historyelement_a703582146b53ef99d37c128e73ab4538}{Accept\+Count}} (void)
+\begin{DoxyCompactList}\small\item\em Returns the number of M\+C\+MC moves accepted during this iteration. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classsmc_1_1historyelement_aa79e02ab98b7b603c05b9f1af6d18823}{mcmc\+Repeats}} (void)
+\begin{DoxyCompactList}\small\item\em Returns the number of M\+C\+MC iterations performed during this iteration. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classsmc_1_1historyelement_abbf23e201874f2d75a615dfd550b8603}{Was\+Resampled}} (void)
+\begin{DoxyCompactList}\small\item\em Returns true if the particle set. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+long \mbox{\hyperlink{classsmc_1_1historyelement_adea5f8dc2ea310f798c4db30548f5197}{number}}
+\begin{DoxyCompactList}\small\item\em The number of particles (presently redundant as this is not a function of iteration) \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classsmc_1_1historyelement_a015849edb0b8e68761175355625d2ad8}{n\+Accepted}}
+\begin{DoxyCompactList}\small\item\em Number of M\+C\+MC moves accepted during this iteration. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classsmc_1_1historyelement_aead93445bfbf78315d4a0dc41d0ef6ce}{n\+Repeat}}
+\begin{DoxyCompactList}\small\item\em Number of M\+C\+MC iterations performed at this iteration (per particle) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsmc_1_1population}{population}}$<$ Space $>$ \mbox{\hyperlink{classsmc_1_1historyelement_ad5c8283a96e2342ee3108f62119398af}{pop}}
+\begin{DoxyCompactList}\small\item\em The particles themselves (values and weights) \end{DoxyCompactList}\item 
+arma\+::\+Col$<$ unsigned int $>$ \mbox{\hyperlink{classsmc_1_1historyelement_a4453e89a2521144d2946a77ed8be49b4}{ancestor\+Indices}} = arma\+::\+Col$<$unsigned int$>$(\mbox{\hyperlink{classsmc_1_1historyelement_adea5f8dc2ea310f798c4db30548f5197}{number}})
+\item 
+\mbox{\hyperlink{classsmc_1_1historyflags}{historyflags}} \mbox{\hyperlink{classsmc_1_1historyelement_a7cdc4a207a4fcede8d45f7ca90aac356}{flags}}
+\begin{DoxyCompactList}\small\item\em Flags associated with this iteration. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$class Space$>$\newline
+class smc\+::historyelement$<$ Space $>$}
+
+A template class for the elements of a linked list to be used for the history of the sampler. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsmc_1_1historyelement_acfe01a851a4cee19068c291e2cc9b0d5}\label{classsmc_1_1historyelement_acfe01a851a4cee19068c291e2cc9b0d5}} 
+\index{smc::historyelement$<$ Space $>$@{smc::historyelement$<$ Space $>$}!historyelement@{historyelement}}
+\index{historyelement@{historyelement}!smc::historyelement$<$ Space $>$@{smc::historyelement$<$ Space $>$}}
+\doxysubsubsection{\texorpdfstring{historyelement()}{historyelement()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class Space $>$ \\
+\mbox{\hyperlink{classsmc_1_1historyelement}{smc\+::historyelement}}$<$ Space $>$\+::\mbox{\hyperlink{classsmc_1_1historyelement}{historyelement}}}
+
+
+
+The null constructor creates an empty history element. 
+
+\mbox{\Hypertarget{classsmc_1_1historyelement_a3ead7752e711387f3f038bdbc016ebcc}\label{classsmc_1_1historyelement_a3ead7752e711387f3f038bdbc016ebcc}} 
+\index{smc::historyelement$<$ Space $>$@{smc::historyelement$<$ Space $>$}!historyelement@{historyelement}}
+\index{historyelement@{historyelement}!smc::historyelement$<$ Space $>$@{smc::historyelement$<$ Space $>$}}
+\doxysubsubsection{\texorpdfstring{historyelement()}{historyelement()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class Space $>$ \\
+\mbox{\hyperlink{classsmc_1_1historyelement}{smc\+::historyelement}}$<$ Space $>$\+::\mbox{\hyperlink{classsmc_1_1historyelement}{historyelement}} (\begin{DoxyParamCaption}\item[{long}]{l\+Number,  }\item[{\mbox{\hyperlink{classsmc_1_1population}{population}}$<$ Space $>$}]{New,  }\item[{int}]{n\+Accepts,  }\item[{int}]{n\+Repeats,  }\item[{\mbox{\hyperlink{classsmc_1_1historyflags}{historyflags}}}]{hf }\end{DoxyParamCaption})}
+
+
+
+A constructor with four arguments initialises the particle set. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em l\+Number} & The number of particles present in the particle generation \\
+\hline
+{\em New} & The array of particles which are present in the particle generation \\
+\hline
+{\em n\+Accepts} & The number of M\+C\+MC moves that were accepted during this particle generation \\
+\hline
+{\em n\+Repeats} & The number of M\+C\+MC iterations that were performed during this particle generation \\
+\hline
+{\em hf} & The historyflags associated with the particle generation \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classsmc_1_1historyelement_a4428ce46f4dd11a8b99cd93cfdc72b33}\label{classsmc_1_1historyelement_a4428ce46f4dd11a8b99cd93cfdc72b33}} 
+\index{smc::historyelement$<$ Space $>$@{smc::historyelement$<$ Space $>$}!````~historyelement@{$\sim$historyelement}}
+\index{````~historyelement@{$\sim$historyelement}!smc::historyelement$<$ Space $>$@{smc::historyelement$<$ Space $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$historyelement()}{~historyelement()}}
+{\footnotesize\ttfamily template$<$class Space $>$ \\
+\mbox{\hyperlink{classsmc_1_1historyelement}{smc\+::historyelement}}$<$ Space $>$\+::$\sim$\mbox{\hyperlink{classsmc_1_1historyelement}{historyelement}}}
+
+
+
+The destructor tidies up. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classsmc_1_1historyelement_a703582146b53ef99d37c128e73ab4538}\label{classsmc_1_1historyelement_a703582146b53ef99d37c128e73ab4538}} 
+\index{smc::historyelement$<$ Space $>$@{smc::historyelement$<$ Space $>$}!AcceptCount@{AcceptCount}}
+\index{AcceptCount@{AcceptCount}!smc::historyelement$<$ Space $>$@{smc::historyelement$<$ Space $>$}}
+\doxysubsubsection{\texorpdfstring{AcceptCount()}{AcceptCount()}}
+{\footnotesize\ttfamily template$<$class Space $>$ \\
+int \mbox{\hyperlink{classsmc_1_1historyelement}{smc\+::historyelement}}$<$ Space $>$\+::Accept\+Count (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the number of M\+C\+MC moves accepted during this iteration. 
+
+\mbox{\Hypertarget{classsmc_1_1historyelement_a20dfbaf1b1e0cd4e4fc80ddf6aef7023}\label{classsmc_1_1historyelement_a20dfbaf1b1e0cd4e4fc80ddf6aef7023}} 
+\index{smc::historyelement$<$ Space $>$@{smc::historyelement$<$ Space $>$}!GetAIndices@{GetAIndices}}
+\index{GetAIndices@{GetAIndices}!smc::historyelement$<$ Space $>$@{smc::historyelement$<$ Space $>$}}
+\doxysubsubsection{\texorpdfstring{GetAIndices()}{GetAIndices()}}
+{\footnotesize\ttfamily template$<$class Space $>$ \\
+arma\+::\+Col$<$unsigned int$>$ \mbox{\hyperlink{classsmc_1_1historyelement}{smc\+::historyelement}}$<$ Space $>$\+::Get\+A\+Indices (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the ancestor indices of the current particle set. 
+
+\mbox{\Hypertarget{classsmc_1_1historyelement_a0fc2b96ec075a38c32f08433b0de7337}\label{classsmc_1_1historyelement_a0fc2b96ec075a38c32f08433b0de7337}} 
+\index{smc::historyelement$<$ Space $>$@{smc::historyelement$<$ Space $>$}!GetESS@{GetESS}}
+\index{GetESS@{GetESS}!smc::historyelement$<$ Space $>$@{smc::historyelement$<$ Space $>$}}
+\doxysubsubsection{\texorpdfstring{GetESS()}{GetESS()}}
+{\footnotesize\ttfamily template$<$class Space $>$ \\
+double \mbox{\hyperlink{classsmc_1_1historyelement}{smc\+::historyelement}}$<$ Space $>$\+::Get\+E\+SS (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the effective sample size of this particle generation. 
+
+\mbox{\Hypertarget{classsmc_1_1historyelement_ad811b285a6b854a99d4285125692b28b}\label{classsmc_1_1historyelement_ad811b285a6b854a99d4285125692b28b}} 
+\index{smc::historyelement$<$ Space $>$@{smc::historyelement$<$ Space $>$}!GetFlags@{GetFlags}}
+\index{GetFlags@{GetFlags}!smc::historyelement$<$ Space $>$@{smc::historyelement$<$ Space $>$}}
+\doxysubsubsection{\texorpdfstring{GetFlags()}{GetFlags()}}
+{\footnotesize\ttfamily template$<$class Space $>$ \\
+\mbox{\hyperlink{classsmc_1_1historyflags}{historyflags}} \mbox{\hyperlink{classsmc_1_1historyelement}{smc\+::historyelement}}$<$ Space $>$\+::Get\+Flags (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the flags. 
+
+\mbox{\Hypertarget{classsmc_1_1historyelement_a9524c99e0173d1b2244c30b7fa29f0e6}\label{classsmc_1_1historyelement_a9524c99e0173d1b2244c30b7fa29f0e6}} 
+\index{smc::historyelement$<$ Space $>$@{smc::historyelement$<$ Space $>$}!GetNumber@{GetNumber}}
+\index{GetNumber@{GetNumber}!smc::historyelement$<$ Space $>$@{smc::historyelement$<$ Space $>$}}
+\doxysubsubsection{\texorpdfstring{GetNumber()}{GetNumber()}}
+{\footnotesize\ttfamily template$<$class Space $>$ \\
+long \mbox{\hyperlink{classsmc_1_1historyelement}{smc\+::historyelement}}$<$ Space $>$\+::Get\+Number (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the number of particles present. 
+
+\mbox{\Hypertarget{classsmc_1_1historyelement_a41c634dfaa108fe51b9cf7a66121e9a2}\label{classsmc_1_1historyelement_a41c634dfaa108fe51b9cf7a66121e9a2}} 
+\index{smc::historyelement$<$ Space $>$@{smc::historyelement$<$ Space $>$}!GetRefs@{GetRefs}}
+\index{GetRefs@{GetRefs}!smc::historyelement$<$ Space $>$@{smc::historyelement$<$ Space $>$}}
+\doxysubsubsection{\texorpdfstring{GetRefs()}{GetRefs()}}
+{\footnotesize\ttfamily template$<$class Space $>$ \\
+\mbox{\hyperlink{classsmc_1_1population}{population}}$<$Space$>$\& \mbox{\hyperlink{classsmc_1_1historyelement}{smc\+::historyelement}}$<$ Space $>$\+::Get\+Refs (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a reference to the current particle set. 
+
+\mbox{\Hypertarget{classsmc_1_1historyelement_a7fa5ffc6301ace687069cb2237b0a0df}\label{classsmc_1_1historyelement_a7fa5ffc6301ace687069cb2237b0a0df}} 
+\index{smc::historyelement$<$ Space $>$@{smc::historyelement$<$ Space $>$}!GetValues@{GetValues}}
+\index{GetValues@{GetValues}!smc::historyelement$<$ Space $>$@{smc::historyelement$<$ Space $>$}}
+\doxysubsubsection{\texorpdfstring{GetValues()}{GetValues()}}
+{\footnotesize\ttfamily template$<$class Space $>$ \\
+\mbox{\hyperlink{classsmc_1_1population}{population}}$<$Space$>$ \mbox{\hyperlink{classsmc_1_1historyelement}{smc\+::historyelement}}$<$ Space $>$\+::Get\+Values (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the current particle set. 
+
+\mbox{\Hypertarget{classsmc_1_1historyelement_aca253afff3c7234a966e59fb6ee6a58e}\label{classsmc_1_1historyelement_aca253afff3c7234a966e59fb6ee6a58e}} 
+\index{smc::historyelement$<$ Space $>$@{smc::historyelement$<$ Space $>$}!Integrate@{Integrate}}
+\index{Integrate@{Integrate}!smc::historyelement$<$ Space $>$@{smc::historyelement$<$ Space $>$}}
+\doxysubsubsection{\texorpdfstring{Integrate()}{Integrate()}}
+{\footnotesize\ttfamily template$<$class Space $>$ \\
+long double \mbox{\hyperlink{classsmc_1_1historyelement}{smc\+::historyelement}}$<$ Space $>$\+::Integrate (\begin{DoxyParamCaption}\item[{long}]{l\+Time,  }\item[{double($\ast$)(long, const Space \&, void $\ast$)}]{p\+Integrand,  }\item[{void $\ast$}]{p\+Auxiliary }\end{DoxyParamCaption}) const}
+
+
+
+Monte Carlo estimate of the expectation of the supplied function with respect to the empirical measure of the particle ensemble. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em l\+Time} & The timestep at which the integration is to be carried out \\
+\hline
+{\em p\+Integrand} & The function which is to be integrated \\
+\hline
+{\em p\+Auxiliary} & A pointer to additional information which is passed to the integrand function \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classsmc_1_1historyelement_ad64f0a4b0dddd789fc1822d057023ab9}\label{classsmc_1_1historyelement_ad64f0a4b0dddd789fc1822d057023ab9}} 
+\index{smc::historyelement$<$ Space $>$@{smc::historyelement$<$ Space $>$}!Integrate\_Var@{Integrate\_Var}}
+\index{Integrate\_Var@{Integrate\_Var}!smc::historyelement$<$ Space $>$@{smc::historyelement$<$ Space $>$}}
+\doxysubsubsection{\texorpdfstring{Integrate\_Var()}{Integrate\_Var()}}
+{\footnotesize\ttfamily template$<$class Space $>$ \\
+long double \mbox{\hyperlink{classsmc_1_1historyelement}{smc\+::historyelement}}$<$ Space $>$\+::Integrate\+\_\+\+Var (\begin{DoxyParamCaption}\item[{long}]{l\+Time,  }\item[{double($\ast$)(long, const Space \&, void $\ast$)}]{p\+Integrand,  }\item[{double}]{Expectation,  }\item[{void $\ast$}]{p\+Auxiliary }\end{DoxyParamCaption}) const}
+
+
+
+Monte Carlo estimate of the variance of the supplied function with respect to the empirical measure of the particle ensemble (to be used in second order trapezoidal correction). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em l\+Time} & The timestep at which the integration is to be carried out \\
+\hline
+{\em p\+Integrand} & The function which is to be integrated \\
+\hline
+{\em p\+Auxiliary} & A pointer to additional information which is passed to the integrand function \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classsmc_1_1historyelement_aa79e02ab98b7b603c05b9f1af6d18823}\label{classsmc_1_1historyelement_aa79e02ab98b7b603c05b9f1af6d18823}} 
+\index{smc::historyelement$<$ Space $>$@{smc::historyelement$<$ Space $>$}!mcmcRepeats@{mcmcRepeats}}
+\index{mcmcRepeats@{mcmcRepeats}!smc::historyelement$<$ Space $>$@{smc::historyelement$<$ Space $>$}}
+\doxysubsubsection{\texorpdfstring{mcmcRepeats()}{mcmcRepeats()}}
+{\footnotesize\ttfamily template$<$class Space $>$ \\
+int \mbox{\hyperlink{classsmc_1_1historyelement}{smc\+::historyelement}}$<$ Space $>$\+::mcmc\+Repeats (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the number of M\+C\+MC iterations performed during this iteration. 
+
+\mbox{\Hypertarget{classsmc_1_1historyelement_a17dc6cf863db8064b7ef6e40b86cd02d}\label{classsmc_1_1historyelement_a17dc6cf863db8064b7ef6e40b86cd02d}} 
+\index{smc::historyelement$<$ Space $>$@{smc::historyelement$<$ Space $>$}!Set@{Set}}
+\index{Set@{Set}!smc::historyelement$<$ Space $>$@{smc::historyelement$<$ Space $>$}}
+\doxysubsubsection{\texorpdfstring{Set()}{Set()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$class Space $>$ \\
+void \mbox{\hyperlink{classsmc_1_1historyelement}{smc\+::historyelement}}$<$ Space $>$\+::Set (\begin{DoxyParamCaption}\item[{long}]{l\+Number,  }\item[{const \mbox{\hyperlink{classsmc_1_1population}{population}}$<$ Space $>$ \&}]{New,  }\item[{const \mbox{\hyperlink{classsmc_1_1historyflags}{historyflags}} \&}]{histflags }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the particle set to the specified values excluding ancestors for the derived conditional sampler class. 
+
+\mbox{\Hypertarget{classsmc_1_1historyelement_a91d3d8baac02d4cbf08642be106a4384}\label{classsmc_1_1historyelement_a91d3d8baac02d4cbf08642be106a4384}} 
+\index{smc::historyelement$<$ Space $>$@{smc::historyelement$<$ Space $>$}!Set@{Set}}
+\index{Set@{Set}!smc::historyelement$<$ Space $>$@{smc::historyelement$<$ Space $>$}}
+\doxysubsubsection{\texorpdfstring{Set()}{Set()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$class Space $>$ \\
+void \mbox{\hyperlink{classsmc_1_1historyelement}{smc\+::historyelement}}$<$ Space $>$\+::Set (\begin{DoxyParamCaption}\item[{long}]{l\+Number,  }\item[{const \mbox{\hyperlink{classsmc_1_1population}{population}}$<$ Space $>$ \&}]{New,  }\item[{const \mbox{\hyperlink{classsmc_1_1historyflags}{historyflags}} \&}]{histflags,  }\item[{const arma\+::\+Col$<$ unsigned int $>$ \&}]{new\+Aindices }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the particle set to the specified values including ancestors specifically to use with the derived conditional sampler class where adaptation and M\+C\+MC moves are not supported. 
+
+\mbox{\Hypertarget{classsmc_1_1historyelement_a937d74cb8b5ffe8e0aa1e637faef2807}\label{classsmc_1_1historyelement_a937d74cb8b5ffe8e0aa1e637faef2807}} 
+\index{smc::historyelement$<$ Space $>$@{smc::historyelement$<$ Space $>$}!Set@{Set}}
+\index{Set@{Set}!smc::historyelement$<$ Space $>$@{smc::historyelement$<$ Space $>$}}
+\doxysubsubsection{\texorpdfstring{Set()}{Set()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$class Space $>$ \\
+void \mbox{\hyperlink{classsmc_1_1historyelement}{smc\+::historyelement}}$<$ Space $>$\+::Set (\begin{DoxyParamCaption}\item[{long}]{l\+Number,  }\item[{const \mbox{\hyperlink{classsmc_1_1population}{population}}$<$ Space $>$ \&}]{New,  }\item[{int}]{in\+Accepted,  }\item[{int}]{n\+Repeats,  }\item[{const \mbox{\hyperlink{classsmc_1_1historyflags}{historyflags}} \&}]{histflags }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the particle set to the specified values excluding ancestors. 
+
+\mbox{\Hypertarget{classsmc_1_1historyelement_a6e16e343752bb1c4403f40b362fc0e7f}\label{classsmc_1_1historyelement_a6e16e343752bb1c4403f40b362fc0e7f}} 
+\index{smc::historyelement$<$ Space $>$@{smc::historyelement$<$ Space $>$}!Set@{Set}}
+\index{Set@{Set}!smc::historyelement$<$ Space $>$@{smc::historyelement$<$ Space $>$}}
+\doxysubsubsection{\texorpdfstring{Set()}{Set()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$class Space $>$ \\
+void \mbox{\hyperlink{classsmc_1_1historyelement}{smc\+::historyelement}}$<$ Space $>$\+::Set (\begin{DoxyParamCaption}\item[{long}]{l\+Number,  }\item[{const \mbox{\hyperlink{classsmc_1_1population}{population}}$<$ Space $>$ \&}]{New,  }\item[{int}]{in\+Accepted,  }\item[{int}]{n\+Repeats,  }\item[{const \mbox{\hyperlink{classsmc_1_1historyflags}{historyflags}} \&}]{histflags,  }\item[{const arma\+::\+Col$<$ unsigned int $>$ \&}]{new\+Aindices }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the particle set to the specified values including ancestors. 
+
+\mbox{\Hypertarget{classsmc_1_1historyelement_ae8812a55f616bf65107ad5bc08ca2644}\label{classsmc_1_1historyelement_ae8812a55f616bf65107ad5bc08ca2644}} 
+\index{smc::historyelement$<$ Space $>$@{smc::historyelement$<$ Space $>$}!SetAIndices@{SetAIndices}}
+\index{SetAIndices@{SetAIndices}!smc::historyelement$<$ Space $>$@{smc::historyelement$<$ Space $>$}}
+\doxysubsubsection{\texorpdfstring{SetAIndices()}{SetAIndices()}}
+{\footnotesize\ttfamily template$<$class Space $>$ \\
+void \mbox{\hyperlink{classsmc_1_1historyelement}{smc\+::historyelement}}$<$ Space $>$\+::Set\+A\+Indices (\begin{DoxyParamCaption}\item[{const arma\+::\+Col$<$ unsigned int $>$ \&}]{new\+Aindices }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the ancestor indices of the current particle set. 
+
+\mbox{\Hypertarget{classsmc_1_1historyelement_abbf23e201874f2d75a615dfd550b8603}\label{classsmc_1_1historyelement_abbf23e201874f2d75a615dfd550b8603}} 
+\index{smc::historyelement$<$ Space $>$@{smc::historyelement$<$ Space $>$}!WasResampled@{WasResampled}}
+\index{WasResampled@{WasResampled}!smc::historyelement$<$ Space $>$@{smc::historyelement$<$ Space $>$}}
+\doxysubsubsection{\texorpdfstring{WasResampled()}{WasResampled()}}
+{\footnotesize\ttfamily template$<$class Space $>$ \\
+int \mbox{\hyperlink{classsmc_1_1historyelement}{smc\+::historyelement}}$<$ Space $>$\+::Was\+Resampled (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns true if the particle set. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classsmc_1_1historyelement_a4453e89a2521144d2946a77ed8be49b4}\label{classsmc_1_1historyelement_a4453e89a2521144d2946a77ed8be49b4}} 
+\index{smc::historyelement$<$ Space $>$@{smc::historyelement$<$ Space $>$}!ancestorIndices@{ancestorIndices}}
+\index{ancestorIndices@{ancestorIndices}!smc::historyelement$<$ Space $>$@{smc::historyelement$<$ Space $>$}}
+\doxysubsubsection{\texorpdfstring{ancestorIndices}{ancestorIndices}}
+{\footnotesize\ttfamily template$<$class Space $>$ \\
+arma\+::\+Col$<$unsigned int$>$ \mbox{\hyperlink{classsmc_1_1historyelement}{smc\+::historyelement}}$<$ Space $>$\+::ancestor\+Indices = arma\+::\+Col$<$unsigned int$>$(\mbox{\hyperlink{classsmc_1_1historyelement_adea5f8dc2ea310f798c4db30548f5197}{number}})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classsmc_1_1historyelement_a7cdc4a207a4fcede8d45f7ca90aac356}\label{classsmc_1_1historyelement_a7cdc4a207a4fcede8d45f7ca90aac356}} 
+\index{smc::historyelement$<$ Space $>$@{smc::historyelement$<$ Space $>$}!flags@{flags}}
+\index{flags@{flags}!smc::historyelement$<$ Space $>$@{smc::historyelement$<$ Space $>$}}
+\doxysubsubsection{\texorpdfstring{flags}{flags}}
+{\footnotesize\ttfamily template$<$class Space $>$ \\
+\mbox{\hyperlink{classsmc_1_1historyflags}{historyflags}} \mbox{\hyperlink{classsmc_1_1historyelement}{smc\+::historyelement}}$<$ Space $>$\+::flags\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Flags associated with this iteration. 
+
+\mbox{\Hypertarget{classsmc_1_1historyelement_a015849edb0b8e68761175355625d2ad8}\label{classsmc_1_1historyelement_a015849edb0b8e68761175355625d2ad8}} 
+\index{smc::historyelement$<$ Space $>$@{smc::historyelement$<$ Space $>$}!nAccepted@{nAccepted}}
+\index{nAccepted@{nAccepted}!smc::historyelement$<$ Space $>$@{smc::historyelement$<$ Space $>$}}
+\doxysubsubsection{\texorpdfstring{nAccepted}{nAccepted}}
+{\footnotesize\ttfamily template$<$class Space $>$ \\
+int \mbox{\hyperlink{classsmc_1_1historyelement}{smc\+::historyelement}}$<$ Space $>$\+::n\+Accepted\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Number of M\+C\+MC moves accepted during this iteration. 
+
+\mbox{\Hypertarget{classsmc_1_1historyelement_aead93445bfbf78315d4a0dc41d0ef6ce}\label{classsmc_1_1historyelement_aead93445bfbf78315d4a0dc41d0ef6ce}} 
+\index{smc::historyelement$<$ Space $>$@{smc::historyelement$<$ Space $>$}!nRepeat@{nRepeat}}
+\index{nRepeat@{nRepeat}!smc::historyelement$<$ Space $>$@{smc::historyelement$<$ Space $>$}}
+\doxysubsubsection{\texorpdfstring{nRepeat}{nRepeat}}
+{\footnotesize\ttfamily template$<$class Space $>$ \\
+int \mbox{\hyperlink{classsmc_1_1historyelement}{smc\+::historyelement}}$<$ Space $>$\+::n\+Repeat\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Number of M\+C\+MC iterations performed at this iteration (per particle) 
+
+\mbox{\Hypertarget{classsmc_1_1historyelement_adea5f8dc2ea310f798c4db30548f5197}\label{classsmc_1_1historyelement_adea5f8dc2ea310f798c4db30548f5197}} 
+\index{smc::historyelement$<$ Space $>$@{smc::historyelement$<$ Space $>$}!number@{number}}
+\index{number@{number}!smc::historyelement$<$ Space $>$@{smc::historyelement$<$ Space $>$}}
+\doxysubsubsection{\texorpdfstring{number}{number}}
+{\footnotesize\ttfamily template$<$class Space $>$ \\
+long \mbox{\hyperlink{classsmc_1_1historyelement}{smc\+::historyelement}}$<$ Space $>$\+::number\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The number of particles (presently redundant as this is not a function of iteration) 
+
+\mbox{\Hypertarget{classsmc_1_1historyelement_ad5c8283a96e2342ee3108f62119398af}\label{classsmc_1_1historyelement_ad5c8283a96e2342ee3108f62119398af}} 
+\index{smc::historyelement$<$ Space $>$@{smc::historyelement$<$ Space $>$}!pop@{pop}}
+\index{pop@{pop}!smc::historyelement$<$ Space $>$@{smc::historyelement$<$ Space $>$}}
+\doxysubsubsection{\texorpdfstring{pop}{pop}}
+{\footnotesize\ttfamily template$<$class Space $>$ \\
+\mbox{\hyperlink{classsmc_1_1population}{population}}$<$Space$>$ \mbox{\hyperlink{classsmc_1_1historyelement}{smc\+::historyelement}}$<$ Space $>$\+::pop\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The particles themselves (values and weights) 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/iz/\+Dropbox/projects/rcppsmc/\+Rcpp\+S\+M\+Cdocumentation/include/\mbox{\hyperlink{history_8h}{history.\+h}}\end{DoxyCompactItemize}

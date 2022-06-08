@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classsmc_1_1historyflags" kind="class" language="C++" prot="public">
+    <compoundname>smc::historyflags</compoundname>
+    <includes refid="history_8h" local="no">history.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classsmc_1_1historyflags_1ab8e88b1774d9f2842f43b6a27d784fb2" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int smc::historyflags::Resampled</definition>
+        <argsstring></argsstring>
+        <name>Resampled</name>
+        <bitfield> 1</bitfield>
+        <briefdescription>
+<para>true if the particle system was resampled during the described iteration. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/history.h" line="41" column="22" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/history.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classsmc_1_1historyflags_1a340a91c65c5f693e86b06d098e790c19" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>smc::historyflags::historyflags</definition>
+        <argsstring>(int wasResampled)</argsstring>
+        <name>historyflags</name>
+        <param>
+          <type>int</type>
+          <declname>wasResampled</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This constructor produces an initialised historyflags instance.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>wasResampled</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An indicator which should be nonzero if the particle system was resampled during the iteration being described </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/history.h" line="50" column="7" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/history.h" bodystart="50" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="classsmc_1_1historyflags_1a3bb24c8a715558f8e51ed41a48e9cb70" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int smc::historyflags::WasResampled</definition>
+        <argsstring>(void)</argsstring>
+        <name>WasResampled</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>This function returns true if the flag set indicates that the ensemble was resampled during the described iteration. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/history.h" line="59" column="13" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/history.h" bodystart="59" bodyend="59"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The historyflags class holds a set of flags which describe various properties of the particle system at a given time. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/history.h" line="38" column="1" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/history.h" bodystart="37" bodyend="60"/>
+    <listofallmembers>
+      <member refid="classsmc_1_1historyflags_1a340a91c65c5f693e86b06d098e790c19" prot="public" virt="non-virtual"><scope>smc::historyflags</scope><name>historyflags</name></member>
+      <member refid="classsmc_1_1historyflags_1ab8e88b1774d9f2842f43b6a27d784fb2" prot="private" virt="non-virtual"><scope>smc::historyflags</scope><name>Resampled</name></member>
+      <member refid="classsmc_1_1historyflags_1a3bb24c8a715558f8e51ed41a48e9cb70" prot="public" virt="non-virtual"><scope>smc::historyflags</scope><name>WasResampled</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

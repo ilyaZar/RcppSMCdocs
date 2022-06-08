@@ -1,0 +1,80 @@
+\hypertarget{namespacestd}{}\doxysection{std Namespace Reference}
+\label{namespacestd}\index{std@{std}}
+
+
+The standard namespace.  
+
+
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class Space $>$ }\\std\+::ostream \& \mbox{\hyperlink{namespacestd_a5009971eadc5b959926350da2ad8ed03}{operator$<$$<$}} (std\+::ostream \&os, \mbox{\hyperlink{classsmc_1_1population}{smc\+::population}}$<$ Space $>$ \&p)
+\begin{DoxyCompactList}\small\item\em Produce a human readable display of an \mbox{\hyperlink{classsmc_1_1population}{smc\+::population}} class using the standard stream operators. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Space , class Params $>$ }\\std\+::ostream \& \mbox{\hyperlink{namespacestd_aabd24cfa371b609f24469d89c0f3b4ef}{operator$<$$<$}} (std\+::ostream \&os, \mbox{\hyperlink{classsmc_1_1sampler}{smc\+::sampler}}$<$ Space, Params $>$ \&s)
+\begin{DoxyCompactList}\small\item\em Produce a human-\/readable display of the state of an \mbox{\hyperlink{classsmc_1_1sampler}{smc\+::sampler}} class using the stream operator. \end{DoxyCompactList}\item 
+std\+::ostream \& \mbox{\hyperlink{namespacestd_a4678d5a0443b232b2ed4e26c6d9bda35}{operator$<$$<$}} (std\+::ostream \&os, \mbox{\hyperlink{classsmc_1_1exception}{smc\+::exception}} \&e)
+\begin{DoxyCompactList}\small\item\em Produce a human-\/readable display of the state of an \mbox{\hyperlink{classsmc_1_1exception}{smc\+::exception}} class using the stream operator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The standard namespace. 
+
+The classes provided within the standard libraries reside within this namespace and the T\+D\+S\+MC class library adds a number of additional operator overloads to some of the standard classes to allow them to deal with our structures. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacestd_a4678d5a0443b232b2ed4e26c6d9bda35}\label{namespacestd_a4678d5a0443b232b2ed4e26c6d9bda35}} 
+\index{std@{std}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!std@{std}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily std\+::ostream\& std\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{\mbox{\hyperlink{classsmc_1_1exception}{smc\+::exception}} \&}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Produce a human-\/readable display of the state of an \mbox{\hyperlink{classsmc_1_1exception}{smc\+::exception}} class using the stream operator. 
+
+Display a human-\/readable version of an S\+MC exception. 
+\begin{DoxyParams}{Parameters}
+{\em os} & The stream to write to. \\
+\hline
+{\em e} & The exception class to display. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+os 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacestd_a5009971eadc5b959926350da2ad8ed03}\label{namespacestd_a5009971eadc5b959926350da2ad8ed03}} 
+\index{std@{std}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!std@{std}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$class Space $>$ \\
+std\+::ostream\& std\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{\mbox{\hyperlink{classsmc_1_1population}{smc\+::population}}$<$ Space $>$ \&}]{p }\end{DoxyParamCaption})}
+
+
+
+Produce a human readable display of an \mbox{\hyperlink{classsmc_1_1population}{smc\+::population}} class using the standard stream operators. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & The output stream to which the display should be made. \\
+\hline
+{\em p} & The population object which is to be displayed. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespacestd_aabd24cfa371b609f24469d89c0f3b4ef}\label{namespacestd_aabd24cfa371b609f24469d89c0f3b4ef}} 
+\index{std@{std}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!std@{std}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$class Space , class Params $>$ \\
+std\+::ostream\& std\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{\mbox{\hyperlink{classsmc_1_1sampler}{smc\+::sampler}}$<$ Space, Params $>$ \&}]{s }\end{DoxyParamCaption})}
+
+
+
+Produce a human-\/readable display of the state of an \mbox{\hyperlink{classsmc_1_1sampler}{smc\+::sampler}} class using the stream operator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & The output stream to which the display should be made. \\
+\hline
+{\em s} & The sampler which is to be displayed. \\
+\hline
+\end{DoxyParams}

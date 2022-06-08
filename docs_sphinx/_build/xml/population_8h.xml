@@ -1,0 +1,309 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="population_8h" kind="file" language="C++">
+    <compoundname>population.h</compoundname>
+    <includes local="no">RcppArmadillo.h</includes>
+    <includes local="no">float.h</includes>
+    <includes local="no">limits</includes>
+    <includes local="no">cmath</includes>
+    <includedby refid="adaptMethods_8h" local="no">/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/adaptMethods.h</includedby>
+    <includedby refid="sampler_8h" local="yes">/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h</includedby>
+    <includedby refid="history_8h" local="yes">/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/history.h</includedby>
+    <includedby refid="moveset_8h" local="yes">/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/moveset.h</includedby>
+    <includedby refid="staticModelAdapt_8h" local="no">/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/staticModelAdapt.h</includedby>
+    <includedby refid="RcppSMC_8h" local="no">/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/RcppSMC.h</includedby>
+    <incdepgraph>
+      <node id="4">
+        <label>limits</label>
+      </node>
+      <node id="3">
+        <label>float.h</label>
+      </node>
+      <node id="5">
+        <label>cmath</label>
+      </node>
+      <node id="2">
+        <label>RcppArmadillo.h</label>
+      </node>
+      <node id="1">
+        <label>/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/population.h</label>
+        <link refid="population_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="16">
+        <label>/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/staticModelAdapt.h</label>
+        <link refid="staticModelAdapt_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/moveset.h</label>
+        <link refid="moveset_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/conditionalSampler.h</label>
+        <link refid="conditionalSampler_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/pflineart.h</label>
+        <link refid="pflineart_8h"/>
+      </node>
+      <node id="8">
+        <label>/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/LinReg_LA.h</label>
+        <link refid="LinReg__LA_8h"/>
+      </node>
+      <node id="7">
+        <label>/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/cSMCexamples.h</label>
+        <link refid="cSMCexamples_8h"/>
+      </node>
+      <node id="12">
+        <label>/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/pfnonlinbs.h</label>
+        <link refid="pfnonlinbs_8h"/>
+      </node>
+      <node id="2">
+        <label>/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/adaptMethods.h</label>
+        <link refid="adaptMethods_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/population.h</label>
+        <link refid="population_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/blockpfgaussianopt.h</label>
+        <link refid="blockpfgaussianopt_8h"/>
+      </node>
+      <node id="6">
+        <label>/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/RcppSMC.h</label>
+        <link refid="RcppSMC_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/nonLinPMMH.h</label>
+        <link refid="nonLinPMMH_8h"/>
+      </node>
+      <node id="14">
+        <label>/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/history.h</label>
+        <link refid="history_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/LinReg_LA_adapt.h</label>
+        <link refid="LinReg__LA__adapt_8h"/>
+      </node>
+      <node id="3">
+        <label>/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/sampler.h</label>
+        <link refid="sampler_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/smctc.h</label>
+        <link refid="smctc_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classsmc_1_1population" prot="public">smc::population</innerclass>
+    <innernamespace refid="namespacesmc">smc</innernamespace>
+    <innernamespace refid="namespacestd">std</innernamespace>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="population_8h_1a3c4cf6d4466e9cbe7d0168e707f55286" prot="public" static="no">
+        <name>__SMC_POPULATION_HH</name>
+        <initializer>1.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/population.h" line="31" column="9" bodyfile="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/population.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Class used to store and manipulate the population of particles. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This file contains the <ref refid="classsmc_1_1population" kindref="compound">smc::population</ref> class which is used internally. </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>-*-<sp/>mode:<sp/>C++;<sp/>c-indent-level:<sp/>4;<sp/>c-basic-offset:<sp/>4;<sp/>indent-tabs-mode:<sp/>nil;<sp/>-*-</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>population.h:<sp/>Rcpp<sp/>integration<sp/>of<sp/>SMC<sp/>library<sp/>--<sp/>storing<sp/>and<sp/>manipulating</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>particles</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Copyright<sp/>(C)<sp/>2008<sp/>-<sp/>2009<sp/><sp/>Adam<sp/>Johansen</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Copyright<sp/>(C)<sp/>2017<sp/>-<sp/>2020<sp/><sp/>Adam<sp/>Johansen,<sp/>Dirk<sp/>Eddelbuettel<sp/>and<sp/>Leah<sp/>South</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Copyright<sp/>(C)<sp/>2021<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Adam<sp/>Johansen,<sp/>Dirk<sp/>Eddelbuettel,<sp/>Leah<sp/>South<sp/>and<sp/>Ilya<sp/>Zarubin</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>RcppSMC.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//<sp/>RcppSMC<sp/>is<sp/>free<sp/>software:<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify<sp/>it</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>as<sp/>published<sp/>by</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//<sp/>the<sp/>Free<sp/>Software<sp/>Foundation,<sp/>either<sp/>version<sp/>2<sp/>of<sp/>the<sp/>License,<sp/>or</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//<sp/>(at<sp/>your<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">//<sp/>RcppSMC<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,<sp/>but</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">//<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//<sp/>MERCHANTABILITY<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/>See<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">//<sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">//<sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">//<sp/>along<sp/>with<sp/>RcppSMC.<sp/>If<sp/>not,<sp/>see<sp/>&lt;http://www.gnu.org/licenses/&gt;.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>__SMC_POPULATION_HH</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="population_8h_1a3c4cf6d4466e9cbe7d0168e707f55286" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__SMC_POPULATION_HH<sp/>1.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;RcppArmadillo.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;float.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;limits&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cmath&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacesmc" kindref="compound">smc</ref><sp/>{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="namespacesmc_1aaa30e89b2e4c9913d9a8b9b79d482308" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="namespacesmc_1aaa30e89b2e4c9913d9a8b9b79d482308" kindref="member">stableLogSumWeights</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>arma::vec<sp/>&amp;<sp/>logw){</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dMaxWeight<sp/>=<sp/>arma::max(logw);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>sum<sp/>=<sp/>arma::sum(exp(logw<sp/>-<sp/>dMaxWeight));</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(dMaxWeight<sp/>+<sp/>log(sum));</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="classsmc_1_1population" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>Space&gt;<sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classsmc_1_1population" kindref="compound">population</ref></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="57" refid="classsmc_1_1population_1af2895b7eeca98bf97ab17b3e281df4ec" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;Space&gt;<sp/><ref refid="classsmc_1_1population_1af2895b7eeca98bf97ab17b3e281df4ec" kindref="member">value</ref>;</highlight></codeline>
+<codeline lineno="59" refid="classsmc_1_1population_1a95f5035145d401fb7b8d45c5d3b6d171" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>arma::vec<sp/><ref refid="classsmc_1_1population_1a95f5035145d401fb7b8d45c5d3b6d171" kindref="member">logweight</ref>;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsmc_1_1population_1ad6094100fe3180b18ac6c2f6efeef970" kindref="member">population</ref>();</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsmc_1_1population_1ad6094100fe3180b18ac6c2f6efeef970" kindref="member">population</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;Space&gt;<sp/>&amp;<sp/>sInit,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>arma::vec<sp/>&amp;<sp/>dLogWeight);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsmc_1_1population_1ad6094100fe3180b18ac6c2f6efeef970" kindref="member">population</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classsmc_1_1population" kindref="compound">population&lt;Space&gt;</ref><sp/>&amp;<sp/>pFrom);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsmc_1_1population" kindref="compound">population&lt;Space&gt;</ref><sp/>&amp;<sp/><ref refid="classsmc_1_1population_1aa7aa4c48db66d934ec4e32e9c09b105d" kindref="member">operator= </ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classsmc_1_1population" kindref="compound">population&lt;Space&gt;</ref><sp/>&amp;<sp/>pFrom);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsmc_1_1population_1aed412a54f4d33b0cde18adf16cdc10b2" kindref="member">~population</ref>();</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73" refid="classsmc_1_1population_1a4209e3a8191069456da6fa6d541ba7a5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="classsmc_1_1population_1a4209e3a8191069456da6fa6d541ba7a5" kindref="member">GetNumber</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classsmc_1_1population_1a95f5035145d401fb7b8d45c5d3b6d171" kindref="member">logweight</ref>.n_rows;}</highlight></codeline>
+<codeline lineno="75" refid="classsmc_1_1population_1a51c4bf9fd600f844a75df512845af88a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;Space&gt;<sp/>&amp;<sp/><ref refid="classsmc_1_1population_1a51c4bf9fd600f844a75df512845af88a" kindref="member">GetValue</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classsmc_1_1population_1af2895b7eeca98bf97ab17b3e281df4ec" kindref="member">value</ref>;}</highlight></codeline>
+<codeline lineno="77" refid="classsmc_1_1population_1a9f81f8d12af9ba884741be1cfb183c5c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Space<sp/>&amp;<sp/><ref refid="classsmc_1_1population_1a9f81f8d12af9ba884741be1cfb183c5c" kindref="member">GetValueN</ref>(</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>n)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classsmc_1_1population_1af2895b7eeca98bf97ab17b3e281df4ec" kindref="member">value</ref>[n];}</highlight></codeline>
+<codeline lineno="79" refid="classsmc_1_1population_1afbb861efa2fddf0e9b0c61f14bd6493e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Space<sp/>&amp;<sp/><ref refid="classsmc_1_1population_1afbb861efa2fddf0e9b0c61f14bd6493e" kindref="member">GetValueRefN</ref>(</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>n)<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classsmc_1_1population_1af2895b7eeca98bf97ab17b3e281df4ec" kindref="member">value</ref>[n];}</highlight></codeline>
+<codeline lineno="81" refid="classsmc_1_1population_1aed65bb17ec164b22220502121784072c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>arma::vec<sp/>&amp;<sp/><ref refid="classsmc_1_1population_1aed65bb17ec164b22220502121784072c" kindref="member">GetLogWeight</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classsmc_1_1population_1a95f5035145d401fb7b8d45c5d3b6d171" kindref="member">logweight</ref>;}</highlight></codeline>
+<codeline lineno="83" refid="classsmc_1_1population_1a5b42f094323cc2425825d82be7842e77" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classsmc_1_1population_1a5b42f094323cc2425825d82be7842e77" kindref="member">GetLogWeightN</ref>(</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>n)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classsmc_1_1population_1a95f5035145d401fb7b8d45c5d3b6d171" kindref="member">logweight</ref>(n);}</highlight></codeline>
+<codeline lineno="85" refid="classsmc_1_1population_1af2706cf1c455f0cd5b9b3d7d455b6364" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>&amp;<sp/><ref refid="classsmc_1_1population_1af2706cf1c455f0cd5b9b3d7d455b6364" kindref="member">GetLogWeightRefN</ref>(</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>n)<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classsmc_1_1population_1a95f5035145d401fb7b8d45c5d3b6d171" kindref="member">logweight</ref>(n);}</highlight></codeline>
+<codeline lineno="87" refid="classsmc_1_1population_1ac03a39fe7a5199433362f69c0e793dd7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>arma::vec<sp/><ref refid="classsmc_1_1population_1ac03a39fe7a5199433362f69c0e793dd7" kindref="member">GetWeight</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>exp(<ref refid="classsmc_1_1population_1a95f5035145d401fb7b8d45c5d3b6d171" kindref="member">logweight</ref>);}</highlight></codeline>
+<codeline lineno="89" refid="classsmc_1_1population_1a229bc5706bf6afef8073990a345b5a60" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classsmc_1_1population_1a229bc5706bf6afef8073990a345b5a60" kindref="member">GetWeightN</ref>(</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>n)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>exp(<ref refid="classsmc_1_1population_1a95f5035145d401fb7b8d45c5d3b6d171" kindref="member">logweight</ref>(n));}</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95" refid="classsmc_1_1population_1a228f119bab158b24e6edef17e9e806d3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classsmc_1_1population_1a228f119bab158b24e6edef17e9e806d3" kindref="member">Set</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;Space&gt;<sp/>&amp;<sp/>sValue,</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>arma::vec<sp/>&amp;<sp/>dLogWeight){<ref refid="classsmc_1_1population_1af2895b7eeca98bf97ab17b3e281df4ec" kindref="member">value</ref><sp/>=<sp/>sValue;<sp/><ref refid="classsmc_1_1population_1a95f5035145d401fb7b8d45c5d3b6d171" kindref="member">logweight</ref><sp/>=<sp/>dLogWeight;}</highlight></codeline>
+<codeline lineno="99" refid="classsmc_1_1population_1a21eb46b6158da5c74088a461e481a7c7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classsmc_1_1population_1a21eb46b6158da5c74088a461e481a7c7" kindref="member">SetValue</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;Space&gt;<sp/>&amp;<sp/>sValue){<ref refid="classsmc_1_1population_1af2895b7eeca98bf97ab17b3e281df4ec" kindref="member">value</ref><sp/>=<sp/>sValue;}</highlight></codeline>
+<codeline lineno="103" refid="classsmc_1_1population_1a7e43dc61d785bf5b88ce6014b53dfb2a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classsmc_1_1population_1a7e43dc61d785bf5b88ce6014b53dfb2a" kindref="member">SetValueN</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Space<sp/>&amp;<sp/>sValue,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>n){<ref refid="classsmc_1_1population_1af2895b7eeca98bf97ab17b3e281df4ec" kindref="member">value</ref>[n]<sp/>=<sp/>sValue;}</highlight></codeline>
+<codeline lineno="107" refid="classsmc_1_1population_1aa3e891ee4bac69ea5248e7af20c9e18d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classsmc_1_1population_1aa3e891ee4bac69ea5248e7af20c9e18d" kindref="member">SetLogWeight</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>arma::vec<sp/>&amp;<sp/>dLogWeight)<sp/>{<ref refid="classsmc_1_1population_1a95f5035145d401fb7b8d45c5d3b6d171" kindref="member">logweight</ref><sp/>=<sp/>dLogWeight;}</highlight></codeline>
+<codeline lineno="111" refid="classsmc_1_1population_1a34976b1339ba0c00a292401e2bf6e1f8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classsmc_1_1population_1a34976b1339ba0c00a292401e2bf6e1f8" kindref="member">SetLogWeightN</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>&amp;<sp/>dLogWeight,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>n)<sp/>{<ref refid="classsmc_1_1population_1a95f5035145d401fb7b8d45c5d3b6d171" kindref="member">logweight</ref>(n)<sp/>=<sp/>dLogWeight;}</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>Space&gt;</highlight></codeline>
+<codeline lineno="117" refid="classsmc_1_1population_1ad6094100fe3180b18ac6c2f6efeef970" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classsmc_1_1population_1ad6094100fe3180b18ac6c2f6efeef970" kindref="member">population&lt;Space&gt;::population</ref>()</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>Space&gt;</highlight></codeline>
+<codeline lineno="123" refid="classsmc_1_1population_1a81068f3d29828546afd189b1502c768d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classsmc_1_1population_1ad6094100fe3180b18ac6c2f6efeef970" kindref="member">population&lt;Space&gt;::population</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classsmc_1_1population" kindref="compound">population&lt;Space&gt;</ref><sp/>&amp;<sp/>pFrom)</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>value<sp/>=<sp/>pFrom.<ref refid="classsmc_1_1population_1af2895b7eeca98bf97ab17b3e281df4ec" kindref="member">value</ref>;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>logweight<sp/>=<sp/>pFrom.<ref refid="classsmc_1_1population_1a95f5035145d401fb7b8d45c5d3b6d171" kindref="member">logweight</ref>;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>Space&gt;</highlight></codeline>
+<codeline lineno="133" refid="classsmc_1_1population_1a6e8333ad491897892311ab5331d9a03e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classsmc_1_1population_1ad6094100fe3180b18ac6c2f6efeef970" kindref="member">population&lt;Space&gt;::population</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;Space&gt;<sp/>&amp;<sp/>sInit,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>arma::vec<sp/>&amp;<sp/>dLogWeight)</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>value<sp/>=<sp/>sInit;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>logweight<sp/>=dLogWeight;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>Space&gt;</highlight></codeline>
+<codeline lineno="141" refid="classsmc_1_1population_1aed412a54f4d33b0cde18adf16cdc10b2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classsmc_1_1population_1aed412a54f4d33b0cde18adf16cdc10b2" kindref="member">population&lt;Space&gt;::~population</ref>()</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>Space&gt;</highlight></codeline>
+<codeline lineno="148" refid="classsmc_1_1population_1aa7aa4c48db66d934ec4e32e9c09b105d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classsmc_1_1population" kindref="compound">population&lt;Space&gt;</ref><sp/>&amp;<sp/><ref refid="classsmc_1_1population_1aa7aa4c48db66d934ec4e32e9c09b105d" kindref="member">population&lt;Space&gt;::operator= </ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classsmc_1_1population" kindref="compound">population&lt;Space&gt;</ref><sp/>&amp;<sp/>pFrom)</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;value<sp/>=<sp/>pFrom.<ref refid="classsmc_1_1population_1af2895b7eeca98bf97ab17b3e281df4ec" kindref="member">value</ref>;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;logweight<sp/>=<sp/>pFrom.<ref refid="classsmc_1_1population_1a95f5035145d401fb7b8d45c5d3b6d171" kindref="member">logweight</ref>;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="155"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157" refid="namespacestd" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacestd" kindref="compound">std</ref><sp/>{</highlight></codeline>
+<codeline lineno="159"></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>Space&gt;</highlight></codeline>
+<codeline lineno="163" refid="namespacestd_1a5009971eadc5b959926350da2ad8ed03" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::ostream<sp/>&amp;<sp/><ref refid="namespacestd_1a5009971eadc5b959926350da2ad8ed03" kindref="member">operator &lt;&lt; </ref>(std::ostream<sp/>&amp;<sp/>os,<sp/><ref refid="classsmc_1_1population" kindref="compound">smc::population&lt;Space&gt;</ref><sp/>&amp;<sp/>p)</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Space<sp/>val;</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>w;</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>p.<ref refid="classsmc_1_1population_1a4209e3a8191069456da6fa6d541ba7a5" kindref="member">GetNumber</ref>()<sp/>-<sp/>1;<sp/>i++){</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>val<sp/>=<sp/>p.<ref refid="classsmc_1_1population_1a9f81f8d12af9ba884741be1cfb183c5c" kindref="member">GetValueN</ref>(i);</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>w<sp/>=<sp/>p.<ref refid="classsmc_1_1population_1a229bc5706bf6afef8073990a345b5a60" kindref="member">GetWeightN</ref>(i);</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>os<sp/>&lt;&lt;<sp/>val<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;,&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>w<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>os;</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="174"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/iz/Dropbox/projects/rcppsmc/RcppSMCdocumentation/include/population.h"/>
+  </compounddef>
+</doxygen>
