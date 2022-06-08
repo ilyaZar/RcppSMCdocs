@@ -1,0 +1,29 @@
+digraph "/Users/runner/work/RcppSMCdocs/RcppSMCdocs/include/sampler.h"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="/Users/runner/work\l/RcppSMCdocs/RcppSMCdocs\l/include/sampler.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Defines the overall sampler object."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="/Users/runner/work\l/RcppSMCdocs/RcppSMCdocs\l/include/RcppSMC.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$RcppSMC_8h.html",tooltip=" "];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="/Users/runner/work\l/RcppSMCdocs/RcppSMCdocs\l/include/cSMCexamples.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$cSMCexamples_8h.html",tooltip=" "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="/Users/runner/work\l/RcppSMCdocs/RcppSMCdocs\l/include/conditionalSampler.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$conditionalSampler_8h.html",tooltip="Defines the conditionalSampler class derived from base sampler."];
+  Node4 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="/Users/runner/work\l/RcppSMCdocs/RcppSMCdocs\l/include/smctc.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$smctc_8h.html",tooltip="The main header file for SMCTC."];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="/Users/runner/work\l/RcppSMCdocs/RcppSMCdocs\l/include/LinReg_LA.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$LinReg__LA_8h.html",tooltip=" "];
+  Node5 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="/Users/runner/work\l/RcppSMCdocs/RcppSMCdocs\l/include/LinReg_LA_adapt.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$LinReg__LA__adapt_8h.html",tooltip=" "];
+  Node5 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="/Users/runner/work\l/RcppSMCdocs/RcppSMCdocs\l/include/blockpfgaussianopt.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$blockpfgaussianopt_8h.html",tooltip=" "];
+  Node5 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="/Users/runner/work\l/RcppSMCdocs/RcppSMCdocs\l/include/nonLinPMMH.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$nonLinPMMH_8h.html",tooltip=" "];
+  Node5 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="/Users/runner/work\l/RcppSMCdocs/RcppSMCdocs\l/include/pflineart.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$pflineart_8h.html",tooltip=" "];
+  Node5 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="/Users/runner/work\l/RcppSMCdocs/RcppSMCdocs\l/include/pfnonlinbs.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$pfnonlinbs_8h.html",tooltip=" "];
+}

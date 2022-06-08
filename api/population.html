@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Particle Population &mdash; RcppSMC  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Moving, conditional moving and weighting particles" href="moveset.html" />
+    <link rel="prev" title="Conditional Sampler" href="conditionalSampler.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> RcppSMC
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Welcome to the RcppSMC documentation!</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Classes</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="sampler.html">Sampler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conditionalSampler.html">Conditional Sampler</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Particle Population</a></li>
+<li class="toctree-l2"><a class="reference internal" href="moveset.html">Moving, conditional moving and weighting particles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="adaptMethods.html">Adaptation Methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="staticModelAdapt.html">Static Adaptation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="history.html">Particle History Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="smcexception.html">Exception handling</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">RcppSMC</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="index.html">Classes</a> &raquo;</li>
+      <li>Particle Population</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/api/population.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="particle-population">
+<span id="api-population"></span><h1>Particle Population<a class="headerlink" href="#particle-population" title="Permalink to this headline"></a></h1>
+<p>Class used to store and manipulate the population of particles. </p>
+<p>This file contains the <a class="reference internal" href="#classsmc_1_1population"><span class="std std-ref">smc::population</span></a> class which is used internally. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-defines">Defines</p>
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.__SMC_POPULATION_HH">
+<span class="target" id="population_8h_1a3c4cf6d4466e9cbe7d0168e707f55286"></span><span class="sig-name descname"><span class="n"><span class="pre">__SMC_POPULATION_HH</span></span></span><a class="headerlink" href="#c.__SMC_POPULATION_HH" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv43smc">
+<span id="_CPPv33smc"></span><span id="_CPPv23smc"></span><span id="smc"></span><span class="target" id="namespacesmc"></span><span class="k"><span class="pre">namespace</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">smc</span></span></span><br /></dt>
+<dd><p>The Sequential Monte Carlo namespace. </p>
+<p>The classes and functions within this namespace are intended to be used for producing implemenetations of SMC samplers and related simulation techniques. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-functions">Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3smc19stableLogSumWeightsERKN4arma3vecE">
+<span id="_CPPv3N3smc19stableLogSumWeightsERKN4arma3vecE"></span><span id="_CPPv2N3smc19stableLogSumWeightsERKN4arma3vecE"></span><span id="smc::stableLogSumWeights__arma::vecCR"></span><span class="target" id="namespacesmc_1aaa30e89b2e4c9913d9a8b9b79d482308"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">stableLogSumWeights</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">arma</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vec</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">logw</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3smc19stableLogSumWeightsERKN4arma3vecE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>A stable calculation of the log sum of the weights, used in ESS calculations This function performs a stable calculation of the log sum of the weights, which is useful for normalising weights, calculating the effective sample size and estimating the normalising constant.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>logw</strong> – The log weights of interest. </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4I0EN3smc10populationE">
+<span id="_CPPv3I0EN3smc10populationE"></span><span id="_CPPv2I0EN3smc10populationE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Space</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classsmc_1_1population"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">population</span></span></span><a class="headerlink" href="#_CPPv4I0EN3smc10populationE" title="Permalink to this definition"></a><br /></dt>
+<dd><div class="docutils container">
+<em>#include &lt;population.h&gt;</em></div>
+<p>A template class for the particles of an SMC algorithm. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3smc10population10populationEv">
+<span id="_CPPv3N3smc10population10populationEv"></span><span id="_CPPv2N3smc10population10populationEv"></span><span id="smc::population::population"></span><span class="target" id="classsmc_1_1population_1ad6094100fe3180b18ac6c2f6efeef970"></span><span class="sig-name descname"><span class="n"><span class="pre">population</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3smc10population10populationEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create a particle with undefined values and weights. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3smc10population10populationERKNSt6vectorI5SpaceEERKN4arma3vecE">
+<span id="_CPPv3N3smc10population10populationERKNSt6vectorI5SpaceEERKN4arma3vecE"></span><span id="_CPPv2N3smc10population10populationERKNSt6vectorI5SpaceEERKN4arma3vecE"></span><span id="smc::population::population__std::vector:Space:CR.arma::vecCR"></span><span class="target" id="classsmc_1_1population_1a6e8333ad491897892311ab5331d9a03e"></span><span class="sig-name descname"><span class="n"><span class="pre">population</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4St" title="std"><span class="n"><span class="pre">std</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN3smc10populationE" title="smc::population::Space"><span class="n"><span class="pre">Space</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">sInit</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">arma</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vec</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">dLogWeight</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3smc10population10populationERKNSt6vectorI5SpaceEERKN4arma3vecE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Constructor which initialises the particle values and weights. </p>
+<p>Create particles with values sInit and log weights dLogWeight </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sInit</strong> – The initial values of the particle </p></li>
+<li><p><strong>dLogWeight</strong> – The initial values of the natural logarithm of the particle weights </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3smc10population10populationERK10populationI5SpaceE">
+<span id="_CPPv3N3smc10population10populationERK10populationI5SpaceE"></span><span id="_CPPv2N3smc10population10populationERK10populationI5SpaceE"></span><span id="smc::population::population__population:Space:CR"></span><span class="target" id="classsmc_1_1population_1a81068f3d29828546afd189b1502c768d"></span><span class="sig-name descname"><span class="n"><span class="pre">population</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3smc10population10populationERK10populationI5SpaceE" title="smc::population::population"><span class="n"><span class="pre">population</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN3smc10populationE" title="smc::population::Space"><span class="n"><span class="pre">Space</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">pFrom</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3smc10population10populationERK10populationI5SpaceE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>The copy constructor performs a shallow copy. </p>
+<p>Copy constructor. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3smc10populationaSERK10populationI5SpaceE">
+<span id="_CPPv3N3smc10populationaSERK10populationI5SpaceE"></span><span id="_CPPv2N3smc10populationaSERK10populationI5SpaceE"></span><span id="smc::population::assign-operator__population:Space:CR"></span><span class="target" id="classsmc_1_1population_1aa7aa4c48db66d934ec4e32e9c09b105d"></span><a class="reference internal" href="#_CPPv4I0EN3smc10populationE" title="smc::population"><span class="n"><span class="pre">population</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN3smc10populationE" title="smc::population::Space"><span class="n"><span class="pre">Space</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">=</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN3smc10populationE" title="smc::population"><span class="n"><span class="pre">population</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN3smc10populationE" title="smc::population::Space"><span class="n"><span class="pre">Space</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">pFrom</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3smc10populationaSERK10populationI5SpaceE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>The assignment operator performs a shallow copy. </p>
+<p>Copy the values of pFrom to the values of this to set this population identical to pFrom in a deep copy sense. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3smc10populationD0Ev">
+<span id="_CPPv3N3smc10populationD0Ev"></span><span id="_CPPv2N3smc10populationD0Ev"></span><span id="smc::population::~population"></span><span class="target" id="classsmc_1_1population_1aed412a54f4d33b0cde18adf16cdc10b2"></span><span class="sig-name descname"><span class="n"><span class="pre">~population</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3smc10populationD0Ev" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Dispose of a population object which is no longer required. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3smc10population9GetNumberEv">
+<span id="_CPPv3NK3smc10population9GetNumberEv"></span><span id="_CPPv2NK3smc10population9GetNumberEv"></span><span id="smc::population::GetNumber__voidC"></span><span class="target" id="classsmc_1_1population_1a4209e3a8191069456da6fa6d541ba7a5"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GetNumber</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3smc10population9GetNumberEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns the number of particles within the system. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3smc10population8GetValueEv">
+<span id="_CPPv3NK3smc10population8GetValueEv"></span><span id="_CPPv2NK3smc10population8GetValueEv"></span><span id="smc::population::GetValue__voidC"></span><span class="target" id="classsmc_1_1population_1aac6732a73fabc46a10120f25c84921e0"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4St" title="std"><span class="n"><span class="pre">std</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN3smc10populationE" title="smc::population::Space"><span class="n"><span class="pre">Space</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">GetValue</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3smc10population8GetValueEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns the particle values. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3smc10population9GetValueNEl">
+<span id="_CPPv3NK3smc10population9GetValueNEl"></span><span id="_CPPv2NK3smc10population9GetValueNEl"></span><span id="smc::population::GetValueN__lC"></span><span class="target" id="classsmc_1_1population_1ab743110e627afa10b2fc1209c33dacfd"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN3smc10populationE" title="smc::population::Space"><span class="n"><span class="pre">Space</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">GetValueN</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">n</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3smc10population9GetValueNEl" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns the value of the nth particle in the population. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3smc10population12GetValueRefNEl">
+<span id="_CPPv3N3smc10population12GetValueRefNEl"></span><span id="_CPPv2N3smc10population12GetValueRefNEl"></span><span id="smc::population::GetValueRefN__l"></span><span class="target" id="classsmc_1_1population_1a8e9b2684ed890fd5b46e3f1739d03c6e"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN3smc10populationE" title="smc::population::Space"><span class="n"><span class="pre">Space</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">GetValueRefN</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">n</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3smc10population12GetValueRefNEl" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns a reference to the value of the nth particle in the population. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3smc10population12GetLogWeightEv">
+<span id="_CPPv3NK3smc10population12GetLogWeightEv"></span><span id="_CPPv2NK3smc10population12GetLogWeightEv"></span><span id="smc::population::GetLogWeight__voidC"></span><span class="target" id="classsmc_1_1population_1a444397cc6107a8a813d73d3827506c37"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">arma</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vec</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">GetLogWeight</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3smc10population12GetLogWeightEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns the particle log weights. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3smc10population13GetLogWeightNEl">
+<span id="_CPPv3NK3smc10population13GetLogWeightNEl"></span><span id="_CPPv2NK3smc10population13GetLogWeightNEl"></span><span id="smc::population::GetLogWeightN__lC"></span><span class="target" id="classsmc_1_1population_1a5b42f094323cc2425825d82be7842e77"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GetLogWeightN</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">n</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3smc10population13GetLogWeightNEl" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns the nth particle’s log weight. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3smc10population16GetLogWeightRefNEl">
+<span id="_CPPv3N3smc10population16GetLogWeightRefNEl"></span><span id="_CPPv2N3smc10population16GetLogWeightRefNEl"></span><span id="smc::population::GetLogWeightRefN__l"></span><span class="target" id="classsmc_1_1population_1aa3f156f9ade0560d6ad06604a46f02ce"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">GetLogWeightRefN</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">n</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3smc10population16GetLogWeightRefNEl" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns a reference to the nth particle’s log weight. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3smc10population9GetWeightEv">
+<span id="_CPPv3NK3smc10population9GetWeightEv"></span><span id="_CPPv2NK3smc10population9GetWeightEv"></span><span id="smc::population::GetWeight__voidC"></span><span class="target" id="classsmc_1_1population_1ac03a39fe7a5199433362f69c0e793dd7"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">arma</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vec</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GetWeight</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3smc10population9GetWeightEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns the particles’ unnormalised weights. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3smc10population10GetWeightNEl">
+<span id="_CPPv3NK3smc10population10GetWeightNEl"></span><span id="_CPPv2NK3smc10population10GetWeightNEl"></span><span id="smc::population::GetWeightN__lC"></span><span class="target" id="classsmc_1_1population_1a229bc5706bf6afef8073990a345b5a60"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GetWeightN</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">n</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3smc10population10GetWeightNEl" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns the nth particle’s unnormalised weight. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3smc10population3SetERKNSt6vectorI5SpaceEERKN4arma3vecE">
+<span id="_CPPv3N3smc10population3SetERKNSt6vectorI5SpaceEERKN4arma3vecE"></span><span id="_CPPv2N3smc10population3SetERKNSt6vectorI5SpaceEERKN4arma3vecE"></span><span id="smc::population::Set__std::vector:Space:CR.arma::vecCR"></span><span class="target" id="classsmc_1_1population_1a228f119bab158b24e6edef17e9e806d3"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Set</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4St" title="std"><span class="n"><span class="pre">std</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN3smc10populationE" title="smc::population::Space"><span class="n"><span class="pre">Space</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">sValue</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">arma</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vec</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">dLogWeight</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3smc10population3SetERKNSt6vectorI5SpaceEERKN4arma3vecE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Sets the particle values and weights explicitly. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sValue</strong> – The particle values to use </p></li>
+<li><p><strong>dLogWeight</strong> – The natural logarithm of the new particle weights </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3smc10population8SetValueERKNSt6vectorI5SpaceEE">
+<span id="_CPPv3N3smc10population8SetValueERKNSt6vectorI5SpaceEE"></span><span id="_CPPv2N3smc10population8SetValueERKNSt6vectorI5SpaceEE"></span><span id="smc::population::SetValue__std::vector:Space:CR"></span><span class="target" id="classsmc_1_1population_1a21eb46b6158da5c74088a461e481a7c7"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SetValue</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4St" title="std"><span class="n"><span class="pre">std</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN3smc10populationE" title="smc::population::Space"><span class="n"><span class="pre">Space</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">sValue</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3smc10population8SetValueERKNSt6vectorI5SpaceEE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Sets the particle values explicitly. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sValue</strong> – The particle values to use </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3smc10population9SetValueNERK5Spacel">
+<span id="_CPPv3N3smc10population9SetValueNERK5Spacel"></span><span id="_CPPv2N3smc10population9SetValueNERK5Spacel"></span><span id="smc::population::SetValueN__SpaceCR.l"></span><span class="target" id="classsmc_1_1population_1a7e43dc61d785bf5b88ce6014b53dfb2a"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SetValueN</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN3smc10populationE" title="smc::population::Space"><span class="n"><span class="pre">Space</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">sValue</span></span>, <span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">n</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3smc10population9SetValueNERK5Spacel" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Sets the nth particle value explicitly. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sValue</strong> – The particle value to use </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3smc10population12SetLogWeightERKN4arma3vecE">
+<span id="_CPPv3N3smc10population12SetLogWeightERKN4arma3vecE"></span><span id="_CPPv2N3smc10population12SetLogWeightERKN4arma3vecE"></span><span id="smc::population::SetLogWeight__arma::vecCR"></span><span class="target" id="classsmc_1_1population_1aa3e891ee4bac69ea5248e7af20c9e18d"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SetLogWeight</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">arma</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vec</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">dLogWeight</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3smc10population12SetLogWeightERKN4arma3vecE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Sets the particle log weights explicitly. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>dLogWeight</strong> – The natural logarithm of the new particle weights to use </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3smc10population13SetLogWeightNERKdl">
+<span id="_CPPv3N3smc10population13SetLogWeightNERKdl"></span><span id="_CPPv2N3smc10population13SetLogWeightNERKdl"></span><span id="smc::population::SetLogWeightN__doubleCR.l"></span><span class="target" id="classsmc_1_1population_1a34976b1339ba0c00a292401e2bf6e1f8"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SetLogWeightN</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">dLogWeight</span></span>, <span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">n</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3smc10population13SetLogWeightNERKdl" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Sets the nth particle log weight explicitly. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>dLogWeight</strong> – The natural logarithm of the new particle weight to use </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-private-members">Private Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N3smc10population5valueE">
+<span id="_CPPv3N3smc10population5valueE"></span><span id="_CPPv2N3smc10population5valueE"></span><span id="smc::population::value__std::vector:Space:"></span><span class="target" id="classsmc_1_1population_1af2895b7eeca98bf97ab17b3e281df4ec"></span><a class="reference internal" href="#_CPPv4St" title="std"><span class="n"><span class="pre">std</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN3smc10populationE" title="smc::population::Space"><span class="n"><span class="pre">Space</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">value</span></span></span><a class="headerlink" href="#_CPPv4N3smc10population5valueE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Values of the particles. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N3smc10population9logweightE">
+<span id="_CPPv3N3smc10population9logweightE"></span><span id="_CPPv2N3smc10population9logweightE"></span><span id="smc::population::logweight__arma::vec"></span><span class="target" id="classsmc_1_1population_1a95f5035145d401fb7b8d45c5d3b6d171"></span><span class="n"><span class="pre">arma</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vec</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">logweight</span></span></span><a class="headerlink" href="#_CPPv4N3smc10population9logweightE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Natural logarithm of the particle weights. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4St">
+<span id="_CPPv3St"></span><span id="_CPPv2St"></span><span id="std"></span><span class="target" id="namespacestd"></span><span class="k"><span class="pre">namespace</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">std</span></span></span><a class="headerlink" href="#_CPPv4St" title="Permalink to this definition"></a><br /></dt>
+<dd><p>The standard namespace. </p>
+<p>The classes provided within the standard libraries reside within this namespace and the TDSMC class library adds a number of additional operator overloads to some of the standard classes to allow them to deal with our structures. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-functions">Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4I0ENStlsERNSt7ostreamERNSt7ostreamERN3smc10populationI5SpaceEE">
+<span id="_CPPv3I0ENStlsERNSt7ostreamERN3smc10populationI5SpaceEE"></span><span id="_CPPv2I0ENStlsERNSt7ostreamERN3smc10populationI5SpaceEE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Space</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacestd_1a10b1fb276e717bf8075b5f574cd32360"></span><a class="reference internal" href="#_CPPv4St" title="std"><span class="n"><span class="pre">std</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">ostream</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">&lt;&lt;</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4St" title="std"><span class="n"><span class="pre">std</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">ostream</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">os</span></span>, <a class="reference internal" href="adaptMethods.html#_CPPv43smc" title="smc"><span class="n"><span class="pre">smc</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4I0EN3smc10populationE" title="smc::population"><span class="n"><span class="pre">population</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0ENStlsERNSt7ostreamERNSt7ostreamERN3smc10populationI5SpaceEE" title="std::operator&lt;&lt;::Space"><span class="n"><span class="pre">Space</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">p</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I0ENStlsERNSt7ostreamERNSt7ostreamERN3smc10populationI5SpaceEE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Produce a human readable display of an <a class="reference internal" href="#classsmc_1_1population"><span class="std std-ref">smc::population</span></a> class using the standard stream operators. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>os</strong> – The output stream to which the display should be made. </p></li>
+<li><p><strong>p</strong> – The population object which is to be displayed. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="conditionalSampler.html" class="btn btn-neutral float-left" title="Conditional Sampler" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="moveset.html" class="btn btn-neutral float-right" title="Moving, conditional moving and weighting particles" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Leah South, Ilya Zarubin, Dirk Eddelbuettel, Adam Johansen.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

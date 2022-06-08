@@ -1,0 +1,16 @@
+digraph "smc::conditionalSampler&lt; Space, Params &gt;"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="smc::conditionalSampler\l\< Space, Params \>",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="smc::sampler\< Space,\l nullParams \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsmc_1_1sampler.html",tooltip=" "];
+  Node3 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" pMoves" ,fontname="Helvetica"];
+  Node3 [label="smc::moveset\< Space,\l nullParams \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsmc_1_1moveset.html",tooltip=" "];
+  Node4 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" algParams" ,fontname="Helvetica"];
+  Node4 [label="smc::nullParams",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsmc_1_1nullParams.html",tooltip="An empty class for use when additional algorithm parameters are not required."];
+  Node5 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" pAdapt" ,fontname="Helvetica"];
+  Node5 [label="smc::adaptMethods\<\l Space, nullParams \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsmc_1_1adaptMethods.html",tooltip=" "];
+}

@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Conditional Sampler &mdash; RcppSMC  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Particle Population" href="population.html" />
+    <link rel="prev" title="Sampler" href="sampler.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> RcppSMC
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Welcome to the RcppSMC documentation!</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Classes</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="sampler.html">Sampler</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Conditional Sampler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="population.html">Particle Population</a></li>
+<li class="toctree-l2"><a class="reference internal" href="moveset.html">Moving, conditional moving and weighting particles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="adaptMethods.html">Adaptation Methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="staticModelAdapt.html">Static Adaptation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="history.html">Particle History Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="smcexception.html">Exception handling</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">RcppSMC</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="index.html">Classes</a> &raquo;</li>
+      <li>Conditional Sampler</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/api/conditionalSampler.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="conditional-sampler">
+<span id="api-csampler"></span><h1>Conditional Sampler<a class="headerlink" href="#conditional-sampler" title="Permalink to this headline"></a></h1>
+<p>Defines the conditionalSampler class derived from base sampler. </p>
+<p>This file defines the <a class="reference internal" href="#classsmc_1_1conditionalSampler"><span class="std std-ref">smc::conditionalSampler</span></a> class which is used to implement entire particle systems for conditional sequential Monte Carlo. The class is derived from the base class ‘sampler’ but currently does not implement facilities of the base class that are not striclty required for conditional SMC (such as MCMC moves or adaptation). Conditional resampling for (some) common resampling mechanisms are implemented. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-defines">Defines</p>
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.__SMC_CONDITIONAL_SAMPLER_HH">
+<span class="target" id="conditionalSampler_8h_1ad24c995bf7e4cc84c98cfc17017e4b6a"></span><span class="sig-name descname"><span class="n"><span class="pre">__SMC_CONDITIONAL_SAMPLER_HH</span></span></span><a class="headerlink" href="#c.__SMC_CONDITIONAL_SAMPLER_HH" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv43smc">
+<span id="_CPPv33smc"></span><span id="_CPPv23smc"></span><span id="smc"></span><span class="target" id="namespacesmc"></span><span class="k"><span class="pre">namespace</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">smc</span></span></span><br /></dt>
+<dd><p>The Sequential Monte Carlo namespace. </p>
+<p>The classes and functions within this namespace are intended to be used for producing implemenetations of SMC samplers and related simulation techniques. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-functions">Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4I00EN3smclsERNSt7ostreamERNSt7ostreamERK18conditionalSamplerI5Space6ParamsE">
+<span id="_CPPv3I00EN3smclsERNSt7ostreamERK18conditionalSamplerI5Space6ParamsE"></span><span id="_CPPv2I00EN3smclsERNSt7ostreamERK18conditionalSamplerI5Space6ParamsE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Space</span></span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Params</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacesmc_1afa9d36a4e701d48e0db9c8f0be9d9ea4"></span><a class="reference internal" href="population.html#_CPPv4St" title="std"><span class="n"><span class="pre">std</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">ostream</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">&lt;&lt;</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="population.html#_CPPv4St" title="std"><span class="n"><span class="pre">std</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">ostream</span></span><span class="p"><span class="pre">&amp;</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I00EN3smc18conditionalSamplerE" title="smc::conditionalSampler"><span class="n"><span class="pre">conditionalSampler</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I00EN3smclsERNSt7ostreamERNSt7ostreamERK18conditionalSamplerI5Space6ParamsE" title="smc::operator&lt;&lt;::Space"><span class="n"><span class="pre">Space</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I00EN3smclsERNSt7ostreamERNSt7ostreamERK18conditionalSamplerI5Space6ParamsE" title="smc::operator&lt;&lt;::Params"><span class="n"><span class="pre">Params</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I00EN3smclsERNSt7ostreamERNSt7ostreamERK18conditionalSamplerI5Space6ParamsE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Produce a human-readable display of the state of an <a class="reference internal" href="sampler.html#classsmc_1_1sampler"><span class="std std-ref">smc::sampler</span></a> class using the stream operator. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>os</strong> – The output stream to which the display should be made. </p></li>
+<li><p><strong>s</strong> – The sampler which is to be displayed. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4I00EN3smc18conditionalSamplerE">
+<span id="_CPPv3I00EN3smc18conditionalSamplerE"></span><span id="_CPPv2I00EN3smc18conditionalSamplerE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Space</span></span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Params</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="sampler.html#_CPPv4N3smc10nullParamsE" title="smc::nullParams"><span class="n"><span class="pre">nullParams</span></span></a><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classsmc_1_1conditionalSampler"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">conditionalSampler</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><a class="reference internal" href="adaptMethods.html#_CPPv43smc" title="smc"><span class="n"><span class="pre">smc</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="sampler.html#_CPPv4I00EN3smc7samplerE" title="smc::sampler"><span class="n"><span class="pre">sampler</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I00EN3smc18conditionalSamplerE" title="smc::conditionalSampler::Space"><span class="n"><span class="pre">Space</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="sampler.html#_CPPv4N3smc10nullParamsE" title="smc::nullParams"><span class="n"><span class="pre">nullParams</span></span></a><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4I00EN3smc18conditionalSamplerE" title="Permalink to this definition"></a><br /></dt>
+<dd><div class="docutils container">
+<em>#include &lt;conditionalSampler.h&gt;</em></div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3smc18conditionalSampler18conditionalSamplerElN11HistoryType4EnumENSt6vectorI5SpaceEE">
+<span id="_CPPv3N3smc18conditionalSampler18conditionalSamplerElN11HistoryType4EnumENSt6vectorI5SpaceEE"></span><span id="_CPPv2N3smc18conditionalSampler18conditionalSamplerElN11HistoryType4EnumENSt6vectorI5SpaceEE"></span><span id="smc::conditionalSampler::conditionalSampler__l.HistoryType::Enum.std::vector:Space:"></span><span class="target" id="classsmc_1_1conditionalSampler_1a49c8b41f8d53145456a4e6fe570c6a70"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">conditionalSampler</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">lSize</span></span>, <a class="reference internal" href="sampler.html#_CPPv411HistoryType" title="HistoryType"><span class="n"><span class="pre">HistoryType</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="sampler.html#_CPPv4N11HistoryType4EnumE" title="HistoryType::Enum"><span class="n"><span class="pre">Enum</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">htHistoryMode</span></span>, <a class="reference internal" href="population.html#_CPPv4St" title="std"><span class="n"><span class="pre">std</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I00EN3smc18conditionalSamplerE" title="smc::conditionalSampler::Space"><span class="n"><span class="pre">Space</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">referenceTrajectoryInit</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3smc18conditionalSampler18conditionalSamplerElN11HistoryType4EnumENSt6vectorI5SpaceEE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create an particle system containing lSize uninitialised particles with the specified mode. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3smc18conditionalSampler18conditionalSamplerElN11HistoryType4EnumEP7movesetI5Space6ParamsENSt6vectorI5SpaceEE">
+<span id="_CPPv3N3smc18conditionalSampler18conditionalSamplerElN11HistoryType4EnumEP7movesetI5Space6ParamsENSt6vectorI5SpaceEE"></span><span id="_CPPv2N3smc18conditionalSampler18conditionalSamplerElN11HistoryType4EnumEP7movesetI5Space6ParamsENSt6vectorI5SpaceEE"></span><span id="smc::conditionalSampler::conditionalSampler__l.HistoryType::Enum.moveset:Space.Params:P.std::vector:Space:"></span><span class="target" id="classsmc_1_1conditionalSampler_1a39f32e4513a3a1ebfaa1e29b91a149ca"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">conditionalSampler</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">lSize</span></span>, <a class="reference internal" href="sampler.html#_CPPv411HistoryType" title="HistoryType"><span class="n"><span class="pre">HistoryType</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="sampler.html#_CPPv4N11HistoryType4EnumE" title="HistoryType::Enum"><span class="n"><span class="pre">Enum</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">htHistoryMode</span></span>, <a class="reference internal" href="moveset.html#_CPPv4I00EN3smc7movesetE" title="smc::moveset"><span class="n"><span class="pre">moveset</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I00EN3smc18conditionalSamplerE" title="smc::conditionalSampler::Space"><span class="n"><span class="pre">Space</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I00EN3smc18conditionalSamplerE" title="smc::conditionalSampler::Params"><span class="n"><span class="pre">Params</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">pNewMoves</span></span>, <a class="reference internal" href="population.html#_CPPv4St" title="std"><span class="n"><span class="pre">std</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I00EN3smc18conditionalSamplerE" title="smc::conditionalSampler::Space"><span class="n"><span class="pre">Space</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">referenceTrajectoryInit</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3smc18conditionalSampler18conditionalSamplerElN11HistoryType4EnumEP7movesetI5Space6ParamsENSt6vectorI5SpaceEE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create an particle system containing lSize uninitialised particles with the specified mode, additionally passing a moveset-object. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3smc18conditionalSampler14GetDigitsPrintEv">
+<span id="_CPPv3NK3smc18conditionalSampler14GetDigitsPrintEv"></span><span id="_CPPv2NK3smc18conditionalSampler14GetDigitsPrintEv"></span><span id="smc::conditionalSampler::GetDigitsPrint__voidC"></span><span class="target" id="classsmc_1_1conditionalSampler_1a37813f208d8438ffd9c0e860ca9323c6"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GetDigitsPrint</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3smc18conditionalSampler14GetDigitsPrintEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Get the number of digits used in ostream&lt;&lt; operator printing. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3smc18conditionalSampler14SetDigitsPrintEi">
+<span id="_CPPv3N3smc18conditionalSampler14SetDigitsPrintEi"></span><span id="_CPPv2N3smc18conditionalSampler14SetDigitsPrintEi"></span><span id="smc::conditionalSampler::SetDigitsPrint__i"></span><span class="target" id="classsmc_1_1conditionalSampler_1a54958b76587872c308fd187b3d816eac"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SetDigitsPrint</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">newDigitsPrint</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3smc18conditionalSampler14SetDigitsPrintEi" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Set the number of digits used in ostream&lt;&lt; operator printing. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3smc18conditionalSampler22GetReferenceTrajectoryEv">
+<span id="_CPPv3NK3smc18conditionalSampler22GetReferenceTrajectoryEv"></span><span id="_CPPv2NK3smc18conditionalSampler22GetReferenceTrajectoryEv"></span><span id="smc::conditionalSampler::GetReferenceTrajectory__voidC"></span><span class="target" id="classsmc_1_1conditionalSampler_1a32a43aaa1d08500ac4fbb33e8d6c42bb"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="population.html#_CPPv4St" title="std"><span class="n"><span class="pre">std</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I00EN3smc18conditionalSamplerE" title="smc::conditionalSampler::Space"><span class="n"><span class="pre">Space</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GetReferenceTrajectory</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3smc18conditionalSampler22GetReferenceTrajectoryEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns the reference trajectory. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3smc18conditionalSampler26GetReferenceTrajectoryRefsEv">
+<span id="_CPPv3NK3smc18conditionalSampler26GetReferenceTrajectoryRefsEv"></span><span id="_CPPv2NK3smc18conditionalSampler26GetReferenceTrajectoryRefsEv"></span><span id="smc::conditionalSampler::GetReferenceTrajectoryRefs__voidC"></span><span class="target" id="classsmc_1_1conditionalSampler_1a0ad38b138eacf4d8d667d751e2f1d7de"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="population.html#_CPPv4St" title="std"><span class="n"><span class="pre">std</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I00EN3smc18conditionalSamplerE" title="smc::conditionalSampler::Space"><span class="n"><span class="pre">Space</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">GetReferenceTrajectoryRefs</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3smc18conditionalSampler26GetReferenceTrajectoryRefsEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns a constant reference to the reference trajectory. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3smc18conditionalSampler17GetReferenceValueEl">
+<span id="_CPPv3NK3smc18conditionalSampler17GetReferenceValueEl"></span><span id="_CPPv2NK3smc18conditionalSampler17GetReferenceValueEl"></span><span id="smc::conditionalSampler::GetReferenceValue__lC"></span><span class="target" id="classsmc_1_1conditionalSampler_1a9b11181e2493bfbda730fd06044fb75c"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I00EN3smc18conditionalSamplerE" title="smc::conditionalSampler::Space"><span class="n"><span class="pre">Space</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GetReferenceValue</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">n</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3smc18conditionalSampler17GetReferenceValueEl" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns the n’th element of the reference trajectory. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3smc18conditionalSampler21GetReferenceValueRefsEl">
+<span id="_CPPv3NK3smc18conditionalSampler21GetReferenceValueRefsEl"></span><span id="_CPPv2NK3smc18conditionalSampler21GetReferenceValueRefsEl"></span><span id="smc::conditionalSampler::GetReferenceValueRefs__lC"></span><span class="target" id="classsmc_1_1conditionalSampler_1a1f9e15667bf0131ced1af15dcb4fdfa8"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I00EN3smc18conditionalSamplerE" title="smc::conditionalSampler::Space"><span class="n"><span class="pre">Space</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">GetReferenceValueRefs</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">n</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3smc18conditionalSampler21GetReferenceValueRefsEl" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns a constant reference to the n’th element of the reference trajectory. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3smc18conditionalSampler22GetReferenceValueIndexEl">
+<span id="_CPPv3NK3smc18conditionalSampler22GetReferenceValueIndexEl"></span><span id="_CPPv2NK3smc18conditionalSampler22GetReferenceValueIndexEl"></span><span id="smc::conditionalSampler::GetReferenceValueIndex__lC"></span><span class="target" id="classsmc_1_1conditionalSampler_1a234aa40e48cd361d469ed9b2ca15fd8e"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GetReferenceValueIndex</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">lTime</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3smc18conditionalSampler22GetReferenceValueIndexEl" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns index of conditional reference Trajectory. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3smc18conditionalSampler22SetReferenceTrajectoryERKNSt6vectorI5SpaceEE">
+<span id="_CPPv3N3smc18conditionalSampler22SetReferenceTrajectoryERKNSt6vectorI5SpaceEE"></span><span id="_CPPv2N3smc18conditionalSampler22SetReferenceTrajectoryERKNSt6vectorI5SpaceEE"></span><span id="smc::conditionalSampler::SetReferenceTrajectory__std::vector:Space:CR"></span><span class="target" id="classsmc_1_1conditionalSampler_1a9ec349f8b96a7a9ed429672f3b38a526"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SetReferenceTrajectory</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="population.html#_CPPv4St" title="std"><span class="n"><span class="pre">std</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I00EN3smc18conditionalSamplerE" title="smc::conditionalSampler::Space"><span class="n"><span class="pre">Space</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">newReferenceTrajectory</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3smc18conditionalSampler22SetReferenceTrajectoryERKNSt6vectorI5SpaceEE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Sets the reference trajectory. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3smc18conditionalSampler17SetReferenceValueERK5Spacel">
+<span id="_CPPv3N3smc18conditionalSampler17SetReferenceValueERK5Spacel"></span><span id="_CPPv2N3smc18conditionalSampler17SetReferenceValueERK5Spacel"></span><span id="smc::conditionalSampler::SetReferenceValue__SpaceCR.l"></span><span class="target" id="classsmc_1_1conditionalSampler_1a7a2dab045105c1cf5d38665ef04ffa02"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SetReferenceValue</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I00EN3smc18conditionalSamplerE" title="smc::conditionalSampler::Space"><span class="n"><span class="pre">Space</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">newReferenceValue</span></span>, <span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">n</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3smc18conditionalSampler17SetReferenceValueERK5Spacel" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Sets the n’elment of the reference trajectory. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3smc18conditionalSampler10InitialiseEv">
+<span id="_CPPv3N3smc18conditionalSampler10InitialiseEv"></span><span id="_CPPv2N3smc18conditionalSampler10InitialiseEv"></span><span id="smc::conditionalSampler::Initialise__void"></span><span class="target" id="classsmc_1_1conditionalSampler_1ae906b8685eec7f3bbaf1bcefb82397f3"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Initialise</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3smc18conditionalSampler10InitialiseEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Initialise the conditional sampler and its constituent particles. The reference trajectory used to set the first coordinate at T=0 is either from the last call to <a class="reference internal" href="#classsmc_1_1conditionalSampler_1a9ec349f8b96a7a9ed429672f3b38a526"><span class="std std-ref">conditionalSampler.SetReferenceTrajectory()</span></a>, or defaults to the trajectory passed to the constructor at the time the object is created. </p>
+<p>At present this function resets the system evolution time to 0 and calls the moveset initialisor to assign each particle in the ensemble.</p>
+<p>Note that the initialisation function must be specified before calling this function.</p>
+<p>Additionally, the t=0 particle coordinate is set to the conditional reference value and re-weighted. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3smc18conditionalSampler10InitialiseERKNSt6vectorI5SpaceEE">
+<span id="_CPPv3N3smc18conditionalSampler10InitialiseERKNSt6vectorI5SpaceEE"></span><span id="_CPPv2N3smc18conditionalSampler10InitialiseERKNSt6vectorI5SpaceEE"></span><span id="smc::conditionalSampler::Initialise__std::vector:Space:CR"></span><span class="target" id="classsmc_1_1conditionalSampler_1a2bc4aa6c9ccd10fd0571780eb68989c7"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Initialise</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="population.html#_CPPv4St" title="std"><span class="n"><span class="pre">std</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I00EN3smc18conditionalSamplerE" title="smc::conditionalSampler::Space"><span class="n"><span class="pre">Space</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">newReferenceTrajectory</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3smc18conditionalSampler10InitialiseERKNSt6vectorI5SpaceEE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Initialise the sampler and its constituent particles. </p>
+<p>At present this function resets the system evolution time to 0 and calls the moveset initialisor to assign each particle in the ensemble.</p>
+<p>Note that the initialisation function must be specified before calling this function.</p>
+<p>Additionally, a conditional particle trajectory is set and the t=0 particle coordinate is set to the conditional reference value and re-weighted. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3smc18conditionalSampler7IterateEv">
+<span id="_CPPv3N3smc18conditionalSampler7IterateEv"></span><span id="_CPPv2N3smc18conditionalSampler7IterateEv"></span><span id="smc::conditionalSampler::Iterate__void"></span><span class="target" id="classsmc_1_1conditionalSampler_1a395adfb581d81d289b7e092bac9e67eb"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Iterate</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3smc18conditionalSampler7IterateEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Perform one conditional iteration of the simulation algorithm. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3smc18conditionalSampler10IterateEssEv">
+<span id="_CPPv3N3smc18conditionalSampler10IterateEssEv"></span><span id="_CPPv2N3smc18conditionalSampler10IterateEssEv"></span><span id="smc::conditionalSampler::IterateEss__void"></span><span class="target" id="classsmc_1_1conditionalSampler_1acc84d393087acb54897b01d9c4c31e9e"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">IterateEss</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3smc18conditionalSampler10IterateEssEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Perform one conditional iteration of the simulation algorithm and return the resulting ess. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3smc18conditionalSampler12IterateUntilEl">
+<span id="_CPPv3N3smc18conditionalSampler12IterateUntilEl"></span><span id="_CPPv2N3smc18conditionalSampler12IterateUntilEl"></span><span id="smc::conditionalSampler::IterateUntil__l"></span><span class="target" id="classsmc_1_1conditionalSampler_1a3d1b5064b90ee24b14a980c857eea6e0"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">IterateUntil</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">lTerminate</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3smc18conditionalSampler12IterateUntilEl" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Perform conditional iterations until the specified evolution time is reached. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3smc18conditionalSampler19conditionalResampleEN12ResampleType4EnumE">
+<span id="_CPPv3N3smc18conditionalSampler19conditionalResampleEN12ResampleType4EnumE"></span><span id="_CPPv2N3smc18conditionalSampler19conditionalResampleEN12ResampleType4EnumE"></span><span id="smc::conditionalSampler::conditionalResample__ResampleType::Enum"></span><span class="target" id="classsmc_1_1conditionalSampler_1ad7404f268ac8e27490c9d1bea4d11d36"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">conditionalResample</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="sampler.html#_CPPv412ResampleType" title="ResampleType"><span class="n"><span class="pre">ResampleType</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="sampler.html#_CPPv4N12ResampleType4EnumE" title="ResampleType::Enum"><span class="n"><span class="pre">Enum</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">lMode</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3smc18conditionalSampler19conditionalResampleEN12ResampleType4EnumE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Resample the particle set using the specified resampling scheme specifically adjusted for conditional resampling. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3smc18conditionalSampler21MoveReferenceParticleEv">
+<span id="_CPPv3N3smc18conditionalSampler21MoveReferenceParticleEv"></span><span id="_CPPv2N3smc18conditionalSampler21MoveReferenceParticleEv"></span><span id="smc::conditionalSampler::MoveReferenceParticle__void"></span><span class="target" id="classsmc_1_1conditionalSampler_1a7d0c9bf096c898b19b8fa5ef77f4bfb4"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MoveReferenceParticle</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3smc18conditionalSampler21MoveReferenceParticleEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Move the reference particle by setting the coordinate to the reference value and re-weighting. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3smc18conditionalSampler14StreamParticleERNSt7ostreamEl">
+<span id="_CPPv3NK3smc18conditionalSampler14StreamParticleERNSt7ostreamEl"></span><span id="_CPPv2NK3smc18conditionalSampler14StreamParticleERNSt7ostreamEl"></span><span id="smc::conditionalSampler::StreamParticle__osR.lC"></span><span class="target" id="classsmc_1_1conditionalSampler_1a2dbdc428dd532386637821500c9d8ee5"></span><a class="reference internal" href="population.html#_CPPv4St" title="std"><span class="n"><span class="pre">std</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">ostream</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">StreamParticle</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="population.html#_CPPv4St" title="std"><span class="n"><span class="pre">std</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">ostream</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">os</span></span>, <span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">n</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3smc18conditionalSampler14StreamParticleERNSt7ostreamEl" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Dump a specified particle to the specified output stream in a human readable form. </p>
+<p>Produce a human-readable display of the current n’th particle value and log weight.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>os</strong> – The output stream to which the display should be made. </p></li>
+<li><p><strong>n</strong> – The index of the particle of interest </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3smc18conditionalSampler15StreamParticlesERNSt7ostreamEi">
+<span id="_CPPv3NK3smc18conditionalSampler15StreamParticlesERNSt7ostreamEi"></span><span id="_CPPv2NK3smc18conditionalSampler15StreamParticlesERNSt7ostreamEi"></span><span id="smc::conditionalSampler::StreamParticles__osR.iC"></span><span class="target" id="classsmc_1_1conditionalSampler_1abd4f8ff812617b616fce87115f6be554"></span><a class="reference internal" href="population.html#_CPPv4St" title="std"><span class="n"><span class="pre">std</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">ostream</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">StreamParticles</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="population.html#_CPPv4St" title="std"><span class="n"><span class="pre">std</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">ostream</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">os</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">digits</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3smc18conditionalSampler15StreamParticlesERNSt7ostreamEi" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Dump the entire particle set to the specified output stream in a human readable form. </p>
+<p>Produce a human-readable display of the current particle values and log weights.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>os</strong> – The output stream to which the display should be made. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3smc18conditionalSampler15SetAdaptMethodsEP12adaptMethodsI5Space6ParamsE">
+<span id="_CPPv3N3smc18conditionalSampler15SetAdaptMethodsEP12adaptMethodsI5Space6ParamsE"></span><span id="_CPPv2N3smc18conditionalSampler15SetAdaptMethodsEP12adaptMethodsI5Space6ParamsE"></span><span id="smc::conditionalSampler::SetAdaptMethods__adaptMethods:Space.Params:P"></span><span class="target" id="classsmc_1_1conditionalSampler_1a19e56bae4c5af2dcabdeec27aedc3413"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SetAdaptMethods</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="adaptMethods.html#_CPPv4I00EN3smc12adaptMethodsE" title="smc::adaptMethods"><span class="n"><span class="pre">adaptMethods</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I00EN3smc18conditionalSamplerE" title="smc::conditionalSampler::Space"><span class="n"><span class="pre">Space</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I00EN3smc18conditionalSamplerE" title="smc::conditionalSampler::Params"><span class="n"><span class="pre">Params</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">adaptMethod</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3smc18conditionalSampler15SetAdaptMethodsEP12adaptMethodsI5Space6ParamsE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Throws exception when adaptation related members of the base sampler class are used: </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3smc18conditionalSampler14SetMcmcRepeatsEP12adaptMethodsI5Space6ParamsE">
+<span id="_CPPv3N3smc18conditionalSampler14SetMcmcRepeatsEP12adaptMethodsI5Space6ParamsE"></span><span id="_CPPv2N3smc18conditionalSampler14SetMcmcRepeatsEP12adaptMethodsI5Space6ParamsE"></span><span id="smc::conditionalSampler::SetMcmcRepeats__adaptMethods:Space.Params:P"></span><span class="target" id="classsmc_1_1conditionalSampler_1a6405be81a56dbf5ab41301033ee16ede"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SetMcmcRepeats</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="adaptMethods.html#_CPPv4I00EN3smc12adaptMethodsE" title="smc::adaptMethods"><span class="n"><span class="pre">adaptMethods</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I00EN3smc18conditionalSamplerE" title="smc::conditionalSampler::Space"><span class="n"><span class="pre">Space</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I00EN3smc18conditionalSamplerE" title="smc::conditionalSampler::Params"><span class="n"><span class="pre">Params</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">adaptMethod</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3smc18conditionalSampler14SetMcmcRepeatsEP12adaptMethodsI5Space6ParamsE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Throws exception when members related to MCMC moves of the base sampler class are used: </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3smc18conditionalSampler25OstreamMCMCRecordToStreamERNSt7ostreamE">
+<span id="_CPPv3NK3smc18conditionalSampler25OstreamMCMCRecordToStreamERNSt7ostreamE"></span><span id="_CPPv2NK3smc18conditionalSampler25OstreamMCMCRecordToStreamERNSt7ostreamE"></span><span id="smc::conditionalSampler::OstreamMCMCRecordToStream__osRC"></span><span class="target" id="classsmc_1_1conditionalSampler_1acbb2adc565693c36b7e71e6a32969c75"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">OstreamMCMCRecordToStream</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="population.html#_CPPv4St" title="std"><span class="n"><span class="pre">std</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">ostream</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">os</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3smc18conditionalSampler25OstreamMCMCRecordToStreamERNSt7ostreamE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3smc18conditionalSampler11GetAcceptedEv">
+<span id="_CPPv3NK3smc18conditionalSampler11GetAcceptedEv"></span><span id="_CPPv2NK3smc18conditionalSampler11GetAcceptedEv"></span><span id="smc::conditionalSampler::GetAccepted__voidC"></span><span class="target" id="classsmc_1_1conditionalSampler_1a8472a0acd9578bdd94b5c08a7428135f"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GetAccepted</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3smc18conditionalSampler11GetAcceptedEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3smc18conditionalSampler14GetMcmcRepeatsEv">
+<span id="_CPPv3NK3smc18conditionalSampler14GetMcmcRepeatsEv"></span><span id="_CPPv2NK3smc18conditionalSampler14GetMcmcRepeatsEv"></span><span id="smc::conditionalSampler::GetMcmcRepeats__voidC"></span><span class="target" id="classsmc_1_1conditionalSampler_1a2f2cf5a113c495bcf6a17c6ac11e0bbf"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GetMcmcRepeats</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3smc18conditionalSampler14GetMcmcRepeatsEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3smc18conditionalSampler21GetHistorymcmcRepeatsEl">
+<span id="_CPPv3N3smc18conditionalSampler21GetHistorymcmcRepeatsEl"></span><span id="_CPPv2N3smc18conditionalSampler21GetHistorymcmcRepeatsEl"></span><span id="smc::conditionalSampler::GetHistorymcmcRepeats__l"></span><span class="target" id="classsmc_1_1conditionalSampler_1ae5038f0bf1465ba16c4e27465f38a0bf"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GetHistorymcmcRepeats</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">n</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3smc18conditionalSampler21GetHistorymcmcRepeatsEl" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3smc18conditionalSampler14SetMcmcRepeatsEi">
+<span id="_CPPv3N3smc18conditionalSampler14SetMcmcRepeatsEi"></span><span id="_CPPv2N3smc18conditionalSampler14SetMcmcRepeatsEi"></span><span id="smc::conditionalSampler::SetMcmcRepeats__i"></span><span class="target" id="classsmc_1_1conditionalSampler_1a5978a76877529f7ef636b19d92f094f2"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SetMcmcRepeats</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">reps</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3smc18conditionalSampler14SetMcmcRepeatsEi" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Sets the number of MCMC repeats. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-private-members">Private Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N3smc18conditionalSampler19referenceTrajectoryE">
+<span id="_CPPv3N3smc18conditionalSampler19referenceTrajectoryE"></span><span id="_CPPv2N3smc18conditionalSampler19referenceTrajectoryE"></span><span id="smc::conditionalSampler::referenceTrajectory__std::vector:Space:"></span><span class="target" id="classsmc_1_1conditionalSampler_1abdf893a9b8c857e14736551c215a2904"></span><a class="reference internal" href="population.html#_CPPv4St" title="std"><span class="n"><span class="pre">std</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I00EN3smc18conditionalSamplerE" title="smc::conditionalSampler::Space"><span class="n"><span class="pre">Space</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">referenceTrajectory</span></span></span><a class="headerlink" href="#_CPPv4N3smc18conditionalSampler19referenceTrajectoryE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N3smc18conditionalSampler4maxTE">
+<span id="_CPPv3N3smc18conditionalSampler4maxTE"></span><span id="_CPPv2N3smc18conditionalSampler4maxTE"></span><span id="smc::conditionalSampler::maxT__l"></span><span class="target" id="classsmc_1_1conditionalSampler_1ae2685bbe6aae5d6a6bfe443463724f42"></span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">maxT</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3smc18conditionalSampler19referenceTrajectoryE" title="smc::conditionalSampler::referenceTrajectory"><span class="n"><span class="pre">referenceTrajectory</span></span></a><span class="p"><span class="pre">.</span></span><span class="n"><span class="pre">size</span></span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">)</span></span><a class="headerlink" href="#_CPPv4N3smc18conditionalSampler4maxTE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N3smc18conditionalSampler26referenceTrajectoryIndicesE">
+<span id="_CPPv3N3smc18conditionalSampler26referenceTrajectoryIndicesE"></span><span id="_CPPv2N3smc18conditionalSampler26referenceTrajectoryIndicesE"></span><span id="smc::conditionalSampler::referenceTrajectoryIndices__arma::Col:unsigned-i:"></span><span class="target" id="classsmc_1_1conditionalSampler_1a50143e1f52e9939ae789eac84222d07c"></span><span class="n"><span class="pre">arma</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Col</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">referenceTrajectoryIndices</span></span></span><a class="headerlink" href="#_CPPv4N3smc18conditionalSampler26referenceTrajectoryIndicesE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N3smc18conditionalSampler11digitsPrintE">
+<span id="_CPPv3N3smc18conditionalSampler11digitsPrintE"></span><span id="_CPPv2N3smc18conditionalSampler11digitsPrintE"></span><span id="smc::conditionalSampler::digitsPrint__i"></span><span class="target" id="classsmc_1_1conditionalSampler_1afe26462b634bc1f4907cb295528955e0"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">digitsPrint</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">6</span></span><a class="headerlink" href="#_CPPv4N3smc18conditionalSampler11digitsPrintE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-friends">Friends</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3smc18conditionalSamplerlsERNSt7ostreamERK18conditionalSamplerI5Space6ParamsE">
+<span id="_CPPv3N3smc18conditionalSamplerlsERNSt7ostreamERK18conditionalSamplerI5Space6ParamsE"></span><span id="_CPPv2N3smc18conditionalSamplerlsERNSt7ostreamERK18conditionalSamplerI5Space6ParamsE"></span><span id="smc::conditionalSampler::lshift-operator__osR.conditionalSampler:Space.Params:CR"></span><span class="target" id="classsmc_1_1conditionalSampler_1af36b72bf25208d2b3b178d5a58c2d655"></span><span class="k"><span class="pre">friend</span></span><span class="w"> </span><a class="reference internal" href="population.html#_CPPv4St" title="std"><span class="n"><span class="pre">std</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">ostream</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">&lt;&lt;</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="population.html#_CPPv4St" title="std"><span class="n"><span class="pre">std</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">ostream</span></span><span class="p"><span class="pre">&amp;</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I00EN3smc18conditionalSamplerE" title="smc::conditionalSampler"><span class="n"><span class="pre">conditionalSampler</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I00EN3smc18conditionalSamplerE" title="smc::conditionalSampler::Space"><span class="n"><span class="pre">Space</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I00EN3smc18conditionalSamplerE" title="smc::conditionalSampler::Params"><span class="n"><span class="pre">Params</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3smc18conditionalSamplerlsERNSt7ostreamERK18conditionalSamplerI5Space6ParamsE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Produce a human-readable display of the state of an <a class="reference internal" href="sampler.html#classsmc_1_1sampler"><span class="std std-ref">smc::sampler</span></a> class using the stream operator. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>os</strong> – The output stream to which the display should be made. </p></li>
+<li><p><strong>s</strong> – The sampler which is to be displayed. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="sampler.html" class="btn btn-neutral float-left" title="Sampler" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="population.html" class="btn btn-neutral float-right" title="Particle Population" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Leah South, Ilya Zarubin, Dirk Eddelbuettel, Adam Johansen.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

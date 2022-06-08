@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Static Adaptation &mdash; RcppSMC  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Particle History Storage" href="history.html" />
+    <link rel="prev" title="Adaptation Methods" href="adaptMethods.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> RcppSMC
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Welcome to the RcppSMC documentation!</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Classes</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="sampler.html">Sampler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conditionalSampler.html">Conditional Sampler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="population.html">Particle Population</a></li>
+<li class="toctree-l2"><a class="reference internal" href="moveset.html">Moving, conditional moving and weighting particles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="adaptMethods.html">Adaptation Methods</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Static Adaptation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="history.html">Particle History Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="smcexception.html">Exception handling</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">RcppSMC</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="index.html">Classes</a> &raquo;</li>
+      <li>Static Adaptation</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/api/staticModelAdapt.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="static-adaptation">
+<span id="api-staticmodeladapt"></span><h1>Static Adaptation<a class="headerlink" href="#static-adaptation" title="Permalink to this headline"></a></h1>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-defines">Defines</p>
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.__SMC_STATICMODELADAPT_HH">
+<span class="target" id="staticModelAdapt_8h_1a8d51011a2c57c6b3012142d816fa59d2"></span><span class="sig-name descname"><span class="n"><span class="pre">__SMC_STATICMODELADAPT_HH</span></span></span><a class="headerlink" href="#c.__SMC_STATICMODELADAPT_HH" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv43smc">
+<span id="_CPPv33smc"></span><span id="_CPPv23smc"></span><span id="smc"></span><span class="target" id="namespacesmc"></span><span class="k"><span class="pre">namespace</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">smc</span></span></span><br /></dt>
+<dd><p>The Sequential Monte Carlo namespace. </p>
+<p>The classes and functions within this namespace are intended to be used for producing implemenetations of SMC samplers and related simulation techniques. </p>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N3smc16staticModelAdaptE">
+<span id="_CPPv3N3smc16staticModelAdaptE"></span><span id="_CPPv2N3smc16staticModelAdaptE"></span><span id="smc::staticModelAdapt"></span><span class="target" id="classsmc_1_1staticModelAdapt"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">staticModelAdapt</span></span></span><a class="headerlink" href="#_CPPv4N3smc16staticModelAdaptE" title="Permalink to this definition"></a><br /></dt>
+<dd><div class="docutils container">
+<em>#include &lt;staticModelAdapt.h&gt;</em></div>
+<p>A class containing parameters and functions to update these parameters in the context of static Bayesian models. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3smc16staticModelAdaptD0Ev">
+<span id="_CPPv3N3smc16staticModelAdaptD0Ev"></span><span id="_CPPv2N3smc16staticModelAdaptD0Ev"></span><span id="smc::staticModelAdapt::~staticModelAdapt"></span><span class="target" id="classsmc_1_1staticModelAdapt_1a984b8dc9035879b20939de2c217d19b6"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">~staticModelAdapt</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3smc16staticModelAdaptD0Ev" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3smc16staticModelAdapt16staticModelAdaptEv">
+<span id="_CPPv3N3smc16staticModelAdapt16staticModelAdaptEv"></span><span id="_CPPv2N3smc16staticModelAdapt16staticModelAdaptEv"></span><span id="smc::staticModelAdapt::staticModelAdapt"></span><span class="target" id="classsmc_1_1staticModelAdapt_1a301341fa94dadceecca0337b399f0f9c"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">staticModelAdapt</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3smc16staticModelAdapt16staticModelAdaptEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>The class constructor which sets the current and previous temperatures to zero. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3smc16staticModelAdapt10ChooseTempERKN4arma3vecERKN4arma3vecEdd">
+<span id="_CPPv3N3smc16staticModelAdapt10ChooseTempERKN4arma3vecERKN4arma3vecEdd"></span><span id="_CPPv2N3smc16staticModelAdapt10ChooseTempERKN4arma3vecERKN4arma3vecEdd"></span><span id="smc::staticModelAdapt::ChooseTemp__arma::vecCR.arma::vecCR.double.double"></span><span class="target" id="classsmc_1_1staticModelAdapt_1a5a865ce472d42b010cdf869debb0deaa"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ChooseTemp</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">arma</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vec</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">logweight</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">arma</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vec</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">loglike</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">desiredCESS</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">epsilon</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.01</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3smc16staticModelAdapt10ChooseTempERKN4arma3vecERKN4arma3vecEdd" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Chooses the next temperature such that a desired conditional ESS is maintained. </p>
+<p>Chooses the next temperature such that a desired conditional ESS is maintained.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>logweight</strong> – An armadillo vector containing the logarithm of the current particle weights. </p></li>
+<li><p><strong>loglike</strong> – An armadillo vector containing the log likelihood of the current particle values. </p></li>
+<li><p><strong>desiredCESS</strong> – The target conditional ESS for the next temperature (generally fixed). </p></li>
+<li><p><strong>epsilon</strong> – The tolerance for the bisection method (maximum difference between desired and actual conditional ESS). </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3smc16staticModelAdapt10calcEmpCovERKN4arma3matERKN4arma3vecE">
+<span id="_CPPv3N3smc16staticModelAdapt10calcEmpCovERKN4arma3matERKN4arma3vecE"></span><span id="_CPPv2N3smc16staticModelAdapt10calcEmpCovERKN4arma3matERKN4arma3vecE"></span><span id="smc::staticModelAdapt::calcEmpCov__arma::matCR.arma::vecCR"></span><span class="target" id="classsmc_1_1staticModelAdapt_1a9fbc8a91e10bfc6a2df267c1bad5d02e"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">calcEmpCov</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">arma</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">mat</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">theta</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">arma</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vec</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">logweight</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3smc16staticModelAdapt10calcEmpCovERKN4arma3matERKN4arma3vecE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Calculates the empirical covariance matrix based on the current weighted particle set. </p>
+<p>Calculates the empirical covariance matrix based on the current weighted particle set.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>theta</strong> – An [Nxd] armadillo matrix of doubles for the current particle values, where N is the number of particles and d is the dimension of the parameter. </p></li>
+<li><p><strong>logweight</strong> – An armadillo vector containing the logarithm of the current particle weights. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3smc16staticModelAdapt11calcCholCovERKN4arma3matEKN4arma3vecE">
+<span id="_CPPv3N3smc16staticModelAdapt11calcCholCovERKN4arma3matEKN4arma3vecE"></span><span id="_CPPv2N3smc16staticModelAdapt11calcCholCovERKN4arma3matEKN4arma3vecE"></span><span id="smc::staticModelAdapt::calcCholCov__arma::matCR.arma::vecC"></span><span class="target" id="classsmc_1_1staticModelAdapt_1a5a37d9e6bf0c01fabfd01d5fe15ea441"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">calcCholCov</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">arma</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">mat</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">theta</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">arma</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vec</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">logweight</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3smc16staticModelAdapt11calcCholCovERKN4arma3matEKN4arma3vecE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Calculates the Cholesky decomposition of the empirical covariance matrix based on the current weighted particle set. </p>
+<p>Calculates the Cholesky decomposition of the empirical covariance matrix based on the current weighted particle set.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>theta</strong> – An [Nxd] armadillo matrix of doubles for the current particle values, where N is the number of particles and d is the dimension of the parameter </p></li>
+<li><p><strong>logweight</strong> – An armadillo vector of the logarithm of the current particle weights </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3smc16staticModelAdapt15calcMcmcRepeatsEddii">
+<span id="_CPPv3N3smc16staticModelAdapt15calcMcmcRepeatsEddii"></span><span id="_CPPv2N3smc16staticModelAdapt15calcMcmcRepeatsEddii"></span><span id="smc::staticModelAdapt::calcMcmcRepeats__double.double.i.i"></span><span class="target" id="classsmc_1_1staticModelAdapt_1ad12fb34bb4cd11ac4223b09eab265e67"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">calcMcmcRepeats</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">acceptProb</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">desiredAcceptProb</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">initialN</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">maxReps</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3smc16staticModelAdapt15calcMcmcRepeatsEddii" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Calculates the number of MCMC repeats based on the results of the most recent set of MCMC moves. </p>
+<p>Calculates the number of MCMC repeats based on the results of the most recent set of MCMC moves.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>acceptProb</strong> – The proportion of accepted MCMC steps in the most recent iteration. </p></li>
+<li><p><strong>desiredAcceptProb</strong> – The desired probability of a successful move for each particle. </p></li>
+<li><p><strong>initialN</strong> – The initial number of MCMC repeats. </p></li>
+<li><p><strong>maxReps</strong> – The maximum number of MCMC repeats. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3smc16staticModelAdapt7GetTempEi">
+<span id="_CPPv3NK3smc16staticModelAdapt7GetTempEi"></span><span id="_CPPv2NK3smc16staticModelAdapt7GetTempEi"></span><span id="smc::staticModelAdapt::GetTemp__iC"></span><span class="target" id="classsmc_1_1staticModelAdapt_1a269caa0da7e3ffc38aeb84b3dfbf4b73"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GetTemp</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">t</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3smc16staticModelAdapt7GetTempEi" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns the t-th temperature. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3smc16staticModelAdapt11GetTempCurrEv">
+<span id="_CPPv3NK3smc16staticModelAdapt11GetTempCurrEv"></span><span id="_CPPv2NK3smc16staticModelAdapt11GetTempCurrEv"></span><span id="smc::staticModelAdapt::GetTempCurr__voidC"></span><span class="target" id="classsmc_1_1staticModelAdapt_1a8737306c979de406ce6a3af3e8bf7119"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GetTempCurr</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3smc16staticModelAdapt11GetTempCurrEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns the current temperature. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3smc16staticModelAdapt15GetTempPreviousEv">
+<span id="_CPPv3NK3smc16staticModelAdapt15GetTempPreviousEv"></span><span id="_CPPv2NK3smc16staticModelAdapt15GetTempPreviousEv"></span><span id="smc::staticModelAdapt::GetTempPrevious__voidC"></span><span class="target" id="classsmc_1_1staticModelAdapt_1ab2a71f9ff8be1e99375b849343786a4e"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GetTempPrevious</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3smc16staticModelAdapt15GetTempPreviousEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns the previous temperature. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3smc16staticModelAdapt8GetTempsEv">
+<span id="_CPPv3NK3smc16staticModelAdapt8GetTempsEv"></span><span id="_CPPv2NK3smc16staticModelAdapt8GetTempsEv"></span><span id="smc::staticModelAdapt::GetTemps__voidC"></span><span class="target" id="classsmc_1_1staticModelAdapt_1aa9bbecbe5ae1e9c7ccf5047301df40ce"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="population.html#_CPPv4St" title="std"><span class="n"><span class="pre">std</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GetTemps</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3smc16staticModelAdapt8GetTempsEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns the vector of temperatures. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3smc16staticModelAdapt10GetCholCovEv">
+<span id="_CPPv3NK3smc16staticModelAdapt10GetCholCovEv"></span><span id="_CPPv2NK3smc16staticModelAdapt10GetCholCovEv"></span><span id="smc::staticModelAdapt::GetCholCov__voidC"></span><span class="target" id="classsmc_1_1staticModelAdapt_1af0020436521cead17a9c8e500e5788f8"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">arma</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">mat</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GetCholCov</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3smc16staticModelAdapt10GetCholCovEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns the Cholesky decomposition of the empirical covariance matrix based on the current weighted particle set. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3smc16staticModelAdapt9GetEmpCovEv">
+<span id="_CPPv3NK3smc16staticModelAdapt9GetEmpCovEv"></span><span id="_CPPv2NK3smc16staticModelAdapt9GetEmpCovEv"></span><span id="smc::staticModelAdapt::GetEmpCov__voidC"></span><span class="target" id="classsmc_1_1staticModelAdapt_1ab669394ae8f88004c37a58afef1fe9ca"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">arma</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">mat</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GetEmpCov</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3smc16staticModelAdapt9GetEmpCovEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns the empirical covariance matrix based on the current weighted particle set. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-private-functions">Private Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3smc16staticModelAdapt8CESSdiffERKN4arma3vecERKN4arma3vecEdd">
+<span id="_CPPv3N3smc16staticModelAdapt8CESSdiffERKN4arma3vecERKN4arma3vecEdd"></span><span id="_CPPv2N3smc16staticModelAdapt8CESSdiffERKN4arma3vecERKN4arma3vecEdd"></span><span id="smc::staticModelAdapt::CESSdiff__arma::vecCR.arma::vecCR.double.double"></span><span class="target" id="classsmc_1_1staticModelAdapt_1ada6b5ca553373baba9069a64f45e86c5"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CESSdiff</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">arma</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vec</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">logweight</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">arma</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vec</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">loglike</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">tempDiff</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">desiredCESS</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3smc16staticModelAdapt8CESSdiffERKN4arma3vecERKN4arma3vecEdd" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Computes the difference between the conditional ESS given the specified temperature difference and the desired conditional ESS. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3smc16staticModelAdapt9bisectionEdRKN4arma3vecERKN4arma3vecEdd">
+<span id="_CPPv3N3smc16staticModelAdapt9bisectionEdRKN4arma3vecERKN4arma3vecEdd"></span><span id="_CPPv2N3smc16staticModelAdapt9bisectionEdRKN4arma3vecERKN4arma3vecEdd"></span><span id="smc::staticModelAdapt::bisection__double.arma::vecCR.arma::vecCR.double.double"></span><span class="target" id="classsmc_1_1staticModelAdapt_1a85968708aebf062be993c4a7037417f9"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bisection</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">curr</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">arma</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vec</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">logweight</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">arma</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vec</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">loglike</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">desiredCESS</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">epsilon</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3smc16staticModelAdapt9bisectionEdRKN4arma3vecERKN4arma3vecEdd" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Performs the bisection method to find the temperature within (temp_curr,1) which gives the desired conditional ESS. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-private-members">Private Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N3smc16staticModelAdapt4tempE">
+<span id="_CPPv3N3smc16staticModelAdapt4tempE"></span><span id="_CPPv2N3smc16staticModelAdapt4tempE"></span><span id="smc::staticModelAdapt::temp__std::vector:double:"></span><span class="target" id="classsmc_1_1staticModelAdapt_1ab98899cba54c9d80480e607f3c9d979f"></span><a class="reference internal" href="population.html#_CPPv4St" title="std"><span class="n"><span class="pre">std</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">temp</span></span></span><a class="headerlink" href="#_CPPv4N3smc16staticModelAdapt4tempE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>The temperature schedule;. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N3smc16staticModelAdapt6empCovE">
+<span id="_CPPv3N3smc16staticModelAdapt6empCovE"></span><span id="_CPPv2N3smc16staticModelAdapt6empCovE"></span><span id="smc::staticModelAdapt::empCov__arma::mat"></span><span class="target" id="classsmc_1_1staticModelAdapt_1a8cb8c1dedfccc7db7ae6d5600cf4ae39"></span><span class="n"><span class="pre">arma</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">mat</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">empCov</span></span></span><a class="headerlink" href="#_CPPv4N3smc16staticModelAdapt6empCovE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>The empirical covariance matrix estimated from the population of particles. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N3smc16staticModelAdapt7cholCovE">
+<span id="_CPPv3N3smc16staticModelAdapt7cholCovE"></span><span id="_CPPv2N3smc16staticModelAdapt7cholCovE"></span><span id="smc::staticModelAdapt::cholCov__arma::mat"></span><span class="target" id="classsmc_1_1staticModelAdapt_1a925d2a0b86f3b15a1ec1321b8b8ebb75"></span><span class="n"><span class="pre">arma</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">mat</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">cholCov</span></span></span><a class="headerlink" href="#_CPPv4N3smc16staticModelAdapt7cholCovE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>The Cholesky decomposition of the empirical covariance matrix. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="adaptMethods.html" class="btn btn-neutral float-left" title="Adaptation Methods" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="history.html" class="btn btn-neutral float-right" title="Particle History Storage" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Leah South, Ilya Zarubin, Dirk Eddelbuettel, Adam Johansen.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,8 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="smc::historyelement\l\< Space \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsmc_1_1historyelement.html",tooltip="A template class for the elements of a linked list to be used for the history of the sampler."];
+}
