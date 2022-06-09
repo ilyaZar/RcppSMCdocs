@@ -18,13 +18,9 @@ Sequential Monte Carlo algorithms (or general particle interpretations of Feynma
 inside R. Various examples illustrate the flexibility of algorithms that can be implemented this way.
 
 This software is released under  `version 3 of the GNU General Public License <http://www.gnu.org/licenses/gpl-3.0.html>`_ .
-Please be aware that this software is still in development, although all known bugs have been eliminated 
-it is possible that some persist, see the `project development sources on Github for the most recent version <https://github.com/rcppsmc/rcppsmc>`_. 
-
-If you wish to be added to a mailing list to receive information about
-updates to this software, then please send an email to the author, a.m.johansen@warwick.ac.uk. 
-Otherwise, please check this page regularly for updates.
-
+Please be aware that this software is still in development, and although all 
+known bugs have been eliminated it is possible that some persist. Please check
+the `project development sources on Github <https://github.com/rcppsmc/rcppsmc>`_ for most the most recent version and important updates. 
 
 .. toctree::
    :maxdepth: 2
