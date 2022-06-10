@@ -20,7 +20,7 @@ inside R. Various examples illustrate the flexibility of algorithms that can be 
 This software is released under  `version 3 of the GNU General Public License <http://www.gnu.org/licenses/gpl-3.0.html>`_ .
 Please be aware that this software is still in development, and although all 
 known bugs have been eliminated it is possible that some persist. Please check
-the `project development sources on Github <https://github.com/rcppsmc/rcppsmc>`_ for most the most recent version and important updates. 
+the `project development sources on Github <https://github.com/rcppsmc/rcppsmc>`_ for the most recent version and important updates. 
 
 .. toctree::
    :maxdepth: 2
